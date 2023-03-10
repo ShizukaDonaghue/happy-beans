@@ -22,6 +22,7 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    """ Admin panel settings for comments """
     list_display = ('recipe', 'name', 'body', 'created_on', 'updated_on')
     list_filter = ('name', 'created_on', 'updated_on')
     search_fields = ['name', 'email', 'body']
