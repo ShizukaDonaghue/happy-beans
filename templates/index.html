@@ -3,13 +3,13 @@
 
 {% block content %}
 
-<div class="container-fluid justify-center items-center introduction">
+<div class="container-fluid introduction">
     <h1>Happy Beans</h1>
-    <h2>Welcome to our child-friendly recipe sharing website!</h2>
-    <h2>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h2>
-    <h2>Sign up for a free account to save your favourite recipes, create your own recipe collections, and share your
-        own creations with our community.</h2>
-    <h2>Get creative and experiment with new flavours and ingredients. Happy cooking!
+    <h4>Welcome to our child-friendly recipe sharing website!</h4>
+    <h4>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h4>
+    <h4>Sign up for a free account to save your favourite recipes, create your own recipe collections, and share your
+        own creations with our community.</h4>
+    <h4>Get creative and experiment with new flavours and ingredients. Happy cooking!</h4>
 </div>
 
 <div>
@@ -36,7 +36,7 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.title }}
-                                <i class="far fa-heart"></i>  {{ recipe.number_of_likes }}</p>
+                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
                             </h5>
                             <p class="card-text">{{ recipe.description }}</p>
                             <a href="#" class="btn btn-primary">View Recipe</a>
