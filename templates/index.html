@@ -19,19 +19,41 @@
     </form>
 </div>
 
-
 <div class="container-fluid">
     <div class="row">
 
         <!-- Recipes -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                {% for recipe in recipe_list %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        {% if "placeholder" in recipe.image.url %}
+                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
+                            class="card-img-top" alt="placeholder image">
+                        {% else %}
+                        <img src=" {{ recipe.image.url }}" class="card-img-top" alt="image of {{ recipe.title }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}
+                                <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
+                            </h5>
+                            <p class="card-text">{{ recipe.description }}</p>
+                            <a href="{% url 'recipe_details' recipe.slug %}" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
 
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
-
 </div>
+
 {% include "paginator.html" %}
 
 {% endblock %}
