@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Happy Beans | Home{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid justify-center items-center">
+    <h1>Happy Beans</h1>
+    <h2>Welcome to our child-friendly recipe sharing website!</h2>
+    <h2>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h2>
+    <h2>Sign up for a free account to save your favourite recipes, create your own recipe collections, and share your
+        own creations with our community.</h2>
+    <h2>Get creative and experiment with new flavours and ingredients. Happy cooking!
+</div>
+
+<div>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Recipes -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% include "paginator.html" %}
+
+{% endblock %}
