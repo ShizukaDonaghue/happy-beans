@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="container-fluid justify-center items-center">
+<div class="container-fluid justify-center items-center introduction">
     <h1>Happy Beans</h1>
     <h2>Welcome to our child-friendly recipe sharing website!</h2>
     <h2>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h2>
@@ -39,7 +39,7 @@
                                 <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
                             </h5>
                             <p class="card-text">{{ recipe.description }}</p>
-                            <a href="{% url 'recipe_details' recipe.slug %}" class="btn btn-primary">View Recipe</a>
+                            <a href="#" class="btn btn-primary">View Recipe</a>
                         </div>
                     </div>
                 </div>

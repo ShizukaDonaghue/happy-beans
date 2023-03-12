@@ -47,9 +47,10 @@ MAIN_INGREDIENT = (
     (2, 'Fruits'),
     (3, 'Grains'),
     (4, 'Lamb'),
-    (5, 'Seafood'),
-    (6, 'Turkey'),
-    (7, 'Vegetable')
+    (5, 'Pork'),
+    (6, 'Seafood'),
+    (7, 'Turkey'),
+    (8, 'Vegetable')
 )
 
 
