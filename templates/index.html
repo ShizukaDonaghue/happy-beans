@@ -27,7 +27,7 @@
             <div class="row">
                 {% for recipe in recipe_list %}
                 <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         {% if "placeholder" in recipe.image.url %}
                         <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
                             class="card-img-top" alt="placeholder image">
@@ -36,7 +36,7 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.title }}
-                                <i class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
+                                <i class="far fa-heart"></i>  {{ recipe.number_of_likes }}</p>
                             </h5>
                             <p class="card-text">{{ recipe.description }}</p>
                             <a href="#" class="btn btn-primary">View Recipe</a>
