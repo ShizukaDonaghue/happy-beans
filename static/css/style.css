@@ -1,3 +1,12 @@
 .introduction {
     padding-top: 3.5rem;
 }
+
+.footer-container {
+    border-top: 1px #D8B646 solid;
+}
+
+footer i {
+    font-size: 180%;
+    padding: 1rem 2rem;
+}
