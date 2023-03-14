@@ -36,10 +36,11 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.title }}
-                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
                             </h5>
                             <p class="card-text">{{ recipe.description }}</p>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary stretched-link">View Recipe</a>
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary stretched-link">View
+                                Recipe</a>
                         </div>
                     </div>
                 </div>

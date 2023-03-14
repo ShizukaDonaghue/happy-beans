@@ -5,7 +5,7 @@
 
 <div class="container recipe-container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
                 alt="placeholder image" width="100%">
@@ -13,14 +13,16 @@
             <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}" width="100%">
             {% endif %}
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <h1>{{ recipe.title }}</h1>
             <div class="row">
-                <div class="col-lg-6">
-                    <p>By {{ recipe.author }}</p>
-                </div>
-                <div class="col-lg-6 text-end">
-                    <p>Posted on {{ recipe.date_format_created_on }}</p>
+                <div class="d-flex">
+                    <div class="d-inline col-6">
+                        <p>By {{ recipe.author }}</p>
+                    </div>
+                    <div class="d-inline col-6">
+                        <p class="text-end"><i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -42,18 +44,34 @@
                 </div>
                 <div class="col-lg-6">
                     <p>
-                        {% if recipe.main_ingedient == 8 %}
-                        Main Ingredient: Vegitables
+                        {% if recipe.difficulty == 0 %}
+                        Difficulty: Easy
+                        {% elif recipe.difficulty == 1 %}
+                        Difficulty: Moderate
+                        {% elif recipe.difficulty == 2 %}
+                        Difficulty: Hard
                         {% endif %}
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
+                    {% if recipe.diet_types %}
                     <p>Diet: {{ recipe.diet_types }}</p>
+                    {% endif %}
                 </div>
             </div>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Ingredients</h3>
+            <p>{{ recipe.ingredients|safe }}</p>
+        </div>
+        <div class="col-lg-6">
+            <h3>Method</h3>
+            <p">{{ recipe.method|safe }}</p>
         </div>
     </div>
 </div>
@@ -70,7 +88,7 @@
 
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ recipe.number_of_likes }}</strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
