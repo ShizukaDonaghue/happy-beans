@@ -41,7 +41,11 @@
                     <p>Serves: {{ recipe.serves }}</p>
                 </div>
                 <div class="col-lg-6">
-                    <p>Main Ingredient: {{ recipe.main_ingedient }} </p>
+                    <p>
+                        {% if recipe.main_ingedient == 8 %}
+                        Main Ingredient: Vegitables
+                        {% endif %}
+                    </p>
                 </div>
             </div>
             <div class="row">

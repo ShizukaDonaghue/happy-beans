@@ -64,6 +64,13 @@ DIET_TYPES = (
     ('Vegetarian', 'Vegetarian')
 )
 
+# Difficulty level choices for the Recipe model
+DIFFICULTY = (
+    (0, 'Easy'),
+    (1, 'Moderate'),
+    (2, 'Hard')
+)
+
 
 class Recipe(models.Model):
     """ Model for recipes """
@@ -78,7 +85,7 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     meal_type = models.IntegerField(choices=MEAL_TYPE)
-    main_ingedient = models.IntegerField(choices=MAIN_INGREDIENT)
+    main_ingredient = models.IntegerField(choices=MAIN_INGREDIENT)
     diet_type = ChoiceArrayField(
         models.CharField(
             choices=DIET_TYPES,
@@ -89,6 +96,7 @@ class Recipe(models.Model):
         blank=True,
         null=True
     )
+    difficulty = models.IntegerField(choices=DIFFICULTY)
     prep_time = models.PositiveIntegerField()
     cook_time = models.PositiveIntegerField()
     serves = models.PositiveIntegerField()
