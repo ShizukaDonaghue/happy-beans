@@ -122,11 +122,11 @@ class Recipe(models.Model):
 
     def date_format_created_on(self):
         """ Date formatting for creation dates """
-        return self.created_on.strftime('%d %b %y')
+        return self.created_on.strftime('%d %b %Y')
 
     def date_format_updated_on(self):
         """ Date formatting for update dates """
-        return self.updated_on.strftime('%d %b %y')
+        return self.updated_on.strftime('%d %b %Y')
 
 
 class Comment(models.Model):
