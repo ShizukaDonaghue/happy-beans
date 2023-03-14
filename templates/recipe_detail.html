@@ -3,24 +3,52 @@
 
 {% block content %}
 
-
-<div class="container-fluid">
-    <div class="row g-0">
-        <div class="d-none d-md-block col-md-6">
+<div class="container recipe-container">
+    <div class="row">
+        <div class="col-md-6">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
                 alt="placeholder image" width="100%">
             {% else %}
-            <img src="{{ recipe.image.url }}" alt="recipe image" width="100%">
+            <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}" width="100%">
             {% endif %}
         </div>
         <div class="col-md-6">
-            <h1>Recipe Title</h1>
-            <p>Author | Creation date</p>
-        </div>
+            <h1>{{ recipe.title }}</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p>By {{ recipe.author }}</p>
+                </div>
+                <div class="col-6 text-end">
+                    <p>Posted on {{ recipe.date_format_created_on }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <p>{{ recipe.description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Prep Time: {{ recipe.prep_time }} mins</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Cooking Time: {{ recipe.cook_time }} mins</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Serves: {{ recipe.serves }}</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Diet: {{ recipe.diet_types }} </p>
+                </div>
+            </div>
 
+        </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">
