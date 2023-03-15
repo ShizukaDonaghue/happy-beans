@@ -58,7 +58,7 @@ SUMMERNOTE_CONFIG = {
           ['fontsize', ['fontsize']],
           ['para', ['ul', 'ol', 'paragraph']],
         ],
-        'fontNames': ['Helvetica'],
+        'fontNames': ['Arial'],
         'fontSizes': ['14'],
     },
 }
