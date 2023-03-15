@@ -32,24 +32,24 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <p>Prep Time: {{ recipe.prep_time }} mins</p>
+                    <p><strong>Prep Time:</strong> {{ recipe.prep_time }} mins</p>
                 </div>
                 <div class="col-lg-6">
-                    <p>Cooking Time: {{ recipe.cook_time }} mins</p>
+                    <p><strong>Cooking Time:</strong> {{ recipe.cook_time }} mins</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <p>Serves: {{ recipe.serves }}</p>
+                    <p><strong>Serves:</strong> {{ recipe.serves }}</p>
                 </div>
                 <div class="col-lg-6">
                     <p>
                         {% if recipe.difficulty == 0 %}
-                        Difficulty: Easy
+                        <strong>Difficulty:</strong> Easy
                         {% elif recipe.difficulty == 1 %}
-                        Difficulty: Moderate
+                        <strong>Difficulty:</strong> Moderate
                         {% elif recipe.difficulty == 2 %}
-                        Difficulty: Hard
+                        <strong>Difficulty:</strong> Hard
                         {% endif %}
                     </p>
                 </div>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col">
                     {% if recipe.diet_types %}
-                    <p>Diet: {{ recipe.diet_types }}</p>
+                    <p><strong>Diet:</strong> {{ recipe.diet_types }}</p>
                     {% endif %}
                 </div>
             </div>
