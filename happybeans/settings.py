@@ -48,6 +48,22 @@ INSTALLED_APPS = [
     'recipeapp',
 ]
 
+SUMMERNOTE_CONFIG = {
+   'summernote': {
+        'toolbar': [
+          ['undo', ['undo',]],
+          ['redo', ['redo',]],
+          ['style', ['bold', 'italic', 'underline',]],
+          ['font', ['fontname', 'bold', 'italic', 'underline', 'clear', ]],
+          ['fontsize', ['fontsize']],
+          ['para', ['ul', 'ol', 'paragraph']],
+        ],
+        'fontNames': ['Impact'],
+        'fontSizes': ['12'],
+        'fontSizesIgnoreCheck': ['12']
+    },
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
