@@ -35,9 +35,18 @@
                         <img src=" {{ recipe.image.url }}" class="card-img-top" alt="image of {{ recipe.title }}">
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title">{{ recipe.title }}
-                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
-                            </h5>
+                            <div class="row">
+                                <div class="d-flex">
+                                    <div class="d-inline col-11">
+                                        <h5 class="card-title">{{ recipe.title }}</h5>
+                                    </div>
+                                    <div class="d-inline col-1">
+                                        <p class="text-end">
+                                            <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             <p class="card-text">{{ recipe.description }}</p>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary stretched-link">View
                                 Recipe</a>
