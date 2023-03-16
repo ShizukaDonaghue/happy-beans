@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'recipeapp',
 ]
 
-#Summernote configurations
+# Summernote configurations
 SUMMERNOTE_CONFIG = {
    'summernote': {
         'toolbar': [
@@ -63,6 +63,9 @@ SUMMERNOTE_CONFIG = {
         'fontSizes': ['14'],
     },
 }
+
+# To prevent 500 errors during login and registration
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,3 +162,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
