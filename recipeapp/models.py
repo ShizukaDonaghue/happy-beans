@@ -128,14 +128,6 @@ class Recipe(models.Model):
         """ Returns the total number of likes for each recipe """
         return self.likes.count()
 
-    def date_format_created_on(self):
-        """ Date formatting for creation dates """
-        return self.created_on.strftime('%d %b %Y')
-
-    def date_format_updated_on(self):
-        """ Date formatting for update dates """
-        return self.updated_on.strftime('%d %b %Y')
-
 
 class Comment(models.Model):
     """ Model for comments """
@@ -159,3 +151,7 @@ class Comment(models.Model):
     def __str__(self):
         """ Returns commnent body and auther name """
         return f"Comment {self.body} by {self.name}"
+
+    def date_format_created_on(self):
+        """ Date formatting for creation dates """
+        return self.created_on.strftime('%d %b %Y')
