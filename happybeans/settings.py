@@ -41,12 +41,23 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
     'recipeapp',
 ]
+
+# For Django to handle multiple sites from one database
+SITE_ID = 1
+
+# Redirection urls after login and logout
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Summernote configurations
 SUMMERNOTE_CONFIG = {
