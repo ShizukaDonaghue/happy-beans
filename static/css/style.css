@@ -1,5 +1,5 @@
-.introduction {
-    padding-top: 3.5rem;
+body {
+    padding-top: 4.5rem;
 }
 
 .footer-container {
@@ -11,6 +11,3 @@ footer i {
     padding: 1rem 2rem;
 }
 
-.recipe-container {
-    margin-top: 5rem;
-}
