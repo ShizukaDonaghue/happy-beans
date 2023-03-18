@@ -112,6 +112,12 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Leave a Comment</h3>
+                <!-- Alert when user comment has been added -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Thank you! Your comment has been added successfully!
+                </div>
+                {% endif %}
                 <!-- If user is logged in -->
                 {% if user.is_authenticated %}
                 <p>Posting as: {{ user.username }}</p>
