@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Recipe
 from .forms import CommentForm
 
@@ -21,6 +22,9 @@ class RecipeDetail(View):
     Includes comment form if the user is logged in
     """
     def get(self, request, slug, *args, **kwargs):
+        """
+        Get method to diplay the details
+        """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.order_by('created_on')
@@ -41,6 +45,9 @@ class RecipeDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Post method used to post a comment
+        """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.order_by('created_on')
@@ -70,3 +77,18 @@ class RecipeDetail(View):
                 'comment_form': CommentForm()
             },
         )
+
+
+class RecipeLike(View):
+    """
+    Post method to like or unlike the recipe
+    """
+    def post(self, request, slug):
+        recipe = get_object_or_404(Recipe, slug=slug)
+
+        if recipe.likes.filter(id=request.user.id).exists():
+            recipe.likes.remove(request.user)
+        else:
+            recipe.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))

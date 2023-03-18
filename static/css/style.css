@@ -7,3 +7,9 @@ footer i {
     padding: 1rem 2rem;
 }
 
+.btn-like {
+    border: none;
+    background: transparent;
+    color: #F74A87;
+    font-size: 110%;
+}

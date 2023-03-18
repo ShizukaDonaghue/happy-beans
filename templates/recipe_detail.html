@@ -19,11 +19,29 @@
             <h1>{{ recipe.title }}</h1>
             <div class="row">
                 <div class="d-flex">
-                    <div class="d-inline col-11">
+                    <div class="d-inline col-10">
                         <p>By {{ recipe.author }}</p>
                     </div>
-                    <div class="d-inline col-1">
-                        <p class="text-end"><i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                    <div class="d-inline col-2">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                {% else %}
+                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <span class="text-secondary"> {{ recipe.number_of_likes }}</span>
+                        </strong>
                     </div>
                 </div>
             </div>
@@ -86,7 +104,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4 mt-3">
+        <div class="col-lg-7 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Comments</h3>
                 <!-- If there is no comment yet -->
@@ -109,7 +127,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4 mt-3">
+        <div class="col-lg-5 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Leave a Comment</h3>
                 <!-- Alert when user comment has been added -->
