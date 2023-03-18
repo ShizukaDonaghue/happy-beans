@@ -78,32 +78,8 @@
     </div>
 </div>
 
-
+<!-- Comments section -->
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4 mt-3 left top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text"></p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i>
-                            {{ recipe.number_of_likes }}</strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                        </strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col">
             <hr>
@@ -113,36 +89,40 @@
         <div class="col-md-8 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Comments</h3>
-                <!-- We want a for loop inside the tags to iterate through each comment in comments -->
+                <!-- If there is no comment yet -->
+                {% if not comments %}
+                <p>Be the first to share your thoughts!</p>
+                {% endif %}
+                <!-- If there is a comment/are comments, loop through the comment(s) -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
+                <div class="row" style="padding: 10px;">
+                    <div class="d-flex">
+                        <div class="d-inline col-10">
+                            {{ comment.name }}
+                        </div>
+                        <div class="d-inline col-2">
                             {{ comment.date_format_created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- The body of the comment goes before the | -->
+                        </div>
+                    </div>
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-                <!-- For later -->
-                {% if user.is_authenticated %}
-
                 <h3>Leave a Comment</h3>
+                <!-- If user is logged in -->
+                {% if user.is_authenticated %}
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-outline-dark">Submit</button>
                 </form>
+                <!-- If user is not logged in -->
+                {% else %}
+                <p>Please log in to leave a comment!</p>
                 {% endif %}
             </div>
         </div>
