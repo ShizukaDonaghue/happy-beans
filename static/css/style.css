@@ -13,3 +13,8 @@ footer i {
     color: #F74A87;
     font-size: 110%;
 }
+
+.card {
+    border: none;
+    background-color: transparent;
+}
