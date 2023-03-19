@@ -130,3 +130,46 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
             cleaned_data,
             calculated_field=self.object.title,
         )
+
+
+class UpdateRecipe(
+        LoginRequiredMixin, UserPassesTestMixin,
+        SuccessMessageMixin, generic.UpdateView
+        ):
+    """
+    Allows the user to update their recipe when logged in
+    """
+    model = Recipe
+    template_name = 'post_recipe.html'
+    form_class = RecipeForm
+    success_url = reverse_lazy('home')
+    success_message = (
+        "Thank you! %(calculated_field)s has been updated successfully!"
+        )
+
+    def form_valid(self, form):
+        """
+        Checks if the form is valid
+        If valid, inserts the user id as a field and set it as the author
+        If valid, adds the recipe title as the slug
+        """
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.instance.title)
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        Tests if the user is the author of the recipe
+        """
+        recipe = self.get_object()
+        return recipe.author == self.request.user
+
+    def get_success_message(self, cleaned_data):
+        """
+        Overrides the get_success_message () to include the recipe title
+        in the success_message
+        """
+        return self.success_message % dict(
+            cleaned_data,
+            calculated_field=self.object.title,
+        )
