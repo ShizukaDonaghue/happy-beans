@@ -14,7 +14,7 @@
             {% csrf_token %}
             {{ form | crispy }}
 
-            <input type="submit" value="Submit" class="btn btn-outline-dark"/>
+            <input type="submit" value="Update" class="btn btn-outline-dark"/>
             <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-outline-dark">Cancel</a>
         </form>
         {% endif %}
