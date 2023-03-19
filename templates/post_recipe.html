@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Happy Beans | Post a Recipe{% endblock %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container justify-content-center">
+    <h1>Please share your creations!</h1>
+    <div class="row">
+        {% if user.is_authenticated %}
+        {% load cloudinary %}
+        <form method="POST" action="{% url 'post_recipe' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | crispy }}
+
+            <input type="submit" value="Submit" class="btn btn-outline-dark"/>
+            <a href="{% url 'home' %}" class="btn btn-outline=dark">Cancel</a>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}

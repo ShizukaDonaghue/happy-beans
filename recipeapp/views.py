@@ -1,8 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.views.generic.edit import FormView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.template.defaultfilters import slugify
 from .models import Recipe
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
 
 
 class RecipeList(generic.ListView):
@@ -92,3 +97,25 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, FormView):
+    """
+    Displays the recipe entry form when user is logged in
+    Allows the user to post a recipe
+    """
+    model = Recipe
+    template_name = 'post_recipe.html'
+    form_class = RecipeForm
+    success_url = reverse_lazy('home')
+    success_message = ("Thank you! Your recipe has been added successfuly!")
+
+    def form_valid(self, form):
+        """
+        Checks if the form is valid
+        If valid, inserts the user id as a field and set it as the author
+        """
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.instance.title)
+        form.save()
+        return super().form_valid(form)
