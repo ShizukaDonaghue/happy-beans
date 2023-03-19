@@ -128,14 +128,6 @@ class Recipe(models.Model):
         """ Returns the total number of likes for each recipe """
         return self.likes.count()
 
-    def save(self, *args, **kwargs):
-        """
-        Add a slug to recipe, code help from Sean in Tutor team
-        """
-        if not self.slug:
-            self.slug = self.title.replace(' ', '')
-        super().save(*args, **kwargs)
-
 
 class Comment(models.Model):
     """ Model for comments """

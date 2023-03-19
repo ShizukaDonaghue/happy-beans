@@ -1,11 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic.edit import FormView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
+from django.views import generic, View
+from django.urls import reverse_lazy
 from .models import Recipe
 from .forms import CommentForm, RecipeForm
 
@@ -99,7 +98,7 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, FormView):
+class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
     Displays the recipe entry form when user is logged in
     Allows the user to post a recipe
@@ -108,14 +107,26 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, FormView):
     template_name = 'post_recipe.html'
     form_class = RecipeForm
     success_url = reverse_lazy('home')
-    success_message = ("Thank you! Your recipe has been added successfuly!")
+    success_message = (
+        "Thank you! %(calculated_field)s has been added successfully!"
+        )
 
     def form_valid(self, form):
         """
         Checks if the form is valid
         If valid, inserts the user id as a field and set it as the author
+        If valid, adds the recipe title as the slug
         """
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.instance.title)
-        form.save()
         return super().form_valid(form)
+
+    def get_success_message(self, cleaned_data):
+        """
+        Overrides the get_success_message () to include the recipe title
+        in the success_message
+        """
+        return self.success_message % dict(
+            cleaned_data,
+            calculated_field=self.object.title,
+        )
