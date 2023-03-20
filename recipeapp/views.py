@@ -99,7 +99,22 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+class SetAuthorMixin(LoginRequiredMixin):
+    """
+    A mixin to set the user as the author
+    """
+    def form_valid(self, form):
+        """
+        Checks if the form is valid
+        Inserts the user id as a field and set it as the author
+        Adds the recipe title as the slug
+        """
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.instance.title)
+        return super().form_valid(form)
+
+
+class PostRecipe(SetAuthorMixin, SuccessMessageMixin, generic.CreateView):
     """
     Allows the user to post a recipe when logged in
     """
@@ -110,16 +125,6 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     success_message = (
         "Thank you! %(recipe_title)s has been added successfully!"
         )
-
-    def form_valid(self, form):
-        """
-        Checks if the form is valid
-        Inserts the user id as a field and set it as the author
-        Adds the recipe title as the slug
-        """
-        form.instance.author = self.request.user
-        form.instance.slug = slugify(form.instance.title)
-        return super().form_valid(form)
 
     def get_success_message(self, cleaned_data):
         """
@@ -133,10 +138,8 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
 
 
 class UpdateRecipe(
-        LoginRequiredMixin,
-        UserPassesTestMixin,
-        SuccessMessageMixin,
-        generic.UpdateView
+        SetAuthorMixin, UserPassesTestMixin,
+        SuccessMessageMixin, generic.UpdateView
         ):
     """
     Allows the user to update their recipe when logged in
@@ -148,16 +151,6 @@ class UpdateRecipe(
     success_message = (
         "Thank you! %(recipe_title)s has been updated successfully!"
     )
-
-    def form_valid(self, form):
-        """
-        Checks if the form is valid
-        Inserts the user id as a field and set it as the author
-        Adds the recipe title as the slug
-        """
-        form.instance.author = self.request.user
-        form.instance.slug = slugify(form.instance.title)
-        return super().form_valid(form)
 
     def test_func(self):
         """
@@ -177,11 +170,7 @@ class UpdateRecipe(
         )
 
 
-class DeleteRecipe(
-        LoginRequiredMixin,
-        UserPassesTestMixin,
-        generic.DeleteView
-        ):
+class DeleteRecipe(SetAuthorMixin, UserPassesTestMixin, generic.DeleteView):
     """
     Allows the user to delete their own recipe when logged in
     """
