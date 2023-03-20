@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
 from django.views import generic, View
 from django.urls import reverse_lazy
-from .models import Recipe
+from .models import Recipe, Comment
 from .forms import CommentForm, RecipeForm
 
 
@@ -205,3 +205,38 @@ class DeleteRecipe(
         """
         messages.success(self.request, self.success_message)
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
+
+
+class UpdateComment(
+        LoginRequiredMixin, UserPassesTestMixin,
+        SuccessMessageMixin, generic.UpdateView
+        ):
+    """
+    Allows the user to update their comment when logged in
+    """
+    model = Comment
+    template_name = 'update_comment.html'
+    form_class = CommentForm
+    success_message = "Your comment has been updated successfully"
+
+    def form_valid(self, form):
+        """
+        Checks if the form is valid
+        Inserts the user id as a field and set it as the author of the comment
+        """
+        form.instance.name = self.request.user.username
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        Tests if the user is the author of the comment
+        """
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+    def get_success_url(self):
+        """
+        Returns to the recipe details once the comment has been updated
+        """
+        recipe = self.object.recipe
+        return reverse_lazy('recipe_detail', kwargs={'slug': recipe.slug})
