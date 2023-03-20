@@ -141,7 +141,7 @@ class UpdateRecipe(
     Allows the user to update their recipe when logged in
     """
     model = Recipe
-    template_name = 'post_recipe.html'
+    template_name = 'update_recipe.html'
     form_class = RecipeForm
     success_url = reverse_lazy('home')
     success_message = (
