@@ -8,15 +8,37 @@
 <div class="container recipe-container">
     <div class="row">
         {% if user.is_authenticated and user == recipe.author %}
-        <span>
-            <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark"
-                aria-label="Update recipe button" role="button">
-                Edit
-            </a>
-        </span>
-        
+        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark" aria-label="Update recipe button"
+            role="button">
+            Edit
+        <a href="" class="delete-recipe" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">Delete</a>
         {% endif %}
     </div>
+
+    <div class="modal fade" id="deleteRecipeModal" tabindex="-1" role="dialog" aria-labelledby="deleteRecipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content modal-delete">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteRecipeModalLabel">Delete Recipe</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete {{ recipe.title }}?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <form action="{% url 'delete_recipe' recipe.slug %}" method="POST">
+                {% csrf_token %}
+                <button class="btn btn-danger" value="Confirm">Yes</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col-lg-6">
             {% if "placeholder" in recipe.image.url %}
