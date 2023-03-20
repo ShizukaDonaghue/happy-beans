@@ -12,10 +12,6 @@
 
         <button type="submit" class="btn btn-outline-dark">Delete</button>
         <a class="btn btn-outline-dark" href="{% url 'recipe_detail' recipe.slug %}">Cancel</a>
-
-        {% if deleted %}
-        <div class="alert alert-success" role="alert">{{ recipe.title }} has been deleted.</div>
-        {% endif %}
     </form>   
     
 </div>
