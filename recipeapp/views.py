@@ -101,8 +101,7 @@ class RecipeLike(View):
 
 class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
-    Displays the recipe entry form when user is logged in
-    Allows the user to post a recipe
+    Allows the user to post a recipe when logged in
     """
     model = Recipe
     template_name = 'post_recipe.html'
@@ -124,7 +123,7 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
 
     def get_success_message(self, cleaned_data):
         """
-        Overrides the get_success_message () to include the recipe title
+        Overrides the get_success_message() to include the recipe title
         in the success_message
         """
         return self.success_message % dict(
@@ -134,8 +133,10 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
 
 
 class UpdateRecipe(
-        LoginRequiredMixin, UserPassesTestMixin,
-        SuccessMessageMixin, generic.UpdateView
+        LoginRequiredMixin,
+        UserPassesTestMixin,
+        SuccessMessageMixin,
+        generic.UpdateView
         ):
     """
     Allows the user to update their recipe when logged in
@@ -199,7 +200,7 @@ class DeleteRecipe(
     def delete(self, request, *args, **kwargs):
         """
         Deletes the recipe
-        Displays confirmation that it deleted successfully
+        Displays confirmation that it has been deleted successfully
         Code from https://stackoverflow.com/questions/47636968/
         django-messages-for-a-successfully-delete-add-or-edit-item
         """
