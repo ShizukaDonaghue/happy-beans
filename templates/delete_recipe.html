@@ -9,7 +9,7 @@
         {% if user.is_authenticated and user == recipe.author %}
         <form method="post">
             {% csrf_token %}
-            <p>Are you sure you would like to delete {{ recipe.title }}?</p>
+            <p>Are you sure you want to delete {{ recipe.title }}?</p>
 
             <button type="submit" class="btn btn-outline-dark">Delete</button>
             <a class="btn btn-outline-dark" href="{% url 'recipe_detail' recipe.slug %}">Cancel</a>
