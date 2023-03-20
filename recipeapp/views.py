@@ -190,8 +190,8 @@ class DeleteRecipe(SetAuthorMixin, UserPassesTestMixin, generic.DeleteView):
         """
         Deletes the recipe
         Displays confirmation that it has been deleted successfully
-        Code from https://stackoverflow.com/questions/47636968/
-        django-messages-for-a-successfully-delete-add-or-edit-item
+        Code from https://stackoverflow.com/questions/48777015/
+        djangos-successmessagemixin-not-working-with-deleteview
         """
         messages.success(self.request, self.success_message)
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
@@ -226,7 +226,7 @@ class UpdateComment(
 
     def get_success_url(self):
         """
-        Returns to the recipe details once the comment has been updated
+        Sets the url to return to when the form is validated successfully
         """
         recipe = self.object.recipe
         return reverse_lazy('recipe_detail', kwargs={'slug': recipe.slug})
