@@ -186,9 +186,7 @@ class DeleteRecipe(
     model = Recipe
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
-    success_message = (
-        "%(calculated_field)s has been deleted successfully. Thank you."
-    )
+    success_message = "Recipe has been deleted successfuly. Thanks."
 
     def test_func(self):
         """
@@ -201,8 +199,5 @@ class DeleteRecipe(
         """
         Displays confirmation that recipe has been deleted successfully
         """
-        obj = self.get_object()
-        delete_message = super(
-            DeleteRecipe, self).delete(request, *args, **kwargs)
-        messages.success(self.request, self.success_message % obj.__dict__)
-        return delete_message
+        messages.success(self.request, self.success_message)
+        return super(DeleteRecipe, self).delete(request, *args, **kwargs)
