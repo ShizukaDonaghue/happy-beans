@@ -198,7 +198,10 @@ class DeleteRecipe(
 
     def delete(self, request, *args, **kwargs):
         """
-        Displays confirmation that recipe has been deleted successfully
+        Deletes the recipe
+        Displays confirmation that it deleted successfully
+        Code from https://stackoverflow.com/questions/47636968/
+        django-messages-for-a-successfully-delete-add-or-edit-item
         """
         messages.success(self.request, self.success_message)
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
