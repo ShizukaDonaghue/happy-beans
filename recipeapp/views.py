@@ -114,8 +114,8 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     def form_valid(self, form):
         """
         Checks if the form is valid
-        If valid, inserts the user id as a field and set it as the author
-        If valid, adds the recipe title as the slug
+        Inserts the user id as a field and set it as the author
+        Adds the recipe title as the slug
         """
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.instance.title)
@@ -145,13 +145,13 @@ class UpdateRecipe(
     success_url = reverse_lazy('home')
     success_message = (
         "Thank you! %(calculated_field)s has been updated successfully!"
-        )
+    )
 
     def form_valid(self, form):
         """
         Checks if the form is valid
-        If valid, inserts the user id as a field and set it as the author
-        If valid, adds the recipe title as the slug
+        Inserts the user id as a field and set it as the author
+        Adds the recipe title as the slug
         """
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.instance.title)

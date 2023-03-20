@@ -10,11 +10,11 @@
     <div class="row">
         {% if user.is_authenticated %}
         {% load cloudinary %}
-        <form method="POST" action="{% url 'post_recipe' %}" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | crispy }}
 
-            <input type="submit" value="Submit" class="btn btn-outline-dark"/>
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
             <a href="{% url 'home' %}" class="btn btn-outline-dark">Cancel</a>
         </form>
         {% endif %}

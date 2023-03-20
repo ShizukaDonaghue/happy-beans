@@ -6,15 +6,15 @@
 {% load crispy_forms_tags %}
 
 <div class="container justify-content-center">
-    <h1>Update your recipe here!</h1>
+    <h1>Please share your creations!</h1>
     <div class="row">
-        {% if user.is_authenticated and recipe.author == user %}
+        {% if user.is_authenticated and recipe.author == user  %}
         {% load cloudinary %}
-        <form method="POST" action="{% url 'post_recipe' %}" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | crispy }}
 
-            <input type="submit" value="Update" class="btn btn-outline-dark"/>
+            <button type="submit" class="btn btn-outline-dark">Update</button>
             <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-outline-dark">Cancel</a>
         </form>
         {% endif %}
