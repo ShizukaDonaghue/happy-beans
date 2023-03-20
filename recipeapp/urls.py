@@ -10,15 +10,15 @@ urlpatterns = [
     path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
     path('post-recipe/', views.PostRecipe.as_view(), name='post_recipe'),
     path(
-        'recipe/<slug:slug>/update/',
+        'update-recipe/<slug:slug>/',
         views.UpdateRecipe.as_view(), name='update_recipe'
         ),
     path(
-        'recipe/<slug:slug>/delete/',
+        'delete-recipe/<slug:slug>/',
         views.DeleteRecipe.as_view(), name='delete_recipe'
         ),
     path(
-        'comment/<int:pk>/update/',
+        'update-comment/<int:pk>/',
         views.UpdateComment.as_view(), name='update_comment'
         ),
 ]

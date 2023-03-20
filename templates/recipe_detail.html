@@ -144,6 +144,13 @@
                     </div>
                     {{ comment.body | linebreaks }}
                 </div>
+                <div>
+                    {% if user.is_authenticated and user.username == comment.name %}
+                    <a href="{% url 'update_comment' comment.id %}" class="btn btn-outline-dark" aria-label="Update recipe button"
+                        role="button"><i class="fa fa-pencil edit-recipe"></i>
+                    </a>
+                    {% endif %}
+                </div>
                 {% endfor %}
             </div>
         </div>

@@ -229,4 +229,4 @@ class UpdateComment(
         Sets the url to return to when the form is validated successfully
         """
         recipe = self.object.recipe
-        return reverse_lazy('recipe_detail', kwargs={'slug': recipe.slug})
+        return reverse_lazy('recipe_detail', args=[self.object.recipe.slug])
