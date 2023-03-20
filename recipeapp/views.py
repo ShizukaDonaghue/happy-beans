@@ -173,3 +173,36 @@ class UpdateRecipe(
             cleaned_data,
             calculated_field=self.object.title,
         )
+
+
+class DeleteRecipe(
+        LoginRequiredMixin,
+        UserPassesTestMixin,
+        generic.DeleteView
+        ):
+    """
+    Allows the user to delete their own recipe when logged in
+    """
+    model = Recipe
+    template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('home')
+    success_message = (
+        "%(calculated_field)s has been deleted successfully. Thank you."
+    )
+
+    def test_func(self):
+        """
+        Tests if the user is the author of the recipe
+        """
+        recipe = self.get_object()
+        return recipe.author == self.request.user
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Displays confirmation that recipe has been deleted successfully
+        """
+        obj = self.get_object()
+        delete_message = super(
+            DeleteRecipe, self).delete(request, *args, **kwargs)
+        messages.success(self.request, self.success_message % obj.__dict__)
+        return delete_message
