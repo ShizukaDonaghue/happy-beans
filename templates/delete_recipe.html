@@ -3,17 +3,15 @@
 
 {% block content %}
 
-<h1>Delete Recipe</h1>
-
 <div class="container justify-content-center">
     <h1>Delete Recipe</h1>
 
     <form method="post">
         {% csrf_token %}
-        <p>Are you sure you would like to delete "{{ recipe.title }}?</p>
+        <p>Are you sure you would like to delete {{ recipe.title }}?</p>
 
         <button type="submit" class="btn btn-outline-dark">Delete</button>
-        <a class="btn btn-outline-dark" href="{% 'recipe_detail' recipe.slug %}">Cancel</a>
+        <a class="btn btn-outline-dark" href="{% url 'recipe_detail' recipe.slug %}">Cancel</a>
 
         {% if deleted %}
         <div class="alert alert-success" role="alert">{{ recipe.title }} has been deleted.</div>
@@ -21,3 +19,5 @@
     </form>   
     
 </div>
+
+{% endblock %}

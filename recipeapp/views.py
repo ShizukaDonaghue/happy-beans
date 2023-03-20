@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponseRedirect
@@ -108,7 +109,7 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     form_class = RecipeForm
     success_url = reverse_lazy('home')
     success_message = (
-        "Thank you! %(calculated_field)s has been added successfully!"
+        "Thank you! %(recipe_title)s has been added successfully!"
         )
 
     def form_valid(self, form):
@@ -128,7 +129,7 @@ class PostRecipe(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
         """
         return self.success_message % dict(
             cleaned_data,
-            calculated_field=self.object.title,
+            recipe_title=self.object.title,
         )
 
 
@@ -144,7 +145,7 @@ class UpdateRecipe(
     form_class = RecipeForm
     success_url = reverse_lazy('home')
     success_message = (
-        "Thank you! %(calculated_field)s has been updated successfully!"
+        "Thank you! %(recipe_title)s has been updated successfully!"
     )
 
     def form_valid(self, form):
@@ -171,7 +172,7 @@ class UpdateRecipe(
         """
         return self.success_message % dict(
             cleaned_data,
-            calculated_field=self.object.title,
+            recipe_title=self.object.title,
         )
 
 
