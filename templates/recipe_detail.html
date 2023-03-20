@@ -7,6 +7,16 @@
 
 <div class="container recipe-container">
     <div class="row">
+        {% if user.is_authenticated and recipe.author == user %}
+        <span>
+            <a class="action-btn btn btn-info" href="{% url 'update_recipe' recipe.slug %}"
+                aria-label="Update recipe button" role="button">
+                <i class="fas fa-edit"></i>
+            </a>
+        </span>
+        {% endif %}
+    </div>
+    <div class="row">
         <div class="col-lg-6">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
@@ -25,7 +35,7 @@
                     <div class="d-inline col-2">
                         <strong>
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="post">
                                 {% csrf_token %}
                                 {% if liked %}
                                 <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
