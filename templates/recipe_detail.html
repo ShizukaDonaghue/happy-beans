@@ -26,10 +26,8 @@
                         <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark" aria-label="Update recipe button"
                             role="button"><i class="fa fa-pencil edit-recipe"></i>
                         </a>
-                        {% endif %}
                     </div>
                     <div class="d-inline col-1">
-                        {% if user.is_authenticated and user == recipe.author %}
                         <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark" aria-label="Delete recipe button"
                             role="button"> <i class="fas fa-times"></i>
                         </a>
