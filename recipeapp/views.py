@@ -116,25 +116,19 @@ class RecipeAuthorMixin(LoginRequiredMixin):
 
 class RecipeAuthorTestMixin(UserPassesTestMixin):
     """
-    A mixin to check if the user is the author of the recipe
+    A mixin to test if the user is the author of the recipe
     to ensure only the recipe author can update or delete the recipe
     """
     def test_func(self):
-        """
-        Tests if the user is the author of the recipe
-        """
         recipe = self.get_object()
         return recipe.author == self.request.user
 
 
 class RecipeMessageMixin(SuccessMessageMixin):
     """
-    A mixin to override the get_success_message()
+    A mixin to override the get_success_message() to include the recipe title
     """
     def get_success_message(self, cleaned_data):
-        """
-        Includes the recipe tile in the success_message
-        """
         return self.success_message % dict(
             cleaned_data,
             recipe_title=self.object.title,
@@ -171,7 +165,7 @@ class UpdateRecipe(
 
 
 class DeleteRecipe(
-        RecipeAuthorMixin, RecipeAuthorTestMixin, generic.DeleteView
+        LoginRequiredMixin, RecipeAuthorTestMixin, generic.DeleteView
         ):
     """
     Allows the user to delete their own recipe when logged in
@@ -190,9 +184,27 @@ class DeleteRecipe(
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
 
 
+class CommentAuthorMixin(UserPassesTestMixin):
+    """
+    A mixin to test if the user is the author of the comment
+    to ensure only the comment author can update or delete the comment
+    """
+    def test_func(self):
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+
+class SetUrlMixin:
+    """
+    A mixin to set to url to return to when the form is validated successfully
+    """
+    def get_success_url(self):
+        return reverse_lazy('recipe_detail', args=[self.object.recipe.slug])
+
+
 class UpdateComment(
-        LoginRequiredMixin, UserPassesTestMixin,
-        SuccessMessageMixin, generic.UpdateView
+        LoginRequiredMixin, CommentAuthorMixin,
+        SuccessMessageMixin, SetUrlMixin, generic.UpdateView
         ):
     """
     Allows the user to update their comment when logged in
@@ -200,25 +212,17 @@ class UpdateComment(
     model = Comment
     template_name = 'update_comment.html'
     form_class = CommentForm
-    success_message = "Your comment has been updated successfully"
+    success_message = "Your comment has been updated successfully."
 
-    def form_valid(self, form):
-        """
-        Checks if the form is valid
-        Inserts the user id as a field and set it as the author of the comment
-        """
-        form.instance.name = self.request.user.username
-        return super().form_valid(form)
 
-    def test_func(self):
-        """
-        Tests if the user is the author of the comment
-        """
-        comment = self.get_object()
-        return comment.name == self.request.user.username
-
-    def get_success_url(self):
-        """
-        Sets the url to return to when the form is validated successfully
-        """
-        return reverse_lazy('recipe_detail', args=[self.object.recipe.slug])
+class DeleteComment(
+        LoginRequiredMixin, CommentAuthorMixin,
+        SuccessMessageMixin, SetUrlMixin, generic.DeleteView
+        ):
+    """
+    Allows the user to delete their comment when logged in
+    """
+    model = Comment
+    template_name = 'delete_comment.html'
+    form_class = CommentForm
+    success_message = "Your comment has been deleted successfully."
