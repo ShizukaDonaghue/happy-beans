@@ -99,9 +99,9 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-class SetAuthorMixin(LoginRequiredMixin):
+class RecipeAuthorMixin(LoginRequiredMixin):
     """
-    A mixin to set the user as the author
+    A mixin to set the user as the author of the recipe
     """
     def form_valid(self, form):
         """
@@ -114,7 +114,34 @@ class SetAuthorMixin(LoginRequiredMixin):
         return super().form_valid(form)
 
 
-class PostRecipe(SetAuthorMixin, SuccessMessageMixin, generic.CreateView):
+class RecipeAuthorTestMixin(UserPassesTestMixin):
+    """
+    A mixin to check if the user is the author of the recipe
+    to ensure only the recipe author can update or delete the recipe
+    """
+    def test_func(self):
+        """
+        Tests if the user is the author of the recipe
+        """
+        recipe = self.get_object()
+        return recipe.author == self.request.user
+
+
+class RecipeMessageMixin(SuccessMessageMixin):
+    """
+    A mixin to override the get_success_message()
+    """
+    def get_success_message(self, cleaned_data):
+        """
+        Includes the recipe tile in the success_message
+        """
+        return self.success_message % dict(
+            cleaned_data,
+            recipe_title=self.object.title,
+        )
+
+
+class PostRecipe(RecipeAuthorMixin, RecipeMessageMixin, generic.CreateView):
     """
     Allows the user to post a recipe when logged in
     """
@@ -126,20 +153,10 @@ class PostRecipe(SetAuthorMixin, SuccessMessageMixin, generic.CreateView):
         "Thank you! %(recipe_title)s has been added successfully!"
         )
 
-    def get_success_message(self, cleaned_data):
-        """
-        Overrides the get_success_message() to include the recipe title
-        in the success_message
-        """
-        return self.success_message % dict(
-            cleaned_data,
-            recipe_title=self.object.title,
-        )
-
 
 class UpdateRecipe(
-        SetAuthorMixin, UserPassesTestMixin,
-        SuccessMessageMixin, generic.UpdateView
+        RecipeAuthorMixin, RecipeAuthorTestMixin,
+        RecipeMessageMixin, generic.UpdateView
         ):
     """
     Allows the user to update their recipe when logged in
@@ -152,25 +169,10 @@ class UpdateRecipe(
         "Thank you! %(recipe_title)s has been updated successfully!"
     )
 
-    def test_func(self):
-        """
-        Tests if the user is the author of the recipe
-        """
-        recipe = self.get_object()
-        return recipe.author == self.request.user
 
-    def get_success_message(self, cleaned_data):
-        """
-        Overrides the get_success_message () to include the recipe title
-        in the success_message
-        """
-        return self.success_message % dict(
-            cleaned_data,
-            recipe_title=self.object.title,
-        )
-
-
-class DeleteRecipe(SetAuthorMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteRecipe(
+        RecipeAuthorMixin, RecipeAuthorTestMixin, generic.DeleteView
+        ):
     """
     Allows the user to delete their own recipe when logged in
     """
@@ -178,13 +180,6 @@ class DeleteRecipe(SetAuthorMixin, UserPassesTestMixin, generic.DeleteView):
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
     success_message = "Recipe has been deleted successfuly. Thanks."
-
-    def test_func(self):
-        """
-        Tests if the user is the author of the recipe
-        """
-        recipe = self.get_object()
-        return recipe.author == self.request.user
 
     def delete(self, request, *args, **kwargs):
         """
