@@ -216,8 +216,7 @@ class UpdateComment(
 
 
 class DeleteComment(
-        LoginRequiredMixin, CommentAuthorMixin,
-        SuccessMessageMixin, SetUrlMixin, generic.DeleteView
+        LoginRequiredMixin, CommentAuthorMixin, SetUrlMixin, generic.DeleteView
         ):
     """
     Allows the user to delete their comment when logged in
@@ -226,3 +225,11 @@ class DeleteComment(
     template_name = 'delete_comment.html'
     form_class = CommentForm
     success_message = "Your comment has been deleted successfully."
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Deletes the recipe
+        Displays confirmation that it has been deleted successfully
+        """
+        messages.success(self.request, self.success_message)
+        return super(DeleteComment, self).delete(request, *args, **kwargs)

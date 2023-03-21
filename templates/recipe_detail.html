@@ -21,18 +21,18 @@
                     <div class="d-inline col-10">
                         <h1>{{ recipe.title }}</h1>
                     </div>
+                    {% if user.is_authenticated and user == recipe.author %}
                     <div class="d-inline col-1">
-                        {% if user.is_authenticated and user == recipe.author %}
-                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark" aria-label="Update recipe button"
-                            role="button"><i class="fa fa-pencil edit-recipe"></i>
+                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark"
+                            aria-label="Update recipe button" role="button"><i class="fa fa-pencil"></i>
                         </a>
                     </div>
                     <div class="d-inline col-1">
-                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark" aria-label="Delete recipe button"
-                            role="button"> <i class="fas fa-times"></i>
+                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark"
+                            aria-label="Delete recipe button" role="button"> <i class="fas fa-times"></i>
                         </a>
-                        {% endif %}
                     </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="row">
@@ -131,23 +131,30 @@
                 {% endif %}
                 <!-- If there is a comment/are comments, loop through the comment(s) -->
                 {% for comment in comments %}
-                <div class="row" style="padding: 10px;">
+                <div class="row">
                     <div class="d-flex">
-                        <div class="d-inline col-9">
+                        <div class="d-inline col-7">
                             {{ comment.name }}
                         </div>
                         <div class="d-inline col-3">
                             {{ comment.date_format_created_on }}
                         </div>
+                        {% if user.is_authenticated and user.username == comment.name %}
+                        <div class="d-inline col-1">
+                            <a href="{% url 'update_comment' comment.id %}" class="btn btn-outline-dark"
+                                aria-label="Update comment button" role="button"><i class="fa fa-pencil edit-recipe"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline col-1">
+                            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-outline-dark"
+                                aria-label="Delete comment button" role="button"> <i class="fas fa-times"></i>
+                            </a>
+                        </div>
+                        {% endif %}
                     </div>
-                    {{ comment.body | linebreaks }}
                 </div>
-                <div>
-                    {% if user.is_authenticated and user.username == comment.name %}
-                    <a href="{% url 'update_comment' comment.id %}" class="btn btn-outline-dark" aria-label="Update recipe button"
-                        role="button"><i class="fa fa-pencil edit-recipe"></i>
-                    </a>
-                    {% endif %}
+                <div class="row">
+                    {{ comment.body | linebreaks }}
                 </div>
                 {% endfor %}
             </div>
