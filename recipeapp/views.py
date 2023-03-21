@@ -185,8 +185,6 @@ class DeleteRecipe(
         """
         Deletes the recipe
         Displays confirmation that it has been deleted successfully
-        Code from https://stackoverflow.com/questions/48777015/
-        djangos-successmessagemixin-not-working-with-deleteview
         """
         messages.success(self.request, self.success_message)
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
