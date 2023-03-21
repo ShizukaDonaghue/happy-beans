@@ -106,7 +106,7 @@ class SetAuthorMixin(LoginRequiredMixin):
     def form_valid(self, form):
         """
         Checks if the form is valid
-        Inserts the user id as a field and set it as the author
+        Inserts the user id as a field and set it as the author of the recipe
         Adds the recipe title as the slug
         """
         form.instance.author = self.request.user
@@ -228,5 +228,4 @@ class UpdateComment(
         """
         Sets the url to return to when the form is validated successfully
         """
-        recipe = self.object.recipe
         return reverse_lazy('recipe_detail', args=[self.object.recipe.slug])

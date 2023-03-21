@@ -14,7 +14,7 @@ class RecipeForm(forms.ModelForm):
     """ Form used to post a recipe """
     class Meta:
         model = Recipe
-        fields = [
+        fields = (
             'title',
             'description',
             'meal_type',
@@ -28,7 +28,7 @@ class RecipeForm(forms.ModelForm):
             'method',
             'image',
             'status',
-        ]
+        )
         widgets = {
             'ingredients': SummernoteWidget(),
             'method': SummernoteWidget(),
