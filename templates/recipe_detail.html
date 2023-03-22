@@ -52,7 +52,8 @@
                                     <i class="fas fa-heart"></i>
                                 </button>
                                 {% else %}
-                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like" title="Click here to like!">
+                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
+                                    title="Click here to like!">
                                     <i class="far fa-heart"></i>
                                 </button>
                                 {% endif %}
@@ -63,11 +64,6 @@
                             <span class="text-secondary"> {{ recipe.number_of_likes }}</span>
                         </strong>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <p>{{ recipe.description }}</p>
                 </div>
             </div>
             <div class="row">
@@ -101,8 +97,10 @@
                     {% endif %}
                 </div>
             </div>
-
         </div>
+    </div>
+    <div class="row mt-4">
+        <p>{{ recipe.description }}</p>
     </div>
     <div class="row">
         <div class="col-lg-6">
