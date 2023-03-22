@@ -48,12 +48,11 @@
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="post">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
-                                    title="Click here to like!">
+                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
                                     <i class="fas fa-heart"></i>
                                 </button>
                                 {% else %}
-                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like" title="Click here to like!">
                                     <i class="far fa-heart"></i>
                                 </button>
                                 {% endif %}
