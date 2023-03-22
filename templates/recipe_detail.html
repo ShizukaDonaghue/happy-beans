@@ -24,14 +24,14 @@
                     {% if user.is_authenticated and user == recipe.author %}
                     <div class="d-inline col-1">
                         <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
-                            aria-label="Update recipe button" role="button" title="Edit"><i
-                                class="fa-solid fa-pen-to-square"></i>
+                            aria-label="Update recipe button" role="button" title="Edit">
+                            <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                     </div>
                     <div class="d-inline col-1">
                         <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
-                            aria-label="Delete recipe button" role="button" title="Delete"><i
-                                class="fa-solid fa-trash-can"></i>
+                            aria-label="Delete recipe button" role="button" title="Delete">
+                            <i class="fa-solid fa-trash-can"></i>
                         </a>
                     </div>
                     {% endif %}
@@ -53,7 +53,7 @@
                                 </button>
                                 {% else %}
                                 <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
-                                    title="Click here to like!">
+                                    data-title="Click here to like!">
                                     <i class="far fa-heart"></i>
                                 </button>
                                 {% endif %}
@@ -142,15 +142,14 @@
                         {% if user.is_authenticated and user.username == comment.name %}
                         <div class="d-inline col-1">
                             <div class="dropdown">
-                                <a class="stretched-link ps-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="stretched-link ps-3" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v text-dark"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                     <li><a class="dropdown-item" href="{% url 'update_comment' comment.id %}">
                                             <i class="fa-regular fa-pen-to-square px-1"></i> Edit</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="{% url 'delete_comment' comment.id %}">
+                                    <li><a class="dropdown-item" href="{% url 'delete_comment' comment.id %}">
                                             <i class="fa-regular fa-trash-can px-1"></i> Delete</a></li>
                                 </ul>
                             </div>
