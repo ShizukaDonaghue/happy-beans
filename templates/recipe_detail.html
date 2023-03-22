@@ -122,7 +122,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="card mb-4 mt-3">
+        <div class="col-lg-7 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Comments</h3>
                 <!-- If there is no comment yet -->
@@ -131,29 +131,39 @@
                 {% endif %}
                 <!-- If there is a comment/are comments, loop through the comment(s) -->
                 {% for comment in comments %}
-                <div>
-                    <p>{{ comment.body }}</p>
-                    <p>By <span>{{ comment.name }}</span> on
-                        <span>{{ comment.date_format_created_on }}</span>
+                <div class="row">
+                    <div class="d-flex">
+                        <div class="d-inline col-8">
+                            {{ comment.name }}
+                        </div>
+                        <div class="d-inline col-3 text-end pe-2">
+                            {{ comment.date_format_created_on }}
+                        </div>
                         {% if user.is_authenticated and user.username == comment.name %}
-                        <span>
-                            <a href="{% url 'update_comment' comment.id %}" class="btn btn-outline-dark"
-                                aria-label="Update comment button" role="button"><i
-                                    class="fa fa-pencil edit-recipe"></i>
-                            </a>
-                            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-outline-dark"
-                                aria-label="Delete comment button" role="button"> <i class="fas fa-times"></i>
-                            </a>
-                        </span>
-                    </p>
-                    {% endif %}
-
+                        <div class="d-inline col-1">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v text-dark"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item text-end"
+                                            href="{% url 'update_comment' comment.id %}">Edit</a></li>
+                                    <li><a class="dropdown-item text-end"
+                                            href="{% url 'delete_comment' comment.id %}">Delete</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
                 </div>
-
+                <div class="row">
+                    <p>{{ comment.body }}</p>
+                </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="card mb-4 mt-3">
+        <div class="col-lg-5 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Leave a Comment</h3>
                 <!-- If user is logged in -->

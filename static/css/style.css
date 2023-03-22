@@ -18,3 +18,12 @@ footer i {
     border: none;
     background-color: transparent;
 }
+
+.dropdown-toggle {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-menu {
+    min-width: inherit;
+}
