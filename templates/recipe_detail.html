@@ -23,13 +23,13 @@
                     </div>
                     {% if user.is_authenticated and user == recipe.author %}
                     <div class="d-inline col-1">
-                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark"
-                            aria-label="Update recipe button" role="button"><i class="fa fa-pencil"></i>
+                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
+                            aria-label="Update recipe button" role="button"><i class="fa-solid fa-pen-to-square"></i>
                         </a>
                     </div>
                     <div class="d-inline col-1">
-                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark"
-                            aria-label="Delete recipe button" role="button"> <i class="fas fa-times"></i>
+                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
+                            aria-label="Delete recipe button" role="button"><i class="fa-solid fa-trash-can"></i>
                         </a>
                     </div>
                     {% endif %}
@@ -122,7 +122,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-7 card mb-4 mt-3">
+        <div class="col-lg-6 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Comments</h3>
                 <!-- If there is no comment yet -->
@@ -136,21 +136,21 @@
                         <div class="d-inline col-8">
                             {{ comment.name }}
                         </div>
-                        <div class="d-inline col-3 text-end pe-2">
+                        <div class="d-inline col-3 text-end">
                             {{ comment.date_format_created_on }}
                         </div>
                         {% if user.is_authenticated and user.username == comment.name %}
-                        <div class="d-inline col-1">
+                        <div class="d-inline col-1 ps-3">
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v text-dark"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item"
+                                            href="{% url 'update_comment' comment.id %}"><i class="fa-regular fa-pen-to-square"></i> Edit</a></li>
                                     <li><a class="dropdown-item text-end"
-                                            href="{% url 'update_comment' comment.id %}">Edit</a></li>
-                                    <li><a class="dropdown-item text-end"
-                                            href="{% url 'delete_comment' comment.id %}">Delete</a></li>
+                                            href="{% url 'delete_comment' comment.id %}"><i class="fa-regular fa-trash-can"></i> Delete</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -158,12 +158,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>{{ comment.body }}</p>
+                    <div class="d-flex">
+                        <div class="d-inline col-11">
+                            <p>{{ comment.body }}</p>
+                        </div>
+                        <div class="d-inline col-1"></div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-lg-5 card mb-4 mt-3">
+        <div class="col-lg-6 card mb-4 mt-3">
             <div class="card-body">
                 <h3>Leave a Comment</h3>
                 <!-- If user is logged in -->
