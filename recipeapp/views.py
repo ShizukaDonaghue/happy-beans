@@ -171,7 +171,6 @@ class DeleteRecipe(
     Allows the user to delete their own recipe when logged in
     """
     model = Recipe
-    template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
     success_message = "Recipe has been deleted successfuly. Thanks."
 
@@ -236,7 +235,6 @@ class DeleteComment(
     Allows the user to delete their comment when logged in
     """
     model = Comment
-    template_name = 'delete_comment.html'
     form_class = CommentForm
     success_message = "Your comment has been deleted successfully."
 
