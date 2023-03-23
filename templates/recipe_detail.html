@@ -29,8 +29,8 @@
                         </a>
                     </div>
                     <div class="d-inline col-1">
-                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
-                            aria-label="Delete recipe button" role="button" title="Delete">
+                        <a href="" class="btn btn-outline-dark mt-2" aria-label="Delete recipe button" role="button"
+                            title="Delete" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                     </div>
@@ -188,4 +188,28 @@
     </div>
 </div>
 
+
+<!-- Modal used to confirm deletion of a recipe -->
+<div class="modal fade" id="deleteRecipeModal" tabindex="-1" aria-labelledby="deleteRecipeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteRecipeModalLabel">Delete Recipe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete {{ recipe.title }}?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form method="post" action="{% url 'delete_recipe' recipe.slug %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+
