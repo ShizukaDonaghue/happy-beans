@@ -190,10 +190,12 @@ class MyRecipes(LoginRequiredMixin, generic.ListView):
     Recipes are ordered by their creation dates in descending order
     """
     model = Recipe
-    queryset = Recipe.objects.filter(
-        author=self.request.user).order_by('-created_on')
     template_name = 'my_recipes.html'
     paginate_by = 9
+
+    def get_queryset(self):
+        return Recipe.objects.filter(
+            author=self.request.user).order_by('-created_on')
 
 
 class CommentAuthorMixin(UserPassesTestMixin):
