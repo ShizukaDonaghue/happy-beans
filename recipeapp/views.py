@@ -184,6 +184,18 @@ class DeleteRecipe(
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
 
 
+class MyRecipes(LoginRequiredMixin, generic.ListView):
+    """
+    Displays a list of recipes posted by the user, 9 recipes per page
+    Recipes are ordered by their creation dates in descending order
+    """
+    model = Recipe
+    queryset = Recipe.objects.filter(
+        author=self.request.user).order_by('-created_on')
+    template_name = 'my_recipes.html'
+    paginate_by = 9
+
+
 class CommentAuthorMixin(UserPassesTestMixin):
     """
     A mixin to test if the user is the author of the comment
