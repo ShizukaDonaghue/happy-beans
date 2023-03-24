@@ -190,6 +190,20 @@ class DeleteRecipe(
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
 
 
+class MyFavourites(LoginRequiredMixin, generic.ListView):
+    """
+    Displays a list of recipes liked by the user, 9 recipes per page
+    Recipes are ordered by their creation dates in descending order
+    """
+    model = Recipe
+    template_name = 'my_favourites.html'
+    paginate_by = 9
+
+    def get_queryset(self):
+        return Recipe.objects.filter(
+            likes=self.request.user).order_by('created_on')
+
+
 class MyRecipes(LoginRequiredMixin, generic.ListView):
     """
     Displays a list of recipes posted by the user, 9 recipes per page
