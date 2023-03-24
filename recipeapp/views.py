@@ -10,6 +10,13 @@ from .models import Recipe, Comment
 from .forms import CommentForm, RecipeForm
 
 
+class Home(generic.TemplateView):
+    """
+    Displays the home page with a landing image
+    """
+    template_name = 'index.html'
+
+
 class RecipeList(generic.ListView):
     """
     Displays a list of 9 recipes per page
@@ -17,7 +24,7 @@ class RecipeList(generic.ListView):
     """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'browse_recipes.html'
     paginate_by = 9
 
 
@@ -142,7 +149,7 @@ class PostRecipe(RecipeAuthorMixin, RecipeMessageMixin, generic.CreateView):
     model = Recipe
     template_name = 'post_recipe.html'
     form_class = RecipeForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('browse_recipes')
     success_message = (
         "Thank you! %(recipe_title)s has been added successfully!"
         )
@@ -158,7 +165,7 @@ class UpdateRecipe(
     model = Recipe
     template_name = 'update_recipe.html'
     form_class = RecipeForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('browse_recipes')
     success_message = (
         "Thank you! %(recipe_title)s has been updated successfully!"
     )
@@ -171,7 +178,7 @@ class DeleteRecipe(
     Allows the user to delete their own recipe when logged in
     """
     model = Recipe
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('browse_recipes')
     success_message = "Recipe has been deleted successfuly. Thanks."
 
     def delete(self, request, *args, **kwargs):
