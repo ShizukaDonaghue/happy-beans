@@ -42,7 +42,7 @@
                     <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     <a class="nav-link" aria-current="page" href="{% url 'browse_recipes' %}">Browse Recipes</a>
                     {% if user.is_authenticated %}
-                    <a class="nav-link" href="#">My Favourites</a>
+                    <a class="nav-link" href="{% url 'my_favourites' %}">My Favourites</a>
                     <a class="nav-link" href="{% url 'my_recipes' %}">My Recipes</a>
                     <a class="nav-link" href="{% url 'post_recipe' %}">Post a Recipe</a>
                     <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>

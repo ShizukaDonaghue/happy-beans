@@ -27,7 +27,11 @@ urlpatterns = [
         views.DeleteComment.as_view(), name='delete_comment'
         ),
     path(
-        'myrecipes/',
+        'my-recipes/',
         views.MyRecipes.as_view(), name='my_recipes'
+        ),
+    path(
+        'my-favourites/',
+        views.MyFavourites.as_view(), name='my_favourites'
         ),
 ]

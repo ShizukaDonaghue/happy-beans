@@ -201,7 +201,7 @@ class MyFavourites(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return Recipe.objects.filter(
-            likes=self.request.user).order_by('created_on')
+            likes=self.request.user).order_by('-created_on')
 
 
 class MyRecipes(LoginRequiredMixin, generic.ListView):
