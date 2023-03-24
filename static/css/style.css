@@ -11,14 +11,13 @@ footer i {
     border: none;
     background: transparent;
     color: #F74A87;
-    font-size: 110%;
+    font-size: 120%;
 }
 
 .card {
     border: none;
     background-color: transparent;
 }
-
 
 .dropdown-menu {
     min-width: inherit;
@@ -39,4 +38,8 @@ footer i {
     margin-left: -8rem;
     margin-top: 2rem;
     visibility: hidden;
+}
+
+.icons {
+    font-size: 120%;
 }
