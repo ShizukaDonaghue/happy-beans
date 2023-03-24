@@ -207,9 +207,10 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-outline-dark">Submit</button>
                 </form>
-                <!-- If user is not logged in -->
+                <!-- If user is logged in but recipe status is draft  -->
                 {% elif user.is_authenticated and recipe.status == 0 %}
                 <P>Let's publish this recipe to get feedback!</P>
+                <!-- If user is not logged in -->
                 {% else %}
                 <p>Please log in to leave a comment!</p>
                 {% endif %}
