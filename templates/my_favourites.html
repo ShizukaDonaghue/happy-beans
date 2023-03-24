@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Happy Beans | My Recipes{% endblock %}
+{% block title %}Happy Beans | My Favourites{% endblock %}
 
 {% block content %}
 
@@ -26,14 +26,7 @@
                             <div class="row">
                                 <div class="d-flex">
                                     <div class="d-inline col-11">
-                                        <!-- If recipe status is draft -->
-                                        {% if recipe.status == 0 %}
-                                        <h5 class="card-title">{{ recipe.title }}<span class="text-danger">
-                                                [Draft]</span></h5>
-                                        <!-- If recipe is published -->
-                                        {% else %}
                                         <h5 class="card-title">{{ recipe.title }}</h5>
-                                        {% endif %}
                                     </div>
                                     <div class="d-inline col-1">
                                         <p class="text-end text-secondary">
