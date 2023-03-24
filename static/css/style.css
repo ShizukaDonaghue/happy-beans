@@ -23,23 +23,6 @@ footer i {
     min-width: inherit;
 }
 
-[data-title]:hover:after {
-    visibility: visible;
-}
-  
-[data-title]:after {
-    content: attr(data-title);
-    background-color: pink;
-    border-radius: 5px;    
-    color: #ffffff;
-    font-size: 100%;
-    position: absolute;
-    padding: 0.5rem;
-    margin-left: -8rem;
-    margin-top: 2rem;
-    visibility: hidden;
-}
-
 .icons {
     font-size: 120%;
 }
