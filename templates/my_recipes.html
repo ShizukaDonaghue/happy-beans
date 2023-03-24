@@ -5,19 +5,21 @@
 
 {% if user.is_authenticated %}
 <div class="container-fluid">
+    <h1>My Recipes</h1>
     <div class="row">
-        <h1>My Recipes</h1>
-
         <!-- Recipes -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                <!-- Loop through recipes -->
                 {% for recipe in recipe_list %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card">
+                        <!-- If image is not loaded by user -->
                         {% if "placeholder" in recipe.image.url %}
                         <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
                             class="card-img-top" alt="placeholder image">
                         {% else %}
+                        <!-- If image is loaded by user -->
                         <img src=" {{ recipe.image.url }}" class="card-img-top" alt="image of {{ recipe.title }}">
                         {% endif %}
                         <div class="card-body">
@@ -27,8 +29,8 @@
                                         <h5 class="card-title">{{ recipe.title }}</h5>
                                     </div>
                                     <div class="d-inline col-1">
-                                        <p class="text-end">
-                                            <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
+                                        <p class="text-end text-secondary">
+                                            <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}
                                         </p>
                                     </div>
                                 </div>
@@ -39,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Displays 3 recipes per row -->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
@@ -50,7 +52,9 @@
     </div>
 </div>
 
+<!-- Includes pagination -->
 {% include "paginator.html" %}
+
 {% endif %}
 
 {% endblock %}
