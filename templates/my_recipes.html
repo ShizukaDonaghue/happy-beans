@@ -6,16 +6,6 @@
 {% if user.is_authenticated %}
 <div class="container-fluid">
     <h1>My Recipes</h1>
-    {% if my_recipes|length == 0 %}
-        <p>No recipes yet!</p>
-        <p>Let's post your first recipe!</p>
-        <a href="{% url 'post_recipe' %}" class="btn btn-outline-dark" aria-label="Post recipe button"
-            role="button">Post a Recipe
-        </a>
-        <p>Not ready to post a recipe yet? Let's get inspired with our recipes!</p>
-        <a href="{% url 'home' %}" class="btn btn-outline-dark" aria-label="Back to home button" role="button">Home
-        </a>
-    {% endif %}
     <div class="row">
         <!-- Recipes -->
         <div class="col-12 mt-3 left">
@@ -38,7 +28,8 @@
                                     <div class="d-inline col-11">
                                         <!-- If recipe status is draft -->
                                         {% if recipe.status == 0 %}
-                                        <h5 class="card-title">{{ recipe.title }}<span class="text-danger"> [Draft]</span></h5>
+                                        <h5 class="card-title">{{ recipe.title }}<span class="text-danger">
+                                                [Draft]</span></h5>
                                         <!-- If recipe is published -->
                                         {% else %}
                                         <h5 class="card-title">{{ recipe.title }}</h5>
@@ -62,7 +53,14 @@
             </div>
             <div class="row">
                 {% endif %}
-
+                <!-- If there are no recipes to display -->
+                {% empty %}
+                <p>No recipes yet!</p>
+                <p>Let's post your first recipe!</p>
+                <a href="{% url 'post_recipe' %}" class="btn btn-outline-dark" aria-label="Post recipe button"
+                    role="button">Post a Recipe</a>
+                <p>Not ready to post a recipe yet? Let's get inspired with our recipes!</p>
+                <a href="{% url 'home' %}" class="btn btn-outline-dark" aria-label="Home button" role="button">Home</a>
                 {% endfor %}
             </div>
         </div>
