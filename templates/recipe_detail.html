@@ -200,7 +200,7 @@
             <div class="card-body">
                 <h3>Leave a Comment</h3>
                 <!-- Comment form for logged-in user -->
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated and recipe.status == 1 %}
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
@@ -208,6 +208,8 @@
                     <button type="submit" class="btn btn-outline-dark">Submit</button>
                 </form>
                 <!-- If user is not logged in -->
+                {% elif user.is_authenticated and recipe.status == 0 %}
+                <P>Let's publish this recipe to get feedback!</P>
                 {% else %}
                 <p>Please log in to leave a comment!</p>
                 {% endif %}

@@ -7,7 +7,6 @@
 <div class="container-fluid">
     <h1>My Recipes</h1>
     {% if my_recipes|length == 0 %}
-    <div>
         <p>No recipes yet!</p>
         <p>Let's post your first recipe!</p>
         <a href="{% url 'post_recipe' %}" class="btn btn-outline-dark" aria-label="Post recipe button"
@@ -17,7 +16,6 @@
         <a href="{% url 'home' %}" class="btn btn-outline-dark" aria-label="Back to home button" role="button">Home
         </a>
     {% endif %}
-    </div>
     <div class="row">
         <!-- Recipes -->
         <div class="col-12 mt-3 left">
@@ -63,6 +61,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <!-- Includes pagination -->
