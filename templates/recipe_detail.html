@@ -47,7 +47,7 @@
                     <div class="d-inline col-3 text-end pe-3">
                         <strong>
                             <!-- Like/unlike button for logged-in user -->
-                            {% if user.is_authenticated %}
+                            {% if user.is_authenticated and recipe.status == 1 %}
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="post">
                                 {% csrf_token %}
                                 {% if liked %}
@@ -61,7 +61,7 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
+                            <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary"> {{ recipe.number_of_likes }}</span>
                         </strong>
