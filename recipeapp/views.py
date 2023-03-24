@@ -30,7 +30,7 @@ class RecipeDetail(View):
         """
         Get method to diplay the details
         """
-        queryset = Recipe.objects.filter(status=1)
+        queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.order_by('created_on')
         liked = False
