@@ -36,7 +36,11 @@
                             <div class="row">
                                 <div class="d-flex">
                                     <div class="d-inline col-11">
+                                        {% if recipe.status == 0 %}
+                                        <h5 class="card-title">{{ recipe.title }}<span class="text-danger"> [Draft]</span></h5>
+                                        {% else %}
                                         <h5 class="card-title">{{ recipe.title }}</h5>
+                                        {% endif %}
                                     </div>
                                     <div class="d-inline col-1">
                                         <p class="text-end text-secondary">
