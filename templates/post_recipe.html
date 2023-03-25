@@ -10,7 +10,7 @@
     <div class="row">
         {% if user.is_authenticated %}
         {% load cloudinary %}
-        <form method="post" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | crispy }}
 

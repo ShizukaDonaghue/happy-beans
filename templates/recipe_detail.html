@@ -48,7 +48,7 @@
                         <strong>
                             <!-- Like/unlike button for logged-in user -->
                             {% if user.is_authenticated and recipe.status == 1 %}
-                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="post">
+                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
                                 <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
@@ -186,7 +186,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Cancel</button>
-                                            <form method="post" action="{% url 'delete_comment' comment.id %}">
+                                            <form method="POST" action="{% url 'delete_comment' comment.id %}">
                                                 {% csrf_token %}
                                                 <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
@@ -218,7 +218,7 @@
                     <!-- If recipe is published -->
                     {% if recipe.status == 1 %}
                     <p>Posting as: {{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em;">
+                    <form method="POST" style="margin-top: 1.3em;">
                         {{ comment_form | crispy }}
                         {% csrf_token %}
                         <button type="submit" class="btn btn-outline-dark">Submit</button>
@@ -250,7 +250,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <form method="post" action="{% url 'delete_recipe' recipe.slug %}">
+                <form method="POST" action="{% url 'delete_recipe' recipe.slug %}">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
