@@ -281,5 +281,6 @@ class SearchRecipes(generic.ListView):
         query = self.request.GET.get('search')
         return Recipe.objects.filter(
             Q(title__icontains=query) |
-            Q(description__icontains=query)
+            Q(description__icontains=query) |
+            Q(ingredients__icontains=query)
         ).filter(status=1)
