@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
 from django.views import generic, View
@@ -12,7 +13,7 @@ from .forms import CommentForm, RecipeForm
 
 class Home(generic.TemplateView):
     """
-    Displays the home page with a landing image
+    Displays the home page
     """
     template_name = 'index.html'
 
@@ -201,7 +202,7 @@ class MyFavourites(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return Recipe.objects.filter(
-            likes=self.request.user).order_by('-created_on')
+            likes=self.request.user).filter(status=1).order_by('-created_on')
 
 
 class MyRecipes(LoginRequiredMixin, generic.ListView):
@@ -266,3 +267,19 @@ class DeleteComment(
         """
         messages.success(self.request, self.success_message)
         return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+
+class SearchRecipes(generic.ListView):
+    """
+    Searches recices and display results
+    """
+    model = Recipe
+    template_name = 'search_recipes.html'
+    paginate_by = 9
+
+    def get_queryset(self):
+        query = self.request.GET.get('search')
+        return Recipe.objects.filter(
+            Q(title__icontains=query) |
+            Q(description__icontains=query)
+        ).filter(status=1)
