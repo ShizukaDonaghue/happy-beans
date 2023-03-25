@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="container-fluid introduction">
+<div class="container introduction">
     <h1>Happy Beans</h1>
     <h4>Welcome to our family-friendly recipe sharing website!</h4>
     <h4>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h4>
@@ -14,68 +14,6 @@
 
 
 
-{% comment %}
-
-
-<div>
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <!-- Recipes -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                <!-- Loop through available recipes -->
-                {% for recipe in recipe_list %}
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <!-- If image is not loaded by user -->
-                        {% if "placeholder" in recipe.image.url %}
-                        <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1678609259/placeholder-image_ljwhho.jpg"
-                            class="card-img-top" alt="placeholder image">
-                        {% else %}
-                        <!-- If image is loaded by user -->
-                        <img src=" {{ recipe.image.url }}" class="card-img-top" alt="image of {{ recipe.title }}">
-                        {% endif %}
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="d-flex">
-                                    <div class="d-inline col-11">
-                                        <h5 class="card-title">{{ recipe.title }}</h5>
-                                    </div>
-                                    <div class="d-inline col-1">
-                                        <p class="text-end text-secondary">
-                                            <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="card-text">{{ recipe.description }}</p>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-link"
-                                aria-label="Link to the recipe detail" role="button"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Displays 3 recipes per row -->
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Includes pagination -->
-{% include "paginator.html" %}
-
-
-{% endcomment %}
 
 
 
