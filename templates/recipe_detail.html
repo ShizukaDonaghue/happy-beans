@@ -215,18 +215,18 @@
                 <h3>Leave a Comment</h3>
                 <!-- If user is logged in -->
                 {% if user.is_authenticated %}
-                <!-- If recipe is published -->
-                {% if recipe.status == 1 %}
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-outline-dark">Submit</button>
-                </form>
-                <!-- If recipe is not yet publised  -->
-                {% elif recipe.status == 0 %}
-                <P>Let's publish this recipe to get feedback!</P>
-                {% endif %}
+                    <!-- If recipe is published -->
+                    {% if recipe.status == 1 %}
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-dark">Submit</button>
+                    </form>
+                    <!-- If recipe is not yet publised  -->
+                    {% elif recipe.status == 0 %}
+                    <P>Let's publish this recipe to get feedback!</P>
+                    {% endif %}
                 <!-- If user is not logged in -->
                 {% else %}
                 <p>Please log in to leave a comment!</p>
