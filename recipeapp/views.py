@@ -275,7 +275,6 @@ class SearchRecipes(generic.ListView):
     """
     model = Recipe
     template_name = 'search_recipes.html'
-    paginate_by = 9
 
     def get_queryset(self):
         query = self.request.GET.get('search')
