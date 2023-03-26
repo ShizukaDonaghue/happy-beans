@@ -55,6 +55,13 @@
             </div>
             <div class="row">
                 {% endif %}
+                <!-- If there are no recipes to display -->
+                {% empty %}
+                <p>No results found, sorry...</p>
+                <p>Let's browse more delicious and nutritious recipes!</p>
+                </p>
+                <a href="{% url 'browse_recipes' %}" class="btn btn-outline-dark" aria-label="Back to recipes button"
+                    role="button">More Recipes!</a>
                 {% endfor %}
             </div>
         </div>

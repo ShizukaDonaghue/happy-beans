@@ -276,7 +276,7 @@ class SearchRecipes(generic.ListView):
     Searches recices and display results
     """
     model = Recipe
-    template_name = 'search_recipes.html'
+    template_name = 'browse_recipes.html'
 
     def get_queryset(self):
         query = self.request.GET.get('search')
