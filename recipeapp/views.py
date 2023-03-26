@@ -177,7 +177,8 @@ class DeleteRecipe(
         ):
     """
     Allows the user to delete their own recipe when logged in
-    Code source: https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
+    Code source:
+    https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
     """
     model = Recipe
     success_url = reverse_lazy('browse_recipes')
@@ -256,7 +257,8 @@ class DeleteComment(
         ):
     """
     Allows the user to delete their comment when logged in
-    Code source: https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
+    Code source:
+    https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
     """
     model = Comment
     form_class = CommentForm

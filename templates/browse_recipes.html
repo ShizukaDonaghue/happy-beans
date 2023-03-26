@@ -7,16 +7,15 @@
 <div>
     <form class="d-flex" role="search" method="GET" action="{% url 'search_recipes' %}">
         {% csrf_token %}
-        <input class="form-control me-2" type="search"
-            placeholder="Ingredient, dish, diet type..." name="search"
+        <input class="form-control me-2" type="search" placeholder="Ingredient, dish, diet type..." name="search"
             aria-label="Search">
         <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 </div>
 
+<!-- Recipes -->
 <div class="container-fluid">
     <div class="row">
-        <!-- Recipes -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 <!-- Loop through available recipes -->
@@ -61,7 +60,7 @@
                 <p>Let's browse more delicious and nutritious recipes!</p>
                 </p>
                 <a href="{% url 'browse_recipes' %}" class="btn btn-outline-dark" aria-label="Back to recipes button"
-                    role="button">More Recipes!</a>
+                    role="button">Browse Recipes!</a>
                 {% endfor %}
             </div>
         </div>
