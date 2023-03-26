@@ -3,11 +3,13 @@
 
 {% block content %}
 
-
+<!-- Search bar -->
 <div>
     <form class="d-flex" role="search" method="GET" action="{% url 'search_recipes' %}">
         {% csrf_token %}
-        <input class="form-control me-2" type="search" placeholder="Search Recipes" name="search" aria-label="Search">
+        <input class="form-control me-2" type="search"
+            placeholder="Search from recipe name, description, ingredients or diet type..." name="search"
+            aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
 </div>
