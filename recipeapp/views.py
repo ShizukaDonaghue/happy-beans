@@ -9,6 +9,7 @@ from django.views import generic, View
 from django.urls import reverse_lazy
 from .models import Recipe, Comment
 from .forms import CommentForm, RecipeForm
+from .filters import RecipeFilter
 
 
 class Home(generic.TemplateView):
@@ -27,6 +28,16 @@ class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'browse_recipes.html'
     paginate_by = 9
+
+    """
+    Django filters for recipe
+    Code source: https://www.youtube.com/watch?v=nle3u6Ww6Xk
+    """
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = RecipeFilter(
+            self.request.GET, queryset=self.get_queryset())
+        return context
 
 
 class RecipeDetail(View):

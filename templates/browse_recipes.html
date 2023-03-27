@@ -3,23 +3,34 @@
 
 {% block content %}
 
+{% load bootstrap %}
+
 <!-- Search bar -->
-<div>
+<div class="container">
     <form class="d-flex" role="search" method="GET" action="{% url 'search_recipes' %}">
         {% csrf_token %}
         <input class="form-control me-2" type="search" placeholder="Ingredient, dish, diet type..." name="search"
             aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+</div>
+
+<!-- Recipe filters -->
+<div class="container">
+    <form method="GET">
+        {% csrf_token %}
+        {{ filter.form|bootstrap }}
+        <button type="submit" class="btn btn-outline-dark mt-1">Search</button>
     </form>
 </div>
 
 <!-- Recipes -->
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
                 <!-- Loop through available recipes -->
-                {% for recipe in recipe_list %}
+                {% for recipe in filter.qs %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card">
                         <!-- If image is not loaded by user -->
