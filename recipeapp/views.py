@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
 from django.views import generic, View
