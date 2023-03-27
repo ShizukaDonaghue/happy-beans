@@ -12,6 +12,7 @@
             <div class="row">
                 <!-- Loop through recipes -->
                 {% for recipe in recipe_list %}
+                {% include "components/recipe_image.html" %}
                 {% include "components/recipe_cards.html" %}
                 <!-- If there are no recipes to display -->
                 {% empty %}

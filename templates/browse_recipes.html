@@ -21,6 +21,7 @@
             <div class="row">
                 <!-- Loop through available recipes -->
                 {% for recipe in filter.qs %}
+                {% include "components/recipe_image.html" %}
                 {% include "components/recipe_cards.html" %}
                 <!-- If there are no recipes to display -->
                 {% empty %}
