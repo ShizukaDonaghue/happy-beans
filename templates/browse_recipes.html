@@ -5,16 +5,6 @@
 
 {% load bootstrap %}
 
-<!-- Search bar -->
-<div class="container">
-    <form class="d-flex" role="search" method="GET" action="{% url 'search_recipes' %}">
-        {% csrf_token %}
-        <input class="form-control me-2" type="search" placeholder="Ingredient, dish, diet type..." name="search"
-            aria-label="Search">
-        <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-</div>
-
 <!-- Recipe filters -->
 <div class="container">
     <form method="GET">

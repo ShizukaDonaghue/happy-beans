@@ -30,7 +30,7 @@ class RecipeList(generic.ListView):
     paginate_by = 9
 
     """
-    Django filters for recipe
+    Django filters for recipes
     Code source: https://www.youtube.com/watch?v=nle3u6Ww6Xk
     """
     def get_context_data(self, **kwargs):
@@ -282,20 +282,3 @@ class DeleteComment(
         """
         messages.success(self.request, self.success_message)
         return super(DeleteComment, self).delete(request, *args, **kwargs)
-
-
-class SearchRecipes(generic.ListView):
-    """
-    Searches recices and display results
-    """
-    model = Recipe
-    template_name = 'browse_recipes.html'
-
-    def get_queryset(self):
-        query = self.request.GET.get('search')
-        return Recipe.objects.filter(
-            Q(title__icontains=query) |
-            Q(description__icontains=query) |
-            Q(ingredients__icontains=query) |
-            Q(diet_type__icontains=query)
-        ).filter(status=1)

@@ -34,8 +34,4 @@ urlpatterns = [
         views.MyFavourites.as_view(), name='my_favourites'
         ),
     path('recipe/post', views.PostRecipe.as_view(), name='post_recipe'),
-    path(
-        'recipes/search/',
-        views.SearchRecipes.as_view(), name='search_recipes'
-        ),
 ]
