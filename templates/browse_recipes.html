@@ -9,7 +9,6 @@
 <!-- Recipe filters -->
 <div class="container">
     <form method="GET">
-        {% csrf_token %}
         {{ filtered_recipes.form|bootstrap }}
         <input type="submit" class="btn btn-outline-dark mt-1" value="Submit">
     </form>
@@ -37,6 +36,7 @@
     </div>
 </div>
 
+<!-- Pagination -->
 <div class="container">
     <div class="pagination">
         <span class="step-links mx-auto">
@@ -57,6 +57,5 @@
         </span>
     </div>
 </div>
-
 
 {% endblock %}

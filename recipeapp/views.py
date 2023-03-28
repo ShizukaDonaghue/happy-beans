@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
+from django_filters.views import FilterView
 from django.http import HttpResponseRedirect
 from django.template.defaultfilters import slugify
 from django.views import generic, View
@@ -19,18 +20,34 @@ class Home(generic.TemplateView):
     template_name = 'index.html'
 
 
-def show_all_recipes(request):
-    context = {}
-    filtered_recipes = RecipeFilter(
-        request.GET,
-        queryset=Recipe.objects.filter(status=1).order_by('-created_on')
-    )
-    context['filtered_recipes'] = filtered_recipes
-    paginated_filtered_recipes = Paginator(filtered_recipes.qs, 9)
-    page_number = request.GET.get('page')
-    recipe_page_obj = paginated_filtered_recipes.get_page(page_number)
-    context['recipe_page_obj'] = recipe_page_obj
-    return render(request, 'browse_recipes.html', context=context)
+class RecipeList(FilterView):
+    """
+    Displays a list of 9 recipes per page
+    Recipes are ordered by their creation dates in descending order
+    """
+    model = Recipe
+    template_name = 'browse_recipes.html'
+    filterset_class = RecipeFilter
+    paginate_by = 9
+
+    def get_context_data(self, **kwargs):
+        """
+        Returns a filtered list of recipes to display
+        Adds pagination for the filtered list
+        Code reference: Django filter and pagination
+        https://www.youtube.com/watch?v=dkJ3uqkdCcY
+        """
+        context = {}
+        filtered_recipes = RecipeFilter(
+            self.request.GET,
+            queryset=Recipe.objects.filter(status=1).order_by('-created_on')
+        )
+        context['filtered_recipes'] = filtered_recipes
+        paginated_filtered_recipes = Paginator(filtered_recipes.qs, 9)
+        page_number = self.request.GET.get('page')
+        recipe_page_obj = paginated_filtered_recipes.get_page(page_number)
+        context['recipe_page_obj'] = recipe_page_obj
+        return context
 
 
 class RecipeDetail(View):

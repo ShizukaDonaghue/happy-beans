@@ -7,7 +7,8 @@ register = template.Library()
 def relative_url(value, field_name, urlencode=None):
     """
     Template tag used for pagination for Django filters
-    Code source: https://www.youtube.com/watch?v=dkJ3uqkdCcY
+    Code source: https://simpleisbetterthancomplex.com/snippet/2016/08/22/
+    dealing-with-querystring-parameters.html
     """
     url = '?{}={}'.format(field_name, value)
 
