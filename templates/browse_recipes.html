@@ -36,13 +36,13 @@
     </div>
 </div>
 
-<!-- Pagination -->
+<!-- Pagination for filtered list-->
 <div class="container">
     <div class="pagination">
         <span class="step-links mx-auto">
             {% if recipe_page_obj.has_previous %}
-            <a href="{% relative_url 1 'page' request.GET.urlencode %}">&laquo; First</a>
-            <a href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% relative_url 1 'page' request.GET.urlencode %}">&laquo; First</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
             {% endif %}
 
             <span class="current">
@@ -50,8 +50,8 @@
             </span>
 
             {% if recipe_page_obj.has_next %}
-            <a href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
-            <a href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;
+            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;
                 Last</a>
             {% endif %}
         </span>
