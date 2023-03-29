@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 from cloudinary.models import CloudinaryField
+from .validators import textfield_not_empty
 
 
 class ChoiceArrayField(ArrayField):
@@ -100,8 +101,8 @@ class Recipe(models.Model):
     prep_time = models.PositiveIntegerField()
     cook_time = models.PositiveIntegerField()
     serves = models.PositiveIntegerField()
-    ingredients = models.TextField()
-    method = models.TextField()
+    ingredients = models.TextField(validators=[textfield_not_empty])
+    method = models.TextField(validators=[textfield_not_empty])
     image = CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
