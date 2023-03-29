@@ -79,16 +79,23 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 # Summernote configurations
 SUMMERNOTE_CONFIG = {
    'summernote': {
+        'width': '100%',
+        'height': '480',
         'toolbar': [
           ['undo', ['undo',]],
           ['redo', ['redo',]],
           ['style', ['bold', 'italic', 'underline',]],
-          ['font', ['fontname', 'bold', 'italic', 'underline', 'clear', ]],
+          ['fontname', ['fontname']],
           ['fontsize', ['fontsize']],
+          ['fontSizes', ['14']],
+          ['color', ['black']],
+          ['font', ['bold', 'italic', 'underline', 'clear', ]],
           ['para', ['ul', 'ol', 'paragraph']],
         ],
-        'fontNames': ['Arial'],
+        'fontNames': ['Helvetica'],
+        'fontNamesIgnoreCheck': ['Helvetica'],
         'fontSizes': ['14'],
+        'fontSizeUnits': ['px'],
     },
 }
 
