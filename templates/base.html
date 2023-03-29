@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Happy Beans - Family-friendly recipe sharing site for happy children!">
-    <meta name="keywords" content="recipe, recipe sharing, child-friendly recipes, Family-friendly recipes">
+    <meta name="keywords" content="Recipe, Recipe sharing, Child-friendly recipes, Family-friendly recipes">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -20,7 +20,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="{% static 'img/favicon.ico '%}" />
+    <link rel="icon" type="image/ico" href="{% static 'img/favicon.ico' %}" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -32,7 +32,9 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Happy Beans</a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img class="navbar-logo" src="https://res.cloudinary.com/dio3rjgik/image/upload/v1680114760/navbar-logo_ltjfvg.png" alt="Happy Beans logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents"
                 aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
