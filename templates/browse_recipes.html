@@ -46,9 +46,11 @@
             <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
             {% endif %}
 
+            {% if recipe_page_obj.has_previous or recipe_page_obj.has_next %}
             <span class="current">
                 Page {{ recipe_page_obj.number }} of {{ recipe_page_obj.paginator.num_pages }}
             </span>
+            {% endif %}
 
             {% if recipe_page_obj.has_next %}
             <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
