@@ -3,16 +3,31 @@
 
 /* General styles  */
 body {
-    padding-top: 4.5rem;
+    padding-top: 5rem;
     font-family: 'Nunito', sans-serif;
+    /* background-color: #F7FFF7; */
+    color: #424242
+}
+
+.navbar-custom {
+    background-color: #FFFFFF;
+}
+
+.navbar-collapse a {
+    color: #189496;
+    /* font-size: 110%; */
 }
 
 a.navbar-brand {
-    width: 20rem;
+    width: 18.3rem;
 }
 
 .navbar-logo {
     width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
 }
 
 .btn-like {
