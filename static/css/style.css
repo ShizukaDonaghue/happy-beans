@@ -9,17 +9,30 @@ body {
     color: #1F4463
 }
 
+/* Root variable for colours */
+:root {
+    --navy: #1F4463;
+    --green: #0cb826;
+    --white: #FFFFFF;
+
+}
+
 .navbar-custom {
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .navbar-collapse a {
-    color: #1F4463;
+    color: var(--navy);
     /* font-size: 110%; */
 }
 
+.navbar-collapse a:hover {
+    color: var(--green);
+}
+
+
 a.navbar-brand {
-    width: 18.3rem;
+    width: 18rem;
 }
 
 .navbar-logo {
@@ -29,6 +42,23 @@ a.navbar-brand {
 .navbar-toggler {
     border: none;
 }
+
+.recipe-filters {
+    font-weight: bold;
+}
+
+.recipe-filters input {
+    width: 5rem;
+    background-color: var(--navy);
+    color: var(--white);
+    margin-top: 0.3rem;
+}
+
+.recipe-filters input:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
 
 .btn-like {
     border: none;
@@ -53,4 +83,33 @@ a.navbar-brand {
 footer i {
     font-size: 180%;
     padding: 1rem 2rem;
+}
+
+
+
+@media screen and (min-width: 350px) {
+    a.navbar-brand {
+        width: 18.3rem;
+    }
+
+
+    .recipe-filters {
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-group {
+        width: 30%;
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    .recipe-filters input {
+        width: 5rem;
+        display: inline-block;
+        background-color: var(--navy);
+        color: var(--white);
+        margin-top: -4px;
+    }
 }
