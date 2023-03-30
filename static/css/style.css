@@ -85,31 +85,47 @@ footer i {
     padding: 1rem 2rem;
 }
 
-
-
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 576px) {
     a.navbar-brand {
         width: 18.3rem;
     }
 
-
     .recipe-filters {
-        font-weight: bold;
         width: 100%;
         text-align: center;
     }
 
     .form-group {
-        width: 30%;
+        width: 25%;
         display: inline-block;
-        padding: 0 0.5rem;
+        padding: 0;
     }
 
     .recipe-filters input {
-        width: 5rem;
         display: inline-block;
-        background-color: var(--navy);
-        color: var(--white);
+        margin-top: -0.3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form-group {
+        width: 27%;
+    }
+
+    .recipe-filters input {
+        margin-top: -0.25rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .recipe-filters input {
         margin-top: -4px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .form-group {
+        width: 30%;
+        padding: 0 0.5rem;
     }
 }
