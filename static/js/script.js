@@ -1,4 +1,4 @@
-// Script for alert messages
+// Script to close alert messages
 setTimeout(function () {
     let messages = document.getElementById("msg");
     let alert = new bootstrap.Alert(messages);

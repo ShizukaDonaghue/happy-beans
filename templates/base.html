@@ -30,32 +30,36 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container navbar-container">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img class="navbar-logo" src="https://res.cloudinary.com/dio3rjgik/image/upload/v1680197665/navbar-logo_wsae4i.png" alt="Happy Beans logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents"
-                aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarContents">
-                <div class="navbar-nav fw-bold">
-                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
-                    <a class="nav-link" aria-current="page" href="{% url 'browse_recipes' %}">Browse Recipes</a>
-                    {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'my_favourites' %}">My Favourites</a>
-                    <a class="nav-link" href="{% url 'my_recipes' %}">My Recipes</a>
-                    <a class="nav-link" href="{% url 'post_recipe' %}">Post a Recipe</a>
-                    <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
-                    {% else %}
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-                    <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
-                    {% endif %}
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container navbar-container">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img class="navbar-logo"
+                        src="https://res.cloudinary.com/dio3rjgik/image/upload/v1680197665/navbar-logo_wsae4i.png"
+                        alt="Happy Beans logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents"
+                    aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContents">
+                    <div class="navbar-nav fw-bold">
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'browse_recipes' %}">Browse Recipes</a>
+                        {% if user.is_authenticated %}
+                        <a class="nav-link" href="{% url 'my_favourites' %}">My Favourites</a>
+                        <a class="nav-link" href="{% url 'my_recipes' %}">My Recipes</a>
+                        <a class="nav-link" href="{% url 'post_recipe' %}">Post a Recipe</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                        {% else %}
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Alerts -->
     <div class="container">
@@ -77,7 +81,7 @@
         {% endblock content %}
     </main>
 
-    <!-- Footer -->
+    <!-- Horizontal line separating the footer from contents above -->
     <div class="container mt-auto">
         <div class="row">
             <div class="col">
@@ -85,7 +89,9 @@
             </div>
         </div>
     </div>
-    <footer class="container footer-container d-flex justify-content-center">
+
+    <!-- Footer -->
+    <footer class="container d-flex justify-content-center footer-container">
         <a href="https://facebook.com" target="_blank" rel="noopener"
             aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://twitter.com" target="_blank" rel="noopener"
