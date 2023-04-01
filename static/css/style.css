@@ -16,6 +16,10 @@ body {
     color: var(--navy);
 }
 
+h1{
+    font-weight:bold;
+}
+
 /* Navbar */
 .navbar {
     background-color: var(--white);

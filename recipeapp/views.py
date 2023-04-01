@@ -33,7 +33,7 @@ class RecipeList(FilterView):
     def get_context_data(self, **kwargs):
         """
         Returns a filtered list of recipes to display
-        Adds pagination for the filtered list
+        Adds pagination to the filtered list
         Code reference: Django filter and pagination
         https://www.youtube.com/watch?v=dkJ3uqkdCcY
         """
@@ -57,7 +57,7 @@ class RecipeDetail(View):
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        Get method to diplay the details
+        Get method to display the details
         """
         queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
@@ -80,7 +80,7 @@ class RecipeDetail(View):
 
     def post(self, request, slug, *args, **kwargs):
         """
-        Post method used to post a comment
+        Post method to post a comment
         """
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -115,7 +115,7 @@ class RecipeDetail(View):
 
 class RecipeLike(View):
     """
-    Post method to like or unlike the recipe
+    Allows the user to like or unlike a recipe when logged in
     """
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
@@ -202,8 +202,6 @@ class DeleteRecipe(
         ):
     """
     Allows the user to delete their own recipe when logged in
-    Code source:
-    https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
     """
     model = Recipe
     success_url = reverse_lazy('browse_recipes')
@@ -213,6 +211,8 @@ class DeleteRecipe(
         """
         Deletes the recipe
         Displays confirmation that it has been deleted successfully
+        Code source: https://stackoverflow.com/questions/24822509/
+        success-message-in-deleteview-not-shown
         """
         messages.success(self.request, self.success_message)
         return super(DeleteRecipe, self).delete(request, *args, **kwargs)
@@ -282,8 +282,6 @@ class DeleteComment(
         ):
     """
     Allows the user to delete their comment when logged in
-    Code source:
-    https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
     """
     model = Comment
     form_class = CommentForm
@@ -293,6 +291,8 @@ class DeleteComment(
         """
         Deletes the recipe
         Displays confirmation that it has been deleted successfully
+        Code source: https://stackoverflow.com/questions/24822509/
+        success-message-in-deleteview-not-shown
         """
         messages.success(self.request, self.success_message)
         return super(DeleteComment, self).delete(request, *args, **kwargs)
