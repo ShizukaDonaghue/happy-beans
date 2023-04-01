@@ -94,7 +94,7 @@ footer i:hover {
     border: none;
 }
 
-.feature-card h5 {
+.introduction h5 {
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -104,7 +104,10 @@ footer i:hover {
 }
 
 .action-container h6 {
-    margin-bottom: 0.7rem;
+    font-weight: bold;
+}
+.action-container a {
+    margin-top: 0.3rem;
 }
 
 /* Browse recipe page */
@@ -146,6 +149,27 @@ footer i:hover {
         width: 17rem;
     }
 
+    .tag-line {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        margin-top: 1rem;
+    }
+
+    .feature-card h5 {
+        font-size: 1.3rem;
+    }
+
+    .action-container {
+        margin-top: 1.5rem;
+    }
+
+    .action-container a {
+        margin-top: 0.5rem;
+
+    }
+
     .footer-container {
         margin-top: -0.2rem;
         margin-bottom: 1rem;
@@ -168,6 +192,36 @@ footer i:hover {
     
     footer i {
         font-size: 170%;
+    }
+
+    .logo {
+        width: 75%;
+    }
+
+    .tag-line {
+        font-size: 1.7rem;
+    }
+
+    .feature-card h5 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card h6 {
+        font-size: 1.1rem;
+    }
+
+    .action-container {
+        margin-top: 1.6rem;
+    }
+
+    .action-container a {
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .action-container h6 {
+        font-size: 1.2rem;
     }
 
     .recipe-filters {
@@ -200,6 +254,20 @@ footer i:hover {
         font-size: 1.2rem !important;
     }
 
+    .logo {
+        width: 60%;
+        margin: 1rem 0;
+    }
+
+    .action-container {
+        margin-top: 1.7rem;
+    }
+
+    .action-container h6 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
     footer i {
         padding: 0.5rem 1.4rem ;
     }
@@ -218,12 +286,25 @@ footer i:hover {
         font-size: 180%;
     }
 
+    .logo {
+        width: 50%;
+    }
+
+    .action-container {
+        margin-top: 2rem;
+    }
+
     .recipe-filters input {
         margin-top: -4px;
     }
 }
 
 @media screen and (min-width: 1200px) {
+    .logo {
+        width: 40%;
+    }
+ 
+
     .form-group {
         width: 30%;
         padding: 0 0.5rem;
