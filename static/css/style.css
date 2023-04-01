@@ -259,7 +259,7 @@ footer i:hover {
 
     .logo {
         width: 60%;
-        margin: 1rem 0;
+        margin-bottom: 0.5rem;
     }
 
     .action-container {
