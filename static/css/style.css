@@ -88,17 +88,23 @@ footer i:hover {
     font-size: 1.3rem;
 }
 
-.benefit-card {
+.feature-card {
     margin-top: 0.5rem;
+    background-color: #C2EF7E;
+    border: none;
 }
 
-.benefit-card h5 {
-    font-size: 1.2rem;
+.feature-card h5 {
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 .action-container {
     margin: 1rem;
+}
+
+.action-container h6 {
+    margin-bottom: 0.7rem;
 }
 
 /* Browse recipe page */

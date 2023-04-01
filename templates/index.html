@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card benefit-card">
+                <div class="card feature-card">
                     <div class="card-body">
                         <h5 class="card-title">Discover your new favourite recipes</h5>
                         <h6 class="card-text">Explore our wide variety of delicious and nutritious recipes that the
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card benefit-card">
+                <div class="card feature-card">
                     <div class="card-body">
                         <h5 class="card-title">Share your own creations</h5>
                         <h6 class="card-text">Share your favourite recipes with other foodies in our happy community!
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card benefit-card">
+                <div class="card feature-card">
                     <div class="card-body">
                         <h5 class="card-title">Save your favourte recipes</h5>
                         <h6 class="card-text">Create your own recipe collections so you can always find them when you
@@ -47,13 +47,13 @@
     <div class="container text-center">
         {% if user.is_authenticated %}
         <div class="action-container">
-            <p>Let's share your creations!</p>
+            <h6>Let's share your creations!</h6>
             <a href="{% url 'post_recipe' %}" class="btn buttons" aria-label="Move to post recipe page"
-                role="button">Post a Recipe!</a>
+                role="button">Post a Recipe</a>
         </div>
         {% else %}
         <div class="action-container">
-            <p>Create a free account to save your favourite recipes and share your own creations!</p>
+            <h6>Create a free account to save your favourite recipes and share your own creations!</h6>
             <a href="{% url 'account_signup' %}" class="btn buttons" aria-label="Move to sign-up page"
                 role="button">Sign Up</a>
         </div>
