@@ -3,13 +3,68 @@
 
 {% block content %}
 
-<div class="container introduction">
-    <h1>Happy Beans</h1>
-    <h4>Welcome to our family-friendly recipe sharing website!</h4>
-    <h4>Browse through our wide variety of delicious and nutritious recipes that the whole family can enjoy.</h4>
-    <h4>Sign up for a free account to save your favourite recipes, create your own recipe collections, and share your
-        own creations with our community.</h4>
-    <h4>Get creative and experiment with new flavours and ingredients! Happy cooking!</h4>
+<!-- Introduction section -->
+<section>
+    <div class="container text-center">
+        <img class="logo" src="https://res.cloudinary.com/dio3rjgik/image/upload/v1680364239/logo_p0rujq.png"
+            alt="Happy Beans logo">
+
+        <h1 class="tag-line mt-2">A home for your favourite family-friendly recipes</h1>
+
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card benefit-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Discover your new favourite recipes</h5>
+                        <h6 class="card-text">Explore our wide variety of delicious and nutritious recipes that the
+                            whole family can enjoy!</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card benefit-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Share your own creations</h5>
+                        <h6 class="card-text">Share your favourite recipes with other foodies in our happy community!
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card benefit-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Save your favourte recipes</h5>
+                        <h6 class="card-text">Create your own recipe collections so you can always find them when you
+                            need them!</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Call to action section -->
+<section>
+    <div class="container text-center">
+        {% if user.is_authenticated %}
+        <div class="action-container">
+            <p>Let's share your creations!</p>
+            <a href="{% url 'post_recipe' %}" class="btn buttons" aria-label="Move to post recipe page"
+                role="button">Post a Recipe!</a>
+        </div>
+        {% else %}
+        <div class="action-container">
+            <p>Create a free account to save your favourite recipes and share your own creations!</p>
+            <a href="{% url 'account_signup' %}" class="btn buttons" aria-label="Move to sign-up page"
+                role="button">Sign Up</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+
+
+
+
 </div>
 
 

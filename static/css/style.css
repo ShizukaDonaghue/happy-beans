@@ -11,13 +11,23 @@
 
 /* General styles  */
 body {
-    padding-top: 62px;
+    padding-top: 70px;
     font-family: 'Nunito', sans-serif;
     color: var(--navy);
 }
 
 h1{
     font-weight:bold;
+}
+
+.buttons {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.buttons:hover {
+    background-color: var(--green);
+    color: var(--white);
 }
 
 /* Navbar */
@@ -36,14 +46,12 @@ h1{
 }
 
 a.navbar-brand {
-    width: 12rem;
     margin: 0 5px 0 0;
 }
 
 .navbar-logo {
-    margin-top: -0.2rem;
-    margin-left: 0.7rem;
-    width: 100%;
+    margin-left: 0.6rem;
+    width: 14.2rem;
 }
 
 .navbar-toggler {
@@ -68,6 +76,29 @@ footer i {
 
 footer i:hover {
     color: var(--green);
+}
+
+/* Home page */
+.logo {
+    width: 90%;
+    margin-top:0.5rem;
+}
+
+.tag-line {
+    font-size: 1.3rem;
+}
+
+.benefit-card {
+    margin-top: 0.5rem;
+}
+
+.benefit-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.action-container {
+    margin: 1rem;
 }
 
 /* Browse recipe page */
@@ -113,14 +144,8 @@ footer i:hover {
         padding-top: 84px;
     }
 
-    a.navbar-brand {
-        width: 14rem;
-        margin: 0.5rem;
-    }
-
     .navbar-logo {
-        margin-top: 0;
-        margin-left: 0.25rem;
+        width: 17rem;
     }
 
     .footer-container {
@@ -135,13 +160,12 @@ footer i:hover {
 }
 
 @media screen and (min-width: 576px) {
-    a.navbar-brand {
-        width: 18.3rem;
-        margin: 0 1rem;
+    body {
+        padding-top: 95px;
     }
 
     .navbar-logo {
-        margin-left: -0.3rem;
+        width: 20rem;
     }
     
     footer i {
@@ -167,7 +191,15 @@ footer i:hover {
 
 @media screen and (min-width: 768px) {
     body {
-        padding-top: 85px;
+        padding-top: 105px;
+    }
+
+    .navbar-logo {
+        width: 23rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem !important;
     }
 
     footer i {
@@ -194,18 +226,17 @@ footer i:hover {
 }
 
 @media screen and (min-width: 1200px) {
-    .nav-link {
-        font-size: 110%;
-
-    }
-
     .form-group {
         width: 30%;
         padding: 0 0.5rem;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
+    .nav-link {
+        font-size: 1.3rem !important;
+    }
+
     footer i {
         font-size: 200%;
     }
