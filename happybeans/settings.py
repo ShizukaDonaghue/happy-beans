@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_filters',
     'bootstrapform',
-    'active_link',
     'recipeapp',
 ]
 

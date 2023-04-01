@@ -46,6 +46,14 @@ a.navbar-brand {
     border: none;
 }
 
+.active {
+    color: var(--navy) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--green);
+    text-underline-offset: 0.2rem;
+}
+
 /* Footer */
 .footer-container {
     margin-top: -0.4rem;
