@@ -107,15 +107,7 @@ footer i:hover {
 }
 
 .recipe-filters input {
-    width: 5rem;
-    background-color: var(--navy);
-    color: var(--white);
     margin-top: 0.3rem;
-}
-
-.recipe-filters input:hover {
-    background-color: var(--green);
-    color: var(--white);
 }
 
 /* Recipe detail page */
