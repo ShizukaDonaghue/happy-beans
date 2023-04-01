@@ -47,11 +47,7 @@ a.navbar-brand {
 }
 
 .active {
-    color: var(--navy) !important;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--green);
-    text-underline-offset: 0.2rem;
+    color: var(--green) !important;
 }
 
 /* Footer */
