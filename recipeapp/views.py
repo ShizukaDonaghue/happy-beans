@@ -171,10 +171,12 @@ class PostRecipe(RecipeAuthorMixin, RecipeMessageMixin, generic.CreateView):
     model = Recipe
     template_name = 'post_recipe.html'
     form_class = RecipeForm
-    success_url = reverse_lazy('browse_recipes')
     success_message = (
         "Thank you! %(recipe_title)s has been added successfully!"
         )
+
+    def get_success_url(self):
+        return reverse_lazy('recipe_detail', args=[self.object.slug])
 
 
 class UpdateRecipe(
@@ -187,10 +189,12 @@ class UpdateRecipe(
     model = Recipe
     template_name = 'update_recipe.html'
     form_class = RecipeForm
-    success_url = reverse_lazy('browse_recipes')
     success_message = (
         "Thank you! %(recipe_title)s has been updated successfully!"
     )
+
+    def get_success_url(self):
+        return reverse_lazy('recipe_detail', args=[self.object.slug])
 
 
 class DeleteRecipe(
