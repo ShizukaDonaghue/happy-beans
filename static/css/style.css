@@ -305,7 +305,7 @@ footer i:hover {
 
 @media screen and (min-width: 768px) {
     body {
-        padding-top: 105px;
+        padding-top: 100px;
     }
 
     .navbar-logo {
@@ -333,6 +333,10 @@ footer i:hover {
         width: 27%;
     }
 
+    .recipe-filters label, .recipe-filters select {
+        font-size: 1.05rem;
+    }
+
     .recipe-filters input {
         margin-top: -0.25rem;
     }
@@ -355,6 +359,10 @@ footer i:hover {
 }
 
 @media screen and (min-width: 992px) {
+    body {
+        padding-top: 105px;
+    }
+
     footer i {
         font-size: 180%;
     }
@@ -377,6 +385,15 @@ footer i:hover {
 
     .action-container h6, .action-container a {
         font-size: 1.4rem;
+    }
+
+    .recipe-filters label, .recipe-filters select {
+        font-size: 1.1rem;
+    }
+
+    .form-group {
+        width: 30%;
+        padding: 0 0.1rem;
     }
  
     .recipe-filters input {
@@ -403,11 +420,6 @@ footer i:hover {
     
     .action-container h6, .action-container a {
         font-size: 1.3rem;
-    }
-
-    .form-group {
-        width: 30%;
-        padding: 0 0.5rem;
     }
 
     .card-img-top {
