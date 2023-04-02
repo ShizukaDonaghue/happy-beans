@@ -22,13 +22,13 @@ class Home(generic.TemplateView):
 
 class RecipeList(FilterView):
     """
-    Displays a list of 9 recipes per page
+    Displays a list of 12 recipes per page
     Recipes are ordered by their creation dates in descending order
     """
     model = Recipe
     template_name = 'browse_recipes.html'
     filterset_class = RecipeFilter
-    paginate_by = 9
+    paginate_by = 12
 
     def get_context_data(self, **kwargs):
         """
@@ -43,7 +43,7 @@ class RecipeList(FilterView):
             queryset=Recipe.objects.filter(status=1).order_by('-created_on')
         )
         context['filtered_recipes'] = filtered_recipes
-        paginated_filtered_recipes = Paginator(filtered_recipes.qs, 9)
+        paginated_filtered_recipes = Paginator(filtered_recipes.qs, 12)
         page_number = self.request.GET.get('page')
         recipe_page_obj = paginated_filtered_recipes.get_page(page_number)
         context['recipe_page_obj'] = recipe_page_obj
@@ -220,12 +220,12 @@ class DeleteRecipe(
 
 class MyFavourites(LoginRequiredMixin, generic.ListView):
     """
-    Displays a list of recipes liked by the user, 9 recipes per page
+    Displays a list of recipes liked by the user, 12 recipes per page
     Recipes are ordered by their creation dates in descending order
     """
     model = Recipe
     template_name = 'my_favourites.html'
-    paginate_by = 9
+    paginate_by = 12
 
     def get_queryset(self):
         return Recipe.objects.filter(
@@ -234,12 +234,12 @@ class MyFavourites(LoginRequiredMixin, generic.ListView):
 
 class MyRecipes(LoginRequiredMixin, generic.ListView):
     """
-    Displays a list of recipes posted by the user, 9 recipes per page
+    Displays a list of recipes posted by the user, 12 recipes per page
     Recipes are ordered by their creation dates in descending order
     """
     model = Recipe
     template_name = 'my_recipes.html'
-    paginate_by = 9
+    paginate_by = 12
 
     def get_queryset(self):
         return Recipe.objects.filter(
