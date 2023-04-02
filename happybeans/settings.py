@@ -80,7 +80,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 SUMMERNOTE_CONFIG = {
    'summernote': {
         'width': '100%',
-        'height': '480',
+        'height': '350',
         'toolbar': [
           ['undo', ['undo']],
           ['redo', ['redo']],
