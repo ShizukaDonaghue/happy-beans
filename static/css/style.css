@@ -124,6 +124,13 @@ footer i:hover {
     margin-top: 0.3rem;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    min-height: 200px;
+}
+
 /* Recipe detail page */
 .btn-like {
     border: none;

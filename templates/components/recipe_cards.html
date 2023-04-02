@@ -2,7 +2,7 @@
             <div class="row">
                 <div class="d-flex">
                     <div class="d-inline col-11">
-                        <h5 class="card-title">{{ recipe.title }}</h5>
+                        <h5 class="card-title">{{ recipe.title | capfirst }}</h5>
                     </div>
                     <div class="d-inline col-1">
                         <p class="text-end text-secondary">
@@ -11,14 +11,9 @@
                     </div>
                 </div>
             </div>
-            <p class="card-text">{{ recipe.description }}</p>
+            <p class="card-text">{{ recipe.description | capfirst | truncatechars:70 }}</p>
             <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-link"
                 aria-label="Link to the recipe detail" role="button"></a>
         </div>
     </div>
 </div>
-<!-- Displays 3 recipes per row -->
-{% if forloop.counter|divisibleby:3 %}
-</div>
-<div class="row">
-{% endif %}

@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="d-flex">
                     <div class="d-inline col-10">
-                        <h1>{{ recipe.title }}</h1>
+                        <h1>{{ recipe.title | capfirst }}</h1>
                     </div>
                     <!-- Edit and delete buttons for recipe author -->
                     {% if user.is_authenticated and user == recipe.author %}
@@ -109,7 +109,7 @@
         </div>
     </div>
     <div class="row mt-4">
-        <p>{{ recipe.description }}</p>
+        <p>{{ recipe.description | capfirst }}</p>
     </div>
     <div class="row">
         <div class="col-lg-6">
@@ -202,7 +202,7 @@
                     <div class="d-flex">
                         <div class="d-inline col-1"></div>
                         <div class="d-inline col-10">
-                            <p>{{ comment.body }}</p>
+                            <p>{{ comment.body | capfirst }}</p>
                         </div>
                         <div class="d-inline col-1"></div>
                     </div>
