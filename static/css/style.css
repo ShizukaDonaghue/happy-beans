@@ -111,6 +111,10 @@ footer i:hover {
     margin-top: 0.3rem;
 }
 
+.action-container h6, .action-container a {
+    font-size: 1.1rem;
+}
+
 /* Browse recipe page */
 .recipe-filters {
     font-weight: bold;
@@ -150,6 +154,11 @@ footer i:hover {
         width: 17rem;
     }
 
+    .nav-link {
+        font-size: 1.1rem !important;
+    }
+
+
     .tag-line {
         font-size: 1.5rem;
     }
@@ -167,7 +176,7 @@ footer i:hover {
     }
 
     .action-container h6, .action-container a {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .action-container a {
@@ -193,7 +202,11 @@ footer i:hover {
     .navbar-logo {
         width: 20rem;
     }
-    
+
+    .nav-link {
+        font-size: 1.2rem !important;
+    }
+
     footer i {
         font-size: 170%;
     }
@@ -224,7 +237,7 @@ footer i:hover {
     }
 
     .action-container h6, .action-container a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .recipe-filters {
@@ -253,10 +266,6 @@ footer i:hover {
         width: 23rem;
     }
 
-    .nav-link {
-        font-size: 1.2rem !important;
-    }
-
     .logo {
         width: 60%;
         margin-bottom: 0.5rem;
@@ -267,7 +276,6 @@ footer i:hover {
     }
 
     .action-container h6 {
-        font-size: 1.3rem;
         margin-bottom: 0.8rem;
     }
 
@@ -296,15 +304,19 @@ footer i:hover {
     .tag-line {
         font-size: 2rem;
     }
+   
+    .feature-card .card-body {
+        padding: 1.5rem;
+    }
 
     .action-container {
         margin-top: 2rem;
     }
 
-    .feature-card .card-body {
-        padding: 1.5rem;
+    .action-container h6, .action-container a {
+        font-size: 1.4rem;
     }
-
+ 
     .recipe-filters input {
         margin-top: -4px;
     }
@@ -319,14 +331,14 @@ footer i:hover {
         font-size: 1.6rem;
     }
 
-    .feature-card h6, .action-container a {
+    .feature-card h6 {
         font-size: 1.2rem;
     }
-
-    .action-container h6 {
+    
+    .action-container h6, .action-container a {
         font-size: 1.5rem;
     }
- 
+
     .form-group {
         width: 30%;
         padding: 0 0.5rem;
