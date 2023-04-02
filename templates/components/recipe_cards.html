@@ -1,18 +1,18 @@
         <div class="card-body">
             <div class="row">
                 <div class="d-flex">
-                    <div class="d-inline col-11">
+                    <div class="d-inline col-10 recipe-card-body">
                         <h5 class="card-title">{{ recipe.title | capfirst }}</h5>
                     </div>
-                    <div class="d-inline col-1">
-                        <p class="text-end text-secondary">
+                    <div class="d-inline col-2 like-container">
+                        <p class="text-end text-secondary like-text">
                             <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}
                         </p>
                     </div>
                 </div>
             </div>
-            <p class="card-text">{{ recipe.description | capfirst | truncatechars:50 }}</p>
-            <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-link"
+            <p class="card-text recipe-description">{{ recipe.description | capfirst | truncatechars:50 }}</p>
+            <a href="{% url 'recipe_detail' recipe.slug %}" 
                 aria-label="Link to the recipe detail" role="button"></a>
         </div>
     </div>
