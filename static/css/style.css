@@ -4,20 +4,21 @@
 /* Root variable for colours */
 :root {
     --navy: #1F4463;
-    --green: #6cb459;
+    --green: #5EA669;
     --white: #FFFFFF;
 
 }
 
 /* General styles  */
 body {
-    padding-top: 70px;
+    padding-top: 75px;
     font-family: 'Nunito', sans-serif;
     color: var(--navy);
 }
 
 h1{
     font-weight:bold;
+    font-size: 1.3rem;
 }
 
 .buttons {
@@ -82,10 +83,6 @@ footer i:hover {
 .logo {
     width: 90%;
     margin-top:0.5rem;
-}
-
-.tag-line {
-    font-size: 1.3rem;
 }
 
 .feature-card {
@@ -168,6 +165,12 @@ footer i:hover {
     font-size: 120%;
 }
 
+/* My favourite and my recipes pages */
+.page-title {
+    margin-bottom: -0.4rem;
+}
+
+
 /* Pagination */
 .current {
     display: none;
@@ -196,7 +199,7 @@ footer i:hover {
         padding: 0.5rem 0.8rem ;
     }
 
-    .tag-line {
+    h1 {
         font-size: 1.5rem;
     }
 
@@ -236,11 +239,15 @@ footer i:hover {
         display: inline;
         font-size: 0.88rem;
     }
+
+    .page-title {
+        margin-bottom: -0.3rem;
+    }
 }
 
 @media screen and (min-width: 576px) {
     body {
-        padding-top: 95px;
+        padding-top: 93px;
     }
 
     .navbar-logo {
@@ -259,7 +266,7 @@ footer i:hover {
         width: 75%;
     }
 
-    .tag-line {
+    h1 {
         font-size: 1.7rem;
     }
 
@@ -314,6 +321,10 @@ footer i:hover {
     
     .current, .btn-secondary {
         font-size: 0.95rem;
+    }
+
+    .page-title {
+        margin-bottom: -0.2rem;
     }
 }
 
@@ -382,7 +393,7 @@ footer i:hover {
 
 @media screen and (min-width: 992px) {
     body {
-        padding-top: 105px;
+        padding-top: 103px;
     }
 
     footer i {
@@ -393,7 +404,7 @@ footer i:hover {
         width: 50%;
     }
 
-    .tag-line {
+    h1 {
         font-size: 2rem;
     }
    
