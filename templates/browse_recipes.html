@@ -42,12 +42,11 @@
 <!-- Pagination -->
 <!-- Code source: Django filter and pagination https://www.youtube.com/watch?v=dkJ3uqkdCcY -->
 <div class="container">
-    <div class="pagination">
+    <div class="pagination my-2">
         <span class="step-links mx-auto">
             {% if recipe_page_obj.has_previous %}
-            <a class="btn btn-outline-dark btn-sm" href="{% relative_url 1 'page' request.GET.urlencode %}">&laquo;
-                First</a>
-            <a class="btn btn-outline-dark btn-sm"
+            <a class="btn btn-secondary btn-sm" href="{% relative_url 1 'page' request.GET.urlencode %}">First</a>
+            <a class="btn btn-secondary btn-sm"
                 href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
             {% endif %}
 
@@ -58,11 +57,10 @@
             {% endif %}
 
             {% if recipe_page_obj.has_next %}
-            <a class="btn btn-outline-dark btn-sm"
+            <a class="btn btn-secondary btn-sm"
                 href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
-            <a class="btn btn-outline-dark btn-sm"
-                href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;
-                Last</a>
+            <a class="btn btn-secondary btn-sm"
+                href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">Last</a>
             {% endif %}
         </span>
     </div>
