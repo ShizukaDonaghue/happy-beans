@@ -1,7 +1,9 @@
 // Script to close alert messages
-setTimeout(function () {
-    let messages = document.getElementById("msg");
-    let alert = new bootstrap.Alert(messages);
-    alert.close();
-}, 3000);
 
+$(document).ready(function() {
+    setTimeout(function(){
+        if ($('#msg').length > 0) {
+            $('#msg').remove();
+        }
+    }, 3000);
+});
