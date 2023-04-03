@@ -25,11 +25,14 @@
                 {% include "components/recipe_cards.html" %}
                 <!-- If there are no recipes to display -->
                 {% empty %}
-                <p>No results found, sorry...</p>
-                <p>Let's browse more delicious and nutritious recipes!</p>
-                </p>
-                <a href="{% url 'browse_recipes' %}" class="btn btn-outline-dark" aria-label="Back to recipes button"
-                    role="button">Browse Recipes!</a>
+                <div class="text-center mt-3">
+                    <p>No results found, sorry...</p>
+                    <p>Let's browse more delicious and nutritious recipes!</p>
+                </div>
+                <div class="text-center browse-recipe-btn mt-3">
+                    <a href="{% url 'browse_recipes' %}" class="btn buttons" aria-label="Back to recipes button"
+                        role="button">Browse Recipes</a>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -42,8 +45,10 @@
     <div class="pagination">
         <span class="step-links mx-auto">
             {% if recipe_page_obj.has_previous %}
-            <a class="btn btn-outline-dark btn-sm" href="{% relative_url 1 'page' request.GET.urlencode %}">&laquo; First</a>
-            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% relative_url 1 'page' request.GET.urlencode %}">&laquo;
+                First</a>
+            <a class="btn btn-outline-dark btn-sm"
+                href="{% relative_url recipe_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
             {% endif %}
 
             {% if recipe_page_obj.has_previous or recipe_page_obj.has_next %}
@@ -53,8 +58,10 @@
             {% endif %}
 
             {% if recipe_page_obj.has_next %}
-            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
-            <a class="btn btn-outline-dark btn-sm" href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;
+            <a class="btn btn-outline-dark btn-sm"
+                href="{% relative_url recipe_page_obj.next_page_number 'page' request.GET.urlencode %}">Next</a>
+            <a class="btn btn-outline-dark btn-sm"
+                href="{% relative_url recipe_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;
                 Last</a>
             {% endif %}
         </span>

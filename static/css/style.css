@@ -111,7 +111,7 @@ footer i:hover {
     margin-top: 0.3rem;
 }
 
-.action-container h6, .action-container a {
+.action-container h6, .action-container a, .browse-recipe-btn a {
     font-size: 1.1rem;
 }
 
@@ -352,6 +352,10 @@ footer i:hover {
     .recipe-description {
         font-size: 1rem;
     }  
+
+    .browse-recipe-btn a {
+        font-size: 1.15rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -398,6 +402,10 @@ footer i:hover {
     .card-img-top {
         min-height: 250px;
     }  
+
+    .browse-recipe-btn a {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -446,4 +454,8 @@ footer i:hover {
     .card-img-top {
         min-height: 300px;
     }  
+
+    .browse-recipe-btn a {
+        font-size: 1.25rem;
+    }
 }
