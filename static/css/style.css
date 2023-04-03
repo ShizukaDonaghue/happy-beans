@@ -111,7 +111,7 @@ footer i:hover {
     margin-top: 0.3rem;
 }
 
-.action-container h6, .action-container a, .browse-recipe-btn a {
+.action-container h6, .action-container a, .action-btn a {
     font-size: 1.1rem;
 }
 
@@ -297,6 +297,10 @@ footer i:hover {
     .recipe-card-body h5 {
         font-size: 1.1rem;
     }
+
+    .action-text {
+        font-size: 1.05rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -353,7 +357,11 @@ footer i:hover {
         font-size: 1rem;
     }  
 
-    .browse-recipe-btn a {
+    .action-text {
+        font-size: 1.1rem;
+    }
+
+    .action-btn a {
         font-size: 1.15rem;
     }
 }
@@ -403,7 +411,11 @@ footer i:hover {
         min-height: 250px;
     }  
 
-    .browse-recipe-btn a {
+    .action-text {
+        font-size: 1.15rem;
+    }
+
+    .action-btn a {
         font-size: 1.2rem;
     }
 }
@@ -417,7 +429,7 @@ footer i:hover {
         font-size: 1.6rem;
     }
 
-    .feature-card h6, recipe-description {
+    .feature-card h6 {
         font-size: 1.2rem;
     }
     
@@ -455,7 +467,7 @@ footer i:hover {
         min-height: 300px;
     }  
 
-    .browse-recipe-btn a {
+    .action-btn a {
         font-size: 1.25rem;
     }
 }

@@ -25,11 +25,11 @@
                 {% include "components/recipe_cards.html" %}
                 <!-- If there are no recipes to display -->
                 {% empty %}
-                <div class="text-center mt-3">
+                <div class="text-center action-text mt-3">
                     <p>No results found, sorry...</p>
                     <p>Let's browse more delicious and nutritious recipes!</p>
                 </div>
-                <div class="text-center browse-recipe-btn mt-3">
+                <div class="text-center action-btn mt-3">
                     <a href="{% url 'browse_recipes' %}" class="btn buttons" aria-label="Back to recipes button"
                         role="button">Browse Recipes</a>
                 </div>

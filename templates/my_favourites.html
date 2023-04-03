@@ -16,11 +16,14 @@
                 {% include "components/recipe_cards.html" %}
                 <!-- If there are no recipes to display -->
                 {% empty %}
-                <p>Haven't found your favourite recipes yet?</p>
-                <p>Let's get inspired with our delicious and nutritious recipes!</p>
-                </p>
-                <a href="{% url 'browse_recipes' %}" class="btn btn-outline-dark" aria-label="Back to recipes button"
-                    role="button">Browse Recipes</a>
+                <div class="text-center action-text">
+                    <p>Haven't found your favourite recipes yet?</p>
+                    <p>Let's get inspired with our delicious and nutritious recipes!</p>
+                </div>
+                <div class="text-center action-btn mt-3">
+                    <a href="{% url 'browse_recipes' %}" class="btn buttons" aria-label="Back to recipes button"
+                        role="button">Browse Recipes</a>
+                </div>
                 {% endfor %}
             </div>
         </div>

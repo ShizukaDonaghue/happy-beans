@@ -13,47 +13,55 @@
                 <!-- Loop through recipes -->
                 {% for recipe in recipe_list %}
                 {% include "components/recipe_image.html" %}
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="d-flex">
-                                    <div class="d-inline col-10 recipe-card-body">
-                                        <!-- If recipe status is not published -->
-                                        {% if recipe.status == 0 %}
-                                        <h5 class="card-title">{{ recipe.title | capfirst }}<span class="text-danger">
-                                                [Draft]</span></h5>
-                                        <!-- If recipe is published -->
-                                        {% else %}
-                                        <h5 class="card-title">{{ recipe.title | capfirst }}</h5>
-                                        {% endif %}
-                                    </div>
-                                    <div class="d-inline col-2 like-container">
-                                        <p class="text-end text-secondary like-text">
-                                            <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="d-flex">
+                            <div class="d-inline col-10 recipe-card-body">
+                                <!-- If recipe status is not published -->
+                                {% if recipe.status == 0 %}
+                                <h5 class="card-title">{{ recipe.title | capfirst }}<span class="text-danger">
+                                        [Draft]</span></h5>
+                                <!-- If recipe is published -->
+                                {% else %}
+                                <h5 class="card-title">{{ recipe.title | capfirst }}</h5>
+                                {% endif %}
                             </div>
-                            <p class="card-text">{{ recipe.description | capfirst | truncatechars:70 }}</p>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-link"
-                                aria-label="Link to the recipe detail" role="button"></a>
+                            <div class="d-inline col-2 like-container">
+                                <p class="text-end text-secondary like-text">
+                                    <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <p class="card-text">{{ recipe.description | capfirst | truncatechars:70 }}</p>
+                    <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-link"
+                        aria-label="Link to the recipe detail" role="button"></a>
                 </div>
-
-                <!-- If there are no recipes to display -->
-                {% empty %}
-                <p>No recipes yet!</p>
-                <p>Let's post your first recipe!</p>
-                <a href="{% url 'post_recipe' %}" class="btn btn-outline-dark" aria-label="Post recipe button"
-                    role="button">Post a Recipe</a>
-                <p>Not ready to post a recipe yet?</p>
-                <p>Let's get inspired with our delicious and nutritious recipes!</p>
-                <a href="{% url 'browse_recipes' %}" class="btn btn-outline-dark" aria-label="Back to recipes button"
-                    role="button">Browse Recipes</a>
-                {% endfor %}
             </div>
         </div>
+
+        <!-- If there are no recipes to display -->
+        {% empty %}
+        <div class="text-center action-text">
+            <p>No recipes yet!</p>
+            <p>Let's post your first recipe!</p>
+        </div>
+        <div class="text-center action-btn mt-2">
+            <a href="{% url 'post_recipe' %}" class="btn buttons" aria-label="Post recipe button" role="button">
+                Post a Recipe</a>
+        </div>
+        <div class="text-center action-text mt-5">
+            <p>Not ready to post a recipe yet?</p>
+            <p>Let's get inspired with our delicious and nutritious recipes!</p>
+        </div>
+        <div class="text-center action-btn mt-2">
+            <a href="{% url 'browse_recipes' %}" class="btn buttons" aria-label="Back to recipes button"
+                role="button">Browse Recipes</a>
+        </div>
+        {% endfor %}
     </div>
+</div>
+</div>
 </div>
 
 <!-- Pagination -->
