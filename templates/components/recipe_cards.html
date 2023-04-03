@@ -11,8 +11,8 @@
                     </div>
                 </div>
             </div>
-            <p class="card-text recipe-description">{{ recipe.description | capfirst | truncatechars:50 }}</p>
-            <a href="{% url 'recipe_detail' recipe.slug %}" 
+            <p class="card-text recipe-description">{{ recipe.description | capfirst | truncatechars:70 }}</p>
+            <a href="{% url 'recipe_detail' recipe.slug %}" class="stretched-links"
                 aria-label="Link to the recipe detail" role="button"></a>
         </div>
     </div>

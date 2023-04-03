@@ -129,7 +129,7 @@ footer i:hover {
 }
 
 .recipe-card:hover {
-    box-shadow: 0px 0px 15px 1px var(--navy) !important;
+    box-shadow: 0px 0px 10px 2px #808080 !important;
 }
 
 .card-img-top {
@@ -257,7 +257,7 @@ footer i:hover {
         font-size: 1.4rem;
     }
 
-    .feature-card h6, recipe-description {
+    .feature-card h6 {
         font-size: 1.1rem;
     }
 
@@ -280,7 +280,7 @@ footer i:hover {
     }
 
     .form-group {
-        width: 25%;
+        width: 27%;
         display: inline-block;
         padding: 0;
     }
@@ -297,10 +297,6 @@ footer i:hover {
     .recipe-card-body h5 {
         font-size: 1.1rem;
     }
-
-    .recipe-description {
-        font-size: 0.9rem;
-    }   
 }
 
 @media screen and (min-width: 768px) {
@@ -330,7 +326,7 @@ footer i:hover {
     }
 
     .form-group {
-        width: 27%;
+        margin: 0.25rem;
     }
 
     .recipe-filters label, .recipe-filters select {
@@ -392,12 +388,11 @@ footer i:hover {
     }
 
     .form-group {
-        width: 30%;
-        padding: 0 0.1rem;
+        width: 28%;
     }
  
     .recipe-filters input {
-        margin-top: -4px;
+        margin-top: -4.5px;
     }
 
     .card-img-top {
