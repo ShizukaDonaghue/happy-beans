@@ -74,7 +74,27 @@ DIFFICULTY = (
 
 
 class Recipe(models.Model):
-    """ Model for recipes """
+    """
+    A model to create and manage recipes:
+        Title - recipe title
+        Slug - a field used to store and generate valid URL path automatically
+        Author - recipe author, assigned by username automatically
+        Description - recipe description
+        Created_on - recipe creation date, used to organise recipes in order
+        Updated_on - recipe update date, used for admin purposes
+        Meal_type - meal type such as breakfast & lunch, used for recipe filter
+        Main_ingredient - main ingredient of recipe, used for recipe filter
+        Diet_type - diet type such as gluten-free, vegetarian & nut-free
+        Difficulty - recipe difficulty level, used for recipe filter
+        Prep_time - recipe preparation time
+        Cook_time - recipe cooking time
+        Serves - recipe servings
+        Ingredients - all ingredients required
+        Method - cooking method
+        Image - recipe image, if none provided, default image is displayed
+        Status - recipe status, either draft or published
+        Likes - indicating the number of likes by users
+    """
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
@@ -131,7 +151,14 @@ class Recipe(models.Model):
 
 
 class Comment(models.Model):
-    """ Model for comments """
+    """
+    A model to create and manage comments:
+        Name - comment author, assigned by username automatically
+        Email - user email, assigned by user email automatically
+        Body - comment content
+        Created_on - comment creation date, used to organise comments in order
+        Updated_on - comment update date, used for admin purposes
+    """
     recipe = models.ForeignKey(
         Recipe,
         on_delete=models.CASCADE,
