@@ -157,7 +157,7 @@ footer i:hover {
     color: var(--green);
 }
 
-/* Home page and recipes pages (shared styling) */
+/* Home page */
 .logo {
     width: 90%;
     margin-top:0.5rem;
@@ -169,7 +169,7 @@ footer i:hover {
     border: none;
 }
 
-.feature-card h5, .recipe-card-body h5 {
+.feature-card h5 {
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -214,6 +214,11 @@ footer i:hover {
     min-height: 200px;
 }
 
+.recipe-card-body h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
 .recipe-description, .like-container p {
     margin: 0;
 }
@@ -223,6 +228,20 @@ footer i:hover {
 }
 
 /* Recipe detail page */
+.recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 180px;
+}
+
+.recipe-image img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .btn-like {
     border: none;
     background: transparent;
@@ -247,7 +266,6 @@ footer i:hover {
 .page-title {
     margin-bottom: -0.4rem;
 }
-
 
 /* Pagination */
 .current {
