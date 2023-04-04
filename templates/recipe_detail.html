@@ -68,59 +68,104 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <span class="icons"><i class="fa-solid fa-faucet-drip"></i></span>
-                        <span class="recipe-indicator"><strong>Prep Time:</strong> {{ recipe.prep_time }}
-                            mins</span>
+                    <div class="col-sm-6 recipe-indicator-container">
+                        <div class="row">
+                            <div class="d-flex">
+                                <div class="d-inline col-1">
+                                    <span class="icons"><i class="fa-solid fa-faucet-drip"></i></span>
+                                </div>
+                                <div class="d-inline col-11 indicator-text">
+                                    <span class="recipe-indicator"><strong>Prep Time:</strong> {{ recipe.prep_time }}
+                                        mins</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6">
-                        <span class="icons"><i class="fa-solid fa-fire"></i></span>
-                        <span class="recipe-indicator"><strong>Cooking Time:</strong> {{ recipe.cook_time }}
-                            mins</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <span class="icons"><i class="fa-solid fa-utensils"></i></span>
-                        <span class="recipe-indicator"><strong>Serves:</strong> {{ recipe.serves }}</span>
-                    </div>
-                    <div class="col-sm-6">
-                        <span class="icons"><i class="fa-solid fa-kitchen-set"></i></span>
-                        <span class="recipe-indicator">
-                            {% if recipe.difficulty == 0 %}
-                            <strong>Difficulty:</strong> Easy
-                            {% elif recipe.difficulty == 1 %}
-                            <strong>Difficulty:</strong> Moderate
-                            {% elif recipe.difficulty == 2 %}
-                            <strong>Difficulty:</strong> Hard
-                            {% endif %}
-                        </span>
+                    <div class="col-sm-6 recipe-indicator-container">
+                        <div class="row">
+                            <div class="d-flex">
+                                <div class="d-inline col-1">
+                                    <span class="icons"><i class="fa-solid fa-fire"></i></span>
+                                </div>
+                                <div class="d-inline col-11 indicator-text">
+                                    <span class="recipe-indicator"><strong>Cooking Time:</strong> {{ recipe.cook_time }}
+                                        mins</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        {% if recipe.diet_types %}
-                        <span><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
-                        <span class="recipe-indicator"><strong>Diet:</strong> {{ recipe.diet_types }}</span>
-                        {% endif %}
+                    <div class="col-sm-6 recipe-indicator-container">
+                        <div class="row">
+                            <div class="d-flex">
+                                <div class="d-inline col-1">
+                                    <span class="icons"><i class="fa-solid fa-utensils"></i></span>
+                                </div>
+                                <div class="d-inline col-11 indicator-text">
+                                    <span class="recipe-indicator"><strong>Serves:</strong> {{ recipe.serves }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 recipe-indicator-container">
+                        <div class="row">
+                            <div class="d-flex">
+                                <div class="d-inline col-1">
+                                    <span class="icons"><i class="fa-solid fa-kitchen-set"></i></span>
+                                </div>
+                                <div class="d-inline col-11 indicator-text">
+                                    <span class="recipe-indicator">
+                                        {% if recipe.difficulty == 0 %}
+                                        <strong>Difficulty:</strong> Easy
+                                        {% elif recipe.difficulty == 1 %}
+                                        <strong>Difficulty:</strong> Moderate
+                                        {% elif recipe.difficulty == 2 %}
+                                        <strong>Difficulty:</strong> Hard
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col recipe-indicator-container">
+                        <div class="row">
+                            <div class="d-flex">
+                                {% if recipe.diet_types %}
+                                <div class="d-inline col-1">
+                                    <span><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
+                                </div>
+                                <div class="d-inline col-11 indicator-text">
+                                    <span class="recipe-indicator"><strong>Diet:</strong> {{ recipe.diet_types }}</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container">
-    <div class="row mt-4">
+    <div class="row mt-2 recipe-detail-desc">
         <p>{{ recipe.description | capfirst }}</p>
     </div>
     <div class="row">
-        <div class="col-lg-6">
-            <h3>Ingredients</h3>
-            <p>{{ recipe.ingredients | safe }}</p>
+        <div class="col-lg-6 card summernote-card">
+            <div class="card-body summernote-card-body">
+                <h3 class="fw-bold">Ingredients</h3>
+                <p>{{ recipe.ingredients | safe }}</p>
+            </div>
         </div>
-        <div class="col-lg-6">
-            <h3>Method</h3>
-            <p>{{ recipe.method | safe }}</p>
+        <div class="col-lg-6 card summernote-card">
+            <div class="card-body summernote-card-body">
+                <h3 class="fw-bold">Method</h3>
+                <p>{{ recipe.method | safe }}</p>
+            </div>
         </div>
     </div>
 </div>
@@ -134,8 +179,8 @@
     </div>
     <div class="row">
         <div class="col-lg-6 card mb-4 mt-3 comment-card">
-            <div class="card-body">
-                <h3>Comments</h3>
+            <div class="card-body comment-card-body">
+                <h3 class="fw-bold">Comments</h3>
                 <!-- If there is no comment yet -->
                 {% if not comments %}
                 <p>Be the first to share your thoughts!</p>
@@ -213,8 +258,8 @@
             </div>
         </div>
         <div class="col-lg-6 card mb-4 mt-3 comment-card">
-            <div class="card-body">
-                <h3>Leave a Comment</h3>
+            <div class="card-body comment-card-body">
+                <h3 class="fw-bold">Leave a Comment</h3>
                 <!-- If user is logged in -->
                 {% if user.is_authenticated %}
                 <!-- If recipe is published -->

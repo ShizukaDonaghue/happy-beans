@@ -270,19 +270,56 @@ footer i:hover {
     margin-top: 0.2rem;
 }
 
+.recipe-indicator-container {
+    margin-bottom: 0.2rem;
+}
 
 .recipe-indicator {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
-.comment-card {
+.recipe-detail-desc {
+    text-align:justify;
+}
+
+.recipe-detail-desc p {
+    margin: 0.2rem 0 1rem 0;
+    font-size: 0.95rem;
+}
+
+.summernote-card, .comment-card {
     border: none;
     background-color: transparent;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+.summernote-card h3, .comment-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.summernote-card-body, .comment-card-body {
+    padding: 0 10px 0 10px;
+    margin-bottom: -0.5rem;
+}
+
+.summernote-card-body ul, .summernote-card-body ol {
+    margin-top: -0.5rem;
+    padding-left: 1.5rem !important;
+}
+
+.summernote-card-body li {
+    padding-left: 0 !important;
 }
 
 .dropdown-menu {
     min-width: inherit;
+}
+
+.indicator-text {
+    margin-left: 0.8rem;
 }
 
 .icons {
