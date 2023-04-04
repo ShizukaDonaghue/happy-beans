@@ -102,7 +102,7 @@ class Recipe(models.Model):
         on_delete=models.CASCADE,
         related_name='recipe_posts'
     )
-    description = models.TextField(max_length=300)
+    description = models.TextField(max_length=500)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     meal_type = models.IntegerField(choices=MEAL_TYPE)
