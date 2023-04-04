@@ -8,7 +8,7 @@
 <!-- Recipe section -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 recipe-image">
+        <div class="col-lg-6 recipe-image pt-2 pb-3">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1679726727/placeholder-image_o1t1ix.jpg"
                 alt="placeholder image" width="100%">
@@ -19,20 +19,18 @@
         <div class="col-lg-6">
             <div class="row">
                 <div class="d-flex">
-                    <div class="d-inline col-10">
+                    <div class="d-inline col-9">
                         <h1>{{ recipe.title | capfirst }}</h1>
                     </div>
                     <!-- Edit and delete buttons for recipe author -->
                     {% if user.is_authenticated and user == recipe.author %}
-                    <div class="d-inline col-1">
-                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-outline-dark mt-2"
-                            aria-label="Update recipe button" role="button" title="Edit">
+                    <div class="d-inline col-3 edit-delete-btn text-end">
+                        <a href="{% url 'update_recipe' recipe.slug %}" class="btn" aria-label="Update recipe button"
+                            role="button" title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
-                    </div>
-                    <div class="d-inline col-1">
-                        <a href="" class="btn btn-outline-dark mt-2" aria-label="Delete recipe button" role="button"
-                            title="Delete" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
+                        <a href="" class="btn" aria-label="Delete recipe button" role="button" title="Delete"
+                            data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                     </div>
@@ -41,10 +39,10 @@
             </div>
             <div class="row">
                 <div class="d-flex">
-                    <div class="d-inline col-9">
-                        <p>By {{ recipe.author }}</p>
+                    <div class="d-inline col-8">
+                        <p class="recipe-indicator">By {{ recipe.author }}</p>
                     </div>
-                    <div class="d-inline col-3 text-end pe-3">
+                    <div class="d-inline col-4 text-end like-btn-container">
                         <strong>
                             <!-- Like/unlike button for logged-in user -->
                             {% if user.is_authenticated and recipe.status == 1 %}
@@ -56,24 +54,44 @@
                                 </button>
                                 {% else %}
                                 <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
-                                    <i class="fa-solid fa-heart-circle-plus"></i> Like
+                                    <i class="fa-solid fa-heart-circle-plus"></i><span class="like fw-bold">Like</span>
                                 </button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary"> {{ recipe.number_of_likes }}</span>
+                            <div class="like-grey">
+                                <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
+                                {% endif %}
+                                <span class="text-secondary pe-1"> {{ recipe.number_of_likes }}</span>
+                            </div>
                         </strong>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <p><strong>Prep Time:</strong> {{ recipe.prep_time }} mins</p>
-                </div>
-                <div class="col-lg-6">
-                    <p><strong>Cooking Time:</strong> {{ recipe.cook_time }} mins</p>
+                <div class="d-flex">
+                    <div class="d-inline col-lg-6">
+                        <div class="row">
+                            <div class="d-inline col-1">
+                                <span class="icons"><i class="fa-solid fa-faucet-drip"></i></span>
+                            </div>
+                            <div class="d-inline col-11">
+                                <p class="recipe-indicator"><strong>Prep Time:</strong> {{ recipe.prep_time }} mins</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline col-lg-6">
+                        <div class="row">
+                            <div class="d-inline col-1">
+                                <span class="icons"><i class="fa-solid fa-fire"></i></span>
+                            </div>
+                            <div class="d-inline col-11">
+                                <p class="recipe-indicator">
+                                    <strong>Cooking Time:</strong> {{ recipe.cook_time }} mins
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -83,26 +101,34 @@
                             <span class="icons"><i class="fa-solid fa-utensils"></i></span>
                         </div>
                         <div class="col-11">
-                            <strong>Serves:</strong> {{ recipe.serves }}
+                            <p class="recipe-indicator"><strong>Serves:</strong> {{ recipe.serves }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <p>
-                        {% if recipe.difficulty == 0 %}
-                        <strong>Difficulty:</strong> Easy
-                        {% elif recipe.difficulty == 1 %}
-                        <strong>Difficulty:</strong> Moderate
-                        {% elif recipe.difficulty == 2 %}
-                        <strong>Difficulty:</strong> Hard
-                        {% endif %}
-                    </p>
+                    <div class="row">
+                        <div class="col-1">
+                            <span class="icons"><i class="fa-solid fa-kitchen-set"></i></span>
+                        </div>
+                        <div class="col-11">
+                            <p class="recipe-indicator">
+                                {% if recipe.difficulty == 0 %}
+                                <strong>Difficulty:</strong> Easy
+                                {% elif recipe.difficulty == 1 %}
+                                <strong>Difficulty:</strong> Moderate
+                                {% elif recipe.difficulty == 2 %}
+                                <strong>Difficulty:</strong> Hard
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     {% if recipe.diet_types %}
-                    <p><strong>Diet:</strong> {{ recipe.diet_types }}</p>
+                    <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                    <p class="recipe-indicator"><strong>Diet:</strong> {{ recipe.diet_types }}</p>
                     {% endif %}
                 </div>
             </div>
@@ -215,18 +241,18 @@
                 <h3>Leave a Comment</h3>
                 <!-- If user is logged in -->
                 {% if user.is_authenticated %}
-                    <!-- If recipe is published -->
-                    {% if recipe.status == 1 %}
-                    <p>Posting as: {{ user.username }}</p>
-                    <form method="POST" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-outline-dark">Submit</button>
-                    </form>
-                    <!-- If recipe is not yet publised  -->
-                    {% elif recipe.status == 0 %}
-                    <P>Let's publish this recipe to get feedback!</P>
-                    {% endif %}
+                <!-- If recipe is published -->
+                {% if recipe.status == 1 %}
+                <p>Posting as: {{ user.username }}</p>
+                <form method="POST" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                </form>
+                <!-- If recipe is not yet publised  -->
+                {% elif recipe.status == 0 %}
+                <P>Let's publish this recipe to get feedback!</P>
+                {% endif %}
                 <!-- If user is not logged in -->
                 {% else %}
                 <p>Please log in to leave a comment!</p>

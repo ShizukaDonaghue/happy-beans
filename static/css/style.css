@@ -228,7 +228,7 @@ footer i:hover {
 }
 
 /* Recipe detail page */
-.recipe-image {
+/* .recipe-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +240,17 @@ footer i:hover {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
+} */
+
+.edit-delete-btn a {
+    margin-top: 0;
+    padding: 0 0 0 0.3rem;
+    font-size: 120%;
+    color: var(--navy)
+}
+
+.like-btn-container {
+    margin-top: -0.2rem;
 }
 
 .btn-like {
@@ -247,6 +258,22 @@ footer i:hover {
     background: transparent;
     color: #F74A87;
     font-size: 120%;
+    padding: 0;
+}
+
+.like {
+    font-size: 1rem;
+    padding-left: 0.2rem;
+}
+
+.like-grey {
+    margin-top: 0.2rem;
+}
+
+
+.recipe-indicator {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
 }
 
 .comment-card {
