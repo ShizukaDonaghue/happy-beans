@@ -727,6 +727,11 @@ footer i:hover {
         margin-bottom: 0;
     }
 
+    .recipe-detail-desc p {
+        margin-top: 0.1rem;
+        margin-bottom: 0rem;
+    }
+
     .divider-one {
         visibility: hidden;
     }
@@ -740,34 +745,28 @@ footer i:hover {
     }
 
     .edit-delete-btn a {
-        font-size: 150%;
+        font-size: 145%;
         padding: 0 0 0 0.6rem;
     }
 
     .btn-like, .icons {
-        font-size: 150%;
+        font-size: 145%;
     }
 
     .like-grey i {
-        font-size: 140%;
+        font-size: 135%;
     }
 
-    .like, .text-secondary {
-        font-size: 1.2rem;
+    .comment-container {
+        margin-top: 0.8rem;
     }
 
-    .recipe-indicator, .recipe-detail-desc p,
-    .summernote-card, .comment-card,
-    .dropdown-item {
-        font-size: 1.2rem;
-    }
-    
-    .summernote-card h3, .comment-card h3 {
-        font-size: 1.4rem;
+    .comment-name {
+        margin-left: -0.5rem;
     }
 
-    .comment-card-body button {
-        font-size: 1.2rem;
+    .comment-text {
+        margin-left: -0.3rem;
     }
 }
 
