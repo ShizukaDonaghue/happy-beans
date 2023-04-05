@@ -8,7 +8,7 @@
 <!-- Recipe section -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 recipe-image pt-2 pb-3">
+        <div class="col-lg-6 recipe-image align-items-stretch">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1679726727/placeholder-image_o1t1ix.jpg"
                 alt="placeholder image" width="100%">
@@ -16,7 +16,7 @@
             <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}" width="100%">
             {% endif %}
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 align-items-stretch">
             <div class="row">
                 <div class="d-flex">
                     <div class="d-inline col-9">
@@ -60,7 +60,7 @@
                             </form>
                             {% else %}
                             <div class="like-grey">
-                                <span class="text-secondary grey-heart"><i class="fa-regular fa-heart"></i></span>
+                                <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
                                 {% endif %}
                                 <span class="text-secondary pe-1"> {{ recipe.number_of_likes }}</span>
                             </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="row">
                             <div class="d-flex">
                                 <div class="d-inline col-1">
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="row">
                             <div class="d-flex">
                                 <div class="d-inline col-1">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="row">
                             <div class="d-flex">
                                 <div class="d-inline col-1">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="row">
                             <div class="d-flex">
                                 <div class="d-inline col-1">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="row">
                             <div class="d-flex">
                                 {% if recipe.diet_types %}
@@ -153,7 +153,7 @@
 <!-- Horizontal line to separate contents -->
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col divider-one">
             <hr>
         </div>
     </div>
@@ -168,7 +168,7 @@
 <!-- Horizontal line to separate contents -->
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col divider-two">
             <hr>
         </div>
     </div>
@@ -182,9 +182,9 @@
                 <p>{{ recipe.ingredients | safe }}</p>
             </div>
         </div>
-        <div class="container mt-auto">
+        <div class="container mt-auto divider-three-container">
             <div class="row">
-                <div class="col">
+                <div class="col divider-three">
                     <hr>
                 </div>
             </div>
@@ -201,7 +201,7 @@
 <!-- Horizontal line to separate contents -->
 <div class="container mt-auto">
     <div class="row">
-        <div class="col">
+        <div class="col divider-four">
             <hr>
         </div>
     </div>
@@ -289,9 +289,9 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="container">
+        <div class="container divder-five-container">
             <div class="row">
-                <div class="col">
+                <div class="col divider-five">
                     <hr>
                 </div>
             </div>
