@@ -794,6 +794,28 @@ footer i:hover {
     .recipe-card-body h5 {
         font-size: 1.3rem;
     }
+    
+    .btn-like, .icons {
+        font-size: 150%;
+    }
+
+    .like-grey i {
+        font-size: 140%;
+    }
+
+    .recipe-indicator, .recipe-detail-desc p,
+    .summernote-card, .comment-card,
+    .dropdown-item {
+        font-size: 1.15rem;
+    }
+    
+    .summernote-card h3, .comment-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .comment-card-body button {
+        font-size: 1.15rem;
+    }    
 }
 
 @media screen and (min-width: 1400px) {
