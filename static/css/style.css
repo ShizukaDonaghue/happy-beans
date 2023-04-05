@@ -271,6 +271,14 @@ footer i:hover {
     margin-top: 0.2rem;
 }
 
+.icons, .like-grey i {
+    font-size: 120%;
+}
+
+.seeding-icon {
+    margin-top: 0.1rem;
+}
+
 .author-container {
     margin-top: 0.1rem;
     margin-bottom: 0.5rem;
@@ -294,14 +302,6 @@ footer i:hover {
 
 .indicator-text {
     margin-left: 0.8rem;
-}
-
-.icons {
-    font-size: 120%;
-}
-
-.seeding-icon {
-    margin-top: 0.1rem;
 }
 
 .summernote-card, .comment-card {
@@ -568,6 +568,14 @@ footer i:hover {
 
     .btn-like, .icons {
         font-size: 140%;
+    }
+
+    .like-grey i {
+        font-size: 130%;
+    }
+
+    .like, .text-secondary {
+        font-size: 1.1rem;
     }
 
     .recipe-indicator, .recipe-detail-desc p,
