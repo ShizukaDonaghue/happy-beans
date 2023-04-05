@@ -578,6 +578,11 @@ footer i:hover {
         font-size: 1.1rem;
     }
 
+    .recipe-detail-desc p {
+        margin-top: -0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
     .recipe-indicator, .recipe-detail-desc p,
     .summernote-card, .comment-card,
     .dropdown-item {
@@ -586,6 +591,10 @@ footer i:hover {
     
     .summernote-card h3, .comment-card h3 {
         font-size: 1.3rem;
+    }
+
+    .comment-card-body button {
+        font-size: 1.1rem;
     }
 }
 
@@ -649,6 +658,14 @@ footer i:hover {
 
     .action-btn a {
         font-size: 1.15rem;
+    }
+
+    .comment-name {
+        margin-left: -1.5rem;
+    }
+
+    .comment-text {
+        margin-left: -1.2rem;
     }
 }
 
