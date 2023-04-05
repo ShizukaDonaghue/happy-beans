@@ -270,10 +270,6 @@ footer i:hover {
     margin-top: 0.2rem;
 }
 
-.recipe-indicator-container {
-    margin-bottom: 0.2rem;
-}
-
 .recipe-indicator {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
@@ -284,8 +280,17 @@ footer i:hover {
 }
 
 .recipe-detail-desc p {
-    margin: 0.2rem 0 1rem 0;
     font-size: 0.95rem;
+    margin-top: -0.6rem;
+    margin-bottom: 0;
+}
+
+.indicator-text {
+    margin-left: 0.8rem;
+}
+
+.icons {
+    font-size: 120%;
 }
 
 .summernote-card, .comment-card {
@@ -301,12 +306,13 @@ footer i:hover {
 }
 
 .summernote-card-body, .comment-card-body {
-    padding: 0 10px 0 10px;
-    margin-bottom: -0.5rem;
+    padding: 0 10px;
+    margin-bottom: -1rem;
 }
 
 .summernote-card-body ul, .summernote-card-body ol {
     margin-top: -0.5rem;
+    margin-bottom: 0;
     padding-left: 1.5rem !important;
 }
 
@@ -314,16 +320,38 @@ footer i:hover {
     padding-left: 0 !important;
 }
 
+.comment-card-body {
+    margin-top: -0.9rem;
+    margin-bottom: -1.3rem;
+}
+
+.comment-container {
+    margin-top: 0.5rem;
+}
+
+.comment-name {
+    padding: 0 0.3rem;
+    font-weight: 600;
+}
+
+.dropdown {
+    margin-top: 0.1rem;
+}
 .dropdown-menu {
     min-width: inherit;
 }
 
-.indicator-text {
-    margin-left: 0.8rem;
+.dropdown-item {
+    font-size: 0.95rem;
 }
 
-.icons {
-    font-size: 120%;
+.comment-text {
+    margin-bottom: 0;
+    padding-left: 0.1rem;
+}
+
+.posting-as {
+    margin: 0.7rem 0;
 }
 
 /* My favourite and my recipes pages */

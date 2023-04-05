@@ -150,15 +150,43 @@
     </div>
 </div>
 
+<!-- Horizontal line to separate contents -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row mt-2 recipe-detail-desc">
         <p>{{ recipe.description | capfirst }}</p>
     </div>
+</div>
+
+<!-- Horizontal line to separate contents -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <div class="row">
         <div class="col-lg-6 card summernote-card">
             <div class="card-body summernote-card-body">
                 <h3 class="fw-bold">Ingredients</h3>
                 <p>{{ recipe.ingredients | safe }}</p>
+            </div>
+        </div>
+        <div class="container mt-auto">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                </div>
             </div>
         </div>
         <div class="col-lg-6 card summernote-card">
@@ -170,13 +198,17 @@
     </div>
 </div>
 
-<!-- Comments section -->
-<div class="container">
+<!-- Horizontal line to separate contents -->
+<div class="container mt-auto">
     <div class="row">
         <div class="col">
             <hr>
         </div>
     </div>
+</div>
+
+<!-- Comments section -->
+<div class="container">
     <div class="row">
         <div class="col-lg-6 card mb-4 mt-3 comment-card">
             <div class="card-body comment-card-body">
@@ -188,18 +220,18 @@
                 <!-- If there is a comment/are comments, loop through the comment(s) -->
                 {% for comment in comments %}
                 <div class="row">
-                    <div class="d-flex">
-                        <div class="d-inline col-8">
+                    <div class="d-flex comment-container">
+                        <div class="d-inline col-7">
                             <div class="row">
-                                <div class="d-inline col-1 icons">
+                                <div class="d-inline col-2 icons">
                                     <i class="fa-solid fa-seedling"></i>
                                 </div>
-                                <div class="d-inline col-11">{{ comment.name }}
+                                <div class="d-inline col-10 comment-name">{{ comment.name }}
                                 </div>
                             </div>
                         </div>
-                        <div class="d-inline col-3 text-end">
-                            {{ comment.date_format_created_on }}
+                        <div class="d-inline col-4 text-end">
+                            <small>{{ comment.date_format_created_on }}</small>
                         </div>
                         <!-- Edit and delete menu for comment author -->
                         {% if user.is_authenticated and user.username == comment.name %}
@@ -249,12 +281,19 @@
                     <div class="d-flex">
                         <div class="d-inline col-1"></div>
                         <div class="d-inline col-10">
-                            <p>{{ comment.body | capfirst }}</p>
+                            <p class="comment-text">{{ comment.body | capfirst }}</p>
                         </div>
                         <div class="d-inline col-1"></div>
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                </div>
             </div>
         </div>
         <div class="col-lg-6 card mb-4 mt-3 comment-card">
@@ -264,11 +303,11 @@
                 {% if user.is_authenticated %}
                 <!-- If recipe is published -->
                 {% if recipe.status == 1 %}
-                <p>Posting as: {{ user.username }}</p>
-                <form method="POST" style="margin-top: 1.3em;">
+                <p class="posting-as">Posting as: {{ user.username }}</p>
+                <form method="POST">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                    <button type="submit" class="btn buttons">Submit</button>
                 </form>
                 <!-- If recipe is not yet publised  -->
                 {% elif recipe.status == 0 %}
