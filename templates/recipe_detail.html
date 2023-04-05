@@ -215,7 +215,7 @@
                 <h3 class="fw-bold">Comments</h3>
                 <!-- If there is no comment yet -->
                 {% if not comments %}
-                <p>Be the first to share your thoughts!</p>
+                <p class="comment-placeholder">Be the first to share your thoughts!</p>
                 {% endif %}
                 <!-- If there is a comment/are comments, loop through the comment(s) -->
                 {% for comment in comments %}
@@ -311,11 +311,11 @@
                 </form>
                 <!-- If recipe is not yet publised  -->
                 {% elif recipe.status == 0 %}
-                <P>Let's publish this recipe to get feedback!</P>
+                <P class="comment-placeholder">Let's publish this recipe to get feedback!</P>
                 {% endif %}
                 <!-- If user is not logged in -->
                 {% else %}
-                <p>Please log in to leave a comment!</p>
+                <p class="comment-placeholder">Please log in to leave a comment!</p>
                 {% endif %}
             </div>
         </div>
