@@ -747,6 +747,10 @@ footer i:hover {
     .summernote-card-body ol li {
         line-height: 1.8rem;
     }
+
+    .comment-card-bottom {
+        margin-bottom: 1.8rem !important;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -756,6 +760,8 @@ footer i:hover {
 
     footer i {
         font-size: 180%;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
     }
 
     .logo {
@@ -867,6 +873,10 @@ footer i:hover {
 
     .comment-text {
         margin-left: -0.1rem;
+    }
+
+    .comment-card-bottom {
+        margin-bottom: 2.3rem !important;
     }
 }
 
