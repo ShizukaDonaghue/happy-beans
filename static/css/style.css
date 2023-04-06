@@ -141,6 +141,13 @@ a.navbar-brand {
     transform: rotate(-135deg);
 }
 
+/* Horizontal line dividers */
+hr {
+    height: 5px;
+    background-color: var(--green);
+    border: none;
+}
+
 /* Footer */
 .footer-container {
     margin-top: -0.4rem;
@@ -240,6 +247,10 @@ footer i:hover {
     color: var(--navy)
 }
 
+.edit-delete-btn a:hover {
+    color: var(--green);
+}
+
 .like-btn-container {
     margin-top: -0.2rem;
 }
@@ -250,6 +261,10 @@ footer i:hover {
     color: #F74A87;
     font-size: 120%;
     padding: 0;
+}
+
+.btn-like:hover {
+    color: #fd0054;
 }
 
 .like {
@@ -267,6 +282,7 @@ footer i:hover {
 
 .seeding-icon {
     margin-top: 0.1rem;
+    color: var(--green);
 }
 
 .author-container {
@@ -495,6 +511,10 @@ footer i:hover {
         font-size: 1.7rem;
     }
 
+    hr {
+        height: 7px;
+    }
+
     .feature-card h5, .recipe-card-body h5 {
         font-size: 1.4rem;
     }
@@ -683,6 +703,10 @@ footer i:hover {
 
     h1 {
         font-size: 2rem;
+    }
+
+    hr {
+        height: 10px;
     }
    
     .feature-card .card-body {
