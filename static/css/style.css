@@ -228,8 +228,8 @@ footer i:hover {
 }
 
 /* Recipe detail page */
-.recipe-image img {
-    margin-top: 0.5rem;
+.recipe-image {
+    margin-top: 0.4rem;
     margin-bottom: 1rem;
 }
 
@@ -449,7 +449,7 @@ footer i:hover {
     .author-container {
         margin-top: 0.2rem;
     }
-    
+
     .edit-delete-btn a {
         font-size: 130%;
         padding: 0 0 0 0.4rem;
@@ -720,10 +720,15 @@ footer i:hover {
     .action-btn a {
         font-size: 1.2rem;
     }
-
+   
     .recipe-image img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+    }
+
+    .recipe-image {
+        max-height: 255px;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -795,6 +800,22 @@ footer i:hover {
     .recipe-card-body h5 {
         font-size: 1.3rem;
     }
+
+    .recipe-image {
+        max-height: 310px;
+    }
+
+    .recipe-title {
+        font-size: 2.2rem;
+    }
+    
+    .edit-delete-btn {
+        margin-bottom: 0.5rem;
+    }
+
+    .indicator-text {
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -824,6 +845,23 @@ footer i:hover {
 
     .current, .btn-secondary {
         font-size: 1rem;
+    }
+
+    .recipe-title {
+        font-size: 2.3rem;
+    }
+
+    .recipe-image {
+        max-height: 350px;
+    }
+
+    
+    .edit-delete-btn {
+        margin-bottom: 1.1rem;
+    }
+
+    .like-btn-container {
+        margin-bottom: 1.2rem;
     }
 }
 

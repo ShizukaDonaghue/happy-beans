@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="d-flex">
                     <div class="d-inline col-9">
-                        <h1>{{ recipe.title | capfirst }}</h1>
+                        <h1 class="recipe-title">{{ recipe.title | capfirst }}</h1>
                     </div>
                     <!-- Edit and delete buttons for recipe author -->
                     {% if user.is_authenticated and user == recipe.author %}
@@ -68,81 +68,65 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xxl-6">
-                        <div class="row">
-                            <div class="d-flex">
-                                <div class="d-inline col-1">
-                                    <span class="icons"><i class="fa-solid fa-faucet-drip"></i></span>
-                                </div>
-                                <div class="d-inline col-11 indicator-text">
-                                    <span class="recipe-indicator"><strong>Prep Time:</strong> {{ recipe.prep_time }}
-                                        mins</span>
-                                </div>
-                            </div>
+                    <div class="d-flex">
+                        <div class="d-inline col-1">
+                            <span class="icons"><i class="fa-solid fa-faucet-drip"></i></span>
                         </div>
-                    </div>
-                    <div class="col-xxl-6">
-                        <div class="row">
-                            <div class="d-flex">
-                                <div class="d-inline col-1">
-                                    <span class="icons"><i class="fa-solid fa-fire"></i></span>
-                                </div>
-                                <div class="d-inline col-11 indicator-text">
-                                    <span class="recipe-indicator"><strong>Cooking Time:</strong> {{ recipe.cook_time }}
-                                        mins</span>
-                                </div>
-                            </div>
+                        <div class="d-inline col-11 indicator-text">
+                            <span class="recipe-indicator"><strong>Prep Time:</strong> {{ recipe.prep_time }}
+                                mins</span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xxl-6">
-                        <div class="row">
-                            <div class="d-flex">
-                                <div class="d-inline col-1">
-                                    <span class="icons"><i class="fa-solid fa-utensils"></i></span>
-                                </div>
-                                <div class="d-inline col-11 indicator-text">
-                                    <span class="recipe-indicator"><strong>Serves:</strong> {{ recipe.serves }}</span>
-                                </div>
-                            </div>
+                    <div class="d-flex">
+                        <div class="d-inline col-1">
+                            <span class="icons"><i class="fa-solid fa-fire"></i></span>
                         </div>
-                    </div>
-                    <div class="col-xxl-6">
-                        <div class="row">
-                            <div class="d-flex">
-                                <div class="d-inline col-1">
-                                    <span class="icons"><i class="fa-solid fa-kitchen-set"></i></span>
-                                </div>
-                                <div class="d-inline col-11 indicator-text">
-                                    <span class="recipe-indicator">
-                                        {% if recipe.difficulty == 0 %}
-                                        <strong>Difficulty:</strong> Easy
-                                        {% elif recipe.difficulty == 1 %}
-                                        <strong>Difficulty:</strong> Moderate
-                                        {% elif recipe.difficulty == 2 %}
-                                        <strong>Difficulty:</strong> Hard
-                                        {% endif %}
-                                    </span>
-                                </div>
-                            </div>
+                        <div class="d-inline col-11 indicator-text">
+                            <span class="recipe-indicator"><strong>Cooking Time:</strong> {{ recipe.cook_time }}
+                                mins</span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xxl-6">
-                        <div class="row">
-                            <div class="d-flex">
-                                {% if recipe.diet_types %}
-                                <div class="d-inline col-1">
-                                    <span><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
-                                </div>
-                                <div class="d-inline col-11 indicator-text">
-                                    <span class="recipe-indicator"><strong>Diet:</strong> {{ recipe.diet_types }}</span>
-                                </div>
+                    <div class="d-flex">
+                        <div class="d-inline col-1">
+                            <span class="icons"><i class="fa-solid fa-utensils"></i></span>
+                        </div>
+                        <div class="d-inline col-11 indicator-text">
+                            <span class="recipe-indicator"><strong>Serves:</strong> {{ recipe.serves }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-flex">
+                        <div class="d-inline col-1">
+                            <span class="icons"><i class="fa-solid fa-kitchen-set"></i></span>
+                        </div>
+                        <div class="d-inline col-11 indicator-text">
+                            <span class="recipe-indicator">
+                                {% if recipe.difficulty == 0 %}
+                                <strong>Difficulty:</strong> Easy
+                                {% elif recipe.difficulty == 1 %}
+                                <strong>Difficulty:</strong> Moderate
+                                {% elif recipe.difficulty == 2 %}
+                                <strong>Difficulty:</strong> Hard
                                 {% endif %}
-                            </div>
+                            </span>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-flex">
+                        {% if recipe.diet_types %}
+                        <div class="d-inline col-1">
+                            <span><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
+                        </div>
+                        <div class="d-inline col-11 indicator-text">
+                            <span class="recipe-indicator"><strong>Diet:</strong> {{ recipe.diet_types }}</span>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
