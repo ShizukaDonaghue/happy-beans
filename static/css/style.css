@@ -34,7 +34,7 @@ h1{
 /* Navbar */
 .navbar {
     background-color: var(--white);
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
@@ -399,6 +399,16 @@ footer i:hover {
     display: none;
 }
 
+/* Post a recipe page */
+.post-recipe {
+    padding-bottom: 0.5rem;
+}
+
+.post-recipe button, .post-recipe a {
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+}
+
 @media screen and (min-width: 375px) {
     body {
         padding-top: 84px;
@@ -650,6 +660,10 @@ footer i:hover {
     .comment-text {
         margin-left: -0.25rem;
     }
+
+    .post-recipe {
+        padding-bottom: 0.7rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -760,6 +774,10 @@ footer i:hover {
 
     .comment-card-bottom {
         margin-bottom: 1.8rem !important;
+    }
+
+    .post-recipe label, .post-recipe button, .post-recipe a {
+        font-size: 1.1rem;
     }
 }
 
@@ -893,6 +911,18 @@ footer i:hover {
     .comment-card-bottom {
         margin-bottom: 2.3rem !important;
     }
+
+    .post-recipe {
+        padding-bottom: 1rem;
+    }
+
+    .post-recipe button, .post-recipe a {
+        margin-top: 1rem;
+    }
+
+    .post-recipe button, .post-recipe a {
+        margin-right: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -962,6 +992,10 @@ footer i:hover {
 
     .comment-text {
         margin-left: -0.4rem;
+    }
+
+    .post-recipe {
+        padding-bottom: 1.2rem;
     }
 }
 
