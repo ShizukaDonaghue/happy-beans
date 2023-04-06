@@ -346,6 +346,7 @@ footer i:hover {
 .dropdown {
     margin-top: 0.1rem;
 }
+
 .dropdown-menu {
     min-width: inherit;
 }
@@ -757,7 +758,7 @@ footer i:hover {
         font-size: 135%;
     }
 
-    .comment-container {
+    .comment-container, .comment-placeholder {
         margin-top: 0.8rem;
     }
 
@@ -794,28 +795,6 @@ footer i:hover {
     .recipe-card-body h5 {
         font-size: 1.3rem;
     }
-    
-    .btn-like, .icons {
-        font-size: 150%;
-    }
-
-    .like-grey i {
-        font-size: 140%;
-    }
-
-    .recipe-indicator, .recipe-detail-desc p,
-    .summernote-card, .comment-card,
-    .dropdown-item {
-        font-size: 1.15rem;
-    }
-    
-    .summernote-card h3, .comment-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .comment-card-body button {
-        font-size: 1.15rem;
-    }    
 }
 
 @media screen and (min-width: 1400px) {
