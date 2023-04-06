@@ -409,6 +409,21 @@ footer i:hover {
     margin-right: 0.2rem;
 }
 
+/* Signup, login & logout pages */
+.signup input, .login input {
+    width: 90%;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+} 
+
+.signup label, .login label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+
 @media screen and (min-width: 375px) {
     body {
         padding-top: 84px;

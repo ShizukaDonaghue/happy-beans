@@ -10,10 +10,7 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-
-
-      <h3>{% trans "Log In" %}</h3>
-
+      <h1 class="my-2">{% trans "Log In" %}</h1>
 
       <p>{% blocktrans %}Welcome back to Happy Beans!</p>
       <p>
@@ -31,7 +28,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
-        <button class="primaryAction" type="submit">{% trans "Log In" %}</button>
+        <button class="primaryAction buttons" type="submit">{% trans "Log In" %}</button>
       </form>
     </div>
   </div>
