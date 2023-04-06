@@ -476,6 +476,10 @@ footer i:hover {
         font-size: 130%;
     }
 
+    .summernote-card-body li {
+        padding-left: 0.3rem !important;
+    }    
+
     .icon-diet {
         font-size: 110%;
     }
@@ -607,6 +611,14 @@ footer i:hover {
         margin-bottom: 0.2rem;
     }
 
+    .summernote-card-body ul, .summernote-card-body ol {
+        margin-left: 0.5rem;
+    }
+    
+    .summernote-card-body li {
+        padding-left: 0.5rem !important;
+    }
+    
     .recipe-indicator, .recipe-detail-desc p,
     .summernote-card, .comment-card,
     .dropdown-item {
@@ -621,8 +633,12 @@ footer i:hover {
         font-size: 1.1rem;
     }
 
+    .comment-name {
+        margin-left: -0.45rem;
+    }
+
     .comment-text {
-        margin-left: 0.1rem;
+        margin-left: -0.25rem;
     }
 }
 
@@ -708,12 +724,20 @@ footer i:hover {
         font-size: 130%;
     }
 
+    .summernote-card-body ul, .summernote-card-body ol {
+        margin-left: 1rem;
+    }
+    
+    .summernote-card-body li {
+        padding-left: 0.8rem !important;
+    }
+
     .comment-name {
-        margin-left: -0.7rem;
+        margin-left: -0.65rem;
     }
 
     .comment-text {
-        margin-left: -0.4rem;
+        margin-left: -0.3rem;
     }
 
     .recipe-detail-desc p, .summernote-card-body ul li, .comment-text {
@@ -829,16 +853,20 @@ footer i:hover {
         font-size: 135%;
     }
 
+    .summernote-card-body ul, .summernote-card-body ol {
+        margin-left: 0rem;
+    }
+
     .comment-container, .comment-placeholder {
         margin-top: 0.8rem;
     }
 
     .comment-name {
-        margin-left: 0;
+        margin-left: -0.3rem;
     }
 
     .comment-text {
-        margin-left: 0.15rem;
+        margin-left: -0.1rem;
     }
 }
 
@@ -899,11 +927,11 @@ footer i:hover {
     }
 
     .comment-name {
-        margin-left: -0.2rem;
+        margin-left: -0.7rem;
     }
 
     .comment-text {
-        margin-left: 0rem;
+        margin-left: -0.4rem;
     }
 }
 
@@ -943,7 +971,6 @@ footer i:hover {
     .recipe-image {
         height: 340px;
     }
-
     
     .edit-delete-btn {
         margin-bottom: 1.1rem;
@@ -952,5 +979,19 @@ footer i:hover {
     .like-btn-container {
         margin-bottom: 1.2rem;
     }
+
+    .summernote-card-body ul, .summernote-card-body ol {
+        margin-left: 1rem;
+    }
+
+    .comment-name {
+        padding-left: 0.6rem;
+    }
+
+    .comment-text {
+        padding-left: 0.45rem;
+    }
+
+
 }
 
