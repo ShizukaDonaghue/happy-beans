@@ -476,6 +476,14 @@ footer i:hover {
         font-size: 130%;
     }
 
+    .icon-diet {
+        font-size: 110%;
+    }
+    
+    .seeding-icon {
+        font-size: 120%;
+    }
+
     .recipe-indicator, .recipe-detail-desc p,
     .summernote-card, .comment-card,
     .dropdown-item {
@@ -579,7 +587,11 @@ footer i:hover {
     }
 
     .btn-like, .icons {
-        font-size: 140%;
+        font-size: 150%;
+    }
+
+    .icon-diet {
+        font-size: 120%;
     }
 
     .like-grey i {
@@ -607,6 +619,10 @@ footer i:hover {
 
     .comment-card-body button {
         font-size: 1.1rem;
+    }
+
+    .comment-text {
+        margin-left: 0.1rem;
     }
 }
 
@@ -672,12 +688,32 @@ footer i:hover {
         font-size: 1.15rem;
     }
 
+    .edit-delete-btn a {
+        padding-left: 0.6rem;
+    }
+
+    .btn-like, .icons {
+        font-size: 160%;
+    }
+
+    .icon-diet {
+        font-size: 130%;
+    }
+
+    .indicator-text {
+        margin-left: 0;
+    }
+
+    .seeding-icon {
+        font-size: 130%;
+    }
+
     .comment-name {
-        margin-left: -1.5rem;
+        margin-left: -0.7rem;
     }
 
     .comment-text {
-        margin-left: -1.2rem;
+        margin-left: -0.4rem;
     }
 
     .recipe-detail-desc p, .summernote-card-body ul li, .comment-text {
@@ -753,9 +789,13 @@ footer i:hover {
     }
 
     .recipe-image {
-        max-height: 255px;
+        height: 305px;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .indicator-text {
+        margin-left: 0.3rem;
     }
 
     .recipe-detail-desc p {
@@ -782,7 +822,7 @@ footer i:hover {
     }
 
     .btn-like, .icons {
-        font-size: 145%;
+        font-size: 150%;
     }
 
     .like-grey i {
@@ -794,11 +834,11 @@ footer i:hover {
     }
 
     .comment-name {
-        margin-left: -0.5rem;
+        margin-left: 0;
     }
 
     .comment-text {
-        margin-left: -0.3rem;
+        margin-left: 0.15rem;
     }
 }
 
@@ -828,7 +868,7 @@ footer i:hover {
     }
 
     .recipe-image {
-        max-height: 310px;
+        height: 315px;
     }
 
     .recipe-title {
@@ -840,8 +880,30 @@ footer i:hover {
         margin-bottom: 0.5rem;
     }
 
+    .edit-delete-btn a {
+        font-size: 150%;
+        padding-left: 0.8rem;
+    }
+
     .indicator-text {
         margin-bottom: 0.5rem;
+        margin-left: 0.2rem;
+    }
+
+    .btn-like, .icons {
+        font-size: 155%;
+    }
+
+    .like-grey i {
+        font-size: 140%;
+    }
+
+    .comment-name {
+        margin-left: -0.2rem;
+    }
+
+    .comment-text {
+        margin-left: 0rem;
     }
 }
 
@@ -879,7 +941,7 @@ footer i:hover {
     }
 
     .recipe-image {
-        max-height: 350px;
+        height: 340px;
     }
 
     
