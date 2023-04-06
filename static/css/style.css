@@ -390,6 +390,11 @@ footer i:hover {
 }
 
 /* Pagination */
+.pagination {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 .current {
     display: none;
 }
@@ -583,6 +588,11 @@ footer i:hover {
 
     .page-title {
         margin-bottom: -0.2rem;
+    }
+
+    .pagination {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
     }
 
     .edit-delete-btn a {
@@ -811,6 +821,11 @@ footer i:hover {
     .action-btn a {
         font-size: 1.2rem;
     }
+
+    .pagination {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
    
     .recipe-image img {
         width: 100%;
@@ -903,6 +918,11 @@ footer i:hover {
 
     .recipe-card-body h5 {
         font-size: 1.3rem;
+    }
+
+    .pagination {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
     }
 
     .recipe-image {
