@@ -241,7 +241,7 @@ footer i:hover {
 }
 
 .edit-delete-btn a {
-    margin-top: 0;
+    margin-top: -0.3rem;
     padding: 0 0 0 0.3rem;
     font-size: 120%;
     color: var(--navy)
@@ -469,6 +469,7 @@ footer i:hover {
     .edit-delete-btn a {
         font-size: 130%;
         padding: 0 0 0 0.4rem;
+        margin-top: -0.2rem;
     }
 
     .btn-like, .icons {
@@ -777,6 +778,7 @@ footer i:hover {
     .edit-delete-btn a {
         font-size: 145%;
         padding: 0 0 0 0.6rem;
+        margin-top: 0.1rem;
     }
 
     .btn-like, .icons {
@@ -834,6 +836,7 @@ footer i:hover {
     }
     
     .edit-delete-btn {
+        margin-top: 0.2rem;
         margin-bottom: 0.5rem;
     }
 
