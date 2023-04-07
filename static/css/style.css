@@ -10,7 +10,7 @@
 
 }
 
-/* General styles  */
+/* General styles */
 body {
     padding-top: 75px;
     font-family: 'Nunito', sans-serif;
@@ -476,6 +476,9 @@ footer i:hover {
     margin: 1rem;
 }
 
+/* Media queries */
+
+/* For screen sizes with a minimum width of 375px */
 @media screen and (min-width: 375px) {
     body {
         padding-top: 84px;
@@ -589,6 +592,7 @@ footer i:hover {
     }
  }
 
+ /* For screen sizes with minimum width of 576px */
 @media screen and (min-width: 576px) {
     body {
         padding-top: 93px;
@@ -751,6 +755,7 @@ footer i:hover {
     }
 }
 
+/* For screen sizes with minimum width of 768px */
 @media screen and (min-width: 768px) {
     body {
         padding-top: 100px;
@@ -886,6 +891,7 @@ footer i:hover {
     }
 }
 
+/* For screen sizes with minimum width of 992px */
 @media screen and (min-width: 992px) {
     body {
         padding-top: 103px;
@@ -1034,6 +1040,7 @@ footer i:hover {
     }
 }
 
+/* For screen sizes with minimum width of 1200px */
 @media screen and (min-width: 1200px) {
     .logo {
         width: 40%;
@@ -1108,6 +1115,7 @@ footer i:hover {
     }
 }
 
+/* For screen sizes with minimum width of 1400px */
 @media screen and (min-width: 1400px) {
     .nav-link {
         font-size: 1.3rem !important;
