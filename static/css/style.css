@@ -448,6 +448,33 @@ footer i:hover {
     padding-left: 1rem;
 }
 
+/* Error pages */
+.error-image {
+    width: 130px;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    margin-bottom: 1rem;
+}
+
+.error-message h1 {
+    margin-bottom: 0.8rem;
+}
+
+.error-message h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.error-message p {
+    margin-bottom: 0.5rem;
+}
+
+.error-message-btn {
+    margin: 1rem;
+}
 
 @media screen and (min-width: 375px) {
     body {
@@ -552,7 +579,15 @@ footer i:hover {
     .summernote-card h3, .comment-card h3 {
         font-size: 1.2rem;
     }
-}
+
+    .error-image {
+        width: 200px;
+    }
+
+    .error-message h2 {
+        margin-bottom: 1rem;
+    }
+ }
 
 @media screen and (min-width: 576px) {
     body {
@@ -685,11 +720,13 @@ footer i:hover {
         font-size: 1.1rem;
     }
     
-    .summernote-card h3, .comment-card h3 {
+    .summernote-card h3, .comment-card h3,
+    .error-message h2 {
         font-size: 1.3rem;
     }
 
-    .comment-card-body button {
+    .comment-card-body button, .error-message p,
+    .error-message-btn a {
         font-size: 1.1rem;
     }
 
@@ -703,6 +740,14 @@ footer i:hover {
 
     .post-recipe {
         padding-bottom: 0.7rem;
+    }
+
+    .error-message {
+        margin-bottom: 1.5rem;
+    }
+
+    .error-message h2 {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -982,6 +1027,10 @@ footer i:hover {
 
     .post-recipe button, .post-recipe a {
         margin-right: 0.5rem;
+    }
+
+    .error-image {
+        width: 300px;
     }
 }
 

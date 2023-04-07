@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container justify-content-center text-center">
+
+    <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1680884155/error-image_lua0wx.png" class="error-image"
+        alt="image of an avocado">
+
+    <div class="error-message">
+        <h1>404 Error</h1>
+        <h2>Page Not Found</h2>
+        <p>Oops, something has gone wrong! The page you're looking for doesn't exist!</p>
+    </div>
+
+    <div class="error-message-btn"><a href="{% url 'home' %}" role="button" class="btn buttons">Home</a></div>
+    <div class="error-message-btn"><a href="{% url 'browse_recipes' %}" role="button" class="btn buttons">
+            Browse Recipes</a></div>
+
+</div>
+
+{% endblock %}
