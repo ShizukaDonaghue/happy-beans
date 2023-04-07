@@ -410,6 +410,11 @@ footer i:hover {
     margin-right: 0.2rem;
 }
 
+/* Update comment page */
+.update-comment button, .update-comment a {
+    margin-right: 0.2rem;
+}
+
 /* Signup, login & logout pages */
 .authentication-container {
     background-color: var(--lime);
@@ -813,8 +818,13 @@ footer i:hover {
         margin-bottom: 1.8rem !important;
     }
 
-    .post-recipe label, .post-recipe button, .post-recipe a {
+    .post-recipe label, .post-recipe button, .post-recipe a,
+    .update-comment button, .update-comment a {
         font-size: 1.1rem;
+    }
+
+    .update-comment button, .update-comment a {
+        margin-right: 0.5rem;
     }
 
     .authentication-message h1 {
