@@ -5,6 +5,7 @@
 :root {
     --navy: #1F4463;
     --green: #5EA669;
+    --lime: #C2EF7E;
     --white: #FFFFFF;
 
 }
@@ -172,7 +173,7 @@ footer i:hover {
 
 .feature-card {
     margin-top: 0.5rem;
-    background-color: #C2EF7E;
+    background-color: var(--lime);
     border: none;
 }
 
@@ -410,10 +411,29 @@ footer i:hover {
 }
 
 /* Signup, login & logout pages */
+.authentication-container {
+    background-color: var(--lime);
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 300px;
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+
+.authentication-message h1 {
+    margin-bottom: 1rem;
+}
+
+.authentication-message p, .authentication-container p {
+    margin-bottom: 0.7rem;
+}
+
+.authentication-container label {
+    margin-bottom: 0.2rem;
+}
+
 .signup input, .login input {
     width: 90%;
-    padding: 5px;
-    margin: 5px 0 10px 0;
 } 
 
 .signup label, .login label {
@@ -599,7 +619,7 @@ footer i:hover {
         min-height: 200px;
     }  
 
-    .recipe-card-body h5 {
+    .recipe-card-body h5  {
         font-size: 1.1rem;
     }
 
@@ -735,7 +755,9 @@ footer i:hover {
         font-size: 1rem;
     }  
 
-    .action-text {
+    .action-text, .authentication-action button,
+    .authentication-action a, .authentication-message p,
+    .authentication-action label {
         font-size: 1.1rem;
     }
 
@@ -793,6 +815,19 @@ footer i:hover {
 
     .post-recipe label, .post-recipe button, .post-recipe a {
         font-size: 1.1rem;
+    }
+
+    .authentication-message h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    .authentication-container {
+        max-width: 500px;
+        margin-top: 1rem;
+    }
+
+    .authentication-container input {
+        max-width: 300px;
     }
 }
 
