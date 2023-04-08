@@ -492,6 +492,19 @@ footer i:hover {
     padding-left: 1rem;
 }
 
+.login-signin-link {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.authentication-container button {
+    margin-bottom: 0.3rem;
+}
+
+.signup-btn {
+    margin-top: 0.4rem;
+}
+
 /* Error pages */
 .error-image {
     width: 130px;
