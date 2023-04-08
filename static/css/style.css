@@ -149,6 +149,11 @@ hr {
     border: none;
 }
 
+.footer-divider hr {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 /* Footer */
 .footer-container {
     margin-top: -0.4rem;
@@ -995,7 +1000,7 @@ footer i:hover {
     }
 
     .recipe-detail-desc p {
-        margin-top: -1rem;
+        margin-top: -2rem;
         margin-bottom: 0;
     }
 
@@ -1005,10 +1010,6 @@ footer i:hover {
 
     .divider-three-container, .divder-five-container {
         display: none;
-    }
-
-    .divider-two, .divider-four {
-        margin: 1rem 0;
     }
 
     .edit-delete-btn a {
@@ -1126,6 +1127,14 @@ footer i:hover {
 
     .like-grey i {
         font-size: 140%;
+    }
+
+    .recipe-detail-desc p {
+        margin-top: -1.2rem;
+    }
+    
+    .divider-two, .divider-four {
+        margin: 0.7rem 0;
     }
 
     .comment-name {
