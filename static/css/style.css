@@ -389,19 +389,18 @@ footer i:hover {
 
 [data-title]:after {
     content: attr(data-title);
-    background-color: grey;
+    background-color: #808080;
     border-radius: 5px;    
     color: #ffffff;
     font-size: 0.8rem;
     position: absolute;
-    padding: 0.1rem;
-    margin-top: 2rem;
-    margin-left: -0.8rem;
+    padding: 0.15rem;
+    margin-top: 1.8rem;
+    margin-left: -1.85rem;
     text-align: center;
     width: 3rem;
     height: 1.5rem;
     opacity: 0;
-    z-index: 99999;
     visibility: hidden;
 }
 
@@ -1162,6 +1161,10 @@ footer i:hover {
     
     .divider-two, .divider-four {
         margin: 0.7rem 0;
+    }
+    
+    [data-title]:after {
+        padding: 0.1rem;
     }
 
     .comment-name {
