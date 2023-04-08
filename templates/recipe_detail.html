@@ -43,28 +43,24 @@
                         <p class="recipe-indicator">By {{ recipe.author }}</p>
                     </div>
                     <div class="d-inline col-4 text-end like-btn-container">
-                        <strong>
-                            <!-- Like/unlike button for logged-in user -->
-                            {% if user.is_authenticated and recipe.status == 1 %}
-                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                {% else %}
-                                <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
-                                    <i class="fa-solid fa-heart-circle-plus"></i><span class="like fw-bold">Like</span>
-                                </button>
-                                {% endif %}
-                            </form>
+                        <!-- Like/unlike button for logged-in user -->
+                        {% if user.is_authenticated and recipe.status == 1 %}
+                        <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
                             {% else %}
-                            <div class="like-grey">
-                                <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
-                                {% endif %}
-                                <span class="text-secondary pe-1"> {{ recipe.number_of_likes }}</span>
-                            </div>
-                        </strong>
+                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                                <i class="fa-solid fa-heart-circle-plus"></i><span class="like fw-bold">Like</span>
+                            </button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span class="text-secondary like-grey"><i class="fa-regular fa-heart"></i></span>
+                        {% endif %}
+                        <span class="text-secondary pe-1 fw-bold"> {{ recipe.number_of_likes }}</span>
                     </div>
                 </div>
                 <div class="row">
