@@ -11,9 +11,9 @@
         <div class="col-lg-6 recipe-image align-items-stretch">
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1679726727/placeholder-image_o1t1ix.jpg"
-                alt="placeholder image" width="100%">
+                alt="placeholder image">
             {% else %}
-            <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}" width="100%">
+            <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}">
             {% endif %}
         </div>
         <div class="col-lg-6 align-items-stretch">
@@ -162,8 +162,8 @@
     <div class="row">
         <div class="col-lg-6 card summernote-card">
             <div class="card-body summernote-card-body">
-                <h3 class="fw-bold">Ingredients</h3>
-                <p>{{ recipe.ingredients | safe }}</p>
+                <h3 class="fw-bold summernote-h3">Ingredients</h3>
+                {{ recipe.ingredients | safe }}
             </div>
         </div>
         <!-- Horizontal line to separate contents -->
@@ -176,8 +176,8 @@
         </div>
         <div class="col-lg-6 card summernote-card">
             <div class="card-body summernote-card-body">
-                <h3 class="fw-bold">Method</h3>
-                <p>{{ recipe.method | safe }}</p>
+                <h3 class="fw-bold summernote-h3">Method</h3>
+                {{ recipe.method | safe }}
             </div>
         </div>
     </div>

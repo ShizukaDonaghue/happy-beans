@@ -241,6 +241,10 @@ footer i:hover {
     margin-bottom: 1rem;
 }
 
+.recipe-image img {
+    width: 100%;
+}
+
 .edit-delete-btn a {
     margin-top: -0.3rem;
     padding: 0 0 0 0.3rem;
@@ -323,6 +327,15 @@ footer i:hover {
     margin-bottom: 0;
 }
 
+.summernote-card {
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.summernote-h3 {
+    margin-bottom: 0.8rem !important;
+}
+
 .summernote-card-body, .comment-card-body {
     padding: 0 10px;
     margin-bottom: -1rem;
@@ -378,7 +391,7 @@ footer i:hover {
 }
 
 .posting-as {
-    margin: 0.7rem 0;
+    margin: 0.5rem 0;
 }
 
 .comment-placeholder {
@@ -583,6 +596,10 @@ footer i:hover {
         font-size: 1.2rem;
     }
 
+    .summernote-h3 {
+        margin-bottom: 0.9rem !important;
+    }
+
     .error-image {
         width: 200px;
     }
@@ -727,6 +744,11 @@ footer i:hover {
     .summernote-card h3, .comment-card h3,
     .error-message h2 {
         font-size: 1.3rem;
+    }
+
+    .summernote-card {
+        margin-top: 0.2rem;
+        margin-bottom: 1.2rem;
     }
 
     .comment-card-body button, .error-message p,
@@ -973,8 +995,8 @@ footer i:hover {
     }
 
     .recipe-detail-desc p {
-        margin-top: 0.1rem;
-        margin-bottom: 0rem;
+        margin-top: -1rem;
+        margin-bottom: 0;
     }
 
     .divider-one {
@@ -1017,6 +1039,10 @@ footer i:hover {
 
     .comment-text {
         margin-left: -0.1rem;
+    }
+
+    .posting-as {
+        margin: 0.8rem 0;
     }
 
     .comment-card-bottom {
