@@ -145,7 +145,7 @@ a.navbar-brand {
 /* Horizontal line dividers */
 hr {
     height: 5px;
-    background-color: var(--green);
+    background-color: #81EE1B;
     border: none;
 }
 
