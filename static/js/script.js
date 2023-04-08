@@ -1,4 +1,4 @@
-// Script to close alert messages
+// Script to close alert messages after 3 seconds
 $(document).ready(function() {
     setTimeout(function() {
         if ($('#msg').length > 0) {
