@@ -115,6 +115,7 @@
                 </div>
                 <div class="row">
                     <div class="d-flex">
+                        <!-- If diet type is entered -->
                         {% if recipe.diet_types %}
                         <div class="d-inline col-1">
                             <span class="icon-diet"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
@@ -271,7 +272,7 @@
             </div>
         </div>
         <!-- Horizontal line to separate contents -->
-        <div class="container divder-five-container">
+        <div class="container divider-five-container">
             <div class="row">
                 <div class="col divider-five">
                     <hr>
@@ -281,9 +282,9 @@
         <div class="col-lg-6 card mb-4 mt-3 comment-card comment-card-bottom">
             <div class="card-body comment-card-body">
                 <h3 class="fw-bold">Leave a Comment</h3>
-                <!-- If user is logged in -->
+                <!-- If the user is logged in -->
                 {% if user.is_authenticated %}
-                <!-- If recipe is published -->
+                <!-- If the recipe is published -->
                 {% if recipe.status == 1 %}
                 <p class="posting-as">Posting as: {{ user.username }}</p>
                 <form method="POST">
@@ -291,11 +292,11 @@
                     {% csrf_token %}
                     <button type="submit" class="btn buttons">Submit</button>
                 </form>
-                <!-- If recipe is not yet publised  -->
+                <!-- If the recipe is not yet published  -->
                 {% elif recipe.status == 0 %}
                 <P class="comment-placeholder">Let's publish this recipe to get feedback!</P>
                 {% endif %}
-                <!-- If user is not logged in -->
+                <!-- If the user is not logged in -->
                 {% else %}
                 <p class="comment-placeholder">Please log in to leave a comment!</p>
                 {% endif %}
