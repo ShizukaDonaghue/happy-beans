@@ -11,7 +11,10 @@ class CommentForm(forms.ModelForm):
 
 
 class RecipeForm(forms.ModelForm):
-    """ Form used to post a recipe """
+    """
+    Form used to post a recipe
+    Summernote widget is used for Ingredients and Method fields
+    """
     class Meta:
         model = Recipe
         fields = (
