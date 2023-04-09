@@ -1,10 +1,10 @@
 <div class="col-sm-6 col-lg-4 d-flex align-items-stretch mb-3">
     <div class="card shadow-lg flex-fill recipe-card">
-        <!-- If image is not loaded by the user -->
+        <!-- If an image is not loaded by the user -->
         {% if "placeholder" in recipe.image.url %}
         <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1679726727/placeholder-image_o1t1ix.jpg"
             class="card-img-top" alt="placeholder image">
         {% else %}
-        <!-- If image is loaded by the user -->
+        <!-- If an image is loaded by the user -->
         <img src=" {{ recipe.image.url }}" class="card-img-top" alt="image of {{ recipe.title }}">
         {% endif %}
