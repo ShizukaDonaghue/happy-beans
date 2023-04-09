@@ -47,7 +47,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarContents">
                     <div class="navbar-nav fw-bold">
-                        <!-- Template tags for active link from https://copyprogramming.com/howto/django-active-home-link -->
+                        <!-- Template tags for the active link from https://copyprogramming.com/howto/django-active-home-link -->
                         {% with request.resolver_match.url_name as url_name %}
                         <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page"
                             href="{% url 'home' %}">Home</a>
