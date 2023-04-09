@@ -260,7 +260,7 @@ class CommentAuthorMixin(UserPassesTestMixin):
 
 class SetUrlMixin:
     """
-    A mixin to set to url to return to when the form is validated successfully
+    A mixin to set URL to return to when the form is validated successfully
     """
     def get_success_url(self):
         return reverse_lazy('recipe_detail', args=[self.object.recipe.slug])
