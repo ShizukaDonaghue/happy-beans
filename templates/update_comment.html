@@ -8,8 +8,8 @@
 <div class="container justify-content-center update-comment">
     <h1>Update Comment</h1>
     <div class="row">
+        <!-- If the user is logged in and is the author of the comment -->
         {% if user.is_authenticated and user.username == comment.name %}
-
         <form method="POST">
             {% csrf_token %}
             {{ form | crispy }}
