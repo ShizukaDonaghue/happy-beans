@@ -449,14 +449,9 @@ footer i:hover {
 }
 
 /* Post a recipe page */
-.post-recipe {
-    padding-bottom: 0.5rem;
-}
-
 .post-recipe button, .post-recipe a,
 .update-recipe button, .update-recipe a {
-    margin-top: 0.5rem;
-    margin-right: 0.2rem;
+    margin: 0.5rem 0.2rem 0.5rem 0;
 }
 
 /* Update comment page */
@@ -813,10 +808,6 @@ footer i:hover {
         margin-left: -0.25rem;
     }
 
-    .post-recipe {
-        padding-bottom: 0.7rem;
-    }
-
     .error-message {
         margin-bottom: 1.5rem;
     }
@@ -1099,13 +1090,10 @@ footer i:hover {
         margin-bottom: 2.3rem !important;
     }
 
-    .post-recipe {
-        padding-bottom: 1rem;
-    }
-
     .post-recipe button, .post-recipe a,
     .update-recipe button, .update-recipe a {
         margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .error-image {
@@ -1189,10 +1177,6 @@ footer i:hover {
 
     .comment-text {
         margin-left: -0.4rem;
-    }
-
-    .post-recipe {
-        padding-bottom: 1.2rem;
     }
 }
 

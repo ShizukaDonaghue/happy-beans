@@ -8,6 +8,7 @@
 <div class="container justify-content-center post-recipe">
     <h1>Please share your creations!</h1>
     <div class="row">
+        <!-- If the user if logged in -->
         {% if user.is_authenticated %}
         {% load cloudinary %}
         <form method="POST" enctype="multipart/form-data">
