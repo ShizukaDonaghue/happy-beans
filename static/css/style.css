@@ -290,6 +290,10 @@ footer i:hover {
     font-size: 120%;
 }
 
+.icon-container {
+    margin-top: -0.2rem;
+}
+
 .seeding-icon {
     margin-top: 0.1rem;
     color: var(--green);
@@ -892,6 +896,10 @@ footer i:hover {
 
     .btn-like, .icons {
         font-size: 160%;
+    }
+
+    .icon-container {
+        margin-top: -0.3rem;
     }
 
     .icon-diet {
