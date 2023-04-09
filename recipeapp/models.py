@@ -121,8 +121,10 @@ class Recipe(models.Model):
         null=True
     )
     difficulty = models.IntegerField(choices=DIFFICULTY)
-    prep_time = models.PositiveIntegerField(verbose_name="Prep Time (mins)")
-    cook_time = models.PositiveIntegerField(verbose_name="Cooking Time (mins)")
+    prep_time = models.PositiveIntegerField(
+        verbose_name="Preparation Time in Minutes")
+    cook_time = models.PositiveIntegerField(
+        verbose_name="Cooking Time in Minutes")
     serves = models.PositiveIntegerField()
     ingredients = models.TextField(validators=[textfield_not_empty])
     method = models.TextField(validators=[textfield_not_empty])
