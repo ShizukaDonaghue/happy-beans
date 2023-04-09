@@ -51,7 +51,8 @@ MAIN_INGREDIENT = (
     (5, 'Pork'),
     (6, 'Seafood'),
     (7, 'Turkey'),
-    (8, 'Vegetable')
+    (8, 'Vegetable'),
+    (9, 'Other')
 )
 
 
@@ -91,7 +92,7 @@ class Recipe(models.Model):
         Serves - recipe servings
         Ingredients - all ingredients required
         Method - cooking method
-        Image - recipe image, if none provided, default image is displayed
+        Image - recipe image, if none provided, a default image is displayed
         Status - recipe status, either draft or published
         Likes - indicating the number of likes by users
     """
@@ -105,8 +106,10 @@ class Recipe(models.Model):
     description = models.TextField(max_length=500)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    meal_type = models.IntegerField(choices=MEAL_TYPE)
-    main_ingredient = models.IntegerField(choices=MAIN_INGREDIENT)
+    meal_type = models.IntegerField(
+        verbose_name="Meal Type", choices=MEAL_TYPE)
+    main_ingredient = models.IntegerField(
+        verbose_name="Main Ingredient", choices=MAIN_INGREDIENT)
     diet_type = ChoiceArrayField(
         models.CharField(
             choices=DIET_TYPES,
@@ -118,8 +121,8 @@ class Recipe(models.Model):
         null=True
     )
     difficulty = models.IntegerField(choices=DIFFICULTY)
-    prep_time = models.PositiveIntegerField()
-    cook_time = models.PositiveIntegerField()
+    prep_time = models.PositiveIntegerField(verbose_name="Prep Time (mins)")
+    cook_time = models.PositiveIntegerField(verbose_name="Cooking Time (mins)")
     serves = models.PositiveIntegerField()
     ingredients = models.TextField(validators=[textfield_not_empty])
     method = models.TextField(validators=[textfield_not_empty])
@@ -133,7 +136,7 @@ class Recipe(models.Model):
 
     class Meta:
         """
-        Ordering of receipes by their creation dates in descending order
+        Ordering of recipes by their creation dates in descending order
         """
         ordering = ['-created_on']
 
@@ -177,7 +180,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        """ Returns commnent body and auther name """
+        """ Returns comment body and author name """
         return f"Comment {self.body} by {self.name}"
 
     def date_format_created_on(self):
