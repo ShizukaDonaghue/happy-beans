@@ -505,6 +505,15 @@ footer i:hover {
     margin-top: 0.4rem;
 }
 
+.login label[for='id_remember'] {
+    display: inline;
+}
+
+.login #id_remember {
+    display: inline;
+    width: 20px;
+}
+
 /* Error pages */
 .error-image {
     width: 130px;
