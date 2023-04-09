@@ -453,7 +453,8 @@ footer i:hover {
     padding-bottom: 0.5rem;
 }
 
-.post-recipe button, .post-recipe a {
+.post-recipe button, .post-recipe a,
+.update-recipe button, .update-recipe a {
     margin-top: 0.5rem;
     margin-right: 0.2rem;
 }
@@ -943,6 +944,7 @@ footer i:hover {
     }
 
     .post-recipe label, .post-recipe button, .post-recipe a,
+    .update-recipe button, .update-recipe a,
     .update-comment button, .update-comment a {
         font-size: 1.1rem;
     }
@@ -1101,12 +1103,9 @@ footer i:hover {
         padding-bottom: 1rem;
     }
 
-    .post-recipe button, .post-recipe a {
+    .post-recipe button, .post-recipe a,
+    .update-recipe button, .update-recipe a {
         margin-top: 1rem;
-    }
-
-    .post-recipe button, .post-recipe a {
-        margin-right: 0.5rem;
     }
 
     .error-image {
