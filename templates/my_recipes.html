@@ -17,11 +17,11 @@
                     <div class="row">
                         <div class="d-flex">
                             <div class="d-inline col-10 recipe-card-body">
-                                <!-- If recipe status is not published -->
+                                <!-- If the recipe is not yet published -->
                                 {% if recipe.status == 0 %}
                                 <h5 class="card-title">{{ recipe.title | capfirst }}<span class="text-danger">
                                         [Draft]</span></h5>
-                                <!-- If recipe is published -->
+                                <!-- If the recipe is published -->
                                 {% else %}
                                 <h5 class="card-title">{{ recipe.title | capfirst }}</h5>
                                 {% endif %}
