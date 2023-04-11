@@ -133,7 +133,7 @@ These errors do not affect the functionality of the application.
 [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes used throughout the application and no issues or errors were found.
 Please see the results for each page.
 
-#### Happy Beans project
+#### Happy Beans Project
 <details>
   <summary>asgi.py - No issues or errors</summary> 
   
@@ -146,7 +146,7 @@ Please see the results for each page.
   
   <img src="docs/images/validation/settings.png">
 
-Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATORS" and also to Cloudinary storage under "STATICFILES_STORAGE" to ignore "line too long" errors.
+Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATORS" and also to Cloudinary storage under "STATICFILES_STORAGE" to ignore "line too long" errors as these could not be shortened without breaking the codes.
 
 </details>
 
@@ -224,7 +224,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>recipeapp_tags.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/template-tags.png">
+  <img src="docs/images/validation/recipeapp-tags.png">
 
 </details>
 
