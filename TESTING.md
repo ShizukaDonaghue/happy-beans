@@ -1,4 +1,4 @@
-# Tesing
+# Testing
 
 Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 
@@ -12,51 +12,51 @@ Please see below results for each page.
 
 
 <details>
-  <summary>Results for Home Page - No isses or errors</summary>
+  <summary>Home Page - No isses or errors</summary>
   
-  <img src="docs/images/validation/home-page.png" width=700>
+  <img src="docs/images/validation/home-page.png">
 
 </details>
 
 <details>
-  <summary>Results for Sigup Page - No issues or errors</summary>
+  <summary>Sigup Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/signup-page.png" width=700>
+  <img src="docs/images/validation/signup-page.png">
 
 </details>
 
 <details>
-  <summary>Results for Login Page - No issues or errors</summary>
+  <summary>Login Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/login-page.png" width=700>
-
-</details>
-
-
-<details>
-  <summary>Results for Logout Page - No issues or errors</summary>
-  
-  <img src="docs/images/validation/logout-page.png" width=700>
+  <img src="docs/images/validation/login-page.png">
 
 </details>
 
 
 <details>
-  <summary>Results for Browse Recipes Page - No issues or errors</summary>
+  <summary>Logout Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/browse-recipes-page.png" width=700>
+  <img src="docs/images/validation/logout-page.png">
+
+</details>
+
+
+<details>
+  <summary>Browse Recipes Page - No issues or errors</summary>
+  
+  <img src="docs/images/validation/browse-recipes-page.png">
 
 </details>
 
 <details>
-  <summary>Results for My Favourites Page - No issues errors</summary> 
+  <summary>My Favourites Page - No issues errors</summary> 
   
-  <img src="docs/images/validation/my-favourites-page.png" width=700>
+  <img src="docs/images/validation/my-favourites-page.png">
 
 </details>
 
 <details>
-  <summary>Results for Post and Update Recipe Pages - Errors identified for Summernote fields</summary> 
+  <summary>Post and Update Recipe Pages - Errors identified for Summernote fields</summary> 
   
   
  
@@ -69,7 +69,7 @@ Since all the errors were related to Summernote codes and not my own, these were
 These errors do not affect the functionality of the application.
 
 <details>
-  <summary>Results for Recipe Details Page - Errors identified for Bootstrap CSS property</summary> 
+  <summary>Recipe Details Page - Errors identified for Bootstrap CSS property</summary> 
   
   <img src="docs/images/validation/post-and-update-recipe-pages.pdf" width=800>
 
