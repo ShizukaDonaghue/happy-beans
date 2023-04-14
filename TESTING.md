@@ -5,7 +5,7 @@ Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 ## Code Validation
 
 ### HTML
-[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors and successfully passed validation, except for errors related to Summernote codes and Bootstrap property.
+[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors. The only errors identified were for Summernote codes and Bootstrap property.
 Please see below results for each page.
 
 <details>
@@ -236,7 +236,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 </details>
 
 ## Accessibility
-[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. Errors identified were related to Crispy Form. Please see below results for each page.
+[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. The only errors identified were for Crispy Form fields. Please see below results for each page.
 
 <details>
   <summary>Home Page - No errors</summary>
