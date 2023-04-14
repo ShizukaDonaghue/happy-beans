@@ -299,21 +299,6 @@ The error identified was a missing form label for the Crispy Form used in the Co
 </details>
 
 <details>
-  <summary>403 Error Page - No errors</summary> 
-  
-  <img src="docs/images/validation/wave-403-page.png">
-
-</details>
-
-<details>
-  <summary>404 Error Page - No errors</summary> 
-  
-  <img src="docs/images/validation/wave-404-page.png">
-
-</details>
-
-
-<details>
   <summary>Post Recipe Page - No errors</summary> 
   
   <img src="docs/images/validation/wave-post-recipe-page-1.png">
@@ -338,6 +323,19 @@ The error identified was a missing form label for the Crispy Form used in the Co
 
 </details>
 
+<details>
+  <summary>403 Error Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-403-page.png">
+
+</details>
+
+<details>
+  <summary>404 Error Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-404-page.png">
+
+</details>
 
 ## Lighthouse
 XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX
@@ -354,7 +352,7 @@ This included the following devices:
 XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
 
 ## Browser Compatibility
-Browser compatibility was checked for the following browsers and no issues found.
+Browser compatibility was checked for the following browsers and no issues were found.
 * Google Chrome
 * Microsoft Edge
 * Apple Safari
@@ -705,7 +703,7 @@ Browse Recipes Link | Click | Navigates to Home page | PASS
 ### 404 Error Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-All Pages | Change URL that does not exist | 404 error message is displayed | PASS
+All Pages | Enter URL that does not exist | 404 error message is displayed | PASS
 Home Link | Click | Navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Home page | PASS
 
