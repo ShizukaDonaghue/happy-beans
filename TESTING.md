@@ -1,15 +1,15 @@
-# Testing
+# Happy Beans - Testing
 
 Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 
 ## Code Validation
 
 ### HTML
-All the pages were run through [W3C HTML Validator](https://validator.w3.org/) to check for any issues and syntax errors.
-Initiallly, there were errors identified due to a missing closing tag and image height values.
-Once these issues were rectified, all pages passed validation, except for errors related to Summernote and Bootstrap codes.
+[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application.
+Each page was checked for any issues and syntax errors.
+Initiallly, there were errors resulting from a missing closing tag and image height values.
+Once these issues were rectified, all pages passed validation, except for the errors related to Summernote codes and Bootstrap property.
 Please see below results for each page.
-
 
 <details>
   <summary>Home Page - No isses or errors</summary>
@@ -85,29 +85,40 @@ Please see below results for each page.
 
 
 <details>
-  <summary>Post and Update Recipe Pages - Errors identified for Summernote fields</summary> 
+  <summary>Post Recipe Page - Errors identified for Summernote fields</summary> 
   
-  
- 
+  <img src="docs/images/validation/post-recipe-page-1.png">
+  <img src="docs/images/validation/post-recipe-page-2.png">
+  <img src="docs/images/validation/post-recipe-page-3.png">
+  <img src="docs/images/validation/post-recipe-page-4.png">
+
+The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were left untouched.
+However, these errors do not affect the functionality of the application.
 
 </details>
-
-Errors were identified in these pages, however, they were all related to Summernote widget that is used in the recipe form for these pages.
-The same errors were identified for both pages as the same form is used in both pages. 
-Since all the errors were related to Summernote codes and not my own, these were not rectified. 
-These errors do not affect the functionality of the application.
 
 <details>
-  <summary>Recipe Details Page - Errors identified for Bootstrap CSS property</summary> 
+  <summary>Update Recipe Page - Errors identified for Summernote fields</summary> 
   
-  <img src="docs/images/validation/post-and-update-recipe-pages.pdf" width=800>
+  <img src="docs/images/validation/update-recipe-page-1.png">
+  <img src="docs/images/validation/update-recipe-page-2.png">
+  <img src="docs/images/validation/update-recipe-page-3.png">
+  <img src="docs/images/validation/update-recipe-page-4.png">
+
+The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were left untouched.
+However, these errors do not affect the functionality of the application.
 
 </details>
 
+<details>
+  <summary>Recipe Details Page - Errors identified for Bootstrap CSS Property</summary> 
+  
+  <img src="docs/images/validation/recipe-details-page-1.png">
+  <img src="docs/images/validation/recipe-details-page-2.png">
 
-********************XXXXXXXREPLACE SCREENSHOT OF ERROR - TYPO IN THE SOURCE CODEXXXXXXXXXXXX*************
-********************xxxxxxxCHECK FOR ERROR AGAIN!!!XXXXXXXXXXXXXXXXXXXXXXXXXXX*******************
+The errors identified were all related to Bootstrap CSS property. Since the errors resulted from Bootstrap codes, these were left untouched.
 
+</details>
 
 ### CSS
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS codes used in the application and no issues or errors were found.
@@ -228,11 +239,105 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 
 </details>
 
+## Accessibility
+[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility and no errors or contrast errors were found.
+
+<details>
+  <summary>Home Page - No errors</summary>
+  
+  <img src="docs/images/validation/wave-home-page.png">
+
+</details>
+
+<details>
+  <summary>Sigup Page - No errors</summary>
+  
+  <img src="docs/images/validation/wave-signup-page.png">
+
+</details>
+
+<details>
+  <summary>Login Page - No errors</summary>
+  
+  <img src="docs/images/validation/wave-login-page.png">
+
+</details>
 
 
+<details>
+  <summary>Logout Page - No errors</summary>
+  
+  <img src="docs/images/validation/wave-logout-page.png">
+
+</details>
 
 
+<details>
+  <summary>Browse Recipes Page - No errors</summary>
+  
+  <img src="docs/images/validation/wave-browse-recipes-page.png">
 
-Feature | Action | Expected Result | PASS/FAIL
----|---|---|---
+</details>
 
+<details>
+  <summary>My Favourites Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-my-favourites-page.png">
+
+</details>
+
+<details>
+  <summary>My Recipes Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-my-recipes-page.png">
+
+</details>
+
+<details>
+  <summary>Update Comment Page - Missing Form Label Error</summary> 
+  
+  <img src="docs/images/validation/wave-update-comment-page.png">
+
+The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was left untouched.
+
+</details>
+
+<details>
+  <summary>403 Error Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-403-page.png">
+
+</details>
+
+<details>
+  <summary>404 Error Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-404-page.png">
+
+</details>
+
+
+<details>
+  <summary>Post Recipe Page - No errors</summary> 
+  
+  <img src="docs/images/validation/wave-post-recipe-page-1.png">
+
+</details>
+
+<details>
+  <summary>Update Recipe Page - Empty Link Error</summary> 
+  
+  <img src="docs/images/validation/wave-update-recipe-page.png">
+
+The error identified was for an empty link for the current recipe image loaded. Since the error resulted from the Crispy Form codes, this was left untouched.
+
+</details>
+
+<details>
+  <summary>Recipe Details Page - Missing Form Label Error</summary> 
+  
+  <img src="docs/images/validation/wave-recipe-details-page.png">
+
+The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was left untouched.
+
+</details>
