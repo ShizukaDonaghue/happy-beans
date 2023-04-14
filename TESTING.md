@@ -341,3 +341,375 @@ The error identified was for an empty link for the current recipe image loaded. 
 The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was left untouched.
 
 </details>
+
+
+## Lighthouse
+XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX
+
+## Responsiveness
+Responsiveness was testing using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found.
+This included the following devices:
+* iPhone 5/SE, 6/7/8, 6/7/8 Plus, SE, XR, 12 Pro, and X
+* iPad Air and iPad Mini
+* Samsung Galaxy S8+, S9+, S20 Ultra, A51/71
+* Microsoft Surface Pro 7 and Duo
+* Nest Hub and Hub Max
+
+XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
+
+## Browser Compatibility
+Browser compatibility was checked for the following browsers and no issues found.
+* Google Chrome
+* Microsoft Edge
+* Apple Safari
+* Mozilla Firefox
+* Opera
+
+XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
+
+## Manual Testing
+Manual testing was performed using Google Chrome to verify that all the features functioned as expected and no issues were found.
+
+### Browser Tab
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
+Title | Display | "Home" is displayed as the title of the page for Home page | PASS
+Title | Display | "Browse Recipes" is displayed as the title of the page for Browse Recipe page | PASS
+Title | Display | The title of the recipe is displayed as the title of the page for each Recipe Details page | PASS
+Title | Display | "My Favourites" is displayed as the title of the page for My Favourites page | PASS
+Title | Display | "My Recipes" is displayed as the title of the page for My Recipes page | PASS
+Title | Display | "Post Recipe" is displayed as the title of the page for Post Recipe page | PASS
+Title | Display | "Update Recipe" is displayed as the title of the page for Update Recipe page | PASS
+Title | Display | "Update Comment" is displayed as the title of the page for Update Comment page | PASS
+Title | Display | "Signup" is displayed as the title of the page for Signup page | PASS
+Title | Display | "Login" is displayed as the title of the page for Login page | PASS
+Title | Display | "Logout" is displayed as the title of the page for Logout page | PASS
+
+### Navigation Bar
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Menu | Display | Links displayed side by side in the navigation bar for screen sizes with a minimum width of 1200px | PASS
+Position | Display | Navigation bar always stays at the top of the screen | PASS
+Logo | Click | Navigates to Home page | PASS
+Home Link | Click | Navigates to Home page | PASS
+Browse Recipe Link | Navigates to Browse Recipe page | PASS
+Sign Up Link | Display | Only available if the user is not logged in | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Log In Link | Display | Only available if the user is not logged in | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Log Out Link | Display | Only available if the user is logged in | PASS
+Log Out Link | Click | Navigates to Log Out page | PASS
+My Favourites Link | Display | Only available if the user is logged in | PASS
+My Favourites Link | Click| Navigates to My Favourites page | PASS
+My Recipes Link | Display | Only available if the user is logged in | PASS
+My Recipes Link | Click| Navigates to My Recipes page | PASS
+Post a Recipe Link | Display | Only available if the user is logged in | PASS
+Post a Recipe Link | Click| Navigates to Post a Recipe page to | PASS
+All Links | Hover | Colour changes to green with hover effect | PASS
+All Links | Display | Active page is shown in green | PASS
+
+### Hamburger Menu
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Menu | Display | Hamburger menu displayed in the navigation bar for screen sizes less than 1200px in width | PASS
+Animation | Click | Animation functions correctly - X is displayed while the menu is open | PASS
+Menu Closure | Click | Hamburger menu closes when clicked outside the menu and when clicked on X | PASS
+Logo | Click | Navigates to Home page | PASS
+Home Link | Click | Navigates to Home page | PASS
+Browse Recipe Link | Navigates to Browse Recipe page | PASS
+Sign Up Link | Display | Only available if the user is not logged in | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Log In Link | Display | Only available if the user is not logged in | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Log Out Link | Display | Only available if the user is logged in | PASS
+Log Out Link | Click | Navigates to Log Out page | PASS
+My Favourites Link | Display | Only available if the user is logged in | PASS
+My Favourites Link | Click| Navigates to My Favourites page | PASS
+My Recipes Link | Display | Only available if the user is logged in | PASS
+My Recipes Link | Click| Navigates to My Recipes page | PASS
+Post a Recipe Link | Display | Only available if the user is logged in | PASS
+Post a Recipe Link | Click| Navigates to Post a Recipe page to | PASS
+All Links | Hover | Colour changes to green with hover effect | PASS
+All Links | Display | Active page is shown in green | PASS
+
+### Footer
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Position | Display | Footer always stays at the bottom of the screen even when the content does not occupy the full view height | PASS
+Facebook Link | Opens Facebook in a new tab | PASS
+Twitter Link | Opens Twitter in a new tab | PASS
+Instagram Link | Opens Instagram in a new tab | PASS
+GitHub Link | Opens GitHub in a new tab | PASS
+LinkedIn Link | Opens LinkedIn in a new tab | PASS
+All Links | Hover | Colour changes to green with hover effect | PASS
+
+### Signup Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Username Field | Leave Empty | Form does not submit | PASS
+Username Field | Leave Empty | Error message is displayed | PASS
+Username Field | Duplicate Username | Form does not submit | PASS
+Username Field | Duplicate Username | Error message is displayed | PASS
+Email Field | Leave Empty | Form submits without email address as this is an optional field | PASS
+Email Field | Enter Invalid Format | Form does not submit | PASS
+Email Field | Enter Invalid Format | Error message is displayed | PASS
+Email Field | Duplicate Email Address | Form does not submit | PASS
+Email Field | Duplicate Email Address | Error message is displayed | PASS
+Password Field | Leave Empty | Form does not submit | PASS
+Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Passwords Not Matched | Form does not submit | PASS
+Password Field | Passwords Not Matched | Error message is displayed | PASS
+Log In Link | Click | Navigates to Log In page | PASS
+Sign Up Link | Click | Once all the required fields are correctly filled in, creates an account | PASS
+Sign Up Link | Click | Once an account is created, logs in the user | PASS
+Sign Up Link | Click | Once the user is logged in, navigates to Home page | PASS
+Alert | Submit | Success message is displayed confirming the user has logged in as <username> | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+
+### Login Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Username Field | Leave Empty | Form does not submit | PASS
+Username Field | Leave Empty | Error message is displayed | PASS
+Password Field | Leave Empty | Form does not submit | PASS
+Password Field | Leave Empty | Error message is displayed | PASS
+Login Fields | Incorrect Details | Form does not submit | PASS
+Login Fields | Incorrect Details | Error message is displayed | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Log In Link | Click | Once the required fields are correctly filled in, logs in the user | PASS
+Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
+Alert | Submit | Success message is displayed confirming the user has logged in as <username> | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+
+### Logout Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Logout Link | Click | Logs out the user | PASS
+Logout Link | Click | Once the user is loggged out, navigates to Home page | PASS
+Browse Recipe Link | Click | Navigates to Browse Recipe page | PASS
+Alert | Submit | Success message is displayed confirming that the user has logged out | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+
+### Home Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Sign Up Message | Display | Correct message is displayed if the user is not logged in | PASS
+Sign Up Link | Display | Only available if the user is not logged in | PASS
+Sign Up Link | Click | Navigates to Sign Up page | PASS
+Post a Recipe Message | Display | Correct message is displayed if the user is logged in | PASS
+Post a Recipe Link | Display | Only available if the user is logged in | PASS
+Post a Recipe Link | Click| Navigates to Post a Recipe page to | PASS
+
+### Browse Recipe Page
+#### Recipe Filters
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Filter Dropdown Menu | Display | Dropdown menu is displayed correctly for each filter | PASS
+Filter Functionality | Click | Filters recipes based on the criteria selected | PASS
+Filter Functionality | Click | Clears filters when no criteria is selected | PASS
+Filter Functionality | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
+Browse Recipe Link | Click | Navigates back to Browse Recipes page without any filter criteria | PASS
+Pagination | Display | When there are more than 12 recipes to display, the filtered list of recipes is paginated correctly and maintains the filter criteria when navigating through the pages (previous, next, first and last pages) | PASS
+Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+
+#### Recipe Cards
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Recipe Card | Display | Recipes published are displayed in descending order | PASS
+Recipe Card | Display | Draft recipes are not displayed | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Hover | Box shadow is applied with hover effect | PASS
+Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
+Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
+Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
+Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+
+### Recipe Details Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Image Size | Display | For screen sizes with a minimum width of 992px, the image height is set to occupy the possible full height of recipe summary container next to the image | PASS
+Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Edit/Delete Recipe Button | Display | Edit/Delete button is available if the user is logged in and is the author of the recipe | PASS
+Edit Recipe Button | Click | Opens Update Recipe page with the original details populated from the database | PASS
+Edit Recipe Cancel Button | Click | Navigates back to Recipe Detail page | PASS
+Delete Recipe Button | Click | Displays the modal asking the user to confirm deletion | PASS
+Like/Unlike Button | Display | Like/Unlike button is available if the user is logged in and the recipe is published | PASS
+Like/Unlike Button | Display | Like/Unlike button is greyed out and not clickable if the user is not logged in or the recipe is not yet published | PASS
+Like/Unlike Button | Click | Toggles between Like (a love heart & plus icon) and Unlike (a love heart icon) if the user is logged in and the recipe is published | PASS
+Number of Likes | Display | The number of likes is dispalyed and increases or decreases correctly when the reipe is liked or unliked | PASS
+Recipe Indicator 
+Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+Ingredients | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
+Method | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
+Comments | Display | If there are no comments, correct message is displayed | PASS
+Comments | Display | Displays comments, authors and dates in ascending order if there are comments | PASS
+Post Comment | Display | If the user is not logged in, correct message is displayed | PASS
+Post Comment | Display | If the recipe is not published, correct message is displayed | PASS
+Post Comment | Display | Comment form is only available if the user is logged in and the recipe is published | PASS
+Post Comment | Display | First letter is always capitalised regardless of whether the comment entered is capitalised | PASS
+Post Comment | Leave Empty | Form does not submit | PASS
+Post Comment | Submit | Form submits and comment is added in ascending order | PASS
+Alert | Submit | Success message is displayed confirming the comment has been added successfully | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Edit/Delete Comment Dropdown Menu | Display | Edit/Delete button is available if the user is logged in and is the author of the comment | PASS
+Edit Comment Button | Click | Opens Update Comment page with the original details populated from the database | PASS
+Delete Comment Button | Click | Displays the modal asking the user to confirm deletion | PASS
+
+### My Favourites Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Recipe Card | Display | Recipes liked by the user are displayed in descending order | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Hover | Box shadow is applied with hover effect | PASS
+Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
+Recipe Card | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
+Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
+Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
+Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
+Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+
+### My Recipes Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Recipe Card | Display | Recipes posted by the user are displayed in descending order | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Hover | Box shadow is applied with hover effect | PASS
+Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
+Recipe Card | Display | [Draft] in red font is added to the recipe title if the recipe is not published | PASS
+Recipe Card | Display | When there are no recipes to display, Post a Recipe button, Browse Recipes button and correct messages are displayed | PASS
+Post a Recipe Link | Click | Navigates to Post Recipe page | PASS
+Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
+Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
+Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
+Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
+Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
+Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
+Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
+Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+
+### Post Recipe Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Title | Leave Empty | Form does not submit | PASS
+Title | Leave Empty | Error message is displayed | PASS
+Description | Leave Empty | Form does not submit | PASS
+Description | Leave Empty | Error message is displayed | PASS
+Meal Type | Leave Empty | Form does not submit | PASS
+Main Ingredient | Leave Empty | Form does not submit | PASS
+Diet Type | Not Selected | Form submits as this is not a required field | PASS
+Difficulty | Leave Empty | Form does not submit | PASS
+Preparation Time | Leave Empty | Form does not submit | PASS
+Preparation Time | Not Positive Numbers | Form does not submit | PASS
+Cooking Time | Leave Empty | Form does not submit | PASS
+Cooking Time | Not Positive Numbers | Form does not submit | PASS
+Serves | Leave Empty | Form does not submit | PASS
+Serves | Not Positive Numbers | Form does not submit | PASS
+Ingredients | Leave Empty | Form does not submit | PASS
+Ingredients | Leave Empty | Error message is displayed | PASS
+Method | Leave Empty | Form does not submit | PASS
+Method | Leave Empty | Error message is displayed | PASS
+Image | Not Uploaded | Form submits as this is not a required field | PASS
+Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
+Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
+Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
+Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipe page | PASS
+Post Recipe | Submit | Displays the Recipe Details page which has been generated | PASS
+Alert | Submit | Success message is displayed confirming [recipe title] has been added successfully | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Post Recipe Cancel Button | Click | Navigates back to Browse Recipes page | PASS
+
+### Update Recipe Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Update Recipe | Display | Update Recipe form contains the original details from database | PASS
+Title | Leave Empty | Form does not submit | PASS
+Title | Leave Empty | Error message is displayed | PASS
+Description | Leave Empty | Form does not submit | PASS
+Description | Leave Empty | Error message is displayed | PASS
+Meal Type | Leave Empty | Form does not submit | PASS
+Main Ingredient | Leave Empty | Form does not submit | PASS
+Diet Type | Not Selected | Form submits as this is not a required field | PASS
+Difficulty | Leave Empty | Form does not submit | PASS
+Preparation Time | Leave Empty | Form does not submit | PASS
+Preparation Time | Not Positive Numbers | Form does not submit | PASS
+Cooking Time | Leave Empty | Form does not submit | PASS
+Cooking Time | Not Positive Numbers | Form does not submit | PASS
+Serves | Leave Empty | Form does not submit | PASS
+Serves | Not Positive Numbers | Form does not submit | PASS
+Ingredients | Leave Empty | Form does not submit | PASS
+Ingredients | Leave Empty | Error message is displayed | PASS
+Method | Leave Empty | Form does not submit | PASS
+Method | Leave Empty | Error message is displayed | PASS
+Image | Not Uploaded | Form submits as this is not a required field | PASS
+Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
+Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
+Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
+Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipe page | PASS
+Update Recipe | Submit | Displays the Recipe Details page which has been updated | PASS
+Alert | Submit | Success message is displayed confirming the [recipe title] has been updated successfully | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Update Recipe Cancel Button | Navigates back to Recipe Detail page | PASS
+
+### Delete Recipe Modal
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delete Recipe | Once the user confirms deletion in the modal, the recipe is deleted | PASS
+Alert | Submit | Success message is displayed confirming that the recipe has been deleted | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Delete Recipe Cancel Button | Click | Modal is closed | PASS
+Close Modal | Click Outside Menu | Modal is closed | PASS
+
+### Update Comment Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Update Comment| Display | Update Comment form contains the original details from database | PASS
+Comment Field | Leave Empty | Form does not submit | PASS
+Comment Field | Leave Empty | Error message is displayed | PASS
+Update Comment | Click | Comment is updated | PASS
+Alert | Submit | Success message is displayed confirming the comment has been updated successfully | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Update Comment Cancel Button | Click | Navigates back to Recipe Detail page | PASS
+
+### Delete Comment Modal
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Delete Comment| Once the user confirms deletion in the modal, the comment is deleted | PASS
+Alert | Submit | Success message is displayed confirming that the comment has been deleted | PASS
+Alert | Submit | Success message is removed after 3 seconds | PASS
+Delete Comment Cancel Button | Click | Modal is closed | PASS
+Close Modal | Click Outside Menu | Modal is closed | PASS 
+
+### 403 Error Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+Update/Delete Recipe | Change URL to Acess Another User's Recipe | 403 error message is displayed | PASS
+Update/Delete Comment | Change URL to Acess Another User's Comment | 403 error message is displayed | PASS
+Home Link | Click | Navigates to Home page | PASS
+Browse Recipes Link | Click | Navigates to Home page | PASS
+
+### 404 Error Page
+Feature | Action | Expected Result | PASS/FAIL
+---|---|---|---
+All Pages | Change URL that does not exist | 404 error message is displayed | PASS
+Home Link | Click | Navigates to Home page | PASS
+Browse Recipes Link | Click | Navigates to Home page | PASS
