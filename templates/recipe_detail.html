@@ -48,11 +48,13 @@
                         <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                             {% csrf_token %}
                             {% if liked %}
-                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
+                                aria-label="Likebutton indicating it is already liked">
                                 <i class="fa-solid fa-heart"></i>
                             </button>
                             {% else %}
-                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
+                            <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
+                                aria-label="Like button indicating not yet liked">
                                 <i class="fa-solid fa-heart-circle-plus"></i><span class="like fw-bold">Like</span>
                             </button>
                             {% endif %}
@@ -220,7 +222,8 @@
                         <div class="d-inline col-1">
                             <div class="dropdown">
                                 <a class="stretched-link ps-3" href="#" role="button" id="dropdownMenuLink"
-                                    data-bs-toggle="dropdown" aria-expanded="false" data-title="More">
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-title="More"
+                                    aria-label="Dropdown menu for edit and delete buttons">
                                     <i class="fas fa-ellipsis-v text-dark"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
