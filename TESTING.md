@@ -458,7 +458,7 @@ Log In Link | Click | Navigates to Log In page | PASS
 Sign Up Link | Click | Once all the required fields are correctly filled in, creates an account | PASS
 Sign Up Link | Click | Once an account is created, logs in the user | PASS
 Sign Up Link | Click | Once the user is logged in, navigates to Home page | PASS
-Alert | Submit | Success message is displayed confirming the user has logged in as <username> | PASS
+Alert | Submit | Success message is displayed confirming the user has logged in as [username] | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 
 ### Login Page
@@ -473,14 +473,14 @@ Login Fields | Incorrect Details | Error message is displayed | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Click | Once the required fields are correctly filled in, logs in the user | PASS
 Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
-Alert | Submit | Success message is displayed confirming the user has logged in as <username> | PASS
+Alert | Submit | Success message is displayed confirming the user has logged in as [username] | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 
 ### Logout Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Logout Link | Click | Logs out the user | PASS
-Logout Link | Click | Once the user is loggged out, navigates to Home page | PASS
+Logout Link | Click | Once the user is logged out, navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
 Alert | Submit | Success message is displayed confirming that the user has logged out | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -503,7 +503,7 @@ Filter Dropdown Menu | Display | Dropdown menu is displayed correctly for each f
 Filter Functionality | Click | Filters recipes based on the criteria selected | PASS
 Filter Functionality | Click | Clears filters when no criteria is selected | PASS
 Filter Functionality | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
-Browse Recipes Link | Click | Navigates back to Browse Recipes page without any filter criteria | PASS
+Browse Recipes Link | Click | Navigates back to Browse Recipes page without any filter criteria applied | PASS
 Pagination | Display | When there are more than 12 recipes to display, the filtered list of recipes is paginated correctly and maintains the filter criteria when navigating through the pages (previous, next, first and last pages) | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -522,7 +522,7 @@ Image Size | Display | Images are displayed in the same height and width regardl
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
-Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Recipe Description | Display | Description is truncated to 70 characters for display the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -531,7 +531,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
-Image Size | Display | For screen sizes with a minimum width of 992px, the image height is set to occupy the possible full height of recipe summary container next to the image | PASS
+Image Size | Display | For screen sizes with a minimum width of 992px, the image height is set to occupy the maximum height of recipe summary container next to the image | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Edit/Delete Recipe Button | Display | Edit/Delete button is available if the user is logged in and is the author of the recipe | PASS
 Edit Recipe Button | Click | Opens Update Recipe page with the original details populated from the database | PASS
@@ -564,7 +564,7 @@ Feature | Action | Expected Result | PASS/FAIL
 Recipe Card | Display | Recipes liked by the user are displayed in descending order | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
-Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
 Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
 Recipe Card | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
 Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
