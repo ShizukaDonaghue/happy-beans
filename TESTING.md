@@ -369,7 +369,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Favicon | Display | Favicon is displayed correctly in the browser tab | PASS
 Title | Display | "Home" is displayed as the title of the page for Home page | PASS
-Title | Display | "Browse Recipes" is displayed as the title of the page for Browse Recipe page | PASS
+Title | Display | "Browse Recipes" is displayed as the title of the page for Browse Recipes page | PASS
 Title | Display | The title of the recipe is displayed as the title of the page for each Recipe Details page | PASS
 Title | Display | "My Favourites" is displayed as the title of the page for My Favourites page | PASS
 Title | Display | "My Recipes" is displayed as the title of the page for My Recipes page | PASS
@@ -387,7 +387,7 @@ Menu | Display | Links displayed side by side in the navigation bar for screen s
 Position | Display | Navigation bar always stays at the top of the screen | PASS
 Logo | Click | Navigates to Home page | PASS
 Home Link | Click | Navigates to Home page | PASS
-Browse Recipe Link | Click |Navigates to Browse Recipe page | PASS
+Browse Recipes Link | Click |Navigates to Browse Recipes page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
@@ -411,7 +411,7 @@ Animation | Click | Animation functions correctly - X is displayed while the men
 Menu Closure | Click | Hamburger menu closes when clicked outside the menu and when clicked on X | PASS
 Logo | Click | Navigates to Home page | PASS
 Home Link | Click | Navigates to Home page | PASS
-Browse Recipe Link | Click | Navigates to Browse Recipe page | PASS
+Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
@@ -481,7 +481,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Logout Link | Click | Logs out the user | PASS
 Logout Link | Click | Once the user is loggged out, navigates to Home page | PASS
-Browse Recipe Link | Click | Navigates to Browse Recipe page | PASS
+Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
 Alert | Submit | Success message is displayed confirming that the user has logged out | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 
@@ -495,7 +495,7 @@ Post a Recipe Message | Display | Correct message is displayed if the user is lo
 Post a Recipe Link | Display | Only available if the user is logged in | PASS
 Post a Recipe Link | Click| Navigates to Post a Recipe page to | PASS
 
-### Browse Recipe Page
+### Browse Recipes Page
 #### Recipe Filters
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
@@ -503,7 +503,7 @@ Filter Dropdown Menu | Display | Dropdown menu is displayed correctly for each f
 Filter Functionality | Click | Filters recipes based on the criteria selected | PASS
 Filter Functionality | Click | Clears filters when no criteria is selected | PASS
 Filter Functionality | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
-Browse Recipe Link | Click | Navigates back to Browse Recipes page without any filter criteria | PASS
+Browse Recipes Link | Click | Navigates back to Browse Recipes page without any filter criteria | PASS
 Pagination | Display | When there are more than 12 recipes to display, the filtered list of recipes is paginated correctly and maintains the filter criteria when navigating through the pages (previous, next, first and last pages) | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -625,7 +625,7 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipe page | PASS
+Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipes page | PASS
 Post Recipe | Submit | Displays the Recipe Details page which has been generated | PASS
 Alert | Submit | Success message is displayed confirming [recipe title] has been added successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -657,7 +657,7 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipe page | PASS
+Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipes page | PASS
 Update Recipe | Submit | Displays the Recipe Details page which has been updated | PASS
 Alert | Submit | Success message is displayed confirming the [recipe title] has been updated successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
