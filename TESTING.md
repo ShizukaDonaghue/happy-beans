@@ -708,3 +708,8 @@ Feature | Action | Expected Result | PASS/FAIL
 All Pages | Change URL that does not exist | 404 error message is displayed | PASS
 Home Link | Click | Navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Home page | PASS
+
+## Physical Testing
+The application was also tested physically on iPhone 12, iPhone 11, iPhone XR, iPhone 8, iPad 8, HP Elitebook 840, and Dell XPS for the above. 
+No issues were found.
+
