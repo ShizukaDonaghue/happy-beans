@@ -5,10 +5,7 @@ Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 ## Code Validation
 
 ### HTML
-[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application.
-Each page was checked for any issues and syntax errors.
-Initiallly, there were errors resulting from a missing closing tag and image height values.
-Once these issues were rectified, all pages passed validation, except for the errors related to Summernote codes and Bootstrap property.
+[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors and successfully passed validation, except for errors related to Summernote codes and Bootstrap property.
 Please see below results for each page.
 
 <details>
@@ -70,21 +67,6 @@ Please see below results for each page.
 </details>
 
 <details>
-  <summary>403 Error Page - No issues or errors</summary> 
-  
-  <img src="docs/images/validation/403-error-page.png">
-
-</details>
-
-<details>
-  <summary>404 Error Page - No issues or errors</summary> 
-  
-  <img src="docs/images/validation/404-error-page.png">
-
-</details>
-
-
-<details>
   <summary>Post Recipe Page - Errors identified for Summernote fields</summary> 
   
   <img src="docs/images/validation/post-recipe-page-1.png">
@@ -117,6 +99,20 @@ However, these errors do not affect the functionality of the application.
   <img src="docs/images/validation/recipe-details-page-2.png">
 
 The errors identified were all related to Bootstrap CSS property. Since the errors resulted from Bootstrap codes, these were left untouched.
+
+</details>
+
+<details>
+  <summary>403 Error Page - No issues or errors</summary> 
+  
+  <img src="docs/images/validation/403-error-page.png">
+
+</details>
+
+<details>
+  <summary>404 Error Page - No issues or errors</summary> 
+  
+  <img src="docs/images/validation/404-error-page.png">
 
 </details>
 
@@ -153,7 +149,7 @@ Please see the results for each page.
 </details>
 
 <details>
-  <summary>settings.py - No issues or errors</summary> 
+  <summary>settings.py - No issues or errors *See Note</summary> 
   
   <img src="docs/images/validation/settings.png">
 
@@ -240,7 +236,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 </details>
 
 ## Accessibility
-[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility and no errors or contrast errors were found.
+[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. Errors identified were related to Crispy Form. Please see below results for each page.
 
 <details>
   <summary>Home Page - No errors</summary>
@@ -275,7 +271,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>Browse Recipes Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-browse-recipes-page.png">
+  <img src="docs/images/validation/wave-browse-recipes.png">
 
 </details>
 
@@ -294,7 +290,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 </details>
 
 <details>
-  <summary>Update Comment Page - Missing Form Label Error</summary> 
+  <summary>Update Comment Page - Missing form label error</summary> 
   
   <img src="docs/images/validation/wave-update-comment-page.png">
 
@@ -325,7 +321,7 @@ The error identified was a missing form label for the Crispy Form used in the Co
 </details>
 
 <details>
-  <summary>Update Recipe Page - Empty Link Error</summary> 
+  <summary>Update Recipe Page - Empty link error</summary> 
   
   <img src="docs/images/validation/wave-update-recipe-page.png">
 
@@ -334,7 +330,7 @@ The error identified was for an empty link for the current recipe image loaded. 
 </details>
 
 <details>
-  <summary>Recipe Details Page - Missing Form Label Error</summary> 
+  <summary>Recipe Details Page - Missing form label error</summary> 
   
   <img src="docs/images/validation/wave-recipe-details-page.png">
 
@@ -393,7 +389,7 @@ Menu | Display | Links displayed side by side in the navigation bar for screen s
 Position | Display | Navigation bar always stays at the top of the screen | PASS
 Logo | Click | Navigates to Home page | PASS
 Home Link | Click | Navigates to Home page | PASS
-Browse Recipe Link | Navigates to Browse Recipe page | PASS
+Browse Recipe Link | Click |Navigates to Browse Recipe page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
@@ -417,7 +413,7 @@ Animation | Click | Animation functions correctly - X is displayed while the men
 Menu Closure | Click | Hamburger menu closes when clicked outside the menu and when clicked on X | PASS
 Logo | Click | Navigates to Home page | PASS
 Home Link | Click | Navigates to Home page | PASS
-Browse Recipe Link | Navigates to Browse Recipe page | PASS
+Browse Recipe Link | Click | Navigates to Browse Recipe page | PASS
 Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Log In Link | Display | Only available if the user is not logged in | PASS
@@ -437,11 +433,11 @@ All Links | Display | Active page is shown in green | PASS
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Position | Display | Footer always stays at the bottom of the screen even when the content does not occupy the full view height | PASS
-Facebook Link | Opens Facebook in a new tab | PASS
-Twitter Link | Opens Twitter in a new tab | PASS
-Instagram Link | Opens Instagram in a new tab | PASS
-GitHub Link | Opens GitHub in a new tab | PASS
-LinkedIn Link | Opens LinkedIn in a new tab | PASS
+Facebook Link | Click | Opens Facebook in a new tab | PASS
+Twitter Link | Click | Opens Twitter in a new tab | PASS
+Instagram Link | Click | Opens Instagram in a new tab | PASS
+GitHub Link | Click | Opens GitHub in a new tab | PASS
+LinkedIn Link | Click | Opens LinkedIn in a new tab | PASS
 All Links | Hover | Colour changes to green with hover effect | PASS
 
 ### Signup Page
@@ -547,7 +543,6 @@ Like/Unlike Button | Display | Like/Unlike button is available if the user is lo
 Like/Unlike Button | Display | Like/Unlike button is greyed out and not clickable if the user is not logged in or the recipe is not yet published | PASS
 Like/Unlike Button | Click | Toggles between Like (a love heart & plus icon) and Unlike (a love heart icon) if the user is logged in and the recipe is published | PASS
 Number of Likes | Display | The number of likes is dispalyed and increases or decreases correctly when the reipe is liked or unliked | PASS
-Recipe Indicator 
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Ingredients | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
 Method | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
@@ -673,7 +668,7 @@ Update Recipe Cancel Button | Navigates back to Recipe Detail page | PASS
 ### Delete Recipe Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Recipe | Once the user confirms deletion in the modal, the recipe is deleted | PASS
+Delete Recipe | Submit | Once the user confirms deletion in the modal, the recipe is deleted | PASS
 Alert | Submit | Success message is displayed confirming that the recipe has been deleted | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 Delete Recipe Cancel Button | Click | Modal is closed | PASS
@@ -693,7 +688,7 @@ Update Comment Cancel Button | Click | Navigates back to Recipe Detail page | PA
 ### Delete Comment Modal
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Delete Comment| Once the user confirms deletion in the modal, the comment is deleted | PASS
+Delete Comment| Submit | Once the user confirms deletion in the modal, the comment is deleted | PASS
 Alert | Submit | Success message is displayed confirming that the comment has been deleted | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 Delete Comment Cancel Button | Click | Modal is closed | PASS
