@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 });
 
-// Script to validate Post Recipe and Update Recipe forms and raise error messages as required
+// Script to validate Post Recipe and Update Recipe forms and raise error messages if required
 $(document).ready(function() {
     $('.recipe-form').validate({
         rules: {

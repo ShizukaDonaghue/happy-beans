@@ -5,7 +5,7 @@ Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 ## Code Validation
 
 ### HTML
-[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors. The only errors identified were for Summernote codes and Bootstrap property.
+[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors. The only errors identified were for Summernote fields.
 Please see below results for each page.
 
 <details>
@@ -74,10 +74,9 @@ Please see below results for each page.
   <img src="docs/images/validation/post-recipe-page-3.png">
   <img src="docs/images/validation/post-recipe-page-4.png">
 
-The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were left untouched.
-However, these errors do not affect the functionality of the application.
-
 </details>
+
+The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
 
 <details>
   <summary>Update Recipe Page - Errors identified for Summernote fields</summary> 
@@ -87,20 +86,19 @@ However, these errors do not affect the functionality of the application.
   <img src="docs/images/validation/update-recipe-page-3.png">
   <img src="docs/images/validation/update-recipe-page-4.png">
 
-The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were left untouched.
-However, these errors do not affect the functionality of the application.
-
 </details>
 
+The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
+
 <details>
-  <summary>Recipe Details Page - Errors identified for Bootstrap CSS Property</summary> 
+  <summary>Recipe Details Page - Errors identified for Summernote fields</summary> 
   
   <img src="docs/images/validation/recipe-details-page-1.png">
   <img src="docs/images/validation/recipe-details-page-2.png">
 
-The errors identified were all related to Bootstrap CSS property. Since the errors resulted from Bootstrap codes, these were left untouched.
-
 </details>
+
+The errors identified were all related to CSS property used in Summernote list items for unordered list. Since the errors resulted from Summernote codes, these were not addressed.
 
 <details>
   <summary>403 Error Page - No issues or errors</summary> 
@@ -149,13 +147,13 @@ Please see the results for each page.
 </details>
 
 <details>
-  <summary>settings.py - No issues or errors *See Note</summary> 
+  <summary>settings.py - No issues or errors</summary> 
   
   <img src="docs/images/validation/settings.png">
 
-Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATORS" and also to Cloudinary storage under "STATICFILES_STORAGE" to ignore "line too long" errors as these could not be shortened without breaking the codes.
-
 </details>
+
+Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATORS" and also to Cloudinary storage under "STATICFILES_STORAGE" for "line too long" errors to be ignored as these could not be shortened without breaking the codes.
 
 <details>
   <summary>urls.py - No issues or errors</summary> 
@@ -294,14 +292,14 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
   
   <img src="docs/images/validation/wave-update-comment-page.png">
 
-The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was left untouched.
-
 </details>
+
+The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was not addressed.
 
 <details>
   <summary>Post Recipe Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-post-recipe-page-1.png">
+  <img src="docs/images/validation/wave-post-recipe-page.png">
 
 </details>
 
@@ -310,18 +308,17 @@ The error identified was a missing form label for the Crispy Form used in the Co
   
   <img src="docs/images/validation/wave-update-recipe-page.png">
 
-The error identified was for an empty link for the current recipe image loaded. Since the error resulted from the Crispy Form codes, this was left untouched.
-
 </details>
 
+The error identified was for an empty link for the current recipe image loaded. Since the error resulted from the Crispy Form codes, this was not addressed.
 <details>
   <summary>Recipe Details Page - Missing form label error</summary> 
   
   <img src="docs/images/validation/wave-recipe-details-page.png">
 
-The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was left untouched.
-
 </details>
+
+The error identified was a missing form label for the Crispy Form used in the Comment field. Since the error resulted from the Crispy Form codes, this was not addressed.
 
 <details>
   <summary>403 Error Page - No errors</summary> 
@@ -352,12 +349,22 @@ This included the following devices:
 XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
 
 ## Browser Compatibility
-Browser compatibility was checked for the following browsers and no issues were found.
+Browser compatibility was checked for the following browsers and no issues were found:
 * Google Chrome
 * Microsoft Edge
 * Apple Safari
 * Mozilla Firefox
 * Opera
+
+The application was also tested manually on the follwoing devices and no issues were found:
+* iPhone 12
+* iPhone 11
+* iPhone XR
+* iPhone 8
+* iPad 8
+* HP Elitebook 840
+* Dell XPS
+
 
 XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
 
@@ -408,7 +415,8 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Menu | Display | Hamburger menu displayed in the navigation bar for screen sizes less than 1200px in width | PASS
 Animation | Click | Animation functions correctly - X is displayed while the menu is open | PASS
-Menu Closure | Click | Hamburger menu closes when clicked outside the menu and when clicked on X | PASS
+Menu Closure | Click | Hamburger menu closes when clicked outside the menu | PASS
+Menu Closure | Click | Hamburger menu closes when clicked on X | PASS 
 Logo | Click | Navigates to Home page | PASS
 Home Link | Click | Navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
@@ -561,6 +569,7 @@ Delete Comment Button | Click | Displays the modal asking the user to confirm de
 ### My Favourites Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
 Recipe Card | Display | Recipes liked by the user are displayed in descending order | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
@@ -581,6 +590,7 @@ Pagination | Display | When there are less than 12 recipes to display, paginatio
 ### My Recipes Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
 Recipe Card | Display | Recipes posted by the user are displayed in descending order | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
@@ -603,24 +613,42 @@ Pagination | Display | When there are less than 12 recipes to display, paginatio
 ### Post Recipe Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
+Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
 Title | Leave Empty | Form does not submit | PASS
 Title | Leave Empty | Error message is displayed | PASS
+Title | Enter an Empty String | Form does not submit | PASS
+Title | Enter an Empty String | Error message is displayed | PASS
 Description | Leave Empty | Form does not submit | PASS
 Description | Leave Empty | Error message is displayed | PASS
+Description | Enter an Empty String | Form does not submit | PASS
+Description | Enter an Empty String | Error message is displayed | PASS
 Meal Type | Leave Empty | Form does not submit | PASS
+Meal Type | Leave Empty | Error message is displayed | PASS
 Main Ingredient | Leave Empty | Form does not submit | PASS
+Main Ingredient | Leave Empty | Error message is displayed | PASS
 Diet Type | Not Selected | Form submits as this is not a required field | PASS
 Difficulty | Leave Empty | Form does not submit | PASS
+Difficulty | Leave Empty | Error message is displayed | PASS
 Preparation Time | Leave Empty | Form does not submit | PASS
-Preparation Time | Not Positive Numbers | Form does not submit | PASS
+Preparation Time | Leave Empty | Error message is displayed | PASS
+Preparation Time | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Preparation Time | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Cooking Time | Leave Empty | Form does not submit | PASS
-Cooking Time | Not Positive Numbers | Form does not submit | PASS
+Cooking Time | Leave Empty | Error message is displayed | PASS
+Cooking Time | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Cooking Time | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Serves | Leave Empty | Form does not submit | PASS
-Serves | Not Positive Numbers | Form does not submit | PASS
+Serves | Leave Empty | Error message is displayed | PASS
+Serves | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Serves | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Ingredients | Leave Empty | Form does not submit | PASS
 Ingredients | Leave Empty | Error message is displayed | PASS
+Ingredients | Enter an Empty String | Form does not submit | PASS
+Ingredients | Enter an Empty String | Error message is displayed | PASS
 Method | Leave Empty | Form does not submit | PASS
 Method | Leave Empty | Error message is displayed | PASS
+Method | Enter an Empty String | Form does not submit | PASS
+Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
@@ -634,25 +662,44 @@ Post Recipe Cancel Button | Click | Navigates back to Browse Recipes page | PASS
 ### Update Recipe Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
+Defensive Measure | Not Logged-in and Try to Access Another User's Recipe by Changing URL | Navigates the user to Log In page | PASS
+Defensive Measure | Logged-in and Try to Access Another User's Recipe by Changing URL | 403 error page is displayed | PASS
 Update Recipe | Display | Update Recipe form contains the original details from database | PASS
 Title | Leave Empty | Form does not submit | PASS
 Title | Leave Empty | Error message is displayed | PASS
+Title | Enter an Empty String | Form does not submit | PASS
+Title | Enter an Empty String | Error message is displayed | PASS
 Description | Leave Empty | Form does not submit | PASS
 Description | Leave Empty | Error message is displayed | PASS
+Description | Enter an Empty String | Form does not submit | PASS
+Description | Enter an Empty String | Error message is displayed | PASS
 Meal Type | Leave Empty | Form does not submit | PASS
+Meal Type | Leave Empty | Error message is displayed | PASS
 Main Ingredient | Leave Empty | Form does not submit | PASS
+Main Ingredient | Leave Empty | Error message is displayed | PASS
 Diet Type | Not Selected | Form submits as this is not a required field | PASS
 Difficulty | Leave Empty | Form does not submit | PASS
+Difficulty | Leave Empty | Error message is displayed | PASS
 Preparation Time | Leave Empty | Form does not submit | PASS
-Preparation Time | Not Positive Numbers | Form does not submit | PASS
+Preparation Time | Leave Empty | Error message is displayed | PASS
+Preparation Time | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Preparation Time | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Cooking Time | Leave Empty | Form does not submit | PASS
-Cooking Time | Not Positive Numbers | Form does not submit | PASS
+Cooking Time | Leave Empty | Error message is displayed | PASS
+Cooking Time | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Cooking Time | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Serves | Leave Empty | Form does not submit | PASS
-Serves | Not Positive Numbers | Form does not submit | PASS
+Serves | Leave Empty | Error message is displayed | PASS
+Serves | Enter Anything Other Than a Positive Integer | Form does not submit | PASS
+Serves | Enter Anything Other Than a Positive Integer | Error message is displayed | PASS
 Ingredients | Leave Empty | Form does not submit | PASS
 Ingredients | Leave Empty | Error message is displayed | PASS
+Ingredients | Enter an Empty String | Form does not submit | PASS
+Ingredients | Enter an Empty String | Error message is displayed | PASS
 Method | Leave Empty | Form does not submit | PASS
 Method | Leave Empty | Error message is displayed | PASS
+Method | Enter an Empty String | Form does not submit | PASS
+Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
@@ -675,6 +722,8 @@ Close Modal | Click Outside Menu | Modal is closed | PASS
 ### Update Comment Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
+Defensive Measure | Not Logged-in and Try to Access Another User's Comment by Changing URL | Navigates the user to Log In page | PASS
+Defensive Measure | Logged-in and Try to Access Another User's Comment by Changing URL | 403 error page is displayed | PASS
 Update Comment| Display | Update Comment form contains the original details from database | PASS
 Comment Field | Leave Empty | Form does not submit | PASS
 Comment Field | Leave Empty | Error message is displayed | PASS
@@ -695,19 +744,16 @@ Close Modal | Click Outside Menu | Modal is closed | PASS
 ### 403 Error Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Update/Delete Recipe | Change URL to Acess Another User's Recipe | 403 error message is displayed | PASS
-Update/Delete Comment | Change URL to Acess Another User's Comment | 403 error message is displayed | PASS
+Custom 403 Error Page  | Change URL to Acess Another User's Recipe | Custom 403 error message is displayed | PASS
+Custom 403 Error Page | Change URL to Acess Another User's Comment | Custom 403 error message is displayed | PASS
 Home Link | Click | Navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Home page | PASS
 
 ### 404 Error Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-All Pages | Enter URL that does not exist | 404 error message is displayed | PASS
+Custom 404 Error Page | Enter URL that does not exist | Custom 404 error message is displayed | PASS
 Home Link | Click | Navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Home page | PASS
 
-## Physical Testing
-The application was also tested physically on iPhone 12, iPhone 11, iPhone XR, iPhone 8, iPad 8, HP Elitebook 840, and Dell XPS for the above. 
-No issues were found.
 
