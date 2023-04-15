@@ -46,12 +46,14 @@
 <!-- Call to action section -->
 <section>
     <div class="container text-center">
+        <!-- If the user is logged in -->
         {% if user.is_authenticated %}
         <div class="action-container">
             <h6>Let's share your creations!</h6>
             <a href="{% url 'post_recipe' %}" class="btn buttons" aria-label="Move to post recipe page"
                 role="button">Post a Recipe</a>
         </div>
+        <!-- If the user is not logged in -->
         {% else %}
         <div class="action-container">
             <h6>Create a free account to save your favourite recipes and share your own creations!</h6>

@@ -9,9 +9,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6 recipe-image align-items-stretch">
+            <!-- If an image is not loaded by the user -->
             {% if "placeholder" in recipe.image.url %}
             <img src="https://res.cloudinary.com/dio3rjgik/image/upload/v1679726727/placeholder-image_o1t1ix.jpg"
                 alt="placeholder image">
+            <!-- If an image is loaded by the user -->
             {% else %}
             <img src="{{ recipe.image.url }}" alt="image of {{ recipe.title }}">
             {% endif %}
@@ -22,7 +24,7 @@
                     <div class="d-inline col-9">
                         <h1 class="recipe-title">{{ recipe.title | capfirst }}</h1>
                     </div>
-                    <!-- Edit and delete buttons for recipe author -->
+                    <!-- If the user is logged in and is the author of the recipe -->
                     {% if user.is_authenticated and user == recipe.author %}
                     <div class="d-inline col-3 edit-delete-btn text-end">
                         <a href="{% url 'update_recipe' recipe.slug %}" class="btn" aria-label="Update recipe button"
@@ -50,7 +52,7 @@
                             <!-- If the logged-in user has already liked the recipe -->
                             {% if liked %}
                             <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like"
-                                aria-label="Likebutton indicating it is already liked">
+                                aria-label="Like button indicating it is already liked">
                                 <i class="fa-solid fa-heart"></i>
                             </button>
                             <!-- If the logged-in user has yet to like the recipe -->
@@ -120,7 +122,7 @@
                 </div>
                 <div class="row">
                     <div class="d-flex">
-                        <!-- If diet type is entered -->
+                        <!-- If diet type is entered (optional field)-->
                         {% if recipe.diet_types %}
                         <div class="d-inline col-1">
                             <span class="icon-diet"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></span>
@@ -220,7 +222,7 @@
                         <div class="d-inline col-4 text-end">
                             <small>{{ comment.date_format_created_on }}</small>
                         </div>
-                        <!-- Edit and delete menu for comment author -->
+                        <!-- If the user is logged in and is the author of the comment -->
                         {% if user.is_authenticated and user.username == comment.name %}
                         <div class="d-inline col-1">
                             <div class="dropdown">

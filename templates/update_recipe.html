@@ -8,7 +8,7 @@
 <div class="container justify-content-center update-recipe">
     <h1>Please share your creations!</h1>
     <div class="row">
-        <!-- If the user if logged in and is the author of the recipe -->
+        <!-- If the user is logged in and is the author of the recipe -->
         {% if user.is_authenticated and user == recipe.author %}
         {% load cloudinary %}
         <form method="POST" enctype="multipart/form-data" class="recipe-form">
