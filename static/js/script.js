@@ -1,4 +1,4 @@
-// Script to close alert messages after 3 seconds
+// Closes alert messages after 3 seconds
 $(document).ready(function() {
     setTimeout(function() {
         if ($('#msg').length > 0) {
@@ -7,14 +7,14 @@ $(document).ready(function() {
     }, 3000);
 });
 
-// Script to close Bootstrap hamburger menu when clicked outside the menu
+// Closes Bootstrap hamburger menu when clicked outside the menu
 $(document).ready(function() {
     $(document).click(function() {
         $('#navbarContents').collapse('hide');
     });
 });
 
-// Script to validate Post Recipe and Update Recipe forms and raise error messages if required
+// Validates Post Recipe and Update Recipe forms and raises error messages where required
 $(document).ready(function() {
     $('.recipe-form').validate({
         rules: {
