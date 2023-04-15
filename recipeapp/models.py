@@ -118,7 +118,8 @@ class Recipe(models.Model):
             null=True
         ),
         blank=True,
-        null=True
+        null=True,
+        verbose_name="Diet Types (Optional)"
     )
     difficulty = models.IntegerField(choices=DIFFICULTY)
     prep_time = models.PositiveIntegerField(
