@@ -203,7 +203,7 @@ footer i:hover {
     font-size: 1.1rem;
 }
 
-/* Browse recipe page */
+/* Browse Recipes page */
 .recipe-filters {
     font-weight: bold;
 }
@@ -240,7 +240,7 @@ footer i:hover {
     font-size: 0.9rem;
 }
 
-/* Recipe detail page */
+/* Recipe Detail page */
 .recipe-image {
     margin-top: 0.4rem;
     margin-bottom: 1rem;
@@ -433,7 +433,7 @@ footer i:hover {
     margin-top: 0.4rem;
 }
 
-/* My favourite and my recipes pages */
+/* My Favourites and My Recipes pages */
 .page-title {
     margin-bottom: -0.4rem;
 }
@@ -448,11 +448,18 @@ footer i:hover {
     display: none;
 }
 
-/* Post a recipe page */
+/* Post Recipe page */
 .post-recipe button, .post-recipe a,
 .update-recipe button, .update-recipe a {
     margin: 0.5rem 0.2rem 0.5rem 0;
 }
+
+/* Error message for Post Recipe page & Update Recipe page */
+label.error {
+    color: #B02A37;
+    font-size: 14px !important;
+    font-weight: bold;
+    }   
 
 /* Update comment page */
 .update-comment button, .update-comment a {

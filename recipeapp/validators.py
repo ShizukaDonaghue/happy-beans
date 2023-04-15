@@ -11,4 +11,4 @@ def textfield_not_empty(textfield):
     """
     cleaned_data = strip_tags(textfield).replace("&nbsp;", "").strip()
     if cleaned_data == "":
-        raise ValidationError("This field is required.")
+        raise ValidationError("Please enter this field.")
