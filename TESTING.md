@@ -338,34 +338,219 @@ The error identified was a missing form label for the Crispy Form used in the Co
 XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX
 
 ## Responsiveness
-Responsiveness was testing using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found.
+Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found.
 This included the following devices:
-* iPhone 5/SE, 6/7/8, 6/7/8 Plus, SE, XR, 12 Pro, and X
-* iPad Air and iPad Mini
-* Samsung Galaxy S8+, S9+, S20 Ultra, A51/71
-* Microsoft Surface Pro 7 and Duo
-* Nest Hub and Hub Max
 
-XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
+<details>
+  <summary>iPhone 5/SE</summary>
+
+  <img src="docs/images/testing/iphone-5-se.png" width=250>
+  
+</details>
+
+<details>
+  <summary>iPhone 6/7/8</summary>
+
+  <img src="docs/images/testing/iphone-6-7-8.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone 6/7/8 Plus</summary>
+
+  <img src="docs/images/testing/iphone-6-7-8-plus.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone SE</summary>
+
+  <img src="docs/images/testing/iphone-se.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone XR</summary>
+
+  <img src="docs/images/testing/iphone-xr.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone 12 Pro</summary>
+
+  <img src="docs/images/testing/iphone-12-pro.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone X</summary>
+
+  <img src="docs/images/testing/iphone-x.png" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone iPad Air</summary>
+
+  <img src="docs/images/testing/ipad-air.png" width=500>
+  
+</details>
+
+<details>
+  <summary>iPhone iPad Mini</summary>
+
+  <img src="docs/images/testing/ipad-mini.png" width=500>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy S8+</summary>
+
+  <img src="docs/images/testing/galaxy-s8-plus.png" width=300>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy S9+</summary>
+
+  <img src="docs/images/testing/galaxy-s9-plus.png" width=300>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy S20 Ultra</summary>
+
+  <img src="docs/images/testing/galaxy-s20-ultra.png" width=350>
+  
+</details>
+
+<details>
+  <summary>Samsung Galaxy A51/71</summary>
+
+  <img src="docs/images/testing/galaxy-a51-71.png" width=350>
+  
+</details>
+
+<details>
+  <summary>Microsoft Surface Pro 7</summary>
+
+  <img src="docs/images/testing/surface-pro-7.png" width=500>
+  
+</details>
+
+<details>
+  <summary>Microsoft Surface Duo</summary>
+
+  <img src="docs/images/testing/surface-duo.png" width=500>
+  
+</details>
+
+<details>
+  <summary>Nest Hub</summary>
+
+  <img src="docs/images/testing/nest-hub.png" width=600>
+  
+</details>
+
+<details>
+  <summary>Nest Hub Max</summary>
+
+  <img src="docs/images/testing/nest-hub-max.png" width=600>
+  
+</details>
+
+
+## Device Testing
+The application was tested manually on the follwoing devices and no issues were found:
+<details>
+  <summary>iPhone 12</summary>
+
+  <img src="docs/images/testing/device-iphone-12.jpeg" width=300>
+  
+</details>
+
+
+<details>
+  <summary>iPhone 11</summary>
+
+  <img src="docs/images/testing/device-iphone-11.jpeg" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone XR</summary>
+
+  <img src="docs/images/testing/device-iphone-xr.jpeg" width=300>
+  
+</details>
+
+<details>
+  <summary>iPhone 8</summary>
+
+  <img src="docs/images/testing/device-iphone-8.jpeg" width=250>
+  
+</details>
+
+<details>
+  <summary>iPad 8</summary>
+
+  <img src="docs/images/testing/device-ipad-8.jpeg" width=500>
+  
+</details>
+
+<details>
+  <summary>HP Elitebook 840</summary>
+
+  <img src="docs/images/testing/device-hp-elitebook-840.png" width=600>
+  
+</details>
+
+<details>
+  <summary>Dell XPS</summary>
+
+  <img src="docs/images/testing/device-dell-xps.png" width=600>
+  
+</details>
+
 
 ## Browser Compatibility
 Browser compatibility was checked for the following browsers and no issues were found:
-* Google Chrome
-* Microsoft Edge
-* Apple Safari
-* Mozilla Firefox
-* Opera
+<details>
+  <summary>Google Chrome</summary>
 
-The application was also tested manually on the follwoing devices and no issues were found:
-* iPhone 12
-* iPhone 11
-* iPhone XR
-* iPhone 8
-* iPad 8
-* HP Elitebook 840
-* Dell XPS
+  <img src="docs/images/testing/chrome.png" width=700>
+  
+</details>
 
-XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX (PP4 walkthrough)
+<details>
+  <summary>Microsoft Edge</summary>
+
+  <img src="docs/images/testing/edge.png" width=700>
+  
+</details>
+
+<details>
+  <summary>Apple Safari</summary>
+
+  <img src="docs/images/testing/safari.jpeg" width=700>
+  
+</details>
+
+<details>
+  <summary>Mozilla Firefox</summary>
+
+  <img src="docs/images/testing/firefox.png" width=700>
+  
+</details>
+
+<details>
+  <summary>Opera</summary>
+
+  <img src="docs/images/testing/opera.png" width=700>
+  
+</details>
+
 
 ## Manual Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and no issues were found.
@@ -649,6 +834,8 @@ Method | Leave Empty | Error message is displayed | PASS
 Method | Enter an Empty String | Form does not submit | PASS
 Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to choose an image from | PASS
+Image | Click to Upload | Chosen image file is displayed in 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
@@ -700,6 +887,8 @@ Method | Leave Empty | Error message is displayed | PASS
 Method | Enter an Empty String | Form does not submit | PASS
 Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
+Image | Click to Upload | Opens a file explorer to choose an image from | PASS
+Image | Click to Upload | Chosen image file is displayed in 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
@@ -788,7 +977,7 @@ The error in the development environment showed that it was caused by the duplic
 In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
 When the draft recipe was deleted from the database, the error no longer occurred.  
 ***Status:***  
-Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>  Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
+Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>   Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
