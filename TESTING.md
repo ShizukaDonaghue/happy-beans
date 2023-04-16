@@ -67,14 +67,14 @@ Please see below results for each page.
 </details>
 
 <details>
-  <summary>Post Recipe Page - Errors identified for Summernote fields</summary> 
+  <summary>Post Recipe Page - Errors identified for Summernote fields.</summary> 
   
   <img src="docs/images/testing/post-recipe-page-1.png">
   <img src="docs/images/testing/post-recipe-page-2.png">
   <img src="docs/images/testing/post-recipe-page-3.png">
   <img src="docs/images/testing/post-recipe-page-4.png">
 
-</details>
+</details>  
 
 The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
 
@@ -556,131 +556,160 @@ Browser compatibility was checked for the following browsers and no issues were 
 User stories were tested and addressed as follows.
 
 ### **EPIC: User Account**
-#### *As a Site User, I can register an account so that I can access all the application's features.*  
-Sign Up button is available on the Home page as well as on the navigation bar for users who are not logged in already.   
-<img src="docs/images/testing/us-account-registration-signup.png" width=600>  
-Once the Sign Up link is clicked, users are directed to Sign Up page where they can register their details to log in and enable all the application's features.  
-<img src="docs/images/testing/us-account-registration.png" width=600>  
+* **_As a Site User, I can register an account so that I can access all the application's features._**
 
-#### *As a Site User, I can log into my account so that all the application's features are available to me.*  
-Log In link is available on the navigation bar for returning users who are not logged in already.   
-<img src="docs/images/testing/us-account-login.png" width=600>  
-Once they fill in their details, they are logged in to enable all the application's features.  
+  Sign Up button is available on the Home page as well as on the navigation bar for users who are not logged in already.   
+<img src="docs/images/testing/us-account-registration-signup.png" width=700>  
 
-#### *As a Site User, I can log out of my account so that I can keep my account secure.*  
-Log Out link is available on the navigation bar for registered users who are already logged in.   
-<img src="docs/images/testing/us-account-logout.png" width=600>  
+  Once the Sign Up link is clicked, users are directed to Sign Up page where they can register their details to log in and enable all the application's features.  
+<img src="docs/images/testing/us-account-registration.png" width=700>  
+
+* **_As a Site User, I can log into my account so that all the application's features are available to me._**  
+
+  Log In link is available on the navigation bar for returning users who are not logged in already.   
+<img src="docs/images/testing/us-account-login.png" width=700>  
+
+  Once they fill in their details, they are logged in to enable all the application's features.  
+
+* **_As a Site User, I can log out of my account so that I can keep my account secure._**  
+
+  Log Out link is available on the navigation bar for registered users who are already logged in.   
+<img src="docs/images/testing/us-account-logout.png" width=700>  
 
 
 ### **EPIC: Site Admin**
-#### *As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my app.*  
-The Admin role has full CRUD functionality for all recipes and comments from the admin panel so that all the contents can be managed from there.  
+* **_As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my app._**
+
+  The Admin role has full CRUD functionality for all recipes and comments from the admin panel so that all the contents can be managed from there.  
 <img src="docs/images/testing/us-admin.png">  
 
 
 ### **EPIC: Site Navigation**
-#### *As a Site User, I can understand the purpose of the app clearly so that I can decide whether the contents are right for me to sign up.*  
-The landing page introduces the application explaining its purpose and benefits for signing up. This page also contains Sign Up button which directs users to Sign Up page.   
-<img src="docs/images/testing/us-introduction.png">  
+* **_As a Site User, I can understand the purpose of the app clearly so that I can decide whether the contents are right for me to sign up._**  
 
-#### *As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for.*  
-A navigation bar is avaible on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. The link for the current page is shown in green to give a visual clue indicating which page they are in.   
-<img src="docs/images/testing/us-navbar.png" width=600>  
+  The landing page introduces the application explaining its purpose and benefits for signing up. This page also contains Sign Up button which directs users to Sign Up page.   
+<img src="docs/images/testing/us-introduction.png" width=700>  
 
-#### *As a Site User, I can browse a paginated list of recipes so that I can easily select a recipe to view.*  
-Browse Recipes page displays 12 recipe cards per page. Each card contains the recipe image, title, description and the number of likes. Users can easily browse through the recipes and select a recipe to view the full details by clicking anywhere on the card.   
-<img src="docs/images/testing/us-browse-recipes.png" width=600>  
+* **_As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for._**  
 
-#### *As a Site User, I can select a recipe from the list so that I can view the full details of a recipe.*  
-Recipe cards are available in Browse Recipes, My Favourites and My Recipes pages. Once a recipe card is selected, users are directed to the Recipe Details page, which displays the full detalis of the recipe.  
-<img src="docs/images/testing/us-recipe-details.png" width=600>  
+  A navigation bar is avaible on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. The link for the current page is shown in green to give a visual clue indicating which page they are in.   
+<img src="docs/images/testing/us-navbar.png" width=700>  
 
-#### *As a Site User, I can view the comments posted by others so that I can see the feedback and conversation for each recipe.*  
-Comment section is available on Recipe Details page underneath the recipe, where comments are display in ascending order based on posting dates.  Users can views the feedback and conversation for each recipe here.  
-<img src="docs/images/testing/us-comment.png" width=600>  
+* **_As a Site User, I can browse a paginated list of recipes so that I can easily select a recipe to view._**  
 
-#### *As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type.*  
-Recipe filters are available in Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
-<img src="docs/images/testing/us-recipe-filters.png" width=600>  
+  Browse Recipes page displays 12 recipe cards per page. Each card contains the recipe image, title, description and the number of likes. Users can easily browse through the recipes and select a recipe to view the full details by clicking anywhere on the card.   
+<img src="docs/images/testing/us-browse-recipes.png" width=700>  
 
-#### *As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient.*  
-Recipe filters are available in Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
-<img src="docs/images/testing/us-recipe-filters.png" width=600>  
+* **_As a Site User, I can select a recipe from the list so that I can view the full details of a recipe._**  
 
-#### *As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level.*  
-Recipe filters are available in Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
-<img src="docs/images/testing/us-recipe-filters.png" width=600>  
+  Recipe cards are available in Browse Recipes, My Favourites and My Recipes pages. Once a recipe card is selected, users are directed to the Recipe Details page, which displays the full detalis of the recipe.  
+<img src="docs/images/testing/us-recipe-details.png" width=700>  
 
-#### *As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website.*  
-Custom pages for 400, 403, 404 and 500 erros have been created.   
-Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
-<img src="docs/images/testing/us-recipe-filters.png" width=400>  
+* **_As a Site User, I can view the comments posted by others so that I can see the feedback and conversation for each recipe._**  
+
+  Comment section is available on Recipe Details page underneath the recipe, where comments are display in ascending order based on posting dates.  Users can views the feedback and conversation for each recipe here.  
+<img src="docs/images/testing/us-comment.png" width=700>  
+
+* **_As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type._**  
+
+  Recipe filters are available in Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
+<img src="docs/images/testing/us-recipe-filters.png" width=700>  
+
+* **_As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient._**  
+
+  Recipe filters are available in Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
+<img src="docs/images/testing/us-recipe-filters.png" width=700>  
+
+* **_As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level._**  
+
+  Recipe filters are available in Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
+<img src="docs/images/testing/us-recipe-filters.png" width=700>  
+
+* **_As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website._**  
+
+  Custom pages for 400, 403, 404 and 500 erros have been created. Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
+<img src="docs/images/testing/us-recipe-filters.png" width=700>  
 
 
 ### **EPIC: Recipe Management**
-#### *As a Site User, I can post my own recipe so that I can share it with others.*  
-For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for ingredients and method to organise the contents.  
-<img src="docs/images/testing/us-post-recipe.png" width=600>  
+* **_As a Site User, I can post my own recipe so that I can share it with others._**  
 
-#### *As a Site User, I can draft a recipe and save it so that I can return later and edit it.*  
-For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form but decide not to published the recipe yet by selecting "Save as Draft" option in the form.  
-<img src="docs/images/testing/us-save-as-draft.png" width=600>  
-Saved drafts are added to My Recipes page where they can return later and edit them. These drafts are marked with red [Draft] next to the title so that they can be easily identified.  
-<img src="docs/images/testing/us-draft-recipe.png" width=600>  
+  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for ingredients and method to organise the contents.  
+<img src="docs/images/testing/us-post-recipe.png" width=700>  
 
-#### *As a Site User, I can edit the recipes that I posed so that I can make changes after it has been submitted.*  
-Users can edit their own recipe from Recipe Details page. Edit button is available for the author of the recipe.   
-<img src="docs/images/testing/us-update-recipe-button.png" width=300>  
-Once the edit button is selected, users are directed to Update Recipe page. This is the same form as the Post Recipe form, but the original details are populated from the database. Users can easily update their recipes in this form and submit the changes.  
-<img src="docs/images/testing/us-update-recipe.png" width=600>  
+* **_As a Site User, I can draft a recipe and save it so that I can return later and edit it._**  
 
-#### * As a Site User, I can delete recipes that I posted so that I can remove them from the site.*  
-Users can delete their own recipe from Recipe Details page. Delete button is available for the author of the recipe.  
-<img src="docs/images/testing/us-update-recipe-button.png" width=300>  
-Once the delete button is selected, a modal will be displayed to confirm the deletion.   
-<img src="docs/images/testing/us-delete-recipe-modal.png" width=250>  
+  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form but decide not to published the recipe yet by selecting "Save as Draft" option in the form.  
+<img src="docs/images/testing/us-save-as-draft.png" width=700>  
 
-#### *As a Site User, I can view a list of recipes that I have posted or drafted so that I can manage them.*  
-For logged-in users, My Recipes link is available from the navigation bar, which directs them to My Recipes page. Users can manage their own recipes from here by clicking anywhere on the recipe card, which directs them to the Recipe Details page.  
-<img src="docs/images/testing/us-my-recipes.png" width=600>  
+  Saved drafts are added to My Recipes page where they can return later and edit them. These drafts are marked with red [Draft] next to the title so that they can be easily identified.  
+<img src="docs/images/testing/us-draft-recipe.png" width=700>  
 
-#### *As a Site User, I can see error messages when submitting a recipe form so that I understand how the errors can be resolved.*  
-If there are any errors in the Post Recipe form, error messages are displayed. This aims to assist users in filling in the form correctly by explaining each error.  
-<img src="docs/images/testing/us-form-validation.png" width=600>  
-<img src="docs/images/testing/us-form-validation-2.png" width=600>  
+* **_As a Site User, I can edit the recipes that I posed so that I can make changes after it has been submitted._**  
+
+  Users can edit their own recipe from Recipe Details page. Edit button is available for the author of the recipe.   
+<img src="docs/images/testing/us-update-recipe-button.png" width=350>  
+
+  Once the edit button is selected, users are directed to Update Recipe page. This is the same form as the Post Recipe form, but the original details are populated from the database. Users can easily update their recipes in this form and submit the changes.  
+<img src="docs/images/testing/us-update-recipe.png" width=700>  
+
+* **_As a Site User, I can delete recipes that I posted so that I can remove them from the site._**  
+
+  Users can delete their own recipe from Recipe Details page. Delete button is available for the author of the recipe.  
+<img src="docs/images/testing/us-update-recipe-button.png" width=350>  
+
+  Once the delete button is selected, a modal will be displayed to confirm the deletion.   
+<img src="docs/images/testing/us-delete-recipe-modal.png" width=400>  
+
+* **_As a Site User, I can view a list of recipes that I have posted or drafted so that I can manage them._**  
+
+  For logged-in users, My Recipes link is available from the navigation bar, which directs them to My Recipes page. Users can manage their own recipes from here by clicking anywhere on the recipe card, which directs them to the Recipe Details page.  
+<img src="docs/images/testing/us-my-recipes.png" width=700>  
+
+* **_As a Site User, I can see error messages when submitting a recipe form so that I understand how the errors can be resolved._**  
+
+  If there are any errors in the Post Recipe form, error messages are displayed. This aims to assist users in filling in the form correctly by explaining each error. Error messages are also raised for empty strings to prevent the form from being submitted with empty fields.
+<img src="docs/images/testing/us-form-validation.png" width=700>  
+<img src="docs/images/testing/us-form-validation-2.png" width=700>  
 
 
 ### **EPIC: Recipe Comment**  
-#### *As a Site User, I can comment on a recipe so that I can share my feedback and be involved in the conversation.*  
-For logged-in users, Comment Form is available beneath each recipe. Users can post their comment from here to leave feedback on the recipe or ask questions, or just communicate with others in the community.  
-<img src="docs/images/testing/us-comment.png" width=600>  
+* **_As a Site User, I can comment on a recipe so that I can share my feedback and be involved in the conversation._**  
 
-#### *As a Site User, I can edit the comment I posted so that I can make changes to my comments.*  
-For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.  
-<img src="docs/images/testing/us-edit-comment.png" width=300>  
+  For logged-in users, Comment Form is available beneath each recipe. Users can post their comment from here to leave feedback on the recipe or ask questions, or just communicate with others in the community.  
+<img src="docs/images/testing/us-comment.png" width=700>  
 
-#### *As a Site User, I can delete the comment I posted so that I can remove it from the comments section.*  
-For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confim the deletion.   
-<img src="docs/images/testing/us-delete-comment-modal.png" width=250>  
+* **_As a Site User, I can edit the comment I posted so that I can make changes to my comments._**  
+  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.  
+<img src="docs/images/testing/us-edit-comment.png" width=350>  
+
+* **_As a Site User, I can delete the comment I posted so that I can remove it from the comments section._**  
+
+  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confim the deletion.   
+<img src="docs/images/testing/us-delete-comment-modal.png" width=400>  
 
 
 ### **EPIC: Recipe Likes**
-#### *As a Site User, I can view the number of likes for each recipe so that I can see the feedback from others.*  
-The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipe pages. It is also displayed in the Recipe Details page for each page.  
-<img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=300>  
-<img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=300>  
+* **_As a Site User, I can view the number of likes for each recipe so that I can see the feedback from others._**  
 
-#### *As a Site User, I can view the list of my liked recipes so that I can easily go back to them within the site.*  
-For logged-in users, My Recipe link is available from the navigation bar, which direct them to My Favourites page. Once a recipe is liked, the recipe is added to this page for the user so that they can easily find them when they need them.  
-<img src="docs/images/testing/us-my-favourites.png" width=600>  
+  The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipe pages. It is also displayed in the Recipe Details page for each page.  
+<img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>  
+<img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
-#### *As a Site User, I can like a recipe so that I can interact with the content.*  
-For logged-in users, the like button is available on Recipe Details page if they have not yet liked the recipe. If the recipe is not yet liked, the love heart with a plus sign is displayed. The recipe can easily be liked by clicking on this icon.  
-<img src="docs/images/testing/us-like-button.png" width=300>  
+* **_As a Site User, I can view the list of my liked recipes so that I can easily go back to them within the site._**   
 
-#### *As a Site User, I can unlike a recipe so that I can remove it from my liked recipes.*  
-For logged-in users, the unlike button is available on Recipe Details page if they have already liked the recipe. If the recipe is already liked, the love heard icon is displayed. The recipe can easily be unliked by clicking on this icon.  
-<img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=300>  
+  For logged-in users, My Recipe link is available from the navigation bar, which direct them to My Favourites page. Once a recipe is liked, the recipe is added to this page for the user so that they can easily find them when they need them.  
+<img src="docs/images/testing/us-my-favourites.png" width=700>  
+
+* **_As a Site User, I can like a recipe so that I can interact with the content._**  
+
+  For logged-in users, the like button is available on Recipe Details page if they have not yet liked the recipe. If the recipe is not yet liked, the love heart with a plus sign is displayed. The recipe can easily be liked by clicking on this icon.  
+<img src="docs/images/testing/us-like-button.png" width=350>  
+
+* **_As a Site User, I can unlike a recipe so that I can remove it from my liked recipes._**  
+
+  For logged-in users, the unlike button is available on Recipe Details page if they have already liked the recipe. If the recipe is already liked, the love heard icon is displayed. The recipe can easily be unliked by clicking on this icon.  
+<img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
 
 
@@ -1102,13 +1131,11 @@ RecipeList view codes and pagination codes for Browse Recipes page were updated 
   During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
   It appered the issue resulted from how Apple Safari rendered the codes.   
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
-    
     ***Solution:***  
     CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
     The text and the box are now centralised together. 
     I felt that this was a more appropriate position for the box.  
     <img src="docs/images/testing/remember-me-box-after-fix.jpeg" width=300>
-
 ### Unresolved Bugs
 
 * **Integrity Error for Slug Key Value Violation**   
@@ -1120,7 +1147,8 @@ In the admin panel, it was verified that there was indeed a recipe titled "Bob" 
 When the draft recipe was deleted from the database, the error no longer occurred.  
 
   ***Status:***  
-Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>   
+Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.  
+<img src="docs/images/testing/no-server-error.png" width=500>   
 Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.  
 
