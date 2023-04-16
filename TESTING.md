@@ -5,7 +5,7 @@ Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 ## Code Validation
 
 ### HTML
-[W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes used in the application. All the pages were check for any issues or syntax errors. The only errors identified were for Summernote fields.
+All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/) to check for any issues or syntax errors. The only errors identified were for Summernote fields.
 Please see below results for each page.
 
 <details>
@@ -115,7 +115,7 @@ The errors identified were all related to CSS property used in Summernote list i
 </details>
 
 ### CSS
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS codes used in the application and no issues or errors were found.
+CSS codes used in the application were validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no issues or errors were found.
 
 <details>
   <summary>CSS Codes - No issues or errors</summary> 
@@ -125,7 +125,7 @@ The errors identified were all related to CSS property used in Summernote list i
 </details>
 
 ### JavaScript
-[JSHint](https://jshint.com/) was used to validate JavaScript codes used in the application and no issues or errors were found.
+JavaScript codes used in the application were validated using [JSHint](https://jshint.com/) and no issues or errors were found.
 
 <details>
   <summary>JavaScript Codes - No issues or errors</summary> 
@@ -135,7 +135,7 @@ The errors identified were all related to CSS property used in Summernote list i
 </details>
 
 ### Python
-[CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes used throughout the application and no issues or errors were found.
+Python codes used throughout the application were validated using [CI Python Linter](https://pep8ci.herokuapp.com/) and no issues or errors were found.
 Please see the results for each page.
 
 #### Happy Beans Project
@@ -153,7 +153,7 @@ Please see the results for each page.
 
 </details>
 
-Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATORS" and also to Cloudinary storage under "STATICFILES_STORAGE" for "line too long" errors to be ignored as these could not be shortened without breaking the codes.
+Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATORS` and also to Cloudinary storage under `STATICFILES_STORAGE` for "line too long" errors to be ignored as these could not be shortened without breaking the codes.
 
 <details>
   <summary>urls.py - No issues or errors</summary> 
@@ -486,8 +486,8 @@ Alert | Submit | Success message is removed after 3 seconds | PASS
 ### Logout Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Logout Link | Click | Logs out the user | PASS
-Logout Link | Click | Once the user is logged out, navigates to Home page | PASS
+Log Out Link | Click | Logs out the user | PASS
+Log Out Link | Click | Once the user is logged out, navigates to Home page | PASS
 Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
 Alert | Submit | Success message is displayed confirming that the user has logged out | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -500,7 +500,7 @@ Sign Up Link | Display | Only available if the user is not logged in | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
 Post a Recipe Message | Display | Correct message is displayed if the user is logged in | PASS
 Post a Recipe Link | Display | Only available if the user is logged in | PASS
-Post a Recipe Link | Click| Navigates to Post a Recipe page to | PASS
+Post a Recipe Link | Click| Navigates to Post a Recipe page | PASS
 
 ### Browse Recipes Page
 #### Recipe Filters
@@ -517,7 +517,7 @@ Pagination | Display | When there are less than 12 recipes to display, paginatio
 #### Recipe Cards
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Recipe Card | Display | Recipes published are displayed in descending order | PASS
+Recipe Card | Display | Recipes published are displayed in descending order basd on creation dates| PASS
 Recipe Card | Display | Draft recipes are not displayed | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
@@ -529,7 +529,7 @@ Image Size | Display | Images are displayed in the same height and width regardl
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
-Recipe Description | Display | Description is truncated to 70 characters for display the recipe cards | PASS  
+Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -558,7 +558,7 @@ Post Comment | Display | If the recipe is not published, correct message is disp
 Post Comment | Display | Comment form is only available if the user is logged in and the recipe is published | PASS
 Post Comment | Display | First letter is always capitalised regardless of whether the comment entered is capitalised | PASS
 Post Comment | Leave Empty | Form does not submit | PASS
-Post Comment | Submit | Form submits and comment is added in ascending order | PASS
+Post Comment | Submit | Form submits and comment is added in ascending order based on posting dates | PASS
 Alert | Submit | Success message is displayed confirming the comment has been added successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 Edit/Delete Comment Dropdown Menu | Display | Edit/Delete button is available if the user is logged in and is the author of the comment | PASS
@@ -569,7 +569,7 @@ Delete Comment Button | Click | Displays the modal asking the user to confirm de
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
-Recipe Card | Display | Recipes liked by the user are displayed in descending order | PASS
+Recipe Card | Display | Recipes liked by the user are displayed in descending order based on creation dates | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
 Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
@@ -582,7 +582,7 @@ Image Size | Display | Images are displayed in the same height and width regardl
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
-Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -590,7 +590,7 @@ Pagination | Display | When there are less than 12 recipes to display, paginatio
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
-Recipe Card | Display | Recipes posted by the user are displayed in descending order | PASS
+Recipe Card | Display | Recipes posted by the user are displayed in descending order based on creation dates | PASS
 Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
 Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
@@ -605,7 +605,7 @@ Image Size | Display | Images are displayed in the same height and width regardl
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
-Recipe Description | Display | Description is truncated to 70 characters for display on a card | PASS  
+Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
 Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
 
@@ -652,7 +652,7 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipes page | PASS
+Status | Publish Now  | Once the recipe is saved, the recipe is displayed in Browse Recipes page | PASS
 Post Recipe | Submit | Displays the Recipe Details page which has been generated | PASS
 Alert | Submit | Success message is displayed confirming [recipe title] has been added successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -661,7 +661,7 @@ Post Recipe Cancel Button | Click | Navigates back to Browse Recipes page | PASS
 ### Update Recipe Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Access Another User's Recipe by Changing URL | Navigates the user to Log In page | PASS
+Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
 Defensive Measure | Logged-in and Try to Access Another User's Recipe by Changing URL | 403 error page is displayed | PASS
 Update Recipe | Display | Update Recipe form contains the original details from database | PASS
 Title | Leave Empty | Form does not submit | PASS
@@ -703,7 +703,7 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved as Draft, the recipe is displayed in Browse Recipes page | PASS
+Status | Publish Now  | Once the recipe is saved, the recipe is displayed in Browse Recipes page | PASS
 Update Recipe | Submit | Displays the Recipe Details page which has been updated | PASS
 Alert | Submit | Success message is displayed confirming the [recipe title] has been updated successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -716,12 +716,12 @@ Delete Recipe | Submit | Once the user confirms deletion in the modal, the recip
 Alert | Submit | Success message is displayed confirming that the recipe has been deleted | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 Delete Recipe Cancel Button | Click | Modal is closed | PASS
-Close Modal | Click Outside Menu | Modal is closed | PASS
+Modal Closure | Click Outside Menu | Modal is closed | PASS
 
 ### Update Comment Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Defensive Measure | Not Logged-in and Try to Access Another User's Comment by Changing URL | Navigates the user to Log In page | PASS
+Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
 Defensive Measure | Logged-in and Try to Access Another User's Comment by Changing URL | 403 error page is displayed | PASS
 Update Comment| Display | Update Comment form contains the original details from database | PASS
 Comment Field | Leave Empty | Form does not submit | PASS
@@ -738,7 +738,7 @@ Delete Comment| Submit | Once the user confirms deletion in the modal, the comme
 Alert | Submit | Success message is displayed confirming that the comment has been deleted | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 Delete Comment Cancel Button | Click | Modal is closed | PASS
-Close Modal | Click Outside Menu | Modal is closed | PASS 
+Modal Closure | Click Outside Menu | Modal is closed | PASS 
 
 ### 403 Error Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -757,24 +757,22 @@ Browse Recipes Link | Click | Navigates to Home page | PASS
 
 ## Bugs
 ### Resolved Bugs
-#### Pagination for a Filtered List of Recipes
+* Pagination for a Filtered List of Recipes  
 **Issue:**  
 When [Django filters](https://django-filter.readthedocs.io/en/stable/) were added to Browse Recipes page, the standard [Django pagination](https://docs.djangoproject.com/en/3.2/topics/pagination/) no longer worked.
-With the standard Django pagination, the filter criteria were no longer applied when navigating to another page and showed recipes that did not fall under the selected criteria.
-
+With the standard Django pagination, the filter criteria were no longer applied when navigating to another page and showed recipes that did not fall under the selected criteria.  
 **Fix:**  
 While searching for a solution, I learnt that this is a common issue with Django filters. 
 Having reviewed many possible solutions to the issue, I decided to implement the soluction found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
 This solution uses [QueryString Template Tags](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html) and works with Django filters.
-RecipeList view code and pagination code for Browse Recipe page were updated to incorporate this solution for the Django filters. 
+RecipeList view codes and pagination codes for Browse Recipes page were updated to incorporate this solution for the Django filters. 
 
-#### Positioning of Remember Me Box
+* Positioning of Remember Me Box  
 **Issue:**  
 The "Remember Me" box in Log In page was initially horizontally centralised with the rest of the contents.
 During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
 It appered the issue resulted from how Apple Safari rendered the codes.   
-<img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>
-
+<img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
 **Fix:**  
 CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
 The text and the box are now centralised together. 
@@ -783,18 +781,16 @@ I felt that this was a more appropriate position for the box.
 
 ### Unresolved Bugs
 
-#### Integrity Error for Slug Key Value Violation
+* Integrity Error for Slug Key Value Violation  
 **Issue:**  
 During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occured.
 The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique.  
-<img src="docs/images/testing/server-error-500.png" width=700>
-
+<img src="docs/images/testing/server-error-500.png" width=700>  
 In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
-When the draft recipe was deleted from the database, the error no longer occurred.
-
-**Result:**  
+When the draft recipe was deleted from the database, the error no longer occurred.  
+**Status:**  
 Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
-<img src="docs/images/testing/no-server-error.png" width=500>
+<img src="docs/images/testing/no-server-error.png" width=500>  
 Numerous attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.
 
