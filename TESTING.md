@@ -773,11 +773,10 @@ The "Remember Me" box in Log In page was initially horizontally centralised with
 During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
 It appered the issue resulted from how Apple Safari rendered the codes.   
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
-
-  **Fix:**  
-CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
-The text and the box are now centralised together. 
-I felt that this was a more appropriate position for the box.  
+    **Fix:**  
+    CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
+    The text and the box are now centralised together. 
+    I felt that this was a more appropriate position for the box.  
     <img src="docs/images/testing/remember-me-box-after-fix.jpeg" width=300>
 
 ### Unresolved Bugs
@@ -791,9 +790,9 @@ In the admin panel, it was verified that there was indeed a recipe titled "Bob" 
 When the draft recipe was deleted from the database, the error no longer occurred.  
 
   **Status:**  
-Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
-<img src="docs/images/testing/no-server-error.png" width=500>  
-Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
-Since the error could not be recreated, this bug was not addressed.  
+  Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
+  <img src="docs/images/testing/no-server-error.png" width=500>  
+  Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
+  Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
