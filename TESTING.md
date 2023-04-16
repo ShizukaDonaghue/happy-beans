@@ -784,15 +784,13 @@ It appered the issue resulted from how Apple Safari rendered the codes.
 * Integrity Error for Slug Key Value Violation  
 **Issue:**  
 During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occured.
-The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique. 
-  <img src="docs/images/testing/server-error-500.png" width=700>  
-  In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
-  When the draft recipe was deleted from the database, the error no longer occurred.  
-
-  **Status:**  
-  Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
-  <img src="docs/images/testing/no-server-error.png" width=500>  
-  Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
-  Since the error could not be recreated, this bug was not addressed.  
+The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique.  <img src="docs/images/testing/server-error-500.png" width=700>  
+In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
+When the draft recipe was deleted from the database, the error no longer occurred.  
+**Status:**  
+Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
+<img src="docs/images/testing/no-server-error.png" width=500>  
+Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
+Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
