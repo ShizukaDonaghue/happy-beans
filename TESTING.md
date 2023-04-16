@@ -11,21 +11,21 @@ Please see below results for each page.
 <details>
   <summary>Home Page - No isses or errors</summary>
   
-  <img src="docs/images/validation/home-page.png">
+  <img src="docs/images/testing/home-page.png">
 
 </details>
 
 <details>
   <summary>Sigup Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/signup-page.png">
+  <img src="docs/images/testing/signup-page.png">
 
 </details>
 
 <details>
   <summary>Login Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/login-page.png">
+  <img src="docs/images/testing/login-page.png">
 
 </details>
 
@@ -33,7 +33,7 @@ Please see below results for each page.
 <details>
   <summary>Logout Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/logout-page.png">
+  <img src="docs/images/testing/logout-page.png">
 
 </details>
 
@@ -41,38 +41,38 @@ Please see below results for each page.
 <details>
   <summary>Browse Recipes Page - No issues or errors</summary>
   
-  <img src="docs/images/validation/browse-recipes-page.png">
+  <img src="docs/images/testing/browse-recipes-page.png">
 
 </details>
 
 <details>
   <summary>My Favourites Page - No issues or errors</summary> 
   
-  <img src="docs/images/validation/my-favourites-page.png">
+  <img src="docs/images/testing/my-favourites-page.png">
 
 </details>
 
 <details>
   <summary>My Recipes Page - No issues or errors</summary> 
   
-  <img src="docs/images/validation/my-recipes-page.png">
+  <img src="docs/images/testing/my-recipes-page.png">
 
 </details>
 
 <details>
   <summary>Update Comment Page - No issues or errors</summary> 
   
-  <img src="docs/images/validation/update-comment-page.png">
+  <img src="docs/images/testing/update-comment-page.png">
 
 </details>
 
 <details>
   <summary>Post Recipe Page - Errors identified for Summernote fields</summary> 
   
-  <img src="docs/images/validation/post-recipe-page-1.png">
-  <img src="docs/images/validation/post-recipe-page-2.png">
-  <img src="docs/images/validation/post-recipe-page-3.png">
-  <img src="docs/images/validation/post-recipe-page-4.png">
+  <img src="docs/images/testing/post-recipe-page-1.png">
+  <img src="docs/images/testing/post-recipe-page-2.png">
+  <img src="docs/images/testing/post-recipe-page-3.png">
+  <img src="docs/images/testing/post-recipe-page-4.png">
 
 </details>
 
@@ -81,10 +81,10 @@ The errors identified were all related to Summernote widget that is used in the 
 <details>
   <summary>Update Recipe Page - Errors identified for Summernote fields</summary> 
   
-  <img src="docs/images/validation/update-recipe-page-1.png">
-  <img src="docs/images/validation/update-recipe-page-2.png">
-  <img src="docs/images/validation/update-recipe-page-3.png">
-  <img src="docs/images/validation/update-recipe-page-4.png">
+  <img src="docs/images/testing/update-recipe-page-1.png">
+  <img src="docs/images/testing/update-recipe-page-2.png">
+  <img src="docs/images/testing/update-recipe-page-3.png">
+  <img src="docs/images/testing/update-recipe-page-4.png">
 
 </details>
 
@@ -93,8 +93,8 @@ The errors identified were all related to Summernote widget that is used in the 
 <details>
   <summary>Recipe Details Page - Errors identified for Summernote fields</summary> 
   
-  <img src="docs/images/validation/recipe-details-page-1.png">
-  <img src="docs/images/validation/recipe-details-page-2.png">
+  <img src="docs/images/testing/recipe-details-page-1.png">
+  <img src="docs/images/testing/recipe-details-page-2.png">
 
 </details>
 
@@ -103,14 +103,14 @@ The errors identified were all related to CSS property used in Summernote list i
 <details>
   <summary>403 Error Page - No issues or errors</summary> 
   
-  <img src="docs/images/validation/403-error-page.png">
+  <img src="docs/images/testing/403-error-page.png">
 
 </details>
 
 <details>
   <summary>404 Error Page - No issues or errors</summary> 
   
-  <img src="docs/images/validation/404-error-page.png">
+  <img src="docs/images/testing/404-error-page.png">
 
 </details>
 
@@ -120,7 +120,7 @@ The errors identified were all related to CSS property used in Summernote list i
 <details>
   <summary>CSS Codes - No issues or errors</summary> 
   
-  <img src="docs/images/validation/css.png">
+  <img src="docs/images/testing/css.png">
 
 </details>
 
@@ -130,7 +130,7 @@ The errors identified were all related to CSS property used in Summernote list i
 <details>
   <summary>JavaScript Codes - No issues or errors</summary> 
   
-  <img src="docs/images/validation/javascript.png">
+  <img src="docs/images/testing/javascript.png">
 
 </details>
 
@@ -142,14 +142,14 @@ Please see the results for each page.
 <details>
   <summary>asgi.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/asgi.png">
+  <img src="docs/images/testing/asgi.png">
 
 </details>
 
 <details>
   <summary>settings.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/settings.png">
+  <img src="docs/images/testing/settings.png">
 
 </details>
 
@@ -158,14 +158,14 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>urls.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/urls-project.png">
+  <img src="docs/images/testing/urls-project.png">
 
 </details>
 
 <details>
   <summary>wsgi.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/wsgi.png">
+  <img src="docs/images/testing/wsgi.png">
 
 </details>
 
@@ -173,63 +173,63 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>admin.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/admin.png">
+  <img src="docs/images/testing/admin.png">
 
 </details>
 
 <details>
   <summary>apps.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/apps.png">
+  <img src="docs/images/testing/apps.png">
 
 </details>
 
 <details>
   <summary>filters.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/filters.png">
+  <img src="docs/images/testing/filters.png">
 
 </details>
 
 <details>
   <summary>forms.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/forms.png">
+  <img src="docs/images/testing/forms.png">
 
 </details>
 
 <details>
   <summary>models.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/models.png">
+  <img src="docs/images/testing/models.png">
 
 </details>
 
 <details>
   <summary>urls.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/urls.png">
+  <img src="docs/images/testing/urls.png">
 
 </details>
 
 <details>
   <summary>validators.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/validators.png">
+  <img src="docs/images/testing/validators.png">
 
 </details>
 
 <details>
   <summary>views.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/views.png">
+  <img src="docs/images/testing/views.png">
 
 </details>
 
 <details>
   <summary>recipeapp_tags.py - No issues or errors</summary> 
   
-  <img src="docs/images/validation/recipeapp-tags.png">
+  <img src="docs/images/testing/recipeapp-tags.png">
 
 </details>
 
@@ -239,21 +239,21 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>Home Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-home-page.png">
+  <img src="docs/images/testing/wave-home-page.png">
 
 </details>
 
 <details>
   <summary>Sigup Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-signup-page.png">
+  <img src="docs/images/testing/wave-signup-page.png">
 
 </details>
 
 <details>
   <summary>Login Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-login-page.png">
+  <img src="docs/images/testing/wave-login-page.png">
 
 </details>
 
@@ -261,7 +261,7 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>Logout Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-logout-page.png">
+  <img src="docs/images/testing/wave-logout-page.png">
 
 </details>
 
@@ -269,28 +269,28 @@ Note: `# noqa` was added to Django generated codes under "AUTH_PASSWORD_VALIDATO
 <details>
   <summary>Browse Recipes Page - No errors</summary>
   
-  <img src="docs/images/validation/wave-browse-recipes.png">
+  <img src="docs/images/testing/wave-browse-recipes.png">
 
 </details>
 
 <details>
   <summary>My Favourites Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-my-favourites-page.png">
+  <img src="docs/images/testing/wave-my-favourites-page.png">
 
 </details>
 
 <details>
   <summary>My Recipes Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-my-recipes-page.png">
+  <img src="docs/images/testing/wave-my-recipes-page.png">
 
 </details>
 
 <details>
   <summary>Update Comment Page - Missing form label error</summary> 
   
-  <img src="docs/images/validation/wave-update-comment-page.png">
+  <img src="docs/images/testing/wave-update-comment-page.png">
 
 </details>
 
@@ -299,14 +299,14 @@ The error identified was a missing form label for the Crispy Form used in the Co
 <details>
   <summary>Post Recipe Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-post-recipe-page.png">
+  <img src="docs/images/testing/wave-post-recipe-page.png">
 
 </details>
 
 <details>
   <summary>Update Recipe Page - Empty link error</summary> 
   
-  <img src="docs/images/validation/wave-update-recipe-page.png">
+  <img src="docs/images/testing/wave-update-recipe-page.png">
 
 </details>
 
@@ -314,7 +314,7 @@ The error identified was for an empty link for the current recipe image loaded. 
 <details>
   <summary>Recipe Details Page - Missing form label error</summary> 
   
-  <img src="docs/images/validation/wave-recipe-details-page.png">
+  <img src="docs/images/testing/wave-recipe-details-page.png">
 
 </details>
 
@@ -323,14 +323,14 @@ The error identified was a missing form label for the Crispy Form used in the Co
 <details>
   <summary>403 Error Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-403-page.png">
+  <img src="docs/images/testing/wave-403-page.png">
 
 </details>
 
 <details>
   <summary>404 Error Page - No errors</summary> 
   
-  <img src="docs/images/validation/wave-404-page.png">
+  <img src="docs/images/testing/wave-404-page.png">
 
 </details>
 
@@ -773,13 +773,13 @@ RecipeList view code and pagination code for Browse Recipe page were updated to 
 The "Remember Me" box in Log In page was initially horizontally centralised with the rest of the contents.
 During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
 It appered the issue resulted from how Apple Safari rendered the codes.   
-<img src="docs/images/bugs/remember-me-box-before-fix.jpeg" width=250>
+<img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>
 
 **Fix:**  
 CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
 The text and the box are now centralised together. 
 I felt that this was a more appropriate position for the box.  
-<img src="docs/images/bugs/remember-me-box-after-fix.jpeg" width=250>
+<img src="docs/images/testing/remember-me-box-after-fix.jpeg" width=300>
 
 ### Unresolved Bugs
 
@@ -787,14 +787,14 @@ I felt that this was a more appropriate position for the box.
 **Issue:**  
 During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occured.
 The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique.  
-<img src="docs/images/bugs/server-error-500.png" width=700>
+<img src="docs/images/testing/server-error-500.png" width=700>
 
 In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
 When the draft recipe was deleted from the database, the error no longer occurred.
 
 **Result:**  
 Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
-<img src="docs/images/bugs/no-server-error.png" width=500>
+<img src="docs/images/testing/no-server-error.png" width=500>
 Numerous attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.
 
