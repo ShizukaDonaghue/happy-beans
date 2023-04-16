@@ -757,23 +757,23 @@ Browse Recipes Link | Click | Navigates to Home page | PASS
 
 ## Bugs
 ### Resolved Bugs
-* Pagination for a Filtered List of Recipes  
-**Issue:**  
+* **Pagination for a Filtered List of Recipes**  
+***Issue:***  
 When [Django filters](https://django-filter.readthedocs.io/en/stable/) were added to Browse Recipes page, the standard [Django pagination](https://docs.djangoproject.com/en/3.2/topics/pagination/) no longer worked.
 With the standard Django pagination, the filter criteria were no longer applied when navigating to another page and showed recipes that did not fall under the selected criteria.  
-**Fix:**  
+***Fix:***  
 While searching for a solution, I learnt that this is a common issue with Django filters. 
 Having reviewed many possible solutions to the issue, I decided to implement the soluction found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
 This solution uses [QueryString Template Tags](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html) and works with Django filters.
 RecipeList view codes and pagination codes for Browse Recipes page were updated to incorporate this solution for the Django filters. 
 
-* Positioning of Remember Me Box  
-**Issue:**  
+* **Positioning of Remember Me Box**  
+***Issue:***  
 The "Remember Me" box in Log In page was initially horizontally centralised with the rest of the contents.
 During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
 It appered the issue resulted from how Apple Safari rendered the codes.   
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
-    **Fix:**  
+    ***Fix:***  
     CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
     The text and the box are now centralised together. 
     I felt that this was a more appropriate position for the box.  
@@ -781,16 +781,14 @@ It appered the issue resulted from how Apple Safari rendered the codes.
 
 ### Unresolved Bugs
 
-* Integrity Error for Slug Key Value Violation  
-**Issue:**  
+* **Integrity Error for Slug Key Value Violation**  
+***Issue:***  
 During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occured.
 The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique.  <img src="docs/images/testing/server-error-500.png" width=700>  
 In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
 When the draft recipe was deleted from the database, the error no longer occurred.  
-**Status:**  
-Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error.   
-<img src="docs/images/testing/no-server-error.png" width=500>  
-Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
+***Status:***  
+Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>  Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
