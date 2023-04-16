@@ -954,7 +954,9 @@ With the standard Django pagination, the filter criteria were no longer applied 
 While searching for a solution, I learnt that this is a common issue with Django filters. 
 Having reviewed many possible solutions to the issue, I decided to implement the soluction found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
 This solution uses [QueryString Template Tags](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html) and works with Django filters.
-RecipeList view codes and pagination codes for Browse Recipes page were updated to incorporate this solution for the Django filters. 
+RecipeList view codes and pagination codes for Browse Recipes page were updated to incorporate this solution for the Django filters.  
+Please click on the image to watch the GIF as auto looping is turned off to minimise distraction.
+<img src="docs/images/testing/recipe-filter-pagination.gif">
 
 * **Positioning of Remember Me Box**  
 ***Issue:***  
