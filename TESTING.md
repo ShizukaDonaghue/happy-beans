@@ -391,30 +391,30 @@ This included the following devices:
 </details>
 
 <details>
-  <summary>iPhone iPad Air</summary>
+  <summary>iPad Air</summary>
 
-  <img src="docs/images/testing/ipad-air.png" width=500>
+  <img src="docs/images/testing/ipad-air.png" width=700>
   
 </details>
 
 <details>
-  <summary>iPhone iPad Mini</summary>
+  <summary>iPad Mini</summary>
 
-  <img src="docs/images/testing/ipad-mini.png" width=500>
+  <img src="docs/images/testing/ipad-mini.png" width=700>
   
 </details>
 
 <details>
   <summary>Samsung Galaxy S8+</summary>
 
-  <img src="docs/images/testing/galaxy-s8-plus.png" width=300>
+  <img src="docs/images/testing/galaxy-s8-plus.png" width=350>
   
 </details>
 
 <details>
   <summary>Samsung Galaxy S9+</summary>
 
-  <img src="docs/images/testing/galaxy-s9-plus.png" width=300>
+  <img src="docs/images/testing/galaxy-s9-plus.png" width=350>
   
 </details>
 
@@ -435,7 +435,7 @@ This included the following devices:
 <details>
   <summary>Microsoft Surface Pro 7</summary>
 
-  <img src="docs/images/testing/surface-pro-7.png" width=500>
+  <img src="docs/images/testing/surface-pro-7.png" width=600>
   
 </details>
 
@@ -449,14 +449,14 @@ This included the following devices:
 <details>
   <summary>Nest Hub</summary>
 
-  <img src="docs/images/testing/nest-hub.png" width=600>
+  <img src="docs/images/testing/nest-hub.png">
   
 </details>
 
 <details>
   <summary>Nest Hub Max</summary>
 
-  <img src="docs/images/testing/nest-hub-max.png" width=600>
+  <img src="docs/images/testing/nest-hub-max.png">
   
 </details>
 
@@ -495,21 +495,21 @@ The application was tested manually on the follwoing devices and no issues were 
 <details>
   <summary>iPad 8</summary>
 
-  <img src="docs/images/testing/device-ipad-8.jpeg" width=500>
+  <img src="docs/images/testing/device-ipad-8.jpeg" width=700>
   
 </details>
 
 <details>
   <summary>HP Elitebook 840</summary>
 
-  <img src="docs/images/testing/device-hp-elitebook-840.png" width=600>
+  <img src="docs/images/testing/device-hp-elitebook-840.png">
   
 </details>
 
 <details>
   <summary>Dell XPS</summary>
 
-  <img src="docs/images/testing/device-dell-xps.png" width=600>
+  <img src="docs/images/testing/device-dell-xps.png">
   
 </details>
 
@@ -519,35 +519,35 @@ Browser compatibility was checked for the following browsers and no issues were 
 <details>
   <summary>Google Chrome</summary>
 
-  <img src="docs/images/testing/chrome.png" width=700>
+  <img src="docs/images/testing/chrome.png">
   
 </details>
 
 <details>
   <summary>Microsoft Edge</summary>
 
-  <img src="docs/images/testing/edge.png" width=700>
+  <img src="docs/images/testing/edge.png">
   
 </details>
 
 <details>
   <summary>Apple Safari</summary>
 
-  <img src="docs/images/testing/safari.jpeg" width=700>
+  <img src="docs/images/testing/safari.jpeg">
   
 </details>
 
 <details>
   <summary>Mozilla Firefox</summary>
 
-  <img src="docs/images/testing/firefox.png" width=700>
+  <img src="docs/images/testing/firefox.png">
   
 </details>
 
 <details>
   <summary>Opera</summary>
 
-  <img src="docs/images/testing/opera.png" width=700>
+  <img src="docs/images/testing/opera.png">
   
 </details>
 
@@ -950,7 +950,7 @@ Browse Recipes Link | Click | Navigates to Home page | PASS
 ***Issue:***  
 When [Django filters](https://django-filter.readthedocs.io/en/stable/) were added to Browse Recipes page, the standard [Django pagination](https://docs.djangoproject.com/en/3.2/topics/pagination/) no longer worked.
 With the standard Django pagination, the filter criteria were no longer applied when navigating to another page and showed recipes that did not fall under the selected criteria.  
-***Fix:***  
+***Solution:***  
 While searching for a solution, I learnt that this is a common issue with Django filters. 
 Having reviewed many possible solutions to the issue, I decided to implement the soluction found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
 This solution uses [QueryString Template Tags](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html) and works with Django filters.
@@ -962,7 +962,7 @@ The "Remember Me" box in Log In page was initially horizontally centralised with
 During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
 It appered the issue resulted from how Apple Safari rendered the codes.   
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
-    ***Fix:***  
+    ***Solution:***  
     CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
     The text and the box are now centralised together. 
     I felt that this was a more appropriate position for the box.  
@@ -977,7 +977,8 @@ The error in the development environment showed that it was caused by the duplic
 In the admin panel, it was verified that there was indeed a recipe titled "Bob" saved as a draft by a user.
 When the draft recipe was deleted from the database, the error no longer occurred.  
 ***Status:***  
-Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>   Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
+Post Recipe form prevents a recipe entry with the same title as an existing recipe and raises an error  <img src="docs/images/testing/no-server-error.png" width=500>   
+Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error.
 Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
