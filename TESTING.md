@@ -727,7 +727,8 @@ User stories were tested and addressed as follows.
 
   The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipe pages. It is also displayed in the Recipe Details page for each page.  
 
-  <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>   
+  <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>     
+  <br>
 
   <img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
