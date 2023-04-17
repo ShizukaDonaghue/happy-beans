@@ -690,11 +690,9 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can log into my account so that all the application's features are available to me._**  
 
-  Log In link is available on the navigation bar for returning users who are not logged in already.   
+  Log In link is available on the navigation bar for returning users who are not logged in already. Once they fill in their details, they are logged in to enable all the application's features. 
 
-  <img src="docs/images/testing/us-account-login.png" width=800>  
-
-    Once they fill in their details, they are logged in to enable all the application's features.  
+  <img src="docs/images/testing/us-account-login.png" width=800>   
 
 * **_As a Site User, I can log out of my account so that I can keep my account secure._**  
 
@@ -744,25 +742,25 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type._**  
 
-  Recipe filters are available in Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
+  A recipe filter is available in Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
 * **_As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient._**  
 
-  Recipe filters are available in Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
+  A recipe filter is available in Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
 * **_As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level._**  
 
-  Recipe filters are available in Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
+  A recipe filter is available in Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
 * **_As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website._**  
 
-  Custom pages for 400, 403, 404 and 500 errors have been created. Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
+  Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
 
   <img src="docs/images/testing/us-404-error.png" width=280>  
 
@@ -786,7 +784,7 @@ User stories were tested and addressed as follows.
 
     <img src="docs/images/testing/us-draft-recipe.png" width=800>  
 
-* **_As a Site User, I can edit the recipes that I posed so that I can make changes after it has been submitted._**  
+* **_As a Site User, I can edit the recipes that I posted so that I can make changes after it has been submitted._**  
 
   Users can edit their own recipes from Recipe Details page. Edit button is available for the author of the recipe.   
 
@@ -798,7 +796,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can delete recipes that I posted so that I can remove them from the site._**  
 
-  Users can delete their own recipe from Recipe Details page. Delete button is available for the author of the recipe.  
+  Users can delete their own recipes from Recipe Details page. Delete button is available for the author of the recipe.  
 
   <img src="docs/images/testing/us-update-recipe-button.png" width=350>  
 
@@ -849,7 +847,7 @@ User stories were tested and addressed as follows.
 ### **EPIC: Recipe Likes**
 * **_As a Site User, I can view the number of likes for each recipe so that I can see the feedback from others._**  
 
-  The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipe pages. It is also displayed in the Recipe Details page for each page.  
+  The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipes pages. It is also displayed in the Recipe Details page for each page.  
 
   <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>     
   <br>
