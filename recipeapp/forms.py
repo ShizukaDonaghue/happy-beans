@@ -11,9 +11,15 @@ class CommentForm(forms.ModelForm):
 
 
 class RecipeForm(forms.ModelForm):
+    """ Overrides Django's default error messages """
+    title = forms.CharField(
+        error_messages={'required': 'Please enter the title of the recipe.'})
+    description = forms.CharField(
+        error_messages={'required': 'Please enter the description.'})
+
     """
     Form used to post a recipe
-    Summernote widget is used for Ingredients and Method fields
+    Summernote widget is used for the Ingredients and Method fields
     """
     class Meta:
         model = Recipe
