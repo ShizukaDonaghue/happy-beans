@@ -1036,7 +1036,7 @@ Recipe Image | Display | When a recipe image is uploaded, the image is displayed
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
-Number of Likes | Display | The number of likes is displayed correctly with a grey love heart and the nubmer indicating the number of likes | PASS
+Number of Likes | Display | The number of likes is displayed correctly with a grey love heart and the number indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
