@@ -6,10 +6,10 @@ Return to [README](https://github.com/ShizukaDonaghue/happy-beans)
 
 ### HTML
 All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/) to check for any issues or syntax errors. The only errors identified were for Summernote fields.
-Please see below results for each page.
+Please see the results below for each page.
 
 <details>
-  <summary>Home Page - No isses or errors</summary>
+  <summary>Home Page - No issues or errors</summary>
   
   <img src="docs/images/testing/home-page.png">
 
@@ -76,7 +76,7 @@ Please see below results for each page.
 
 </details>  
 
-The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
+The errors identified were all related to the Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
 
 <details>
   <summary>Update Recipe Page - Errors identified for Summernote fields</summary> 
@@ -88,7 +88,7 @@ The errors identified were all related to Summernote widget that is used in the 
 
 </details>
 
-The errors identified were all related to Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
+The errors identified were all related to the Summernote widget that is used in the recipe form. Since the errors resulted from Summernote codes, these were not addressed. However, these errors do not affect the functionality of the application.
 
 <details>
   <summary>Recipe Details Page - Errors identified for Summernote fields</summary> 
@@ -98,7 +98,7 @@ The errors identified were all related to Summernote widget that is used in the 
 
 </details>
 
-The errors identified were all related to CSS property used in Summernote list items for unordered list. Since the errors resulted from Summernote codes, these were not addressed.
+The errors identified were all related to CSS property used in Summernote list items for the unordered list. Since the errors resulted from Summernote codes, these were not addressed.
 
 <details>
   <summary>403 Error Page - No issues or errors</summary> 
@@ -234,7 +234,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 </details>
 
 ## Accessibility
-[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. The only errors identified were for Crispy Form fields. Please see below results for each page.
+[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. The only errors identified were for Crispy Form fields. Please see the results below for each page.
 
 <details>
   <summary>Home Page - No errors</summary>
@@ -462,7 +462,7 @@ This included the following devices:
 
 
 ## Device Testing
-The application was tested manually on the follwoing devices and no issues were found:
+The application was tested manually on the following devices and no issues were found:
 <details>
   <summary>iPhone 12</summary>
 
@@ -558,7 +558,7 @@ User stories were tested and addressed as follows.
 ### **EPIC: User Account**
 * **_As a Site User, I can register an account so that I can access all the application's features._**
 
-  Sign Up button is available on the Home page as well as on the navigation bar for users who are not logged in already.   
+  Sign Up button is available on the Home page as well as on the navigation bar for users who have not logged in already.   
 
   <img src="docs/images/testing/us-account-registration-signup.png" width=800>  
 
@@ -598,7 +598,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for._**  
 
-  A navigation bar is avaible on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. The link for the current page is shown in green to visually indicate which page they are in.   
+  A navigation bar is available on every page, which is fixed at the top of the screen for ease of use and fully responsive to all screen sizes. This allows users to navigate through the site easily. The link for the current page is shown in green to visually indicate which page they are on.   
 
   <img src="docs/images/testing/us-navbar.png" width=800>  
 
@@ -610,13 +610,13 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can select a recipe from the list so that I can view the full details of a recipe._**  
 
-  Recipe cards are available in Browse Recipes, My Favourites and My Recipes pages. All these pages display 12 recipe cards per page. Once a recipe card is selected by clicking anywhere on the card, users are directed to the Recipe Details page, which displays the full detalis of the recipe.  
+  Recipe cards are available in Browse Recipes, My Favourites and My Recipes pages. All these pages display 12 recipe cards per page. Once a recipe card is selected by clicking anywhere on the card, users are directed to the Recipe Details page, which displays the full details of the recipe.  
 
   <img src="docs/images/testing/us-recipe-details.png" width=800>  
 
 * **_As a Site User, I can view the comments posted by others so that I can see the feedback and conversation for each recipe._**  
 
-  Comment section is available on Recipe Details page underneath the recipe, where comments are display in ascending order based on posting dates.  Users can views the feedback and conversation for each recipe here.  
+  Comment section is available on Recipe Details page underneath the recipe, where comments are displayed in ascending order based on posting dates.  Users can view the feedback and conversation for each recipe here.  
 
   <img src="docs/images/testing/us-comment.png" width=800>  
 
@@ -640,7 +640,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website._**  
 
-  Custom pages for 400, 403, 404 and 500 erros have been created. Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
+  Custom pages for 400, 403, 404 and 500 errors have been created. Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.  
 
   <img src="docs/images/testing/us-404-error.png" width=280>  
 
@@ -648,7 +648,7 @@ User stories were tested and addressed as follows.
 ### **EPIC: Recipe Management**
 * **_As a Site User, I can post my own recipe so that I can share it with others._**  
 
-  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for ingredients and method to organise the contents.  
+  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for the ingredients and method to organise the contents.  
 
   <img src="docs/images/testing/us-post-recipe.png" width=800>  
   <img src="docs/images/testing/us-post-recipe-2.png" width=800>  
@@ -656,7 +656,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can draft a recipe and save it so that I can return later and edit it._**  
 
-  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form but decide not to published the recipe yet by selecting "Save as Draft" option in the form.  
+  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form but decide not to publish the recipe yet by selecting "Save as Draft" option in the form.  
 
   <img src="docs/images/testing/us-save-as-draft.png" width=800>  
 
@@ -666,7 +666,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can edit the recipes that I posed so that I can make changes after it has been submitted._**  
 
-  Users can edit their own recipe from Recipe Details page. Edit button is available for the author of the recipe.   
+  Users can edit their own recipes from Recipe Details page. Edit button is available for the author of the recipe.   
 
   <img src="docs/images/testing/us-update-recipe-button.png" width=350>  
 
@@ -706,18 +706,19 @@ User stories were tested and addressed as follows.
 ### **EPIC: Recipe Comment**  
 * **_As a Site User, I can comment on a recipe so that I can share my feedback and be involved in the conversation._**  
 
-  For logged-in users, Comment Form is available beneath each recipe. Users can post their comment from here to leave feedback on the recipe or ask questions, or just communicate with others in the community.  
+  For logged-in users, a Comment Form is available beneath each recipe. Users can post their comments from here to leave feedback on the recipe or ask questions, or just communicate with others in the community.  
 
   <img src="docs/images/testing/us-comment.png" width=800>  
 
 * **_As a Site User, I can edit the comment I posted so that I can make changes to my comments._**  
+
   For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.  
 
   <img src="docs/images/testing/us-edit-comment.png" width=420>  
 
 * **_As a Site User, I can delete the comment I posted so that I can remove it from the comments section._**  
 
-  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confim the deletion.   
+  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confirm the deletion.   
 
   <img src="docs/images/testing/us-delete-comment-modal.png" width=420>  
 
@@ -734,7 +735,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can view the list of my liked recipes so that I can easily go back to them within the site._**   
 
-  For logged-in users, My Favourites link is available from the navigation bar, which direct them to My Favourites page. Once a recipe is liked, the recipe is added to My Favourites page for the user so that they can easily find them when they need them.  
+  For logged-in users, My Favourites link is available from the navigation bar, which directs them to My Favourites page. Once a recipe is liked, the recipe is added to My Favourites page for the user so that they can easily find them when they need them.  
 
   <img src="docs/images/testing/us-my-favourites.png" width=800>  
 
@@ -746,14 +747,14 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can unlike a recipe so that I can remove it from my liked recipes._**  
 
-  For logged-in users, the unlike button is available on Recipe Details page if they have already liked the recipe. By clicking on the loeve heart icon, the recipe can be unliked.  
+  For logged-in users, the unlike button is available on Recipe Details page if they have already liked the recipe. By clicking on the love heart icon, the recipe can be unliked.  
 
   <img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
 
 
 ## Features Testing
-Manual testing was performed using Google Chrome to verify that all the features functioned as expected and no issues were found.
+Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
 
 ### Browser Tab
 Feature | Action | Expected Result | PASS/FAIL
@@ -837,7 +838,7 @@ Username Field | Leave Empty | Form does not submit | PASS
 Username Field | Leave Empty | Error message is displayed | PASS
 Username Field | Duplicate Username | Form does not submit | PASS
 Username Field | Duplicate Username | Error message is displayed | PASS
-Email Field | Leave Empty | Form submits without email address as this is an optional field | PASS
+Email Field | Leave Empty | Form submits without an email address as this is an optional field | PASS
 Email Field | Enter Invalid Format | Form does not submit | PASS
 Email Field | Enter Invalid Format | Error message is displayed | PASS
 Email Field | Duplicate Email Address | Form does not submit | PASS
@@ -893,37 +894,37 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Filter Dropdown Menu | Display | Dropdown menu is displayed correctly for each filter | PASS
 Filter Functionality | Click | Filters recipes based on the criteria selected | PASS
-Filter Functionality | Click | Clears filters when no criteria is selected | PASS
-Filter Functionality | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
+Filter Functionality | Click | Clears filters when no criteria are selected | PASS
+Filter Functionality | Display | When there are no recipes to display, Browse Recipes button and the correct message are displayed | PASS
 Browse Recipes Link | Click | Navigates back to Browse Recipes page without any filter criteria applied | PASS
 Pagination | Display | When there are more than 12 recipes to display, the filtered list of recipes is paginated correctly and maintains the filter criteria when navigating through the pages (previous, next, first and last pages) | PASS
-Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+Pagination | Display | When there are fewer than 12 recipes to display, pagination is not displayed | PASS
 
 #### Recipe Cards
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
-Recipe Card | Display | Recipes published are displayed in descending order basd on creation dates| PASS
+Recipe Card | Display | Recipes published are displayed in descending order based on creation dates| PASS
 Recipe Card | Display | Draft recipes are not displayed | PASS
-Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigates to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
-Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Height | Display | Recipe cards are displayed at the same height for each row regardless of the height of the card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
 Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
 Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
-Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Number of Likes | Display | The number of likes is displayed correctly with a grey love heart and the nubmer indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
-Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+Pagination | Display | When there are fewer than 12 recipes to display, pagination is not displayed | PASS
 
 ### Recipe Details Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
-Image Size | Display | For screen sizes with a minimum width of 992px, the image height is set to occupy the maximum height of recipe summary container next to the image | PASS
+Image Size | Display | For screen sizes with a minimum width of 992px, the image height is set to occupy the maximum height of the recipe summary container next to the image | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
 Edit/Delete Recipe Button | Display | Edit/Delete button is available if the user is logged in and is the author of the recipe | PASS
 Edit Recipe Button | Click | Opens Update Recipe page with the original details populated from the database | PASS
@@ -932,14 +933,14 @@ Delete Recipe Button | Click | Displays the modal asking the user to confirm del
 Like/Unlike Button | Display | Like/Unlike button is available if the user is logged in and the recipe is published | PASS
 Like/Unlike Button | Display | Like/Unlike button is greyed out and not clickable if the user is not logged in or the recipe is not yet published | PASS
 Like/Unlike Button | Click | Toggles between Like (a love heart & plus icon) and Unlike (a love heart icon) if the user is logged in and the recipe is published | PASS
-Number of Likes | Display | The number of likes is dispalyed and increases or decreases correctly when the reipe is liked or unliked | PASS
+Number of Likes | Display | The number of likes is displayed and increases or decreases correctly when the recipe is liked or unliked | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
-Ingredients | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
-Method | Display | Details are displayed correctly from Summernote field in the default font and font size | PASS
-Comments | Display | If there are no comments, correct message is displayed | PASS
+Ingredients | Display | Details are displayed correctly from the Summernote field in the default font and font size | PASS
+Method | Display | Details are displayed correctly from the Summernote field in the default font and font size | PASS
+Comments | Display | If there are no comments, the correct message is displayed | PASS
 Comments | Display | Displays comments, authors and dates in ascending order if there are comments | PASS
-Post Comment | Display | If the user is not logged in, correct message is displayed | PASS
-Post Comment | Display | If the recipe is not published, correct message is displayed | PASS
+Post Comment | Display | If the user is not logged in, the correct message is displayed | PASS
+Post Comment | Display | If the recipe is not published, the correct message is displayed | PASS
 Post Comment | Display | Comment form is only available if the user is logged in and the recipe is published | PASS
 Post Comment | Display | First letter is always capitalised regardless of whether the comment entered is capitalised | PASS
 Post Comment | Leave Empty | Form does not submit | PASS
@@ -955,30 +956,30 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
 Recipe Card | Display | Recipes liked by the user are displayed in descending order based on creation dates | PASS
-Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigates to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
-Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Height | Display | Recipe cards are displayed at the same height for each row regardless of the height of the card body (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
 Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
-Recipe Card | Display | When there are no recipes to display, Browse Recipes button and correct message are displayed | PASS
+Recipe Card | Display | When there are no recipes to display, Browse Recipes button and the correct message are displayed | PASS
 Browse Recipes Link | Click | Navigates to Browse Recipes page | PASS
 Recipe Image | Display | When a recipe image is uploaded, the image is displayed correctly from Cloudinary | PASS
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
-Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Number of Likes | Display | The number of likes is displayed correctly with a grey love heart and the number indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
-Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+Pagination | Display | When there are fewer than 12 recipes to display, pagination is not displayed | PASS
 
 ### My Recipes Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Acess the Page by Changing URL | Navigates the user to Log In page | PASS
 Recipe Card | Display | Recipes posted by the user are displayed in descending order based on creation dates | PASS
-Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigtes to the correct Recipe Details page | PASS
+Recipe Card | Click | Stretched link is applied correctly and clicking anywhere on a card navigates to the correct Recipe Details page | PASS
 Recipe Card | Hover | Box shadow is applied with hover effect | PASS
-Recipe Card Height | Display | Recipe cards are displayed in the same height for each row regardless of the height of card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
+Recipe Card Height | Display | Recipe cards are displayed at the same height for each row regardless of the height of the card body content (when the height of a card is higher, the rest of the cards in the same row are stretched to the same height) | PASS  
 Recipe Card Width | Display | Recipe cards are displayed in the same width for each column and column width is the same for all columns displayed | PASS
 Recipe Card | Display | [Draft] in red font is added to the recipe title if the recipe is not published | PASS
 Recipe Card | Display | When there are no recipes to display, Post a Recipe button, Browse Recipes button and correct messages are displayed | PASS
@@ -988,11 +989,11 @@ Recipe Image | Display | When a recipe image is uploaded, the image is displayed
 Recipe Image | Display | When a recipe image is not uploaded, the placeholder image is displayed correctly from Cloudinary | PASS
 Image Size | Display | Images are displayed in the same height and width regardless of the size or aspect ratio of the images uploaded | PASS
 Recipe Title | Display | First letter is always capitalised regardless of whether the title entered is capitalised | PASS
-Number of Likes | Display | The number of likes is displayed correcty with a grey love heart and the nubmer indicating the number of likes | PASS
+Number of Likes | Display | The number of likes is displayed correctly with a grey love heart and the number indicating the number of likes | PASS
 Recipe Description | Display | First letter is always capitalised regardless of whether the description entered is capitalised | PASS
 Recipe Description | Display | Description is truncated to 70 characters for display on the recipe cards | PASS  
 Pagination | Display | When there are more than 12 recipes to display, pagination is added and functions correctly | PASS
-Pagination | Display | When there are less than 12 recipes to display, pagination is not displayed | PASS
+Pagination | Display | When there are fewer than 12 recipes to display, pagination is not displayed | PASS
 
 ### Post Recipe Page
 Feature | Action | Expected Result | PASS/FAIL
@@ -1035,7 +1036,7 @@ Method | Enter an Empty String | Form does not submit | PASS
 Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
 Image | Click to Upload | Opens a file explorer to choose an image from | PASS
-Image | Click to Upload | Chosen image file is displayed in 'Choose File' field | PASS
+Image | Click to Upload | Chosen image file is displayed in the 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
@@ -1050,7 +1051,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
 Defensive Measure | Logged-in and Try to Access Another User's Recipe by Changing URL | 403 error page is displayed | PASS
-Update Recipe | Display | Update Recipe form contains the original details from database | PASS
+Update Recipe | Display | Update Recipe form contains the original details from the database | PASS
 Title | Leave Empty | Form does not submit | PASS
 Title | Leave Empty | Error message is displayed | PASS
 Title | Enter an Empty String | Form does not submit | PASS
@@ -1088,7 +1089,7 @@ Method | Enter an Empty String | Form does not submit | PASS
 Method | Enter an Empty String | Error message is displayed | PASS
 Image | Not Uploaded | Form submits as this is not a required field | PASS
 Image | Click to Upload | Opens a file explorer to choose an image from | PASS
-Image | Click to Upload | Chosen image file is displayed in 'Choose File' field | PASS
+Image | Click to Upload | Chosen image file is displayed in the 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
 Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
@@ -1112,7 +1113,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Defensive Measure | Not Logged-in and Try to Access the Page by Changing URL | Navigates the user to Log In page | PASS
 Defensive Measure | Logged-in and Try to Access Another User's Comment by Changing URL | 403 error page is displayed | PASS
-Update Comment| Display | Update Comment form contains the original details from database | PASS
+Update Comment| Display | Update Comment form contains the original details from the database | PASS
 Comment Field | Leave Empty | Form does not submit | PASS
 Comment Field | Leave Empty | Error message is displayed | PASS
 Update Comment | Click | Comment is updated | PASS
@@ -1155,7 +1156,7 @@ With the standard Django pagination, the filter criteria were no longer applied 
 
   ***Solution:***  
 While searching for a solution, I learnt that this is a common issue with Django filters. 
-Having reviewed many possible solutions to the issue, I decided to implement the soluction found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
+Having reviewed many possible solutions to the issue, I decided to implement the solution found in [Django Filter and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) tutorial.
 This solution uses [QueryString Template Tags](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html) and works with Django filters.
 RecipeList view codes and pagination codes for Browse Recipes page were updated to incorporate this solution for the Django filters.  
 
@@ -1169,12 +1170,12 @@ RecipeList view codes and pagination codes for Browse Recipes page were updated 
   ***Issue:***  
   The "Remember Me" box in Log In page was initially horizontally centralised with the rest of the contents.
   During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
-  It appered the issue resulted from how Apple Safari rendered the codes.   
+  It appeared the issue resulted from how Apple Safari rendered the codes.   
 
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
 
     ***Solution:***  
-    CSS codes were added to target the "Remember Me" box and moved it to the right of the "Remember Me" text.
+    CSS codes were added to target the "Remember Me" box and moved to the right of the "Remember Me" text.
     The text and the box are now centralised together. 
     I felt that this was a more appropriate position for the box.  
 
@@ -1184,8 +1185,8 @@ RecipeList view codes and pagination codes for Browse Recipes page were updated 
 * **Integrity Error for Slug Key Value Violation**   
 
   ***Issue:***  
-During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occured.
-The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existed in the database and the slug key value must be unique.  
+During the manual testing, when a recipe titled "Bob" was submitted in the deployed site, server error 500 occurred.
+The error in the development environment showed that it was caused by the duplicate key value as there was already a slug value "Bob" existing in the database and the slug key value must be unique.  
 
   <img src="docs/images/testing/server-error-500.png" width=700>  
 
