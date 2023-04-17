@@ -680,7 +680,7 @@ User stories were tested and addressed as follows.
 ### **EPIC: User Account**
 * **_As a Site User, I can register an account so that I can access all the application's features._**
 
-  Sign Up button is available on the Home page as well as on the navigation bar for users who have not logged in already.   
+  Sign Up button is available on the Home page as well as on the navigation bar for users who are not logged in already.   
 
   <img src="docs/images/testing/us-account-registration-signup.png" width=800>  
 
