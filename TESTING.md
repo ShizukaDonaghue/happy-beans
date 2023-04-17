@@ -682,7 +682,7 @@ User stories were tested and addressed as follows.
 
     Once the delete button is selected, a modal will be displayed to confirm the deletion.  
 
-    <img src="docs/images/testing/us-delete-recipe-modal.png" width=430>  
+    <img src="docs/images/testing/us-delete-recipe-modal.png" width=420>  
 
 * **_As a Site User, I can view a list of recipes that I have posted or drafted so that I can manage them._**  
 
@@ -713,13 +713,13 @@ User stories were tested and addressed as follows.
 * **_As a Site User, I can edit the comment I posted so that I can make changes to my comments._**  
   For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.  
 
-  <img src="docs/images/testing/us-edit-comment.png" width=400>  
+  <img src="docs/images/testing/us-edit-comment.png" width=420>  
 
 * **_As a Site User, I can delete the comment I posted so that I can remove it from the comments section._**  
 
   For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confim the deletion.   
 
-  <img src="docs/images/testing/us-delete-comment-modal.png" width=430>  
+  <img src="docs/images/testing/us-delete-comment-modal.png" width=420>  
 
 
 ### **EPIC: Recipe Likes**
@@ -727,7 +727,8 @@ User stories were tested and addressed as follows.
 
   The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipe pages. It is also displayed in the Recipe Details page for each page.  
 
-  <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>  
+  <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>   
+
   <img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
 * **_As a Site User, I can view the list of my liked recipes so that I can easily go back to them within the site._**   
@@ -1194,6 +1195,6 @@ Post Recipe form prevents a recipe entry with the same title as an existing reci
 
   <img src="docs/images/testing/no-server-error.png" width=500>   
 
-  Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error. Since the error could not be recreated, this bug was not addressed.  
+    Attempts were made to recreate the error to investigate the issue further, however, I was never able to recreate the error. Since the error could not be recreated, this bug was not addressed.  
 
 There are no other known bugs.
