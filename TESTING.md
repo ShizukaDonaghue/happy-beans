@@ -16,14 +16,14 @@ Please see the results below for each page.
 </details>
 
 <details>
-  <summary>Sigup Page - No issues or errors</summary>
+  <summary>Sign Up Page - No issues or errors</summary>
   
   <img src="docs/images/testing/signup-page.png">
 
 </details>
 
 <details>
-  <summary>Login Page - No issues or errors</summary>
+  <summary>Log In Page - No issues or errors</summary>
   
   <img src="docs/images/testing/login-page.png">
 
@@ -31,7 +31,7 @@ Please see the results below for each page.
 
 
 <details>
-  <summary>Logout Page - No issues or errors</summary>
+  <summary>Log Out Page - No issues or errors</summary>
   
   <img src="docs/images/testing/logout-page.png">
 
@@ -244,14 +244,14 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 </details>
 
 <details>
-  <summary>Sigup Page - No errors</summary>
+  <summary>Sign Up Page - No errors</summary>
   
   <img src="docs/images/testing/wave-signup-page.png">
 
 </details>
 
 <details>
-  <summary>Login Page - No errors</summary>
+  <summary>Log In Page - No errors</summary>
   
   <img src="docs/images/testing/wave-login-page.png">
 
@@ -259,7 +259,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 
 
 <details>
-  <summary>Logout Page - No errors</summary>
+  <summary>Log Out Page - No errors</summary>
   
   <img src="docs/images/testing/wave-logout-page.png">
 
@@ -336,7 +336,7 @@ The error identified was a missing form label for the Crispy Form used in the Co
 
 ## Lighthouse
 Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance.
-Please see the results below for each page (desktop and mobile).
+Please see the results below for each page.
 
 <details>
   <summary>Home Page</summary>
@@ -350,7 +350,7 @@ Please see the results below for each page (desktop and mobile).
 </details>
 
 <details>
-  <summary>Signup Page</summary>
+  <summary>Sign Up Page</summary>
   
   Desktop:  
   <img src="docs/images/testing/lh-sign-up-page-desktop.png">
@@ -361,7 +361,7 @@ Please see the results below for each page (desktop and mobile).
 </details>
 
 <details>
-  <summary>Login Page</summary>
+  <summary>Log In Page</summary>
   
   Desktop:  
   <img src="docs/images/testing/lh-log-in-page-desktop.png">
@@ -372,7 +372,7 @@ Please see the results below for each page (desktop and mobile).
 </details>
 
 <details>
-  <summary>Logout Page</summary>
+  <summary>Log Out Page</summary>
   
   Desktop:  
   <img src="docs/images/testing/lh-log-out-page-desktop.png">
@@ -818,7 +818,7 @@ User stories were tested and addressed as follows.
 
   <img src="docs/images/testing/us-form-validation.png" width=800>  
   <img src="docs/images/testing/us-form-validation-2.png" width=800>  
-  <img src="docs/images/testing/us-form-validation-22.png" width=800>  
+  <img src="docs/images/testing/us-form-validation-4.png" width=800>  
 
     Error messages are also raised for empty strings to prevent the form from being submitted with empty fields.   
     
@@ -891,9 +891,9 @@ Title | Display | "My Recipes" is displayed as the title of the page for My Reci
 Title | Display | "Post Recipe" is displayed as the title of the page for Post Recipe page | PASS
 Title | Display | "Update Recipe" is displayed as the title of the page for Update Recipe page | PASS
 Title | Display | "Update Comment" is displayed as the title of the page for Update Comment page | PASS
-Title | Display | "Signup" is displayed as the title of the page for Signup page | PASS
-Title | Display | "Login" is displayed as the title of the page for Login page | PASS
-Title | Display | "Logout" is displayed as the title of the page for Logout page | PASS
+Title | Display | "Sign Up" is displayed as the title of the page for Sign Up page | PASS
+Title | Display | "Log In" is displayed as the title of the page for Log In page | PASS
+Title | Display | "Log Out" is displayed as the title of the page for Log Out page | PASS
 
 ### Navigation Bar
 Feature | Action | Expected Result | PASS/FAIL
@@ -954,7 +954,7 @@ GitHub Link | Click | Opens GitHub in a new tab | PASS
 LinkedIn Link | Click | Opens LinkedIn in a new tab | PASS
 All Links | Hover | Colour changes to green with hover effect | PASS
 
-### Signup Page
+### Sign Up Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Username Field | Leave Empty | Form does not submit | PASS
@@ -977,7 +977,7 @@ Sign Up Link | Click | Once the user is logged in, navigates to Home page | PASS
 Alert | Submit | Success message is displayed confirming the user has logged in as [username] | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 
-### Login Page
+### Log In Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Username Field | Leave Empty | Form does not submit | PASS
@@ -992,7 +992,7 @@ Log In Link | Click | Once the user is logged in, navigates to Home page | PASS
 Alert | Submit | Success message is displayed confirming the user has logged in as [username] | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
 
-### Logout Page
+### Logo Out Page
 Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Log Out Link | Click | Logs out the user | PASS
