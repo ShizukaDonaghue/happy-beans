@@ -335,7 +335,129 @@ The error identified was a missing form label for the Crispy Form used in the Co
 </details>
 
 ## Lighthouse
-XXXXXXXXXXXXXXXX  NEED SCREENSHOTS  XXXXXXXXXXXXXXXXXXXX
+Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to test accessibility and performance.
+Please see the results below for each page (desktop and mobile).
+
+<details>
+  <summary>Home Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-home-page-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-home-page-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Signup Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-sign-up-page-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-sign-up-page-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Login Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-log-in-page-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-log-in-page-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Logout Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-log-out-page-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-log-out-page-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Browse Recipes Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-browse-recipe-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-browse-recipe-mobile.png">
+	
+</details>
+
+<details>
+  <summary>My Favourites Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-my-favourites-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-my-favourites-mobile.png">
+	
+</details>
+
+<details>
+  <summary>My Recipes Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-my-recipes-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-my-recipes-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Update Comment Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-update-comment-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-update-comment-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Post Recipe Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-post-recipe-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-post-recipe-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Update Recipe Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-update-recipe-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-update-recipe-mobile.png">
+	
+</details>
+
+<details>
+  <summary>Recipe Details Page</summary>
+  
+  Desktop:  
+  <img src="docs/images/testing/lh-recipe-details-page-desktop.png">
+
+  Mobile:  
+  <img src="docs/images/testing/lh-recipe-details-page-mobile.png">
+	
+</details>
 
 ## Responsiveness
 Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found.
@@ -696,6 +818,7 @@ User stories were tested and addressed as follows.
 
   <img src="docs/images/testing/us-form-validation.png" width=800>  
   <img src="docs/images/testing/us-form-validation-2.png" width=800>  
+  <img src="docs/images/testing/us-form-validation-22.png" width=800>  
 
     Error messages are also raised for empty strings to prevent the form from being submitted with empty fields.   
     
