@@ -21,7 +21,7 @@ Click here to view [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Cli
 
 ## UXD - User Experience Design
 
-### User Stories
+### **User Stories**
 Based on the concept of a recipe-sharing website, the following 6 Epics were created for the application's features. 
 These epics were then further developed into 28 User Stories.
 
@@ -72,7 +72,7 @@ The following User Stories were not implemented for EPIC: Site Navigation:
 	The decision was made to maintain the Django filters and remove the search bar.
 
 
-### Agile Methodology
+### **Agile Methodology**
 This application was developed using agile methodology. 
 [Happy Beans Kanban Board](https://github.com/users/ShizukaDonaghue/projects/11) was created using GitHub Projects and was used to manage the entire development process.
 
@@ -98,13 +98,13 @@ These were included so that the entire project was tracked and managed through t
 * EPIC: Testing
 * EPIC: README
 
-### Wireframes
+### **Wireframes**
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-### Application Flow
+### **Application Flow**
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-### Database Design
+### **Database Design**
 An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
 The intention was to utilise Django-AllAuth for the user authentication system and create two custom models - one for Recipe and the other for Comment.
 
@@ -114,20 +114,20 @@ The Comment model is linked to the Recipe model by a Foreign key to store commen
 
 <img src="docs/images/database-schema.png">
 
-### Security Features and Defensive Design
-#### User Authentication
+### **Security Features and Defensive Design**
+#### **User Authentication**
 Django-AllAuth is used to authenticate users. 
 Certain pages within the application can only be accessed by logged-in users. 
 These pages are secured with Django's LoginRequiredMixin, which provides role-based access to the central dataset within the application.
 If a user tries to access these pages without having logged in, they are directed to Log In page instead.
 
-#### User Authorisation
+#### **User Authorisation**
 Users can only edit or delete their own recipes and comments in the application.
 Django's UserPassesTestMixin is used to limit access to logged-in users that pass the author test - 
 it is used to test if the user is the author of the recipe or comment before it gives permission to edit or delete the object.
 If a user tries to edit or delete another user's recipe or comment, HTTP 403 Forbidden error is displayed and prevents the user from editing or deleting the object.
 
-#### Form Validation
+#### **Form Validation**
 Django's built-in form validation is used to validate the forms within the application. 
 The forms will not submit unless they are completed correctly.
 If there are errors, error messages are displayed to assist users to fill in all the fields correctly.
@@ -140,12 +140,12 @@ Since Django's build-in form validation does not catch empty strings in the Summ
 additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty.
 With these measures combined, the Post Recipe form is fully validated for each submission.
 
-#### Security-Sensitive Information
+#### **Security-Sensitive Information**
 Environment variables are stored in env.py for local development to ensure security-sensitive information is not pushed to the GitHub repository.
 For the production environment, these variables are added to Config Vars for the application in Heroku. 
 
-### Design
-#### Colour Scheme
+### **Design**
+#### **Colour Scheme**
 The design of the website is intended to be simple and clean so as not to distract users from colourful images of recipes.
 [Coolors](https://coolors.co) was used to create the colour pallet.
 
@@ -159,10 +159,313 @@ The logo for the website was created using the same colour palette to be consist
 
 <img src="docs/images/colour-scheme.png" width=600>
 
-#### Typography
+#### **Typography**
 The font used throughout the website is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
 It has a happy and playful feel and is easy to read.   
 Sans-serif is the backup font in case the main font is not available.
 
 <img src="docs/images/font-nunito.png" width=200>
 
+## Features
+### **Existing Features**
+#### **Browser Tabs**
+The browser tab contains Happy Beans' favicon and the title of the page to clearly indicate which page is open.
+The favicon was generated from the logo using [RealFaviconGenerator](https://realfavicongenerator.net/). 
+
+<img src="docs/images/browser-tabs.png" width=600>
+
+#### Logo
+The logo was created using [Wix](https://www.wix.com/).  
+The logo on the navigation bar functions as a link to back the Home page for ease of navigation for users.  
+
+<img src="docs/images/navbar-logo.png" width=200>
+
+#### **Navigation Bar**
+The navigation bar is fixed at the top of every page and includes links to other pages.
+The link for the current page is shown in green to visually indicate which page the user is on.
+
+The links on the navigation bar change depending on whether the user is logged in.
+
+Navigation bar for users who are not logged in:
+
+<img src="docs/images/navbar-not-logged-in.png" width=800>
+
+Navigation bar for users who are logged in:
+
+<img src="docs/images/navbar-logged-in.png" width=800>
+
+* Home - Available to all users
+* Browse Recipes - Available to all users
+* My Favourites - Available to users who are logged in
+* My Recipes - Available to users who are logged in
+* Post a Recipe - Available to users who are logged in
+* Sign Up - Available to users who are not logged in
+* Log In - Available to users who are not logged in
+* Log Out - Available to users who are logged in
+
+The same links are available for smaller screen sizes with a hamburger menu.
+
+<img src="docs/images/hamburger-closed.png" width=350>
+
+<img src="docs/images/hamburger-open.png" width=350>
+
+
+#### **Footer**
+The footer includes links to Facebook, Twitter, Instagram, GitHub and LinkedIn. 
+Clicking on any of these icons opens a new browser tab so that users will still have Happy Beans open to easily navigate back.
+
+<img src="docs/images/footer.png" width=500>
+
+
+#### **Sign Up Page**
+
+<img src="docs/images/testing/us-account-registration.png" width=800>
+
+Sign Up page is accessed from the Sign Up button on the Home page or the Sing Up link on the navigation bar, which are available for users who are not logged in already. 
+Users can enter their details here to register and log in. 
+Once signed up, a success message is displayed confirming the login and username, and redirected to the Home page.
+
+#### **Log In Page**
+
+<img src="docs/images/testing/us-account-login.png" width=800>
+
+Log In page is accessed from the Log In link on the navigation bar, which is available for users who are not logged in already.
+Returning users can enter their details here to log in to avail of all the features.
+Once logged in, a success message is displayed confirming the login and username, and redirected to the Home page.
+
+#### **Log Out Page**
+
+<img src="docs/images/testing/us-account-logout.png" width=800>
+
+Log Out page is accessed from the Log Out link on the navigation bar, which is available for logged-in users.
+Users can log out from here by clicking on the Log Out button. 
+Browse Recipe button is available in case they would like to navigate back to recipes. 
+Once logged out, a success message is displayed confirming that the user has logged out and redirected to the Home page.
+
+#### **Home Page**
+
+<img src="docs/images/testing/us-account-registration-signup.png" width=800>
+
+The Hope page carries a larger version of the logo with the tagline "A home for your favourite family-friendly recipes" so that the purpose of the website is immediately clear. 
+The logo was created using [Wix](https://www.wix.com/) and includes green beans in the design to suit the name of the website.
+
+Underneath the tagline, three cards are displayed explaining what users can expect from the website and the benefits of signing up. 
+Sign Up button is included underneath the cards to make it easier for users to sign up. This button directs users to Sign Up page for convenience.
+
+If the user is already logged in, the Sign Up button is replaced with Post a Recipe button to encourage users to post recipes. 
+This button directs users to Post a Recipe page for convenience.
+
+<img src="docs/images/post-recipe-button.png" width=350>
+
+#### **Browse Recipes Page**  
+
+<img src="docs/images/testing/us-browse-recipes.png" width=800>
+
+This page displays all the recipes that are published in descending order based on the creation dates. 
+The recipe cards are paginated after every 12 cards. 
+Each card contains the recipe image, title, description and the number of likes. 
+Users can browse through the recipes easily and select a recipe to view the full details by clicking anywhere on the card.
+
+<img src="docs/images/testing/us-recipe-filters.png" width=800>
+
+Users can also use the recipe filters at the top of the screen to filter the recipes based on their chosen criteria. 
+The recipe filters are available for Meal Type, Main Ingredient and Difficulty.
+
+#### **Recipe Details Page**
+
+Recipe Details page is available for each recipe and is accessed by clicking anywhere on the recipe card in Browse Recipes, My Favourites and My Recipes pages.
+
+**Recipe Header Section**
+
+<img src="docs/images/recipe-details-header.png" width=800>
+
+The recipe summary section displays the recipe image, title, author, preparation time, cooking time, servings, difficulty level and diet types.
+
+This section also includes the number of likes for the recipe.
+
+If the user is logged in and has not yet liked the recipe, the like button (the pink love heart with a plus sign) is available and the number of likes is displayed.
+
+<img src="docs/images/testing/us-like-button.png" width=350>
+
+If the user is logged in and has already liked the recipe, the unlike button (the pink love heart) is available and the number of likes is displayed. 
+The unlike button is intentionally subtle to discourage users not to unlike recipes.
+
+<img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>
+
+If the user is not logged in, the grey love heart and the number of likes are displayed.
+
+<img src="docs/images/nr-of-likes.png" width=350>
+
+**Recipe Details Section**
+
+<img src="docs/images/recipe-details-mid-section.png" width=800>
+
+The main body of the page consists of the recipe description, ingredients and cooking method. 
+
+**Comments Section**
+
+This section displays the comments posted by users in ascending order based on posting dates.
+If the user is logged in and the recipe is published, the comment form is available for users to post comments.
+
+<img src="docs/images/testing/us-comment.png" width=800>
+
+If there are no comments to display, "Be the first to share your thoughts!" is displayed.
+
+<img src="docs/images/no-comment-yet.png" width=800>
+
+If the user is not logged in, "Please log in to leave a comment!" is displayed instead of the comment form.
+
+<img src="docs/images/log-in-to-comment.png" width=800>
+
+If the recipe is not yet published, "Let's publish this recipe to get feedback!" is displayed instead of the comment form.
+
+<img src="docs/images/comment-for-draft.png" width=800>
+
+If the user is logged in and the author of the comment, a vertical ellipsis is available next to the comment posting date. 
+Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.
+
+<img src="docs/images/testing/us-edit-comment.png" width=420>
+
+If the delete button is selected from the dropdown menu, a modal opens up to confirm the deletion.
+
+<img src="docs/images/testing/us-delete-comment-modal.png" width=420>
+
+#### **My Favourites Page**
+
+<img src="docs/images/testing/us-my-favorites.png" width=800>  
+
+My Favourites page is accessed from the My Favourites link on the navigation bar, which is available for users who are logged in.
+Once a recipe is liked, the recipe is added to My Favourites page for the user so that they can store their favourites recipe here and find them easily at a later date.
+
+The recipe cards here are displayed in descending order based on the creation dates and paginated after every 12 cards. 
+Each card contains the recipe image, title, description and the number of likes. 
+
+If there are no recipes to display, Browse Recipe button is available here.
+
+<img src="docs/images/no-favourites.png" width=800>  
+
+
+#### **My Recipes Page**
+
+<img src="docs/images/testing/us-draft-recipe.png" width=800>  
+
+My Recipes page is accessed from the My Recipes link on the navigation bar, which is available for users who are logged in.
+This page lists all the recipes that the user has drafted or published. 
+The recipe cards here are displayed in descending order based on the creation dates and paginated after every 12 cards. 
+Each card contains the recipe image, title, description and the number of likes. 
+
+The recipes which are not yet published are marked with red [Draft] next to the title so that they can be easily identified.
+Users can manage their own recipes from here by clicking anywhere on the recipe card, which directs them to the Recipe Details page.
+
+If there are no recipes to display, Post a Recipe and Browse Recipes buttons are available.
+
+<img src="docs/images/no-recipes.png" width=800>  
+
+
+#### **Post Recipe Page**
+
+Post Recipe page is accessed from the Post a Recipe button on the Home page or the Post a Recipe link on the navigation bar, which are available for logged-in users.
+Users can fill in the form to share their own creations with the community. 
+The form is easy to understand and users can opt to use bullet points for the ingredients and cooking method to organise the contents.
+Users can upload a recipe image, or if they choose not to, a default image is displayed as the recipe image.
+
+<img src="docs/images/testing/us-post-recipe.png" width=800>  
+<img src="docs/images/testing/us-post-recipe-2.png" width=800>  
+<img src="docs/images/testing/us-post-recipe-3.png" width=800>  
+
+Users can fill in the form but decide not to publish the recipe yet by selecting "Save as Draft" option in the form. 
+
+<img src="docs/images/testing/us-save-as-draft.png" width=800>  
+
+Saved drafts are then added to My Recipes page where they can return later and edit them. 
+These drafts are marked with red [Draft] next to the title so that they can be easily identified.
+
+<img src="docs/images/testing/us-draft-recipe.png" width=800>  
+
+If any of the fields are not filled out correctly, error messages are displayed explaining the errors.
+
+<img src="docs/images/testing/us-form-validation.png" width=800>  
+<img src="docs/images/testing/us-form-validation-2.png" width=800>  
+<img src="docs/images/testing/us-form-validation-4.png" width=800>  
+
+Error messages are also raised for empty strings to alert users as the form cannot be submitted with empty fields.
+
+<img src="docs/images/testing/us-form-validation-3.png" width=800>  
+<img src="docs/images/testing/us-form-validation-4.png" width=800>  
+
+Once the form is correctly filled in and submitted, a success message is displayed confirming [recipe title] has been added successfully.
+
+#### **Update Recipe Page**
+
+Users can edit their own recipes from Recipe Details page. Edit button is available here for the author of the recipe.
+
+<img src="docs/images/testing/us-update-recipe-button.png" width=350>  
+
+Once the edit button is selected, users are directed to Update Recipe page. 
+The form opens with the original details populated from the database. 
+Users can update their recipes in this form and submit the changes.
+
+<img src="docs/images/testing/us-update-recipe.png" width=800>  
+
+Once the form is correctly filled in and submitted, a success message is displayed confirming [recipe title] has been updated successfully.
+
+#### **Delete Recipe Modal**
+
+Users can delete their own recipes from Recipe Details page. 
+Delete button is available here for the author of the recipe.
+
+<img src="docs/images/testing/us-update-recipe-button.png" width=350> 
+
+Once the delete button is selected, a modal opens up to confirm the deletion. Once confirmed, the recipe is deleted.
+
+<img src="docs/images/testing/us-delete-recipe-modal.png" width=420>  
+
+#### **Update Comment Page**
+
+In the Comment section of the Recipe Details page, if the user is logged in and the author of the comment, a vertical ellipsis is available next to the comment posting date. 
+Users can select the edit button to access the Update Comment page where they can edit the comment.
+
+<img src="docs/images/testing/us-edit-comment.png" width=420>
+
+The form opens with the original comment populated from the database. Users can make changes and submit the changes from here.
+<img src="docs/images/update-comment.png" width=800>
+
+#### **Delete Comment Modal**
+
+Users can delete their own comments on the Recipe Details page. 
+For the author of the comment, a vertical ellipsis is available next to the comment posting date. 
+Once the delete button is selected, a modal opens up to confirm the deletion. Once confirmed, the comment is deleted.
+
+<img src="docs/images/testing/us-delete-comment-modal.png" width=420>  
+
+#### **Error Pages**
+Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. 
+Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.
+
+<img src="docs/images/testing/404-error.png" width=280>  
+
+* 400 Bad Request - Looks like Happy Beans can't cook up your request, sorry…!
+* 403 Page Forbidden - This action is forbidden! Please check to make sure you've signed into the correct account!
+* 404 Page Not Found - Oops, something has gone wrong! The page you're looking for doesn't exist!
+* 500 Server Error - Looks like Happy Beans can't cook up your request, sorry…!
+
+### **Features Left to Implement**
+
+#### **Search Bar**
+A search bar to search recipes based on a particular word or phrase was one of the two User Stories that was not implemented. 
+All the necessary tasks were completed and the search bar functioned as expected. However, when the recipe filters were added, the search bar no longer functioned.
+This issue was reviewed with a tutor, but a solution was not found within the time frame given. 
+Therefore, the decision was made to keep the recipe filters and remove the search bar. 
+I believe the website will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
+
+#### **Diet Type Filter**
+The ability to filter recipes based on the Diet Type was the other User Story that was not implemented. 
+The Diet Type is an ArrayField and having searched for a solution online, it was deemed not feasible with standard Django filters.
+ArrayField was initially chosen for the diet types so that users can select multiple diet types when posting a recipe.
+This could be changed to a different field type so that a filter can be applied. This is another feature to be implemented in future.
+
+#### **Django ResizedImageField**
+ResizedImageField can resize images to a specific size. 
+Images uploaded by users can vary in size and could impact the website's performance if they are unnecessarily too large. 
+I became aware of this field after the application was already created and therefore it was not implemented.
+I believe this change will beneficial for the website in future. 
