@@ -874,7 +874,16 @@ User stories were tested and addressed as follows.
 
   <img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>  
 
+## Automated Testing
+Automated tests were planned to be executed on the local SQLite database, however, due to an ArrayField used in the Recipe Model, it was not possible to run the tests in SQLite database as ArrayFields are specific to Postgres database and not supported in SQLite database.
 
+The issue was reviewed with a tutor and I was advised that ElphantSQL database would not support test databases being created for testing, so the tests were unable to be executed in the end. 
+
+I have however written codes to test the forms used in the application and these are in tests.py.
+
+<img src="docs/images/automated-tests.png" width=500>
+
+As automated tests cannot be run for the application, the decision was made to extensively test all the fields and features of the application instead.
 
 ## Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
