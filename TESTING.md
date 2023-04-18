@@ -234,7 +234,7 @@ Note: `# noqa` was added to Django generated codes under `AUTH_PASSWORD_VALIDATO
 </details>
 
 ## Accessibility
-[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessibility. The only errors identified were for Crispy Form fields. Please see the results below for each page.
+[Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) were used to test accessibility. The only errors identified were for Crispy Form fields. Please see the results below for each page.
 
 <details>
   <summary>Home Page - No errors</summary>
@@ -730,7 +730,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can select a recipe from the list so that I can view the full details of a recipe._**  
 
-  Recipe cards are available in Browse Recipes, My Favourites and My Recipes pages. All these pages display 12 recipe cards per page. Once a recipe card is selected by clicking anywhere on the card, users are directed to the Recipe Details page, which displays the full details of the recipe.  
+  Recipe cards are available on Browse Recipes, My Favourites and My Recipes pages. All these pages display 12 recipe cards per page. Once a recipe card is selected by clicking anywhere on the card, users are directed to the Recipe Details page, which displays the full details of the recipe.  
 
   <img src="docs/images/testing/us-recipe-details.png" width=800>  
 
@@ -742,19 +742,19 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type._**  
 
-  A recipe filter is available in Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
+  A recipe filter is available on Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
 * **_As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient._**  
 
-  A recipe filter is available in Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
+  A recipe filter is available on Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
 * **_As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level._**  
 
-  A recipe filter is available in Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
+  A recipe filter is available on Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
@@ -768,7 +768,9 @@ User stories were tested and addressed as follows.
 ### **EPIC: Recipe Management**
 * **_As a Site User, I can post my own recipe so that I can share it with others._**  
 
-  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for the ingredients and method to organise the contents.  
+  For logged-in users, Post a Recipe link is available from the navigation bar, which directs them to Post Recipe page. They can also access the page by selecting the Post a Recipe button on the Home page. 
+  
+  Users can fill in the form to share the recipe with others in the community. The form is easy to understand and users can opt to use bullet points for the ingredients and method to organise the contents.  
 
   <img src="docs/images/testing/us-post-recipe.png" width=800>  
   <img src="docs/images/testing/us-post-recipe-2.png" width=800>  
@@ -800,7 +802,7 @@ User stories were tested and addressed as follows.
 
   <img src="docs/images/testing/us-update-recipe-button.png" width=350>  
 
-    Once the delete button is selected, a modal will be displayed to confirm the deletion.  
+    When the delete button is selected, a modal opens up to confirm the deletion. Once confirmed, the recipe is deleted. 
 
     <img src="docs/images/testing/us-delete-recipe-modal.png" width=420>  
 
@@ -808,7 +810,7 @@ User stories were tested and addressed as follows.
 
   For logged-in users, My Recipes link is available from the navigation bar, which directs them to My Recipes page. Users can manage their own recipes from here by clicking anywhere on the recipe card, which directs them to the Recipe Details page.  
 
-  <img src="docs/images/testing/us-my-recipes.png" width=800>  
+  <img src="docs/images/testing/us-draft-recipe.png" width=800>  
 
 * **_As a Site User, I can see error messages when submitting a recipe form so that I understand how the errors can be resolved._**  
 
@@ -818,13 +820,13 @@ User stories were tested and addressed as follows.
   <img src="docs/images/testing/us-form-validation-2.png" width=800>  
   <img src="docs/images/testing/us-form-validation-4.png" width=800>  
 
-    Error messages are also raised for empty strings to prevent the form from being submitted with empty fields.   
+    Error messages are also raised for empty strings to alert users as the form cannot be submitted with empty fields.
     
     <img src="docs/images/testing/us-form-validation-3.png" width=800>  
     <img src="docs/images/testing/us-form-validation-4.png" width=800>  
 
 
-### **EPIC: Recipe Comment**  
+### **EPIC: Recipe Comments**  
 * **_As a Site User, I can comment on a recipe so that I can share my feedback and be involved in the conversation._**  
 
   For logged-in users, a Comment Form is available beneath each recipe. Users can post their comments from here to leave feedback on the recipe or ask questions, or just communicate with others in the community.  
@@ -839,7 +841,7 @@ User stories were tested and addressed as follows.
 
 * **_As a Site User, I can delete the comment I posted so that I can remove it from the comments section._**  
 
-  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confirm the deletion.   
+  For the author of the comment, a vertical ellipsis is available next to the comment posting date. Users can select the delete button here, which opens a modal to confirm the deletion. Once confirmed, the comment is deleted.
 
   <img src="docs/images/testing/us-delete-comment-modal.png" width=420>  
 
@@ -847,7 +849,7 @@ User stories were tested and addressed as follows.
 ### **EPIC: Recipe Likes**
 * **_As a Site User, I can view the number of likes for each recipe so that I can see the feedback from others._**  
 
-  The number of likes for each recipe is displayed in the recipe card in Browse Recipes, My Favourites and My Recipes pages. It is also displayed in the Recipe Details page for each page.  
+  The number of likes for each recipe is displayed in the recipe card on Browse Recipes, My Favourites and My Recipes pages. It is also displayed on the Recipe Details page for each page.  
 
   <img src="docs/images/testing/us-nr-of-likes-recipe-card.png" width=350>     
   <br>
@@ -957,6 +959,8 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Username Field | Leave Empty | Form does not submit | PASS
 Username Field | Leave Empty | Error message is displayed | PASS
+Username Field | Enter an Empty String | Form does not submit | PASS
+Username Field | Enter an Empty String | Error message is displayed | PASS
 Username Field | Duplicate Username | Form does not submit | PASS
 Username Field | Duplicate Username | Error message is displayed | PASS
 Email Field | Leave Empty | Form submits without an email address as this is an optional field | PASS
@@ -966,6 +970,8 @@ Email Field | Duplicate Email Address | Form does not submit | PASS
 Email Field | Duplicate Email Address | Error message is displayed | PASS
 Password Field | Leave Empty | Form does not submit | PASS
 Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Enter an Empty String | Form does not submit | PASS
+Password Field | Enter an Empty String | Error message is displayed | PASS
 Password Field | Passwords Not Matched | Form does not submit | PASS
 Password Field | Passwords Not Matched | Error message is displayed | PASS
 Log In Link | Click | Navigates to Log In page | PASS
@@ -980,8 +986,12 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Username Field | Leave Empty | Form does not submit | PASS
 Username Field | Leave Empty | Error message is displayed | PASS
+Username Field | Enter an Empty String | Form does not submit | PASS
+Username Field | Enter an Empty String | Error message is displayed | PASS
 Password Field | Leave Empty | Form does not submit | PASS
 Password Field | Leave Empty | Error message is displayed | PASS
+Password Field | Enter an Empty String | Form does not submit | PASS
+Password Field | Enter an Empty String | Error message is displayed | PASS
 Login Fields | Incorrect Details | Form does not submit | PASS
 Login Fields | Incorrect Details | Error message is displayed | PASS
 Sign Up Link | Click | Navigates to Sign Up page | PASS
@@ -1159,9 +1169,9 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Image | Click to Upload | Opens a file explorer to choose an image from | PASS
 Image | Click to Upload | Chosen image file is displayed in the 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
+Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed on My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved, the recipe is displayed in Browse Recipes page | PASS
+Status | Publish Now  | Once the recipe is saved, the recipe is displayed on Browse Recipes page | PASS
 Post Recipe | Submit | Displays the Recipe Details page which has been generated | PASS
 Alert | Submit | Success message is displayed confirming [recipe title] has been added successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -1212,9 +1222,9 @@ Image | Not Uploaded | Form submits as this is not a required field | PASS
 Image | Click to Upload | Opens a file explorer to choose an image from | PASS
 Image | Click to Upload | Chosen image file is displayed in the 'Choose File' field | PASS
 Status | Save as Draft | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed in My Recipe page | PASS
+Status | Save as Draft | Once the recipe is saved as Draft, the recipe is displayed on My Recipe page | PASS
 Status | Publish Now | Once all the required fields are filled in correctly, saves the recipe | PASS
-Status | Publish Now  | Once the recipe is saved, the recipe is displayed in Browse Recipes page | PASS
+Status | Publish Now  | Once the recipe is saved, the recipe is displayed on Browse Recipes page | PASS
 Update Recipe | Submit | Displays the Recipe Details page which has been updated | PASS
 Alert | Submit | Success message is displayed confirming the [recipe title] has been updated successfully | PASS
 Alert | Submit | Success message is removed after 3 seconds | PASS
@@ -1289,8 +1299,8 @@ RecipeList view codes and pagination codes for Browse Recipes page were updated 
 * **Positioning of Remember Me Box**  
 
   ***Issue:***  
-  The "Remember Me" box in Log In page was initially horizontally centralised with the rest of the contents.
-  During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Developer.
+  The "Remember Me" box on Log In page was initially horizontally centralised with the rest of the contents.
+  During the manual testing on iPhone 11, it was noted that the box was positioned to the left, although this was not the case in Chrome Dev Tools.
   It appeared the issue resulted from how Apple Safari rendered the codes.   
 
     <img src="docs/images/testing/remember-me-box-before-fix.jpeg" width=300>  
