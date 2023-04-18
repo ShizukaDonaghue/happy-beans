@@ -166,7 +166,7 @@ Sans-serif is the backup font in case the main font is not available.
 
 # Features
 ## Existing Features
-### **Browser Tabs**
+### Browser Tabs
 The browser tab contains Happy Beans' favicon and the title of the page to clearly indicate which page is open.
 The favicon was generated from the logo using [RealFaviconGenerator](https://realfavicongenerator.net/). 
 
@@ -252,7 +252,7 @@ Sign Up button is included underneath the cards to make it easier for users to s
 If the user is already logged in, the Sign Up button is replaced with Post a Recipe button to encourage users to post recipes. 
 This button directs users to Post a Recipe page for convenience.
 
-<img src="docs/images/post-recipe-button.png" width=200>
+<img src="docs/images/post-recipe-button.png" width=220>
 
 ### Browse Recipes Page
 
@@ -272,7 +272,7 @@ The recipe filters are available for Meal Type, Main Ingredient and Difficulty.
 
 Recipe Details page is available for each recipe and is accessed by clicking anywhere on the recipe card in Browse Recipes, My Favourites and My Recipes pages.
 
-*Recipe Header Section*
+#### Recipe Header Section
 
 <img src="docs/images/recipe-details-header.png" width=800>
 
@@ -293,13 +293,13 @@ If the user is not logged in, the grey love heart and the number of likes are di
 
 <img src="docs/images/nr-of-likes.png" width=350>
 
-*Recipe Details Section*
+#### Recipe Details Section
 
 <img src="docs/images/recipe-details-mid-section.png" width=800>
 
 The main body of the page consists of the recipe description, ingredients and cooking method. 
 
-*Comments Section*
+#### Comments Section
 
 This section displays the comments posted by users in ascending order based on posting dates.
 If the user is logged in and the recipe is published, the comment form is available for users to post comments.
