@@ -22,15 +22,15 @@ class TestRecipeForm(TestCase):
         form = RecipeForm({
             'title': 'Chicken Curry',
             'description': 'Yummy curry',
-            'meal_type': '2',
-            'main_ingredient': '1',
-            'difficulty': '0',
-            'prep_time': '10',
-            'cook_time': '10',
-            'serves': '4',
+            'meal_type': 2,
+            'main_ingredient': 1,
+            'difficulty': 0,
+            'prep_time': 10,
+            'cook_time': 10,
+            'serves': 4,
             'ingredients': 'Curry',
             'method': 'Cook curry',
-            'status': '1',
+            'status': 1,
         })
         self.assertTrue(form.is_valid())
 
