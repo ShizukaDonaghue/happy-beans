@@ -469,3 +469,87 @@ ResizedImageField can resize images to a specific size.
 Images uploaded by users can vary in size and could impact the website's performance if they are unnecessarily too large. 
 I became aware of this field after the application was already created and therefore it was not implemented.
 I believe this change will beneficial for the website in future. 
+
+## Technologies Used
+
+### Languages
+* [HTML](https://html.spec.whatwg.org/) was used to create the content and structure for the application.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to add styling to the application.
+* [Python](https://www.python.org/) was used to add functionality to the application.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive content for the application.
+
+
+### Frameworks, Libraries and Tools Used within the Application
+* [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
+* [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
+* [Django Filters](https://django-filter.readthedocs.io/en/stable/) was used to filter recipes on Browse Recipes page.
+* [Django Bootstrap Form](https://django-bootstrap-form.readthedocs.io/en/latest/) was used for the recipe filters on Browse Recipes page.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used for Post Recipe and Comment forms.
+* [Crispy Bootstrap](https://pypi.org/project/crispy-bootstrap5/) was used for Post Recipe and Comment forms.
+* [Bootstrap](https://getbootstrap.com/) was used for general layout and styling for the application.
+* [jQuery](https://jquery.com/) was used to close the success messages and the hamburger menu as well as for Post Recipe form validation.
+* [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate Post Recipe form and raise error messages where necessary.
+* [ElephantSQL](https://www.elephantsql.com/) was used for the Production database.
+* [Cloudinary](https://cloudinary.com/) was used to store all static files and images.
+* [Summernote](https://summernote.org/) editor was used on the Post Recipe page.
+* [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
+* [GitHub](https://github.com/)was used to store the repository and the codes.
+* [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
+* [Heroku](https://id.heroku.com/login) was used to deploy the application.
+* [Google Fonts](https://fonts.google.com/) was used for the Nunito font.
+* [Font Awesome](https://fontawesome.com/) was used for all the icons.
+* [Wix](https://www.wix.com/) was used to design the two versions of the logo.
+* [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon from the logo.
+
+
+### Other Online Tools used
+* [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
+* [Figma](https://www.figma.com/) was used to generate the database schema.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
+* [Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessiblity.
+* [Coolors](https://coolors.co) was used to generate the colour palette.
+* [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image in the Bug section.
+* [Remove Background](https://www.remove.bg/) was used to remove the background for the logos.
+* [Am I Responsive](https://ui.dev/amiresponsive) was used to generate the mockup image showing the website on various screen sizes.
+* [Compressor.io](https://compressor.io/) was used to compress the images used in the application and README.
+* [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
+
+### Validators
+* [W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS codes.
+* [JSHint](https://jshint.com/) was used to validate JavaScript codes.
+* [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
+
+## Testing
+For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/happy-beans/blob/main/TESTING.md).
+
+## Deployment
+
+
+## Credits
+### Content
+* Recipes and their images are from [Everymum](https://www.everymum.ie/food).
+
+### Media
+* The recipe placeholder image and the avocado image for the error pages are from [Freepik](https://www.freepik.com/).
+
+### Code
+* Django Documentation was extensively used throughout the project:
+	* [Class based Views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/)
+	* [Authentication](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
+	* [Pagination](https://docs.djangoproject.com/en/3.2/topics/pagination/)
+	* [Messages](https://docs.djangoproject.com/en/3.2/ref/contrib/messages/)
+	* [Django Filters](https://django-filter.readthedocs.io/en/stable/ref/filterset.html)
+* ChoiceArrayField model class to return an array field with front-end checkboxes was from [Rogulski.it](https://rogulski.it/django-multiselect-choice-admin/).
+* [Django filters and pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) was referenced for the Recipe filters.
+* Template tags for Django filters were from [Dealing with QueryString Parameters](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html).
+* Template tags for Django active link were from [CopyProgramming](https://copyprogramming.com/howto/django-active-home-link?utm_content=cmp-true).
+* Success message for Delete View was from [Stackoverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown).
+* The validation for Summernote fields was from [Slack](https://code-institute-room.slack.com/archives/CGWQJQKC5/p1659026298076079?thread_ts=1659005118.161939&cid=CGWQJQKC5).
+* Animated hamburger menu was from [Animated Custom Hamburger Icon](https://www.youtube.com/watch?v=_MrShB9fh7U).
+
+## Acknowledgements
+Happy Beans was created as a portfolio 4 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
+I would like to thank my mentor, [Harry Dhillon](https://github.com/Harry-Leepz), for his valuable feedback, guidance and encouragement given throughout the project.
+
+I would also like to thank [Simen Daehlin](https://github.com/Eventyret) at Code Institute for his patience and time answering all the questions during the class and also in Slack.
