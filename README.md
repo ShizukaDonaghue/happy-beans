@@ -1,4 +1,3 @@
-
 # Happy Beans
 
 Happy Beans is a Full-Stack web application built with Django. 
@@ -99,8 +98,6 @@ These were included so that the entire project was tracked and managed through t
 ## Wireframes
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Application Flow
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Database Design
 An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
@@ -203,9 +200,9 @@ Navigation bar for users who are logged in:
 
 The same links are available for smaller screen sizes with a hamburger menu.
 
-<img src="docs/images/hamburger-closed.png" width=350>
+<img src="docs/images/hamburger-closed.png" width=380>
 
-<img src="docs/images/hamburger-open.png" width=350>
+<img src="docs/images/hamburger-open.png" width=380>
 
 ### Footer
 The footer includes links to Facebook, Twitter, Instagram, GitHub and LinkedIn. 
