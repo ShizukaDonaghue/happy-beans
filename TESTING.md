@@ -881,7 +881,7 @@ The issue was reviewed with a tutor and I was advised that ElphantSQL database w
 
 I have however written codes to test the forms used in the application and these are in tests.py.
 
-<img src="docs/images/automated-tests.png" width=500>
+<img src="docs/images/automated-tests.png" width=600>
 
 As automated tests cannot be run for the application, the decision was made to extensively test all the fields and features of the application instead.
 
