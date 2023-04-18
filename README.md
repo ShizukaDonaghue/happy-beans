@@ -97,3 +97,72 @@ These were included so that the entire project was tracked and managed through t
 * EPIC: Styling
 * EPIC: Testing
 * EPIC: README
+
+### Wireframes
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Application Flow
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Database Design
+An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
+The intention was to utilise Django-AllAuth for the user authentication system and create two custom models - one for Recipe and the other for Comment.
+
+The Recipe model has a relationship with the User model linked by a Foreign key, which allows the user to be assigned as the author of a recipe. 
+It also has ManyToMany relationship for the Likes field so that recipe likes are linked to the user. 
+The Comment model is linked to the Recipe model by a Foreign key to store comments for the specific recipe.
+
+<img src="docs/images/database-schema.png">
+
+### Security Features and Defensive Design
+#### User Authentication
+Django-AllAuth is used to authenticate users. 
+Certain pages within the application can only be accessed by logged-in users. 
+These pages are secured with Django's LoginRequiredMixin, which provides role-based access to the central dataset within the application.
+If a user tries to access these pages without having logged in, they are directed to Log In page instead.
+
+#### User Authorisation
+Users can only edit or delete their own recipes and comments in the application.
+Django's UserPassesTestMixin is used to limit access to logged-in users that pass the author test - 
+it is used to test if the user is the author of the recipe or comment before it gives permission to edit or delete the object.
+If a user tries to edit or delete another user's recipe or comment, HTTP 403 Forbidden error is displayed and prevents the user from editing or deleting the object.
+
+#### Form Validation
+Django's built-in form validation is used to validate the forms within the application. 
+The forms will not submit unless they are completed correctly.
+If there are errors, error messages are displayed to assist users to fill in all the fields correctly.
+
+In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to Post Recipe form.
+This displays a custom error message explaining the error for each field to assist users to fill in the field correctly.
+
+Summernote fields are used in the Post Recipe form. 
+Since Django's build-in form validation does not catch empty strings in the Summernote fields,
+additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty.
+With these measures combined, the Post Recipe form is fully validated for each submission.
+
+#### Security-Sensitive Information
+Environment variables are stored in env.py for local development to ensure security-sensitive information is not pushed to the GitHub repository.
+For the production environment, these variables are added to Config Vars for the application in Heroku. 
+
+### Design
+#### Colour Scheme
+The design of the website is intended to be simple and clean so as not to distract users from colourful images of recipes.
+[Coolors](https://coolors.co) was used to create the colour pallet.
+
+* #FFFFFF White is used for the background colour
+* #1F4463 Indigo Dye is used for the main text colour to ensure a good contrast against the background colour.
+* #C2EF7E Mindaro is used as the background colour for containers in Home, Sign Up and Log In pages. 
+* #37A748 Pigment Green is used for the active link in the navigation bar and also for the hover effect on buttons.
+* #F74A87 French Rose is used for the Like button on Recipe Detail page.
+
+The logo for the website was created using the same colour palette to be consistent. 
+
+<img src="docs/images/colour-scheme.png" width=600>
+
+#### Typography
+The font used throughout the website is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
+It has a happy and playful feel and is easy to read.   
+Sans-serif is the backup font in case the main font is not available.
+
+<img src="docs/images/font-nunito.png" width=200>
+
