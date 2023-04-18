@@ -883,7 +883,7 @@ I have however written codes to test the forms used in the application and these
 
 <img src="docs/images/automated-tests.png" width=600>
 
-As automated tests cannot be run for the application, the decision was made to extensively test all the fields and features of the application instead.
+As automated tests cannot be run for the application, the decision was made to perform extensive manual testing for all the features of the application.
 
 ## Features Testing
 Manual testing was performed using Google Chrome to verify that all the features functioned as expected and that no issues were found.
