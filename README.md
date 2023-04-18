@@ -1,8 +1,6 @@
 
 # Happy Beans
 
-## Introduction
-
 Happy Beans is a Full-Stack web application built with Django. 
 It is a recipe-sharing website, where users can view and share family-friendly recipes. 
 Registered users have the ability to post recipes, like recipes to save them in their own recipe collections, and post comments to interact with the community. 
@@ -19,21 +17,21 @@ Click here to view [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Cli
 <img src="docs/images/amiresponsive.png">
 
 
-## UXD - User Experience Design
+# UXD - User Experience Design
 
-### **User Stories**
+## User Stories
 Based on the concept of a recipe-sharing website, the following 6 Epics were created for the application's features. 
 These epics were then further developed into 28 User Stories.
 
-#### EPIC: User Account
+### EPIC: User Account
 * As a Site User, I can register an account so that I can access all the application's features.
 * As a Site User, I can log into my account so that all the application's features are available to me.
 * As a Site User, I can log out of my account so that I can keep my account secure.
 
-#### EPIC: Site Admin
+### EPIC: Site Admin
 * As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my app.
 
-#### EPIC: Site Navigation
+### EPIC: Site Navigation
 * As a Site User, I can understand the purpose of the app clearly so that I can decide whether the contents are right for me to sign up.
 * As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for.
 * As a Site User, I can browse a paginated list of recipes so that I can easily select a recipe to view.
@@ -44,7 +42,7 @@ These epics were then further developed into 28 User Stories.
 * As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level.
 * As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website.
 
-#### EPIC: Recipe Management
+### EPIC: Recipe Management
 * As a Site User, I can post my own recipe so that I can share it with others.
 * As a Site User, I can draft a recipe and save it so that I can return later and edit it.
 * As a Site User, I can edit the recipes that I posted so that I can make changes after it has been submitted.
@@ -52,12 +50,12 @@ These epics were then further developed into 28 User Stories.
 * As a Site User, I can view a list of recipes that I have posted or drafted so that I can manage them.
 * As a Site User, I can see error messages when submitting a recipe form so that I understand how the errors can be resolved.
 
-#### EPIC: Recipe Comments
+### EPIC: Recipe Comments
 * As a Site User, I can comment on a recipe so that I can share my feedback and be involved in the conversation.
 * As a Site User, I can edit the comment I posted so that I can make changes to my comments.
 * As a Site User, I can delete the comment I posted so that I can remove it from the comments section.
 
-#### EPIC: Recipe Likes
+### EPIC: Recipe Likes
 * As a Site User, I can view the number of likes for each recipe so that I can see the feedback from others.
 * As a Site User, I can view the list of my liked recipes so that I can easily go back to them within the site.
 * As a Site User, I can like a recipe so that I can interact with the content.
@@ -72,7 +70,7 @@ The following User Stories were not implemented for EPIC: Site Navigation:
 	The decision was made to maintain the Django filters and remove the search bar.
 
 
-### **Agile Methodology**
+## Agile Methodology
 This application was developed using agile methodology. 
 [Happy Beans Kanban Board](https://github.com/users/ShizukaDonaghue/projects/11) was created using GitHub Projects and was used to manage the entire development process.
 
@@ -98,13 +96,13 @@ These were included so that the entire project was tracked and managed through t
 * EPIC: Testing
 * EPIC: README
 
-### **Wireframes**
+## Wireframes
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-### **Application Flow**
+## Application Flow
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-### **Database Design**
+## Database Design
 An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
 The intention was to utilise Django-AllAuth for the user authentication system and create two custom models - one for Recipe and the other for Comment.
 
@@ -114,20 +112,20 @@ The Comment model is linked to the Recipe model by a Foreign key to store commen
 
 <img src="docs/images/database-schema.png">
 
-### **Security Features and Defensive Design**
-#### **User Authentication**
+## Security Features and Defensive Design
+### User Authentication
 Django-AllAuth is used to authenticate users. 
 Certain pages within the application can only be accessed by logged-in users. 
 These pages are secured with Django's LoginRequiredMixin, which provides role-based access to the central dataset within the application.
 If a user tries to access these pages without having logged in, they are directed to Log In page instead.
 
-#### **User Authorisation**
+### User Authorisation
 Users can only edit or delete their own recipes and comments in the application.
 Django's UserPassesTestMixin is used to limit access to logged-in users that pass the author test - 
 it is used to test if the user is the author of the recipe or comment before it gives permission to edit or delete the object.
 If a user tries to edit or delete another user's recipe or comment, HTTP 403 Forbidden error is displayed and prevents the user from editing or deleting the object.
 
-#### **Form Validation**
+### Form Validation
 Django's built-in form validation is used to validate the forms within the application. 
 The forms will not submit unless they are completed correctly.
 If there are errors, error messages are displayed to assist users to fill in all the fields correctly.
@@ -140,12 +138,12 @@ Since Django's build-in form validation does not catch empty strings in the Summ
 additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty.
 With these measures combined, the Post Recipe form is fully validated for each submission.
 
-#### **Security-Sensitive Information**
+### Security-Sensitive Information
 Environment variables are stored in env.py for local development to ensure security-sensitive information is not pushed to the GitHub repository.
 For the production environment, these variables are added to Config Vars for the application in Heroku. 
 
-### **Design**
-#### **Colour Scheme**
+## Design
+### Colour Scheme
 The design of the website is intended to be simple and clean so as not to distract users from colourful images of recipes.
 [Coolors](https://coolors.co) was used to create the colour pallet.
 
@@ -159,28 +157,28 @@ The logo for the website was created using the same colour palette to be consist
 
 <img src="docs/images/colour-scheme.png" width=600>
 
-#### **Typography**
+### Typography
 The font used throughout the website is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
 It has a happy and playful feel and is easy to read.   
 Sans-serif is the backup font in case the main font is not available.
 
 <img src="docs/images/font-nunito.png" width=200>
 
-## Features
-### **Existing Features**
-#### **Browser Tabs**
+# Features
+## Existing Features
+### **Browser Tabs**
 The browser tab contains Happy Beans' favicon and the title of the page to clearly indicate which page is open.
 The favicon was generated from the logo using [RealFaviconGenerator](https://realfavicongenerator.net/). 
 
 <img src="docs/images/browser-tabs.png" width=600>
 
-#### Logo
+### Logo
 The logo was created using [Wix](https://www.wix.com/).  
 The logo on the navigation bar functions as a link to back the Home page for ease of navigation for users.  
 
 <img src="docs/images/navbar-logo.png" width=200>
 
-#### **Navigation Bar**
+### Navigation Bar
 The navigation bar is fixed at the top of every page and includes links to other pages.
 The link for the current page is shown in green to visually indicate which page the user is on.
 
@@ -209,15 +207,14 @@ The same links are available for smaller screen sizes with a hamburger menu.
 
 <img src="docs/images/hamburger-open.png" width=350>
 
-
-#### **Footer**
+### Footer
 The footer includes links to Facebook, Twitter, Instagram, GitHub and LinkedIn. 
 Clicking on any of these icons opens a new browser tab so that users will still have Happy Beans open to easily navigate back.
 
 <img src="docs/images/footer.png" width=500>
 
 
-#### **Sign Up Page**
+### Sign Up Page
 
 <img src="docs/images/testing/us-account-registration.png" width=800>
 
@@ -225,7 +222,7 @@ Sign Up page is accessed from the Sign Up button on the Home page or the Sing Up
 Users can enter their details here to register and log in. 
 Once signed up, a success message is displayed confirming the login and username, and redirected to the Home page.
 
-#### **Log In Page**
+### Log In Page
 
 <img src="docs/images/testing/us-account-login.png" width=800>
 
@@ -233,7 +230,7 @@ Log In page is accessed from the Log In link on the navigation bar, which is ava
 Returning users can enter their details here to log in to avail of all the features.
 Once logged in, a success message is displayed confirming the login and username, and redirected to the Home page.
 
-#### **Log Out Page**
+### Log Out Page
 
 <img src="docs/images/testing/us-account-logout.png" width=800>
 
@@ -242,7 +239,7 @@ Users can log out from here by clicking on the Log Out button.
 Browse Recipe button is available in case they would like to navigate back to recipes. 
 Once logged out, a success message is displayed confirming that the user has logged out and redirected to the Home page.
 
-#### **Home Page**
+### Home Page
 
 <img src="docs/images/testing/us-account-registration-signup.png" width=800>
 
@@ -255,9 +252,9 @@ Sign Up button is included underneath the cards to make it easier for users to s
 If the user is already logged in, the Sign Up button is replaced with Post a Recipe button to encourage users to post recipes. 
 This button directs users to Post a Recipe page for convenience.
 
-<img src="docs/images/post-recipe-button.png" width=350>
+<img src="docs/images/post-recipe-button.png" width=200>
 
-#### **Browse Recipes Page**  
+### Browse Recipes Page
 
 <img src="docs/images/testing/us-browse-recipes.png" width=800>
 
@@ -271,11 +268,11 @@ Users can browse through the recipes easily and select a recipe to view the full
 Users can also use the recipe filters at the top of the screen to filter the recipes based on their chosen criteria. 
 The recipe filters are available for Meal Type, Main Ingredient and Difficulty.
 
-#### **Recipe Details Page**
+### Recipe Details Page
 
 Recipe Details page is available for each recipe and is accessed by clicking anywhere on the recipe card in Browse Recipes, My Favourites and My Recipes pages.
 
-**Recipe Header Section**
+*Recipe Header Section*
 
 <img src="docs/images/recipe-details-header.png" width=800>
 
@@ -296,13 +293,13 @@ If the user is not logged in, the grey love heart and the number of likes are di
 
 <img src="docs/images/nr-of-likes.png" width=350>
 
-**Recipe Details Section**
+*Recipe Details Section*
 
 <img src="docs/images/recipe-details-mid-section.png" width=800>
 
 The main body of the page consists of the recipe description, ingredients and cooking method. 
 
-**Comments Section**
+*Comments Section*
 
 This section displays the comments posted by users in ascending order based on posting dates.
 If the user is logged in and the recipe is published, the comment form is available for users to post comments.
@@ -330,7 +327,7 @@ If the delete button is selected from the dropdown menu, a modal opens up to con
 
 <img src="docs/images/testing/us-delete-comment-modal.png" width=420>
 
-#### **My Favourites Page**
+### My Favourites Page
 
 <img src="docs/images/testing/us-my-favorites.png" width=800>  
 
@@ -344,8 +341,7 @@ If there are no recipes to display, Browse Recipe button is available here.
 
 <img src="docs/images/no-favourites.png" width=800>  
 
-
-#### **My Recipes Page**
+### My Recipes Page
 
 <img src="docs/images/testing/us-draft-recipe.png" width=800>  
 
@@ -362,7 +358,7 @@ If there are no recipes to display, Post a Recipe and Browse Recipes buttons are
 <img src="docs/images/no-recipes.png" width=800>  
 
 
-#### **Post Recipe Page**
+### Post Recipe Page
 
 Post Recipe page is accessed from the Post a Recipe button on the Home page or the Post a Recipe link on the navigation bar, which are available for logged-in users.
 Users can fill in the form to share their own creations with the community. 
@@ -395,7 +391,7 @@ Error messages are also raised for empty strings to alert users as the form cann
 
 Once the form is correctly filled in and submitted, a success message is displayed confirming [recipe title] has been added successfully.
 
-#### **Update Recipe Page**
+### Update Recipe Page
 
 Users can edit their own recipes from Recipe Details page. Edit button is available here for the author of the recipe.
 
@@ -409,7 +405,7 @@ Users can update their recipes in this form and submit the changes.
 
 Once the form is correctly filled in and submitted, a success message is displayed confirming [recipe title] has been updated successfully.
 
-#### **Delete Recipe Modal**
+### Delete Recipe Modal
 
 Users can delete their own recipes from Recipe Details page. 
 Delete button is available here for the author of the recipe.
@@ -420,7 +416,7 @@ Once the delete button is selected, a modal opens up to confirm the deletion. On
 
 <img src="docs/images/testing/us-delete-recipe-modal.png" width=420>  
 
-#### **Update Comment Page**
+### Update Comment Page
 
 In the Comment section of the Recipe Details page, if the user is logged in and the author of the comment, a vertical ellipsis is available next to the comment posting date. 
 Users can select the edit button to access the Update Comment page where they can edit the comment.
@@ -430,7 +426,7 @@ Users can select the edit button to access the Update Comment page where they ca
 The form opens with the original comment populated from the database. Users can make changes and submit the changes from here.
 <img src="docs/images/update-comment.png" width=800>
 
-#### **Delete Comment Modal**
+### Delete Comment Modal
 
 Users can delete their own comments on the Recipe Details page. 
 For the author of the comment, a vertical ellipsis is available next to the comment posting date. 
@@ -438,48 +434,48 @@ Once the delete button is selected, a modal opens up to confirm the deletion. On
 
 <img src="docs/images/testing/us-delete-comment-modal.png" width=420>  
 
-#### **Error Pages**
+### Error Pages
 Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. 
 Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.
 
-<img src="docs/images/testing/404-error.png" width=280>  
+<img src="docs/images/testing/us-404-error.png" width=280>  
 
 * 400 Bad Request - Looks like Happy Beans can't cook up your request, sorry…!
 * 403 Page Forbidden - This action is forbidden! Please check to make sure you've signed into the correct account!
 * 404 Page Not Found - Oops, something has gone wrong! The page you're looking for doesn't exist!
 * 500 Server Error - Looks like Happy Beans can't cook up your request, sorry…!
 
-### **Features Left to Implement**
+## Features Left to Implement
 
-#### **Search Bar**
+### Search Bar
 A search bar to search recipes based on a particular word or phrase was one of the two User Stories that was not implemented. 
 All the necessary tasks were completed and the search bar functioned as expected. However, when the recipe filters were added, the search bar no longer functioned.
 This issue was reviewed with a tutor, but a solution was not found within the time frame given. 
 Therefore, the decision was made to keep the recipe filters and remove the search bar. 
 I believe the website will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
 
-#### **Diet Type Filter**
+### Diet Type Filter
 The ability to filter recipes based on the Diet Type was the other User Story that was not implemented. 
 The Diet Type is an ArrayField and having searched for a solution online, it was deemed not feasible with standard Django filters.
 ArrayField was initially chosen for the diet types so that users can select multiple diet types when posting a recipe.
 This could be changed to a different field type so that a filter can be applied. This is another feature to be implemented in future.
 
-#### **Django ResizedImageField**
+### Django ResizedImageField
 ResizedImageField can resize images to a specific size. 
 Images uploaded by users can vary in size and could impact the website's performance if they are unnecessarily too large. 
 I became aware of this field after the application was already created and therefore it was not implemented.
 I believe this change will beneficial for the website in future. 
 
-## Technologies Used
+# Technologies Used
 
-### Languages
+## Languages
 * [HTML](https://html.spec.whatwg.org/) was used to create the content and structure for the application.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to add styling to the application.
 * [Python](https://www.python.org/) was used to add functionality to the application.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive content for the application.
 
 
-### Frameworks, Libraries and Tools Used within the Application
+## Frameworks, Libraries and Tools Used within the Application
 * [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
 * [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
 * [Django Filters](https://django-filter.readthedocs.io/en/stable/) was used to filter recipes on Browse Recipes page.
@@ -502,7 +498,7 @@ I believe this change will beneficial for the website in future.
 * [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon from the logo.
 
 
-### Other Online Tools used
+## Other Online Tools used
 * [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
 * [Figma](https://www.figma.com/) was used to generate the database schema.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
@@ -514,26 +510,26 @@ I believe this change will beneficial for the website in future.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the application and README.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
-### Validators
+## Validators
 * [W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes.
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS codes.
 * [JSHint](https://jshint.com/) was used to validate JavaScript codes.
 * [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python codes.
 
-## Testing
+# Testing
 For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/happy-beans/blob/main/TESTING.md).
 
-## Deployment
+# Deployment
 
 
-## Credits
-### Content
+# Credits
+## Content
 * Recipes and their images are from [Everymum](https://www.everymum.ie/food).
 
-### Media
+## Media
 * The recipe placeholder image and the avocado image for the error pages are from [Freepik](https://www.freepik.com/).
 
-### Code
+## Code
 * Django Documentation was extensively used throughout the project:
 	* [Class based Views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/)
 	* [Authentication](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
@@ -548,7 +544,7 @@ For the full details of the testing executed, please see [TESTING.md](https://gi
 * The validation for Summernote fields was from [Slack](https://code-institute-room.slack.com/archives/CGWQJQKC5/p1659026298076079?thread_ts=1659005118.161939&cid=CGWQJQKC5).
 * Animated hamburger menu was from [Animated Custom Hamburger Icon](https://www.youtube.com/watch?v=_MrShB9fh7U).
 
-## Acknowledgements
+# Acknowledgements
 Happy Beans was created as a portfolio 4 project for the Full Stack Software Development course at UCD Professional Academy and Code Institute.
 I would like to thank my mentor, [Harry Dhillon](https://github.com/Harry-Leepz), for his valuable feedback, guidance and encouragement given throughout the project.
 
