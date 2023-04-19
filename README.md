@@ -557,7 +557,7 @@ The following are the steps to deploy the application on Heroku.
 	* Give the plan a name (this is commonly the name of the project) and select "Tiny Turtle (Free)" plan 
 	* Click on "Select Region"
 	* Select a data center near you, for example, "EU-West-1 (Ireland) and click on "Review"
-	* Check your details are correct and then click on "Create instance"
+	* Check that the details are correct and then click on "Create instance"
 	* Return to ElephantSQL dashboard and click on the database instance name for the project 
 	* In the URL section, click on the copy icon to copy the database URL
 12. Create an env.py
@@ -594,22 +594,22 @@ The following are the steps to deploy the application on Heroku.
 15. Migrate Database Structure to the ElephantSQL database
 	* In the terminal, enter `python manage.py migrate`
 	* In ElephantSQL dashboard, select the database instance name and then select the "Browser" tab on the left
-	* Click on "Table queries" to reveal a dropdown list where you can verify your database structure
+	* Click on "Table queries" to reveal a dropdown list where you can verify the database structure
 16. Push the Changes to GitHub
 	* In the terminal, `git add .`, `git commit -m "(enter commit message here)"` and `git push`
 17. Set Up Cloudinary
 	* Create an account if required or log into [Cloudinary](https://cloudinary.com/)
 	* In the Dashboard, click to copy the API environment variable
-	* In env.py, add `os.environ[CLOUDINARY_URL] = "cloudinary://paste in the API variable"`
+	* In env.py, add `os.environ[CLOUDINARY_URL] = "cloudinary:// 'paste in the API variable'"`
 18. Set up Heroku Config Vars
 	* In Heroku dashboard, open the "Settings" tab
-	* Add two Config Vars:
+	* Add the following Config Vars:
 		Key | Value
 		--- | ---
 		DATABASE_URL | Enter the database URL from ElephantSQL without quotation marks
-		SECRET_KEY | Enter your secret key
+		SECRET_KEY | Enter the secret key
 		PORT | 8000
-		CLOUDINARY_URL | cloudinary://paste in the API variable
+		CLOUDINARY_URL | cloudinary:// 'paste in the API variable'
 		DISABLE_COLLECTSTATIC | 1 (temporary and will be removed when deploying the full project)
 19. Update settings.py
 	* In settings.py, add Cloudinary libraries in INSTALLED_APPS
@@ -648,7 +648,7 @@ The following are the steps to deploy the application on Heroku.
 		```python
 		TEMPLATES = [
     		{
-       			'BACKEND': 'django.template.backends.django.DjangoTemplates',
+				'BACKEND': 'django.template.backends.django.DjangoTemplates',
         		'DIRS': [TEMPLATES_DIR],
         		'APP_DIRS': True,
         		'OPTIONS': {
@@ -672,7 +672,7 @@ The following are the steps to deploy the application on Heroku.
 23. Deploy the app in Heroku
 	* In Heroku, select "Deploy" tab from the menu
 	* Select "GitHub" under Deployment method
-	* Search for your repository and connect to Heroku
+	* Search for the repository and connect to Heroku
 	* Click on "Deploy Branch" to deploy the app
 
 ### Local Deployment
