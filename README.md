@@ -96,8 +96,51 @@ These were included so that the entire project was tracked and managed through t
 * EPIC: README
 
 ## Wireframes
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADD SCREENSHOTS HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Wireframes were created using [Balsamiq](https://balsamiq.com/) to visualise the structure of the website. 
+The structure of the finished product is slightly different from the wireframes, 
+but this is due to design choices made during the development process. 
 
+<details>
+  <summary>Home Page</summary>
+  
+  <img src="docs/images/home-page.png" width=800>
+
+</details>
+
+<details>
+  <summary>Browse Recipes Page</summary>
+  
+  <img src="docs/images/browse-recipes.png" width=800>
+
+</details>
+
+<details>
+  <summary>Recipes Details Page</summary>
+  
+  <img src="docs/images/recipe-details.png" width=800>
+
+</details>
+
+<details>
+  <summary>My Favourites Page</summary>
+  
+  <img src="docs/images/my-favourites.png" width=800>
+
+</details>
+
+<details>
+  <summary>My Recipes Page</summary>
+  
+  <img src="docs/images/my-recipes.png" width=800>
+
+</details>
+
+<details>
+  <summary>Post Recipes Page</summary>
+  
+  <img src="docs/images/post-recipe.png" width=800>
+
+</details>
 
 ## Database Design
 An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to visualise the relationships between the data structures. 
@@ -682,6 +725,7 @@ The project can be cloned or forked to make a local copy.
 	* In the terminal, `pip2 install -r requirements.txt`
 	* In the root directory, create a file named env.py and the following
 		The contents of these need to match the Config Vars in Heroku
+
 		```python
 		import os
 
