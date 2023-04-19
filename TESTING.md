@@ -702,7 +702,7 @@ User stories were tested and addressed as follows.
 
 
 ### **EPIC: Site Admin**
-* **_As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my app._**
+* **_As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my application._**
 
   The Admin role has full CRUD functionality for all recipes and comments from the admin panel so that all the contents can be managed from there.  
 
@@ -710,7 +710,7 @@ User stories were tested and addressed as follows.
 
 
 ### **EPIC: Site Navigation**
-* **_As a Site User, I can understand the purpose of the app clearly so that I can decide whether the contents are right for me to sign up._**  
+* **_As a Site User, I can understand the purpose of the application clearly so that I can decide whether the contents are right for me to sign up._**  
 
   The landing page introduces the website explaining its purpose and benefits for signing up. This page also contains Sign Up button which directs users to Sign Up page.   
 
@@ -740,19 +740,19 @@ User stories were tested and addressed as follows.
 
   <img src="docs/images/testing/us-comment.png" width=800>  
 
-* **_As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type._**  
+* **_As a Site User, I can filter the recipes by a meal type so that I can view a list of recipes for the meal type._**  
 
   A recipe filter is available on Browse Recipes page where users can select a meal type to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
-* **_As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient._**  
+* **_As a Site User, I can filter the recipes by a main ingredient so that I can view a list of recipes using the main ingredient._**  
 
   A recipe filter is available on Browse Recipes page where users can select a main ingredient to view the recipes based on the chosen criteria.  
 
   <img src="docs/images/testing/us-recipe-filters.png" width=800>  
 
-* **_As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level._**  
+* **_As a Site User, I can filter the recipes based on a difficulty level so that I can view a list of recipes suitable for my level._**  
 
   A recipe filter is available on Browse Recipes page where users can select a difficulty level to view the recipes based on the chosen criteria.  
 

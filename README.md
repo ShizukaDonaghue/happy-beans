@@ -1,15 +1,13 @@
 # Happy Beans
 
-Happy Beans is a Full-Stack web application built with Django. 
+Happy Beans is a full-stack web application built with Django. 
 It is a recipe-sharing website, where users can view and share family-friendly recipes. 
 Registered users have the ability to post recipes, like recipes to save them in their own recipe collections, and post comments to interact with the community. 
 The intended audience is anyone who enjoys cooking tasty and nutritious meals for the whole family.
 
-The application implements user authentication to provide role-based access to its centrally-owned dataset,
-and user authorisation to allow users to manipulate their own data records.
-It includes full CRUD functionality for recipes and comments, allowing users to create, read, update and delete their recipes and comments.
+The application implements user authentication to provide role-based access to its centrally-owned dataset, and user authorisation to allow users to manipulate only their own data records. It includes full CRUD functionality for recipes and comments, allowing users to create, read, update and delete their recipes and comments.
 
-The application also provides an admin dashboard where the admin role has full CRUD functionality for all recipes, comments and users so that they can manage the contents of the website. 
+The application also provides a back-end admin dashboard where the admin role has full CRUD functionality for all recipes, comments and users so that they can manage the contents of the website. 
 
 Click here to view [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Click to open in a new browser tab).
 
@@ -28,17 +26,17 @@ These epics were then further developed into 28 User Stories.
 * As a Site User, I can log out of my account so that I can keep my account secure.
 
 ### EPIC: Site Admin
-* As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my app.
+* As a Site Admin, I can create, update and delete recipes and comments so that I can manage the contents of my application.
 
 ### EPIC: Site Navigation
-* As a Site User, I can understand the purpose of the app clearly so that I can decide whether the contents are right for me to sign up.
+* As a Site User, I can understand the purpose of the application clearly so that I can decide whether the contents are right for me to sign up.
 * As a Site User, I can navigate the site intuitively so that I can easily find what I am looking for.
 * As a Site User, I can browse a paginated list of recipes so that I can easily select a recipe to view.
 * As a Site User, I can select a recipe from the list so that I can view the full details of a recipe.
 * As a Site User, I can view the comments posted by others so that I can see the feedback and conversation for each recipe.
-* As a Site User, I can filter the recipes by meal type so that I can view a list of recipes for the meal type.
-* As a Site User, I can filter the recipes by main ingredient so that I can view a list of recipes using the main ingredient.
-* As a Site User, I can filter the recipes based on difficulty so that I can view a list of recipes suitable for my level.
+* As a Site User, I can filter the recipes by a meal type so that I can view a list of recipes for the meal type.
+* As a Site User, I can filter the recipes by a main ingredient so that I can view a list of recipes using the main ingredient.
+* As a Site User, I can filter the recipes based on a difficulty level so that I can view a list of recipes suitable for my level.
 * As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website.
 
 ### EPIC: Recipe Management
@@ -60,14 +58,10 @@ These epics were then further developed into 28 User Stories.
 * As a Site User, I can like a recipe so that I can interact with the content.
 * As a Site User, I can unlike a recipe so that I can remove it from my liked recipes.
 
-The following User Stories were not implemented for EPIC: Site Navigation:
+The following User Stories were not implemented for EPIC: Site Navigation. Please see the details in the Features Left to Implement section.
 
 * As a Site User, I can filter the recipes by diet type so that I can view a list of recipes for the diet type.
-	Upon review, this was deemed not feasible with standard Django filters as the diet_type is an ArrayField.
 * As a Site User, I can search for a recipe based on a particular word or phrase so that I can quickly find what I am looking for.
-	Reviewed this issue with a tutor, however, a solution was not found within the time frame given.
-	The decision was made to maintain the Django filters and remove the search bar.
-
 
 ## Agile Methodology
 This application was developed using agile methodology. 
@@ -85,7 +79,7 @@ MoSCoW Prioritisation technique was applied to each User Story and each User Sto
 * Could Have - Have a small impact if left out
 * Won't Have - Not a priority for this iteration
 
-All the User Stories were prioritised based on their prioritisation levels and tracked through the Kanban board until they were executed fully.
+The User Stories were prioritised based on their prioritisation levels and tracked through the Kanban board until they were executed fully.
 
 The Kanban board also contained 5 other Epics, which were not related to the application's features. 
 These were included so that the entire project was tracked and managed through the Kanban board. 
@@ -98,7 +92,7 @@ These were included so that the entire project was tracked and managed through t
 ## Wireframes
 Wireframes were created using [Balsamiq](https://balsamiq.com/) to visualise the structure of the website. 
 The structure of the finished product is slightly different from the wireframes, 
-but this is due to design choices made during the development process. 
+but this is due to the design choices made during the development process. 
 
 <details>
   <summary>Home Page</summary>
@@ -161,7 +155,7 @@ If a user tries to access these pages without having logged in, they are directe
 
 ### User Authorisation
 Users can only edit or delete their own recipes and comments in the application.
-Django's UserPassesTestMixin is used to limit access to logged-in users that pass the author test - 
+Django's UserPassesTestMixin is used to limit access to logged-in users who pass the author test - 
 it is used to test if the user is the author of the recipe or comment before it gives permission to edit or delete the object.
 If a user tries to edit or delete another user's recipe or comment, HTTP 403 Forbidden error is displayed and prevents the user from editing or deleting the object.
 
@@ -173,9 +167,7 @@ If there are errors, error messages are displayed to assist users to fill in all
 In addition to Django's built-in form validation, [jQuery Validation Plugin](https://jqueryvalidation.org/) has been added to Post Recipe form.
 This displays a custom error message explaining the error for each field to assist users to fill in the field correctly.
 
-Summernote fields are used in the Post Recipe form. 
-Since Django's build-in form validation does not catch empty strings in the Summernote fields,
-additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty.
+Since Django's build-in form validation does not catch empty strings in the Summernote fields used in the Post Recipe form, additional form validation measure was added in validators.py to strip white space and raise an error message if the field is left empty.
 With these measures combined, the Post Recipe form is fully validated for each submission.
 
 ### Security-Sensitive Information
@@ -199,8 +191,7 @@ The logo for the website was created using the same colour palette to be consist
 
 ### Typography
 The font used throughout the website is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
-It has a happy and playful feel and is easy to read.   
-Sans-serif is the backup font in case the main font is not available.
+It has a happy and playful feel and is easy to read. Sans-serif is the backup font in case the main font is not available.
 
 <img src="docs/images/font-nunito.png" width=200>
 
@@ -210,11 +201,10 @@ Sans-serif is the backup font in case the main font is not available.
 The browser tab contains Happy Beans' favicon and the title of the page to clearly indicate which page is open.
 The favicon was generated from the logo using [RealFaviconGenerator](https://realfavicongenerator.net/). 
 
-<img src="docs/images/browser-tabs.png" width=600>
+<img src="docs/images/browser-tabs.png" width=800>
 
 ### Logo
-The logo was created using [Wix](https://www.wix.com/).  
-The logo on the navigation bar functions as a link to back the Home page for ease of navigation for users.  
+The logo was created using [Wix](https://www.wix.com/). The logo on the navigation bar functions as a link back to the Home page for ease of navigation.  
 
 <img src="docs/images/navbar-logo.png" width=200>
 
@@ -249,7 +239,7 @@ The same links are available for smaller screen sizes with a hamburger menu.
 
 ### Footer
 The footer includes links to Facebook, Twitter, Instagram, GitHub and LinkedIn. 
-Clicking on any of these icons opens a new browser tab so that users will still have Happy Beans open to easily navigate back.
+Clicking on any of these icons opens a new browser tab so that users will still have Happy Beans open to navigate back easily.
 
 <img src="docs/images/footer.png" width=500>
 
@@ -258,26 +248,24 @@ Clicking on any of these icons opens a new browser tab so that users will still 
 
 <img src="docs/images/testing/us-account-registration.png" width=800>
 
-Sign Up page is accessed from the Sign Up button on the Home page or the Sing Up link on the navigation bar, which are available for users who are not logged in already. 
+Sign Up page is accessed from the Sign Up button on the Home page or the Sing Up link on the navigation bar, which are available to users who are not logged in already. 
 Users can enter their details here to register and log in. 
-Once signed up, a success message is displayed confirming the login and username, and redirected to the Home page.
+Once signed up, a success message is displayed confirming the login and username, and the user is redirected to the Home page.
 
 ### Log In Page
 
 <img src="docs/images/testing/us-account-login.png" width=800>
 
-Log In page is accessed from the Log In link on the navigation bar, which is available for users who are not logged in already.
+Log In page is accessed from the Log In link on the navigation bar, which is available to users who are not logged in already.
 Returning users can enter their details here to log in to avail of all the features.
-Once logged in, a success message is displayed confirming the login and username, and redirected to the Home page.
+Once logged in, a success message is displayed confirming the login and username, and the user is redirected to the Home page.
 
 ### Log Out Page
 
 <img src="docs/images/testing/us-account-logout.png" width=800>
 
-Log Out page is accessed from the Log Out link on the navigation bar, which is available for logged-in users.
-Users can log out from here by clicking on the Log Out button. 
-Browse Recipe button is available in case they would like to navigate back to recipes. 
-Once logged out, a success message is displayed confirming that the user has logged out and redirected to the Home page.
+Log Out page is accessed from the Log Out link on the navigation bar, which is available to logged-in users. Users can log out from here by clicking on the Log Out button. Browse Recipe button is also available in case they would like to navigate back to the recipes. 
+Once logged out, a success message is displayed confirming that the user has logged out and the user is redirected to the Home page.
 
 ### Home Page
 
@@ -292,7 +280,7 @@ Sign Up button is included underneath the cards to make it easier for users to s
 If the user is already logged in, the Sign Up button is replaced with Post a Recipe button to encourage users to post recipes. 
 This button directs users to Post a Recipe page for convenience.
 
-<img src="docs/images/post-recipe-button.png" width=220>
+<img src="docs/images/post-recipe-button.png" width=800>
 
 ### Browse Recipes Page
 
@@ -320,11 +308,11 @@ The recipe summary section displays the recipe image, title, author, preparation
 
 This section also includes the number of likes for the recipe.
 
-If the user is logged in and has not yet liked the recipe, the like button (the pink love heart with a plus sign) is available and the number of likes is displayed.
+If the user is logged in and has not yet liked the recipe, the like button (the pink love heart with a plus sign) is available and the number of likes is displayed next to it.
 
 <img src="docs/images/testing/us-like-button.png" width=350>
 
-If the user is logged in and has already liked the recipe, the unlike button (the pink love heart) is available and the number of likes is displayed. 
+If the user is logged in and has already liked the recipe, the unlike button (the pink love heart) is available and the number of likes is displayed next to it. 
 The unlike button is intentionally subtle to discourage users not to unlike recipes.
 
 <img src="docs/images/testing/us-nr-of-likes-recipe-details.png" width=350>
@@ -341,7 +329,7 @@ The main body of the page consists of the recipe description, ingredients and co
 
 #### Comments Section
 
-This section displays the comments posted by users in ascending order based on posting dates.
+This section displays the comments posted by users in ascending order based on the posting dates.
 If the user is logged in and the recipe is published, the comment form is available for users to post comments.
 
 <img src="docs/images/testing/us-comment.png" width=800>
@@ -358,7 +346,7 @@ If the recipe is not yet published, "Let's publish this recipe to get feedback!"
 
 <img src="docs/images/comment-for-draft.png" width=800>
 
-If the user is logged in and the author of the comment, a vertical ellipsis is available next to the comment posting date. 
+If the user is logged in and is the author of the comment, a vertical ellipsis is available next to the comment posting date. 
 Users can select the edit button here, which directs them to Update Comment page where they can edit the comment.
 
 <img src="docs/images/testing/us-edit-comment.png" width=420>
@@ -371,13 +359,13 @@ If the delete button is selected from the dropdown menu, a modal opens up to con
 
 <img src="docs/images/testing/us-my-favorites.png" width=800>  
 
-My Favourites page is accessed from the My Favourites link on the navigation bar, which is available for users who are logged in.
+My Favourites page is accessed from the My Favourites link on the navigation bar, which is available to users who are logged in.
 Once a recipe is liked, the recipe is added to My Favourites page for the user so that they can store their favourites recipe here and find them easily at a later date.
 
 The recipe cards here are displayed in descending order based on the creation dates and paginated after every 12 cards. 
 Each card contains the recipe image, title, description and the number of likes. 
 
-If there are no recipes to display, Browse Recipe button is available here.
+If there are no recipes to display, Browse Recipe button is displayed here instead.
 
 <img src="docs/images/no-favourites.png" width=800>  
 
@@ -385,7 +373,7 @@ If there are no recipes to display, Browse Recipe button is available here.
 
 <img src="docs/images/testing/us-draft-recipe.png" width=800>  
 
-My Recipes page is accessed from the My Recipes link on the navigation bar, which is available for users who are logged in.
+My Recipes page is accessed from the My Recipes link on the navigation bar, which is available to users who are logged in.
 This page lists all the recipes that the user has drafted or published. 
 The recipe cards here are displayed in descending order based on the creation dates and paginated after every 12 cards. 
 Each card contains the recipe image, title, description and the number of likes. 
@@ -393,14 +381,14 @@ Each card contains the recipe image, title, description and the number of likes.
 The recipes which are not yet published are marked with red [Draft] next to the title so that they can be easily identified.
 Users can manage their own recipes from here by clicking anywhere on the recipe card, which directs them to the Recipe Details page.
 
-If there are no recipes to display, Post a Recipe and Browse Recipes buttons are available.
+If there are no recipes to display, Post a Recipe and Browse Recipes buttons are displayed here instead.
 
 <img src="docs/images/no-recipes.png" width=800>  
 
 
 ### Post Recipe Page
 
-Post Recipe page is accessed from the Post a Recipe button on the Home page or the Post a Recipe link on the navigation bar, which are available for logged-in users.
+Post Recipe page is accessed from the Post a Recipe button on the Home page or the Post a Recipe link on the navigation bar, which are available to logged-in users.
 Users can fill in the form to share their own creations with the community. 
 The form is easy to understand and users can opt to use bullet points for the ingredients and cooking method to organise the contents.
 Users can upload a recipe image, or if they choose not to, a default image is displayed as the recipe image.
@@ -418,7 +406,7 @@ These drafts are marked with red [Draft] next to the title so that they can be e
 
 <img src="docs/images/testing/us-draft-recipe.png" width=800>  
 
-If any of the fields are not filled out correctly, error messages are displayed explaining the errors.
+If any of the fields in the form are not filled out correctly, error messages are displayed explaining the errors.
 
 <img src="docs/images/testing/us-form-validation.png" width=800>  
 <img src="docs/images/testing/us-form-validation-2.png" width=800>  
@@ -458,12 +446,12 @@ Once the delete button is selected, a modal opens up to confirm the deletion. On
 
 ### Update Comment Page
 
-In the Comment section of the Recipe Details page, if the user is logged in and the author of the comment, a vertical ellipsis is available next to the comment posting date. 
-Users can select the edit button to access the Update Comment page where they can edit the comment.
+In the Comment section of the Recipe Details page, if the user is logged in and is the author of the comment, a vertical ellipsis is available next to the comment posting date. 
+Users can select the edit button here to access the Update Comment page where they can edit the comment.
 
 <img src="docs/images/testing/us-edit-comment.png" width=420>
 
-The form opens with the original comment populated from the database. Users can make changes and submit the changes from here.
+The form opens with the original comment populated from the database. Users can make changes and submit them from here.
 <img src="docs/images/update-comment.png" width=800>
 
 ### Delete Comment Modal
@@ -488,23 +476,21 @@ Each error page contains a link to the Home page as well as Browse Recipes page 
 ## Features Left to Implement
 
 ### Search Bar
-A search bar to search recipes based on a particular word or phrase was one of the two User Stories that was not implemented. 
+A search bar allowing users to search recipes based on a particular word or phrase was one of the 2 User Stories that was not implemented. 
 All the necessary tasks were completed and the search bar functioned as expected. However, when the recipe filters were added, the search bar no longer functioned.
-This issue was reviewed with a tutor, but a solution was not found within the time frame given. 
-Therefore, the decision was made to keep the recipe filters and remove the search bar. 
-I believe the website will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
+This issue was reviewed with a tutor, but a solution was not found within the time frame given. Therefore, the decision was made to keep the recipe filters and remove the search bar. I believe the website will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
 
 ### Diet Type Filter
 The ability to filter recipes based on the Diet Type was the other User Story that was not implemented. 
 The Diet Type is an ArrayField and having searched for a solution online, it was deemed not feasible with standard Django filters.
 ArrayField was initially chosen for the diet types so that users can select multiple diet types when posting a recipe.
-This could be changed to a different field type so that a filter can be applied. This is another feature to be implemented in future.
+This could be changed to a different field type so that a filter could be applied. This is another feature to be implemented in future.
 
 ### Django ResizedImageField
 ResizedImageField can resize images to a specific size. 
-Images uploaded by users can vary in size and could impact the website's performance if they are unnecessarily too large. 
+Images uploaded by users can vary in size and could impact the site's performance if they are unnecessarily too large. 
 I became aware of this field after the application was already created and therefore it was not implemented.
-I believe this change will beneficial for the website in future. 
+I believe changing the image field to ResizedImageField will beneficial for the site in future. 
 
 # Technologies Used
 
@@ -517,16 +503,16 @@ I believe this change will beneficial for the website in future.
 ## Frameworks, Libraries and Tools Used within the Application
 * [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
 * [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
-* [Django Filters](https://django-filter.readthedocs.io/en/stable/) was used to filter recipes on Browse Recipes page.
+* [Django Filters](https://django-filter.readthedocs.io/en/stable/) were used to filter recipes on Browse Recipes page.
 * [Django Bootstrap Form](https://django-bootstrap-form.readthedocs.io/en/latest/) was used for the recipe filters on Browse Recipes page.
 * [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used for Post Recipe and Comment forms.
 * [Crispy Bootstrap](https://pypi.org/project/crispy-bootstrap5/) was used for Post Recipe and Comment forms.
 * [Bootstrap](https://getbootstrap.com/) was used for general layout and styling for the application.
-* [jQuery](https://jquery.com/) was used to close the success messages and the hamburger menu as well as for Post Recipe form validation.
+* [jQuery](https://jquery.com/) was used to close the success messages and the hamburger menu, and to validate the Post Recipe form.
 * [jQuery Validation Plugin](https://jqueryvalidation.org/) was used to validate Post Recipe form and raise error messages where necessary.
 * [ElephantSQL](https://www.elephantsql.com/) was used for the Production database.
 * [Cloudinary](https://cloudinary.com/) was used to store all static files and images.
-* [Summernote](https://summernote.org/) editor was used on the Post Recipe page.
+* [Summernote](https://summernote.org/) editor was used on the Post Recipe form.
 * [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
 * [GitHub](https://github.com/) was used to store the repository and the codes.
 * [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
@@ -537,14 +523,14 @@ I believe this change will beneficial for the website in future.
 * [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon from the logo.
 
 ## Other Online Tools used
-* [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
+* [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the application.
 * [Figma](https://www.figma.com/) was used to generate the database schema.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
 * [Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) were used to test accessiblity.
 * [Coolors](https://coolors.co) was used to generate the colour palette.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image in the Bug section.
-* [Remove Background](https://www.remove.bg/) was used to remove the background for the logos.
-* [Am I Responsive](https://ui.dev/amiresponsive) was used to generate the mockup image showing the website on various screen sizes.
+* [Remove Background](https://www.remove.bg/) was used to remove the background from the logos.
+* [Am I Responsive](https://ui.dev/amiresponsive) was used to generate the mockup image showing the application on various screen sizes.
 * [Compressor.io](https://compressor.io/) was used to compress the images used in the application and README.
 * [Grammarly](https://app.grammarly.com/) was used to remove grammatical and typographical errors in the game and README file.
 
@@ -599,18 +585,18 @@ The following are the steps to deploy the application on Heroku.
 	* Click on "Create New Instance"
 	* Give the plan a name (this is commonly the name of the project) and select "Tiny Turtle (Free)" plan 
 	* Click on "Select Region"
-	* Select a data center near you, for example, "EU-West-1 (Ireland) and click on "Review"
-	* Check that the details are correct and then click on "Create instance"
+	* Select a data center near you, for example, "EU-West-1 (Ireland)" and click on "Review"
+	* Ensure the details are correct and then click on "Create instance"
 	* Return to ElephantSQL dashboard and click on the database instance name for the project 
 	* In the URL section, click on the copy icon to copy the database URL
 12. Create an env.py
 	* In the terminal, `touch env.py` to create env.py in the root directory
 	* Check to ensure that env.py file is included in .gitignore file
 	* In env.py, add `import os` at the top
-	* In env.py, add a blank line and then `os.environ["DATABASE_URL"]="copiedURL"` to set DATABASE_URL variable
-	* In env.py, add `os.environ["SECRET_KEY"]="secret_key"` to set SECRET_KEY variable
+	* In env.py, add a blank line and then `os.environ["DATABASE_URL"]="copiedURL"` (enter the copied URL here) to set DATABASE_URL variable
+	* In env.py, add `os.environ["SECRET_KEY"]="secret_key"` (enter the secret key here) to set SECRET_KEY variable
 	* Save env.py
-13. Add SQLite database to .gitignore fiel
+13. Add SQLite database to .gitignore file
 	* Add `*.sqlite3` to .gitignore file so that SQLite database is not exposed
 14. Modify settings.py file
 	* In settings.py, add the following:  
@@ -643,19 +629,19 @@ The following are the steps to deploy the application on Heroku.
 17. Set Up Cloudinary
 	* Create an account if required or log into [Cloudinary](https://cloudinary.com/)
 	* In the Dashboard, click to copy the API environment variable
-	* In env.py, add `os.environ[CLOUDINARY_URL] = "cloudinary:// 'paste in the API variable'"`
+	* In env.py, add `os.environ[CLOUDINARY_URL] = "cloudinary:// '(paste in the API variable here)'"`
 18. Set up Heroku Config Vars
 	* In Heroku dashboard, open the "Settings" tab
 	* Add the following Config Vars:
 		Key | Value
 		--- | ---
-		DATABASE_URL | Enter the database URL from ElephantSQL without quotation marks
+		DATABASE_URL | Enter the database URL from ElephantSQL without the quotation marks
 		SECRET_KEY | Enter the secret key
 		PORT | 8000
-		CLOUDINARY_URL | cloudinary:// 'paste in the API variable'
+		CLOUDINARY_URL | cloudinary:// '(paste in the API variable here)'
 		DISABLE_COLLECTSTATIC | 1 (temporary and will be removed when deploying the full project)
 19. Update settings.py
-	* In settings.py, add Cloudinary libraries in INSTALLED_APPS
+	* In settings.py, add Cloudinary libraries in INSTALLED_APPS. 
 		"cloudinary_storage" needs to be added above "django.contrib.staticfiles" and then the regular 'cloudinary' library 
 
 		```python
@@ -704,12 +690,12 @@ The following are the steps to deploy the application on Heroku.
 
 		```
 
-	* In settings.py, add `ALLOWED_HOSTS = ['project_name.herokuapp.com', 'localhost']` (enter project name without quotation marks)
+	* In settings.py, add `ALLOWED_HOSTS = ['project_name.herokuapp.com', 'localhost']` (enter project name without the quotation marks)
 20. Create Static Files
 	* Create three new folders in the root directory - media, static and templates
 21. Create Procfile
 	* Create a file named "Procfile" in the root directly
-	* Add `web: gunicorn 'project_name'.wsgi` (enter project name without quotation marks)
+	* Add `web: gunicorn 'project_name'.wsgi` (enter project name without the quotation marks)
 22. Push the Changes to GitHub
 	* In the terminal, `git add .`, `git commit -m "(enter commit message here)"` and `git push`
 23. Deploy the app in Heroku
@@ -722,8 +708,8 @@ The following are the steps to deploy the application on Heroku.
 The project can be cloned or forked to make a local copy.
 
 1. For cloning and forking, install all required libraries and packages found in requirements.txt
-	* In the terminal, `pip2 install -r requirements.txt`
-	* In the root directory, create a file named env.py and the following
+	* In the terminal, `pip3 install -r requirements.txt`
+	* In the root directory, create a file named env.py and the following. 
 		The contents of these need to match the Config Vars in Heroku
 
 		```python
@@ -737,7 +723,8 @@ The project can be cloned or forked to make a local copy.
 	* Save env.py
 	* Add env.py to .gitignore file 
 	* To migrate the changes, in the terminal, enter `python3 manage.py migrate`
-2. Once the project is closed or forked, the following steps are required to run it locally
+
+2. Once the project is cloned or forked, the following steps are required to run it locally
 	* Make migration `python3 manage.py makemigrations`
 	* Migrate the Changes `python3 manage.py migrate`
 	* Create a superuser `python3 manage.py createsuperuser`
