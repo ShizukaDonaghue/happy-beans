@@ -471,7 +471,6 @@ I believe this change will beneficial for the website in future.
 * [Python](https://www.python.org/) was used to add functionality to the application.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive content for the application.
 
-
 ## Frameworks, Libraries and Tools Used within the Application
 * [Django](https://www.djangoproject.com/) was used as the main Python framework for the application.
 * [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) was used to create accounts and authenticate users.
@@ -486,7 +485,7 @@ I believe this change will beneficial for the website in future.
 * [Cloudinary](https://cloudinary.com/) was used to store all static files and images.
 * [Summernote](https://summernote.org/) editor was used on the Post Recipe page.
 * [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
-* [GitHub](https://github.com/)was used to store the repository and the codes.
+* [GitHub](https://github.com/) was used to store the repository and the codes.
 * [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during the development.
 * [Heroku](https://id.heroku.com/login) was used to deploy the application.
 * [Google Fonts](https://fonts.google.com/) was used for the Nunito font.
@@ -494,12 +493,11 @@ I believe this change will beneficial for the website in future.
 * [Wix](https://www.wix.com/) was used to design the two versions of the logo.
 * [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon from the logo.
 
-
 ## Other Online Tools used
 * [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
 * [Figma](https://www.figma.com/) was used to generate the database schema.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
-* [Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to test accessiblity.
+* [Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) were used to test accessiblity.
 * [Coolors](https://coolors.co) was used to generate the colour palette.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image in the Bug section.
 * [Remove Background](https://www.remove.bg/) was used to remove the background for the logos.
@@ -517,7 +515,204 @@ I believe this change will beneficial for the website in future.
 For the full details of the testing executed, please see [TESTING.md](https://github.com/ShizukaDonaghue/happy-beans/blob/main/TESTING.md).
 
 # Deployment
+The live deployed application - [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Click to open in a new browser tab).
 
+### Deployment - Heroku
+The following are the steps to deploy the application on Heroku.
+
+1. Create a repository in GitHub using [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. Open GitPod from the newly created repository
+3. Install Django and supporting libraries:
+	* In the terminal, enter `pip3 install 'django<4' gunicorn`
+	* In the terminal, enter `pip3 install dj_database_url==0.5.0 psycopg2`
+	* In the terminal, enter `pip3 install dj3-cloudinary-storage`
+4. Create requirements.txt
+	* In the terminal, enter `pip3 freeze --local > requirements.txt`
+5. Create a Django project
+	* In the terminal, enter `django-admin startproject 'project_name' .` (enter the project name without the quotation marks, a space and a full stop)
+6. Create an app
+	* In the terminal, enter `python3 manage.py startapp 'app_name'` (enter the app name without the quotation marks)
+7. Add the newly created app into settings.py
+	* Add the app name into the INSTALLED_APPS array and save the file
+
+		```python
+		INSTALLED_APPS =[
+			...
+			...
+			'app_name'
+		]
+		```
+
+8. Migrate the Changes
+	* In the terminal, enter `python3 manage.py migrate`
+9. Run the server to verify that the basic skelton project is now up and running
+	* In the terminal, enter `python3 manage.py runserver`
+10. Create an app in [Heroku](https://dashboard.heroku.com/login)
+	* Create an account if required and log into Heroku
+	* Click on "New" and from the dropdown menu, select "Create new app"
+	* Enter the name of the app and set the region to "Europe" and click on "Create app" button
+11. Create a database in [ElphantSQL](https://www.elephantsql.com/)
+	* Create an account if required and log into ElephantSQL
+	* Click on "Create New Instance"
+	* Give the plan a name (this is commonly the name of the project) and select "Tiny Turtle (Free)" plan 
+	* Click on "Select Region"
+	* Select a data center near you, for example, "EU-West-1 (Ireland) and click on "Review"
+	* Check your details are correct and then click on "Create instance"
+	* Return to ElephantSQL dashboard and click on the database instance name for the project 
+	* In the URL section, click on the copy icon to copy the database URL
+12. Create an env.py
+	* In the terminal, `touch env.py` to create env.py in the root directory
+	* Check to ensure that env.py file is included in .gitignore file
+	* In env.py, add `import os` at the top
+	* In env.py, add a blank line and then `os.environ["DATABASE_URL"]="copiedURL"` to set DATABASE_URL variable
+	* In env.py, add `os.environ["SECRET_KEY"]="secret_key"` to set SECRET_KEY variable
+	* Save env.py
+13. Add SQLite database to .gitignore fiel
+	* Add `*.sqlite3` to .gitignore file so that SQLite database is not exposed
+14. Modify settings.py file
+	* In settings.py, add the following:  
+
+		```python
+		import os
+		import dj_database_url
+		if os.path.isfile('env.py'):
+			import env
+		```
+
+	* In settings.py, replace the secret key provided by Django with SECRET_KEY variable
+		`SECRET_KEY = os.environ.get('SECRET_KEY')`
+	* In settings.py, comment out the original DATABASES variable and add the following:
+
+		```python
+		DATABASES = {
+			'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+		}
+
+		```
+
+	* Save settings.py
+15. Migrate Database Structure to the ElephantSQL database
+	* In the terminal, enter `python manage.py migrate`
+	* In ElephantSQL dashboard, select the database instance name and then select the "Browser" tab on the left
+	* Click on "Table queries" to reveal a dropdown list where you can verify your database structure
+16. Push the Changes to GitHub
+	* In the terminal, `git add .`, `git commit -m "(enter commit message here)"` and `git push`
+17. Set Up Cloudinary
+	* Create an account if required or log into [Cloudinary](https://cloudinary.com/)
+	* In the Dashboard, click to copy the API environment variable
+	* In env.py, add `os.environ[CLOUDINARY_URL] = "cloudinary://paste in the API variable"`
+18. Set up Heroku Config Vars
+	* In Heroku dashboard, open the "Settings" tab
+	* Add two Config Vars:
+		Key | Value
+		--- | ---
+		DATABASE_URL | Enter the database URL from ElephantSQL without quotation marks
+		SECRET_KEY | Enter your secret key
+		PORT | 8000
+		CLOUDINARY_URL | cloudinary://paste in the API variable
+		DISABLE_COLLECTSTATIC | 1 (temporary and will be removed when deploying the full project)
+19. Update settings.py
+	* In settings.py, add Cloudinary libraries in INSTALLED_APPS
+		"cloudinary_storage" needs to be added above "django.contrib.staticfiles" and then the regular 'cloudinary' library 
+
+		```python
+		INSTALLED_APPS = [
+    	...
+		....
+    	'cloudinary_storage',
+    	'django.contrib.staticfiles',
+    	'cloudinary',
+    	'recipeapp',
+		]
+
+		```
+
+	* In settings.py, add the following so that Django knows that Cloudinary is used to store the media and static files
+
+		```python
+		STATIC_URL = '/static/'
+		STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+		STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+		STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+		MEDIA_URL = '/media/'
+		DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+		```
+
+	* In settings.py, add the following so that Django knows where the templates are stored   
+	`TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+	* In settings.py, change the DIRS key to TEMPLATES_DIR
+
+		```python
+		TEMPLATES = [
+    		{
+       			'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        		'DIRS': [TEMPLATES_DIR],
+        		'APP_DIRS': True,
+        		'OPTIONS': {
+        			...
+					...
+            		],
+        		},
+    		},
+		]
+
+		```
+
+	* In settings.py, add `ALLOWED_HOSTS = ['project_name.herokuapp.com', 'localhost']` (enter project name without quotation marks)
+20. Create Static Files
+	* Create three new folders in the root directory - media, static and templates
+21. Create Procfile
+	* Create a file named "Procfile" in the root directly
+	* Add `web: gunicorn 'project_name'.wsgi` (enter project name without quotation marks)
+22. Push the Changes to GitHub
+	* In the terminal, `git add .`, `git commit -m "(enter commit message here)"` and `git push`
+23. Deploy the app in Heroku
+	* In Heroku, select "Deploy" tab from the menu
+	* Select "GitHub" under Deployment method
+	* Search for your repository and connect to Heroku
+	* Click on "Deploy Branch" to deploy the app
+
+### Local Deployment
+The project can be cloned or forked to make a local copy.
+
+1. For cloning and forking, install all required libraries and packages found in requirements.txt
+	* In the terminal, `pip2 install -r requirements.txt`
+	* In the root directory, create a file named env.py and the following
+		The contents of these need to match the Config Vars in Heroku
+		```python
+		import os
+
+		os.environ.("CLOUDINARY_URL", 'enter the Cloudinary API key here')
+		os.environ.("DATABASE_URL", 'enter the ElephantSQL database URL here')
+		os.environ.("SECRET_KEY", 'enter the secret key')
+		os.environ['DEVELOP'] = '1' (for local environment only)
+		```
+	* Save env.py
+	* Add env.py to .gitignore file 
+	* Migrate the Changes
+		* In the terminal, enter `python3 manage.py migrate`
+2. Once the project is closed or forked, the following steps are required to run it locally
+	* Make migration `python3 manage.py makemigrations`
+	* Migrate the Changes `python3 manage.py migrate`
+	* Create a superuser `python3 manage.py createsuperuser`
+	* Run the application locally `python3 manage.py runserver`
+
+Forking the Repository on GitHub:
+To make a copy or "fork" the original repository to view or make changes without affecting the original repository,
+
+1. Log into GitHub and locate the repository
+2. Select the "Fork" option at the top of the screen to create a copy of the repository
+3. This will create a copy of the repository in your GitHub account
+
+Cloning the Repository on GitHub:
+1. In the GitHub repository, select the "Code" button
+2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL
+3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created
+4. Type "git clone" and then paste the URL copied from GitHub
+5. Press "Enter" and the local clone will be created
 
 # Credits
 ## Content
@@ -534,7 +729,7 @@ For the full details of the testing executed, please see [TESTING.md](https://gi
 	* [Messages](https://docs.djangoproject.com/en/3.2/ref/contrib/messages/)
 	* [Django Filters](https://django-filter.readthedocs.io/en/stable/ref/filterset.html)
 * ChoiceArrayField model class to return an array field with front-end checkboxes was from [Rogulski.it](https://rogulski.it/django-multiselect-choice-admin/).
-* [Django filters and pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) was referenced for the Recipe filters.
+* [Django Filters and Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY) was referenced for the Recipe filters.
 * Template tags for Django filters were from [Dealing with QueryString Parameters](https://simpleisbetterthancomplex.com/snippet/2016/08/22/dealing-with-querystring-parameters.html).
 * Template tags for Django active link were from [CopyProgramming](https://copyprogramming.com/howto/django-active-home-link?utm_content=cmp-true).
 * Success message for Delete View was from [Stackoverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown).
