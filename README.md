@@ -1,13 +1,13 @@
 # Happy Beans
 
 Happy Beans is a full-stack web application built with Django. 
-It is a recipe-sharing website, where users can view and share family-friendly recipes. 
+It is a recipe-sharing site, where users can view and share family-friendly recipes. 
 Registered users have the ability to post recipes, like recipes to save them in their own recipe collections, and post comments to interact with the community. 
 The intended audience is anyone who enjoys cooking tasty and nutritious meals for the whole family.
 
 The application implements user authentication to provide role-based access to its centrally-owned dataset, and user authorisation to allow users to manipulate only their own data records. It includes full CRUD functionality for recipes and comments, allowing users to create, read, update and delete their recipes and comments.
 
-The application also provides a back-end admin dashboard where the admin role has full CRUD functionality for all recipes, comments and users so that they can manage the contents of the website. 
+The application also provides a back-end admin dashboard where the admin role has full CRUD functionality for all recipes, comments and users so that they can manage the contents of the site. 
 
 Click here to view [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Click to open in a new browser tab).
 
@@ -17,7 +17,7 @@ Click here to view [Happy Beans](https://happy-beans.herokuapp.com/) (CTRL + Cli
 # UXD - User Experience Design
 
 ## User Stories
-Based on the concept of a recipe-sharing website, the following 6 Epics were created for the application's features. 
+Based on the concept of a recipe-sharing site, the following 6 Epics were created for the application's features. 
 These epics were then further developed into 28 User Stories.
 
 ### EPIC: User Account
@@ -37,7 +37,7 @@ These epics were then further developed into 28 User Stories.
 * As a Site User, I can filter the recipes by a meal type so that I can view a list of recipes for the meal type.
 * As a Site User, I can filter the recipes by a main ingredient so that I can view a list of recipes using the main ingredient.
 * As a Site User, I can filter the recipes based on a difficulty level so that I can view a list of recipes suitable for my level.
-* As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the website.
+* As a Site User, I can see a custom error message when an HTTP error occurs so that I can understand why the error has occurred and easily navigate back to the site.
 
 ### EPIC: Recipe Management
 * As a Site User, I can post my own recipe so that I can share it with others.
@@ -90,7 +90,7 @@ These were included so that the entire project was tracked and managed through t
 * EPIC: README
 
 ## Wireframes
-Wireframes were created using [Balsamiq](https://balsamiq.com/) to visualise the structure of the website. 
+Wireframes were created using [Balsamiq](https://balsamiq.com/) to visualise the structure of the site. 
 The structure of the finished product is slightly different from the wireframes, 
 but this is due to the design choices made during the development process. 
 
@@ -176,7 +176,7 @@ For the production environment, these variables are added to Config Vars for the
 
 ## Design
 ### Colour Scheme
-The design of the website is intended to be simple and clean so as not to distract users from colourful images of recipes.
+The design of the site is intended to be simple and clean so as not to distract users from colourful images of recipes.
 [Coolors](https://coolors.co) was used to create the colour pallet.
 
 * #FFFFFF White is used for the background colour
@@ -185,12 +185,12 @@ The design of the website is intended to be simple and clean so as not to distra
 * #37A748 Pigment Green is used for the active link in the navigation bar and also for the hover effect on buttons.
 * #F74A87 French Rose is used for the Like button on Recipe Detail page.
 
-The logo for the website was created using the same colour palette to be consistent. 
+The logo for the site was created using the same colour palette to be consistent. 
 
 <img src="docs/images/colour-scheme.png" width=600>
 
 ### Typography
-The font used throughout the website is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
+The font used throughout the site is Nunito which is imported from [Google Fonts](https://fonts.google.com/).
 It has a happy and playful feel and is easy to read. Sans-serif is the backup font in case the main font is not available.
 
 <img src="docs/images/font-nunito.png" width=200>
@@ -271,10 +271,10 @@ Once logged out, a success message is displayed confirming that the user has log
 
 <img src="docs/images/testing/us-account-registration-signup.png" width=800>
 
-The Hope page carries a larger version of the logo with the tagline "A home for your favourite family-friendly recipes" so that the purpose of the website is immediately clear. 
-The logo was created using [Wix](https://www.wix.com/) and includes green beans in the design to suit the name of the website.
+The Hope page carries a larger version of the logo with the tagline "A home for your favourite family-friendly recipes" so that the purpose of the site is immediately clear. 
+The logo was created using [Wix](https://www.wix.com/) and includes green beans in the design to suit the name of the site.
 
-Underneath the tagline, three cards are displayed explaining what users can expect from the website and the benefits of signing up. 
+Underneath the tagline, three cards are displayed explaining what users can expect from the site and the benefits of signing up. 
 Sign Up button is included underneath the cards to make it easier for users to sign up. This button directs users to Sign Up page for convenience.
 
 If the user is already logged in, the Sign Up button is replaced with Post a Recipe button to encourage users to post recipes. 
@@ -464,7 +464,7 @@ Once the delete button is selected, a modal opens up to confirm the deletion. On
 
 ### Error Pages
 Custom HTML pages have been created for HTTP 400, 403, 404 and 500 errors. 
-Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the website.
+Each error page contains a link to the Home page as well as Browse Recipes page so that users can easily navigate back to the site.
 
 <img src="docs/images/testing/us-404-error.png" width=280>  
 
@@ -476,9 +476,9 @@ Each error page contains a link to the Home page as well as Browse Recipes page 
 ## Features Left to Implement
 
 ### Search Bar
-A search bar allowing users to search recipes based on a particular word or phrase was one of the 2 User Stories that was not implemented. 
+A search bar allowing users to search recipes based on a particular word or phrase was one of the two User Stories that was not implemented. 
 All the necessary tasks were completed and the search bar functioned as expected. However, when the recipe filters were added, the search bar no longer functioned.
-This issue was reviewed with a tutor, but a solution was not found within the time frame given. Therefore, the decision was made to keep the recipe filters and remove the search bar. I believe the website will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
+This issue was reviewed with a tutor, but a solution was not found within the time frame given. Therefore, the decision was made to keep the recipe filters and remove the search bar. I believe the site will benefit by having a search bar in addition to the recipe filters and this is a feature to be implemented in future.
 
 ### Diet Type Filter
 The ability to filter recipes based on the Diet Type was the other User Story that was not implemented. 
@@ -519,13 +519,13 @@ I believe changing the image field to ResizedImageField will beneficial for the 
 * [Heroku](https://id.heroku.com/login) was used to deploy the application.
 * [Google Fonts](https://fonts.google.com/) was used for the Nunito font.
 * [Font Awesome](https://fontawesome.com/) was used for all the icons.
-* [Wix](https://www.wix.com/) was used to design the two versions of the logo.
+* [Wix](https://www.wix.com/) was used to design the 2 versions of the logo.
 * [RealFaviconGenerator](https://realfavicongenerator.net/) was used to generate the favicon from the logo.
 
 ## Other Online Tools used
 * [Balsamiq](https://balsamiq.com/) was used to generate wireframes for the application.
 * [Figma](https://www.figma.com/) was used to generate the database schema.
-* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the site for different screen sizes.
 * [Wave Web Accessibility Evaluation Tools](https://wave.webaim.org/) were used to test accessiblity.
 * [Coolors](https://coolors.co) was used to generate the colour palette.
 * [ScreenToGif](https://www.screentogif.com/) was used to create the GIF image in the Bug section.
