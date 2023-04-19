@@ -622,7 +622,7 @@ The following are the steps to deploy the application on Heroku.
     	'cloudinary_storage',
     	'django.contrib.staticfiles',
     	'cloudinary',
-    	'recipeapp',
+    	'app_name',
 		]
 
 		```
@@ -692,15 +692,15 @@ The project can be cloned or forked to make a local copy.
 		```
 	* Save env.py
 	* Add env.py to .gitignore file 
-	* Migrate the Changes
-		* In the terminal, enter `python3 manage.py migrate`
+	* To migrate the changes, in the terminal, enter `python3 manage.py migrate`
 2. Once the project is closed or forked, the following steps are required to run it locally
 	* Make migration `python3 manage.py makemigrations`
 	* Migrate the Changes `python3 manage.py migrate`
 	* Create a superuser `python3 manage.py createsuperuser`
 	* Run the application locally `python3 manage.py runserver`
 
-Forking the Repository on GitHub:
+Forking the Repository on GitHub:  
+
 To make a copy or "fork" the original repository to view or make changes without affecting the original repository,
 
 1. Log into GitHub and locate the repository
